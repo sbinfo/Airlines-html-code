@@ -8,25 +8,43 @@ $color-brown: #CE833F;
 $color-green: #15AD56;
 $color-light-green: #82D2A4;
 $color-main: #2D2B2C; // Black
+$color-primary: #0EB155;
 $color-gray: #595758;
 $color-light-gray: #BCCDC2;
 // === Variables end === //
 
-// ==== Elements ==== //
-// buttons
-.button-success {
-  padding: 16px 84px;
+// === Mixins === //
+@mixin position-zeroing {
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+@mixin start-button-26($color, $bg-color) {
   font-weight: 500;
   font-size: 26px;
-  line-height: 31px;
   text-transform: uppercase;
+  cursor: pointer;
 
   border: none;
   outline: none;
-
-  color: $color-white;
-  background: $color-green;
   border-radius: 50px;
+
+  color: $color;
+  background: $bg-color;
+}
+// === Mixins end === //
+
+// ==== Elements ==== //
+// buttons
+.button-success {
+  @include start-button-26($color-white, $color-green);
+  padding: 16px 84px;
+}
+
+.button-white {
+  @include start-button-26($color-green, $color-white);
+  padding: 16px 105px;
 }
 
 // / buttons
@@ -330,13 +348,13 @@ body {
 
 // === slider === //
 .section-slider {
-  padding-top: 120px;
-  padding-bottom: 30px;
+  padding-top: 10px;
+  padding-bottom: 60px;
 
   &-inner {
-    width: 1632px;
+    width: 1638px;
     height: 500px;
-    overflow: hidden;
+    //overflow: hidden;
     margin: 0 auto;
   }
 
@@ -344,19 +362,31 @@ body {
     .owl-stage {
       display: flex;
       align-items: center;
-      .owl-item  {
+
+      .owl-item {
         .slider-item {
           position: relative;
           width: 100%;
           height: 100%;
 
+          &__primary_block {
+            display: none;
+          }
           &__secondary_block, &__primary_block {
             position: absolute;
             top: 0;
-            left: 0;
-            right: 0;
             bottom: 0;
+            color: $color-white;
+            &-title {
+              font-size: 32px;
+              font-weight: 500;
+            }
+            &-subtitle {
+              font-size: 24px;
+              font-weight: 400;
+            }
           }
+
           img {
             width: 100%;
             height: 100%;
@@ -364,13 +394,88 @@ body {
           }
         }
       }
+
       .medium {
         width: 360px !important;
         height: 400px !important;
       }
       .big {
-        width: 927px !important;
+        width: 928px !important;
         height: 548px !important;
+        .slider-item {
+          img {
+            position: relative;
+            top: 20px;
+            height: 508px;
+          }
+          &__primary_block {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            text-align: center;
+            width: 358px;
+            right: -1px;
+            background-color: $color-primary;
+            .bg-clouds {
+              position: absolute;
+              @include position-zeroing;
+              background: url("../img/cloud_057.svg") no-repeat 50% center;
+            }
+            &-title {
+              margin-bottom: 16px;
+            }
+            &-title,
+            &-subtitle {
+              text-align: right;
+              width: 80%;
+              margin-left: auto;
+            }
+            &-button {
+              margin-top: 170px;
+              margin-bottom: 70px;
+            }
+          }
+          &__secondary_block {
+            display: none;
+          }
+        }
+      }
+      .left {
+        .slider-item {
+          &__secondary_block {
+            left: 8px;
+            width: 100px;
+            background-color: $color-brown;
+            &-inner {
+              writing-mode: vertical-rl;
+              transform: rotate(180deg);
+              text-align: right;
+              padding: 0 13px 30px 0px;
+            }
+            &-title {
+              margin-left: 2px;
+            }
+          }
+        }
+      }
+      .right {
+        margin-right: 40px;
+        .slider-item {
+          &__secondary_block {
+            right: 0;
+            width: 100px;
+            background-color: $color-brown;
+            &-inner {
+              writing-mode: vertical-rl;
+              transform: rotate(180deg);
+              text-align: right;
+              padding: 0 13px 30px 0px;
+            }
+            &-title {
+              margin-left: 2px;
+            }
+          }
+        }
       }
     }
   }
