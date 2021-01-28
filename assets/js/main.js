@@ -8,12 +8,17 @@
 // });
 
 $(document).ready(function(){
+
     $(".owl-carousel").owlCarousel({
-        loop: true,
-        center: true,
         items: 3,
-        autoHeight: true
+        loop: true,
+        smartSpeed: 600,
+        autoHeight: true,
+        center: true,
+        autoplay: true,
+        autoplayTimeout: 1000,
     });
+
 
     const elems = document.querySelectorAll('.owl-item');
     elems.forEach(elem => {
@@ -24,11 +29,9 @@ $(document).ready(function(){
         } else if (elem.classList.contains('active')) {
             elem.classList.add('right', 'medium')
         }
-        console.log(elem)
     })
 
     $('.owl-carousel').on('translate.owl.carousel', function(e){
-        console.log('type', typeof e.item)
         idx = e.item.index;
         $('.owl-item.big').removeClass('big');
         $('.owl-item.left').removeClass('left');
