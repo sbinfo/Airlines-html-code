@@ -664,6 +664,42 @@ body {
   color: #000;
 }
 
+.my-menu-open {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #000;
+  padding: 12px;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+}
+.my-menu-open__text {
+  color: #fff;
+}
+.my-menu-open__logo {
+  margin-top: -5px;
+  width: 90px;
+}
+@media (min-width: 62em) {
+  .my-menu-open {
+    display: none;
+  }
+}
+
+.mobile-menu__profile {
+  display: flex;
+  justify-content: flex-end;
+}
+.mobile-menu__profile-button {
+  flex-basis: 15%;
+}
+@media (min-width: 62em) {
+  .mobile-menu {
+    display: none;
+  }
+}
+
 .section-header {
   background: url("../img/hero_airplane.svg") no-repeat 50% top;
   background-size: cover;
@@ -697,7 +733,7 @@ body {
 }
 .section-header-nav {
   flex-shrink: 1;
-  display: flex;
+  display: none;
   justify-content: space-between;
   align-items: center;
   padding-top: 20px;
@@ -710,11 +746,11 @@ body {
 }
 .section-header-nav__menu ul li a {
   font-weight: 500;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 21px;
   text-align: right;
   text-transform: uppercase;
-  margin-left: 100px;
+  margin-left: 30px;
   color: #2D2B2C;
 }
 .section-header-search {
@@ -726,8 +762,7 @@ body {
 }
 .section-header-search__title {
   font-weight: 500;
-  font-size: 56px;
-  line-height: 66px;
+  font-size: 44px;
   text-align: right;
   margin-bottom: 22px;
 }
@@ -749,6 +784,20 @@ body {
 .section-header-search__icons-item .text {
   margin-right: 20px;
   text-align: right;
+}
+@media (min-width: 62em) {
+  .section-header-nav {
+    display: flex;
+  }
+}
+@media (min-width: 85.375em) {
+  .section-header-search__title {
+    font-size: 56px;
+  }
+  .section-header-nav__menu ul li a {
+    font-size: 16px;
+    margin-left: 100px;
+  }
 }
 
 .section-slider {
