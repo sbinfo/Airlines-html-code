@@ -3,10 +3,6 @@
  * @type {Splide}
  */
 
-// document.addEventListener( 'DOMContentLoaded', function () {
-
-// });
-
 document.addEventListener("DOMContentLoaded", function () {
     const menu = new MmenuLight(
         document.querySelector("#my-menu"),
@@ -59,4 +55,9 @@ $(document).ready(function(){
         $('.owl-item').eq(idx+1).addClass('medium');
         $('.owl-item').eq(idx+1).addClass('right');
     });
+
+    // footer spoiler
+    $('.footer-menu__title').on('click', function() {
+        $(this).toggleClass('active').next().slideToggle(300);
+    })
 });
