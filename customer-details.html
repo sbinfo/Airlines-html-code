@@ -93,6 +93,7 @@
 </header>
 <!-- / section-header -->
 
+<!-- section ordering -->
 <section class="section-block ordering">
     <div class="section-inner">
         <!-- order-details -->
@@ -150,9 +151,122 @@
         </div>
 
         <!-- customer-details -->
-        <div class="customer-details"></div>
+        <div class="customer-details">
+            <div class="customer-details__steps">
+                <div class="step step-4">
+                    <span class="step-text">Payment</span>
+                    <span class="step-number">04</span>
+                </div>
+                <div class="step step-3">
+                    <span class="step-text">Extra services</span>
+                    <span class="step-number">03</span>
+                </div>
+                <div class="step step-2">
+                    <span class="step-text">Passenger details</span>
+                    <span class="step-number">02</span>
+                </div>
+                <div class="step step-1 active">
+                    <span class="step-text">Customer details</span>
+                    <span class="step-number">01</span>
+                </div>
+            </div>
+            <h3 class="customer-details__title heading-3--right_line">Customer details</h3>
+            <form action="" class="customer-details__form form">
+                <div class="form-text__group customer-last_name">
+                    <label for="last-name">Last name</label>
+                    <input type="text" id="last-name" class="form-text">
+                </div>
+                <div class="form-text__group customer-first_name">
+                    <label for="first-name">First name</label>
+                    <input type="text" id="first-name" class="form-text">
+                </div>
+                <div class="form-select__group customer-title">
+                    <label for="select-gender">Title</label>
+                    <select id="select-gender" dir="rtl" class="form-select">
+                        <option>Mr</option>
+                        <option>Mrs</option>
+                    </select>
+                </div>
+                <div class="form-text__group customer-phone">
+                    <label for="phone-number">Phone</label>
+                    <input type="email" id="phone-number" class="form-text">
+                </div>
+                <div class="form-text__group customer-email">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" class="form-text">
+                </div>
+
+                <div class="form__footer">
+                    <button type="submit">Save</button>
+
+                    <label for="privacy-policy">We will be happy to pamper you with coupons, birthday benefits, information on the most surprising destinations,
+                        advertising deals and more, via email and / or SMS. does not fit you? You can remove the V and continue.</label>
+                    <input id="privacy-policy" type="checkbox">
+                </div>
+            </form>
+        </div>
     </div>
 </section>
+<!-- / section ordering -->
+
+<!-- section services -->
+<section class="section-block services">
+    <div class="section-inner">
+        <div class="service-item">
+            <div class="service-item__bg"></div>
+            <img src="assets/icons/service-chat.svg" class="service-item__icon" alt="icon">
+            <div class="service-item__content">
+                <h3 class="service-item__title">Online chat</h3>
+                <p class="service-item__text">with a company representative is available during business hours Sun-Thu 9; 00-18; 00</p>
+            </div>
+        </div>
+        <div class="service-item">
+            <div class="service-item__bg"></div>
+            <img src="assets/icons/service-order.svg" class="service-item__icon" alt="icon">
+            <div class="service-item__content">
+            <h3 class="service-item__title">Order processing</h3>
+            <p class="service-item__text">to process an existing order,
+                call: 2134567890</p>
+            </div>
+        </div>
+        <div class="service-item">
+            <div class="service-item__bg"></div>
+            <img src="assets/icons/service-operator.svg" class="service-item__icon" alt="icon">
+            <div class="service-item__content">
+            <h3 class="service-item__title">Consultation</h3>
+            <p class="service-item__text">To order a consultation with a company agent, call 34567890 during business hours Sun-Thu 9; 00-17; 00</p>
+            </div>
+        </div>
+        <div class="service-item">
+            <div class="service-item__bg"></div>
+            <img src="assets/icons/service-networking.svg" class="service-item__icon" alt="icon">
+            <div class="service-item__content">
+            <h3 class="service-item__title">Personal area</h3>
+            <p class="service-item__text">Everything is important in one place. Useful information and various self-service operations. To go to your personal account,
+                <a href="#">click here</a>
+            </p>
+            </div>
+        </div>
+        <div class="service-item">
+            <div class="service-item__bg"></div>
+            <img src="assets/icons/service-form.svg" class="service-item__icon" alt="icon">
+            <div class="service-item__content">
+            <h3 class="service-item__title">Application form</h3>
+            <p class="service-item__text"><a href="#">Click here</a> to fill out the online form</p>
+            </div>
+        </div>
+        <div class="service-item">
+            <div class="service-item__bg"></div>
+            <img src="assets/icons/service-facebook.svg" class="service-item__icon" alt="icon">
+            <div class="service-item__content">
+                <h3 class="service-item__title">Facebook</h3>
+                <p class="service-item__text">The response from a company representative in a personal message on our Facebook page
+                    <a href="#">Start</a> a conversation with a company representative.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- / section services -->
 
 <!-- section footer -->
 <footer class="section-block footer footer-customer-details">

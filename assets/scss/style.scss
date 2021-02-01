@@ -1,5 +1,6 @@
 @import "normalize";
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&family=Rubik:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap');
 
 // === Variables === //
 // Colors
@@ -104,6 +105,23 @@ $bp-xxlarge-1920: 120em; // 1920px
   color: $color-main;
 }
 
+.heading-3--right_line {
+  position: relative;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 24px;
+  color: $color-main;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    width: 50%;
+    border-bottom: 6px solid #0EB155;
+  }
+}
+
 .white-separator {
   width: 94%;
   height: 0;
@@ -156,6 +174,49 @@ body {
   font-size: 36px;
   line-height: 43px;
   text-align: right;
+}
+
+.form-select__group,
+.form-text__group {
+  height: 55px;
+  border: 1px solid #C4C4C4;
+  box-sizing: border-box;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  padding: 10px;
+
+  label {
+    flex-basis: 100%;
+    text-align: right;
+    font-size: 10px;
+    font-weight: 400;
+    color: $color-gray;
+  }
+}
+
+.form-text__group {
+  .form-text {
+    outline: none;
+    border: none;
+    flex-basis: 100%;
+    text-align: right;
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
+
+.form-select__group {
+
+  .form-select {
+    outline: none;
+    border: none;
+    flex-basis: 100%;
+    text-align: right;
+    font-size: 14px;
+    font-weight: 400;
+  }
 }
 
 @media (min-width: $bp-small-768) {
@@ -1818,11 +1879,16 @@ body {
 
 
 ///////////////////  List of flights Page //////////////////////
-
-.ordering {}
+.ordering {
+  .section-inner {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 
 .order-details {
-  max-width: 460px;
+  min-width: 448px;
+  flex-basis: 30%;
 }
 
 .order-details-card {
@@ -1895,10 +1961,14 @@ body {
     text-align: right;
   }
 }
+
 .order-details-card .return {
   padding-top: 14px;
   &__to {
     text-align: right;
+  }
+  &__connect {
+    transform: rotate(180deg);
   }
 }
 
@@ -1943,3 +2013,174 @@ body {
     }
   }
 }
+
+.customer-details {
+  flex-basis: 60%;
+  text-align: right;
+  &__steps {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 60px;
+
+    .step {
+      position: relative;
+      color: $color-footer-menu;
+      font-family: Roboto;
+      display: flex;
+      align-items: center;
+      padding-left: 40px;
+
+      &:after, &:before {
+        content: '';
+        position: absolute;
+      }
+      &:after {
+        width: 100%;
+        border-bottom: 2px solid #CE833F;
+        opacity: 0.38;
+        left: 0;
+        bottom: -28px;
+      }
+      &:before {
+        right: 0;
+        bottom: -44px;
+        width: 36px;
+        height: 36px;
+        background: #fff;
+        border-radius: 50%;
+        box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.2);
+        z-index: 10;
+      }
+
+      &.active:after {
+        opacity: 1;
+      }
+      &.active:before {
+        background: #CE833F;
+      }
+
+      &:first-child:after {
+        content: none;
+      }
+    }
+    .step .step-text {
+      font-size: 16px;
+      font-weight: 400;
+      margin-right: 8px;
+    }
+    .step .step-number {
+      font-size:42px;
+      font-weight: 500;
+    }
+    .step.active .step-text {
+      color: $color-brown;
+    }
+    .step.active .step-number {
+      color: $color-main;
+    }
+
+  }
+  &__title {}
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 70px;
+    .form__footer {
+      flex-basis: 100%;
+      padding-top: 30px;
+    }
+    .form-text__group {
+      flex-basis: 44%;
+    }
+    .customer-title {
+      flex-basis: 10%;
+    }
+    .customer-email {
+      flex-basis: 55%;
+    }
+    .form-text__group,
+    .customer-title,
+    .customer-email {
+      margin-bottom: 20px;
+    }
+    .form__footer button {
+      @include start-button(16px, #fff, $color-primary);
+      padding: 10px 70px;
+    }
+    .form__footer label {
+      font-size: 10px;
+      color: $color-footer-menu;
+      line-height: 14px;
+    }
+    .form__footer input#privacy-policy {}
+  }
+}
+
+// === services === //
+.services {
+  background: url("../img/bg-section-services.svg") no-repeat center center;
+  padding-top: 340px;
+  padding-bottom: 100px;
+  .section-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .service-item {
+    max-width: 467px;
+    width: 467px;
+    height: 180px;
+    padding: 15px 20px;
+    position: relative;
+    background-color: $color-primary;
+    color: #fff;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+
+    &__bg {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: url("../img/bg-service-item.svg") no-repeat center center;
+    }
+
+    &__icon {
+      width: 60px;
+      height: 60px;
+      position: absolute;
+      left: 30px;
+      bottom: 22px;
+    }
+
+    &__content {
+      max-width: 206px;
+    }
+
+    &__title,
+    &__text {
+
+      text-align: right;
+    }
+    &__title {
+      font-weight: 500;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    &__text {
+      font-size: 12px;
+      line-height: 16px;
+    }
+    &__text a {
+      font-weight: 700;
+      color: #fff;
+      text-decoration: underline;
+    }
+  }
+}
+// === / services end === //
