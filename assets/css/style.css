@@ -382,6 +382,25 @@ h1, h2, h3, h4, h5, h6, p, span, ul, ol, a, button, input {
   border-radius: 2px;
 }
 
+.heading-1-with-line {
+  position: relative;
+  font-weight: 500;
+  font-size: 43px;
+  text-align: right;
+  padding-right: 106px;
+  margin-top: 110px;
+  margin-bottom: 110px;
+}
+.heading-1-with-line:after {
+  content: "";
+  width: 87px;
+  height: 2px;
+  position: absolute;
+  border-top: 2px solid #0EB155;
+  top: 55%;
+  margin-left: 20px;
+}
+
 .heading-2 {
   font-weight: 500;
   font-size: 30px;
@@ -757,11 +776,16 @@ body {
   width: 100%;
   font-size: 14px;
   text-transform: uppercase;
-  padding: 14px 50px;
   background: transparent;
   border: none;
   outline: none;
   cursor: pointer;
+}
+.filter__buttons.padding-9 .filter__buttons-btn {
+  padding: 9px 50px;
+}
+.filter__buttons.padding-14 .filter__buttons-btn {
+  padding: 14px 50px;
 }
 .filter__buttons.active-brown .active {
   background-color: #CE833F;
@@ -888,6 +912,34 @@ body {
   }
 }
 
+.breadcrumbs {
+  padding-top: 32px;
+}
+.breadcrumbs__list {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.breadcrumbs__item {
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #908C8E;
+}
+.breadcrumbs__item a {
+  color: #908C8E;
+}
+.breadcrumbs__item a.active {
+  color: #CE833F;
+}
+.breadcrumbs__item a:not(.active):before {
+  content: "";
+  display: inline-block;
+  background: url("../icons/lomg-arrow-left.svg") no-repeat center left;
+  width: 12px;
+  height: 6px;
+  padding-right: 10px;
+}
+
 .section-header {
   background: url("../img/hero_airplane.svg") no-repeat 50% top;
   background-size: cover;
@@ -995,7 +1047,7 @@ body {
   }
 }
 @media (min-width: 75em) {
-  .section-header {
+  .section-header.vh100 {
     min-height: 100vh;
     height: 100vh;
   }
@@ -1870,4 +1922,139 @@ body {
   .footer .footer-contact__top .contact-phone__number {
     font-size: 28px;
   }
+}
+
+.order-details {
+  max-width: 460px;
+}
+
+.order-details-card {
+  padding: 14px 25px;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.2);
+}
+
+.order-details-card .round-trip,
+.order-details-card .return {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-bottom: 1px solid #E6E6E6;
+  padding-bottom: 25px;
+}
+.order-details-card .round-trip__title,
+.order-details-card .return__title {
+  flex-basis: 100%;
+  text-align: right;
+  padding-bottom: 12px;
+}
+.order-details-card .round-trip__title p,
+.order-details-card .return__title p {
+  display: inline-block;
+  color: #CE833F;
+  background-color: #fdf2e8;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 6px 10px;
+  text-align: right;
+}
+.order-details-card .round-trip__to, .order-details-card .round-trip__from,
+.order-details-card .return__to,
+.order-details-card .return__from {
+  font-size: 16px;
+  font-weight: 400;
+}
+.order-details-card .round-trip__to p:not(:last-child), .order-details-card .round-trip__from p:not(:last-child),
+.order-details-card .return__to p:not(:last-child),
+.order-details-card .return__from p:not(:last-child) {
+  margin-bottom: 5px;
+}
+.order-details-card .round-trip__to .round-trip__date, .order-details-card .round-trip__from .round-trip__date,
+.order-details-card .return__to .round-trip__date,
+.order-details-card .return__from .round-trip__date {
+  color: #908C8E;
+}
+.order-details-card .round-trip__connect,
+.order-details-card .return__connect {
+  color: #CE833F;
+  text-align: center;
+  padding-top: 10px;
+  position: relative;
+}
+.order-details-card .round-trip__connect:before,
+.order-details-card .return__connect:before {
+  left: -32px;
+  top: 21px;
+}
+.order-details-card .round-trip__connect:after,
+.order-details-card .return__connect:after {
+  right: -32px;
+  top: 21px;
+}
+.order-details-card .round-trip__connect:before, .order-details-card .round-trip__connect:after,
+.order-details-card .return__connect:before,
+.order-details-card .return__connect:after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 1px;
+  border-bottom: 1px dashed #828282;
+}
+
+.order-details-card .round-trip__from {
+  text-align: right;
+}
+
+.order-details-card .return {
+  padding-top: 14px;
+}
+.order-details-card .return__to {
+  text-align: right;
+}
+
+.order-details-card .payment-details {
+  padding-top: 20px;
+}
+.order-details-card .payment-details .btn-flight_details {
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  color: #0EB155;
+  background: transparent;
+  position: relative;
+  font-weight: 500;
+  padding-left: 20px;
+  margin-bottom: 25px;
+  text-transform: none;
+}
+.order-details-card .payment-details .btn-flight_details:before {
+  left: 0;
+  transform: rotate(45deg);
+}
+.order-details-card .payment-details .btn-flight_details:after {
+  left: 5px;
+  transform: rotate(-45deg);
+}
+.order-details-card .payment-details .btn-flight_details:before, .order-details-card .payment-details .btn-flight_details:after {
+  content: "";
+  position: absolute;
+  top: 36%;
+  width: 8px;
+  border-bottom: 2px solid #0EB155;
+}
+.order-details-card .payment-details__footer {
+  display: flex;
+  justify-content: space-between;
+}
+.order-details-card .payment-details__footer .payment-details__cost {
+  font-weight: 500;
+  font-size: 24px;
+}
+.order-details-card .payment-details__footer .payment-details__text {
+  font-weight: 500;
+  font-size: 16px;
 }
