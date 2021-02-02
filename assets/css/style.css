@@ -878,6 +878,11 @@ body {
     width: auto;
     border-radius: 50px;
     flex-basis: 50%;
+    -webkit-transition: all, 0.25s ease;
+    -moz-transition: all, 0.25s ease;
+    -ms-transition: all, 0.25s ease;
+    -o-transition: all, 0.25s ease;
+    transition: all, 0.25s ease;
   }
 }
 @media (min-width: 48em) {
@@ -1061,7 +1066,7 @@ body {
   line-height: 21px;
   text-align: right;
   text-transform: uppercase;
-  margin-left: 30px;
+  margin-left: 40px;
   color: #2D2B2C;
 }
 .section-header-nav__menu ul li {
@@ -1436,6 +1441,7 @@ body {
   position: relative;
   padding-top: 14px;
   padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 .section-social__content-item-bg {
   position: absolute;
@@ -1482,6 +1488,7 @@ body {
     margin-left: 30px;
   }
   .section-social__content-item {
+    margin-bottom: 0;
     width: 330px;
     flex-basis: unset;
   }
@@ -2466,4 +2473,227 @@ body {
   background-size: cover;
   padding-top: 100px;
   padding-bottom: 200px;
+}
+
+.contacts .contact-from__offices {
+  width: 100%;
+}
+
+.contacts .contact-offices {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 80px;
+}
+.contacts .contact-offices__address {
+  flex-basis: 100%;
+  text-align: right;
+}
+.contacts .contact-offices__address h3 {
+  font-size: 24px;
+  font-weight: 400;
+  color: #908C8E;
+  margin-bottom: 30px;
+}
+.contacts .contact-offices__address h4 {
+  font-weight: 500;
+  font-size: 21px;
+  margin-bottom: 12px;
+}
+.contacts .contact-offices__address ul.address-list {
+  max-width: 350px;
+  margin-left: auto;
+}
+.contacts .contact-offices__address ul.address-list li {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 6px;
+  line-height: 30px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-end;
+}
+.contacts .contact-offices__address ul.address-list li span {
+  font-weight: 500;
+}
+.contacts .contact-offices__address ul.address-list li div {
+  display: flex;
+  min-width: 34px;
+  padding-left: 18px;
+}
+.contacts .contact-offices__map {
+  flex-basis: 100%;
+}
+.contacts .contact-offices__map iframe {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  border-radius: 20px;
+}
+
+.contacts .offices-list {
+  background: url("../img/bg-offices-list.svg") no-repeat 50% 100%;
+  padding-bottom: 210px;
+}
+.contacts .offices-list .contact-form__inner {
+  max-width: 1180px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.contacts .offices-list__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.contacts .offices-list__header h3 {
+  height: 26px;
+}
+.contacts .offices-list__header .search__element {
+  margin: 0;
+}
+
+.contacts .offices-list__table h4 {
+  font-weight: 500;
+  font-size: 18px;
+  text-align: right;
+  padding-top: 12px;
+  padding-bottom: 14px;
+  position: relative;
+}
+.contacts .offices-list__table h4:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 97%;
+  border-bottom: 1px dashed #E0E0E0;
+}
+.contacts .offices-list__table h4:after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 15px;
+  right: 0;
+  transform: rotate(180deg);
+  bottom: -6px;
+  background: url("../icons/plane-black.svg") no-repeat center center;
+}
+.contacts .offices-list__table .offices-list__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 18px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #E0E0E0;
+}
+.contacts .offices-list__table .offices-list__item .office-number {
+  flex-basis: 15%;
+}
+.contacts .offices-list__table .offices-list__item .office-email {
+  flex-basis: 25%;
+}
+.contacts .offices-list__table .offices-list__item .office-number, .contacts .offices-list__table .offices-list__item .office-email {
+  font-weight: 500;
+  font-size: 16px;
+}
+.contacts .offices-list__table .offices-list__item .office-schedule {
+  flex-basis: 10%;
+  font-weight: 400;
+  font-size: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: right;
+}
+.contacts .offices-list__table .offices-list__item .office-schedule > * {
+  flex-basis: 100%;
+}
+.contacts .offices-list__table .offices-list__item .office-schedule span:first-child {
+  margin-bottom: 2px;
+}
+.contacts .offices-list__table .offices-list__item .office-schedule a {
+  font-size: 13px;
+  color: #0EB155;
+  text-decoration: underline;
+  margin-top: 3px;
+}
+.contacts .offices-list__table .offices-list__item .office-location {
+  flex-basis: 45%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  font-size: 16px;
+}
+.contacts .offices-list__table .offices-list__item .office-location__street {
+  display: flex;
+  align-items: center;
+  flex-basis: 60%;
+  justify-content: flex-end;
+  text-align: right;
+  color: #CE833F;
+  margin-right: 30px;
+}
+.contacts .offices-list__table .offices-list__item .office-location__street img {
+  margin-left: 15px;
+}
+.contacts .offices-list__table .offices-list__item .office-location img {
+  margin-top: -2px;
+}
+.contacts .offices-list__table .offices-list__item .office-location__city {
+  flex-basis: 35%;
+  text-align: right;
+  margin-left: 26px;
+}
+
+.contacts .services {
+  background: url("../img/bg-offices-services-down.svg") no-repeat center center;
+  background-size: cover;
+  padding-top: 0;
+  padding-bottom: 140px;
+}
+.contacts .services .section-inner {
+  max-width: 1180px;
+  padding: 0;
+}
+.contacts .services .section-inner .service-item {
+  width: auto;
+  flex-basis: 32.4%;
+}
+
+@media (min-width: 48em) {
+  .contacts .contact-offices__address {
+    flex-basis: 50%;
+    padding-right: 50px;
+  }
+  .contacts .contact-offices__map {
+    flex-basis: 50%;
+  }
+}
+@media (max-width: 75em) {
+  .contacts .contact-form .contact-form__title {
+    margin-bottom: 50px;
+  }
+
+  .contacts .contact-form__message form .form-textarea__group {
+    margin-bottom: 20px;
+  }
+  .contacts .contact-form__message form .form-textarea__group .form-textarea {
+    height: 171px;
+  }
+  .contacts .contact-form__message .contact-form__title, .contacts .contact-form__numbers .contact-form__title {
+    font-size: 20px;
+  }
+  .contacts .contact-form .contact-form__number p {
+    font-size: 24px;
+  }
+  .contacts .contact-form .contact-form__number span {
+    font-size: 14px;
+  }
+}
+@media (max-width: 75em) and (min-width: 36em) {
+  .contacts .contact-form .section-inner,
+.contacts .section-social .section-inner {
+    max-width: 80%;
+  }
 }

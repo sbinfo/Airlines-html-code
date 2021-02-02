@@ -105,29 +105,30 @@
     <div class="section-inner">
         <div class="contact-form__buttons">
             <div class="filter-buttons">
-                <div class="order-details-filter filter__buttons active-brown bg-white section-popular__nav-filter padding-14">
-                    <button class="filter__buttons-btn">offices & representatives</button>
-                    <button class="filter__buttons-btn active">For passengers</button>
+                <div class="contact-form__filter filter__buttons active-brown bg-white section-popular__nav-filter padding-14">
+                    <button class="filter__buttons-btn active" id="filter-btn_offices">offices & representatives</button>
+                    <button class="filter__buttons-btn " id="filter-btn_passengers">For passengers</button>
                 </div>
             </div>
         </div>
-        <div class="contact-form__message">
-            <h3 class="contact-form__title heading-3--right_line">You can also send your request to <a href="#">example@airlines.com</a> or use the online form below right now.</h3>
+        <div class="contact-from__passengers contact-form__message">
+            <h3 class="contact-form__title heading-3--right_line">You can also send your request to <a href="#">example@airlines.com</a>
+                or use the online form below right now.</h3>
             <form action="">
                 <div class="form-textarea__group">
                     <label for="your-request">Your request</label>
                     <textarea id="your-request" class="form-textarea"></textarea>
                 </div>
-<!--                <div class="contact-form__submit">-->
-                    <button type="submit">Send message</button>
-<!--                </div>-->
+                <!--                <div class="contact-form__submit">-->
+                <button type="submit">Send message</button>
+                <!--                </div>-->
                 <div class="form-text__group">
                     <label for="email">Your email (for feedback)</label>
                     <input type="email" id="email" class="form-text">
                 </div>
             </form>
         </div>
-        <div class="contact-form__numbers">
+        <div class="contact-from__passengers contact-form__numbers">
             <h3 class="contact-form__title heading-3--right_line">Call us or order a call back:</h3>
             <div class="contact-form__number">
                 <p>04-6122000</p>
@@ -143,12 +144,446 @@
             </div>
             <button type="button" class="contact-form__callme">Call me</button>
         </div>
+
+        <div class="contact-from__offices">
+            <div class="contact-offices">
+                <div class="contact-offices__address">
+                    <h3>Issta head office and ticket office:</h3>
+                    <h4>Tel Aviv - Issta House</h4>
+                    <ul class="address-list">
+                        <li>
+                            <span>Lamp of Light B</span>
+                            <div><img src="assets/icons/map-gray.svg"></div>
+                        </li>
+                        <li><span style="margin-right: auto;">17:00 - 09:00</span>Activity time M - Th:<div><img src="assets/icons/clock-gray.svg"></div></li>
+                        <li><span style="margin-right: auto;">13:00 - 09:00</span>Friday and holiday eves:<div></li>
+                        <li><span style="margin-right: auto;">closed</span>Sabbath<div></div></li>
+                        <li>ISTGivatayimBranch@issta.co.il<div><img src="assets/icons/email-gray.svg"></div></li>
+                        <li><span>03-7777222</span><div><img src="assets/icons/phone-gray.svg"></div></li>
+                    </ul>
+                </div>
+                <div class="contact-offices__map">
+                        <iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                                src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=Tel%20Aviv%20-%20Issta%20House+(Tel%20Aviv%20-%20Issta%20House)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 <!-- / section contact-form -->
 
+<div class="section-block offices-list contact-from__offices">
+    <div class="contact-form__inner">
+        <div class="offices-list__header">
+            <div class="search__element">
+                <input type="text" class="search__element-input">
+                <button class="search__element-button">
+                    <img src="assets/icons/search.svg" alt="search icon">
+                </button>
+            </div>
+            <h3 class="heading-3--right_line">Regional offices</h3>
+        </div>
+        <div class="offices-list__table">
+            <h4>Branches in the northern region</h4>
+            <div class="offices-list__item">
+                <span class="office-number">04-6122000</span>
+                <span class="office-email">ISTHaderaBranch@issta</span>
+                <span class="office-schedule">
+                    <span>M - Th:</span>
+                    <span>17:00 - 09:00</span>
+                    <a href="#">show more</a>
+                </span>
+                <span class="office-location_block office-location">
+                    <span class="office-location__street">Herzl 21<img src="assets/icons/map-brown.svg" alt="map icon"></span>
+                    <img src="assets/icons/invalid-gray.svg" alt="icon">
+                    <span class="office-location__city">Hadera - Herzl</span>
+                </span>
+            </div>
+            <div class="offices-list__item">
+                <span class="office-number">04-6122000</span>
+                <span class="office-email">ISTHaderaBranch@issta</span>
+                <span class="office-schedule">
+                    <span>M - Th:</span>
+                    <span>17:00 - 09:00</span>
+                    <a href="#">show more</a>
+                </span>
+                <span class="office-location_block office-location">
+                    <span class="office-location__street">Horev Street 15<img src="assets/icons/map-brown.svg" alt="map icon"></span>
+                    <img src="assets/icons/invalid-gray.svg" alt="icon">
+                    <span class="office-location__city">Haifa - Horef</span>
+                </span>
+            </div>
+            <div class="offices-list__item">
+                <span class="office-number">04-6122000</span>
+                <span class="office-email">ISTHaderaBranch@issta</span>
+                <span class="office-schedule">
+                    <span>M - Th:</span>
+                    <span>17:00 - 09:00</span>
+                    <a href="#">show more</a>
+                </span>
+                <span class="office-location_block office-location">
+                    <span class="office-location__street">The Galilee 34<img src="assets/icons/map-brown.svg" alt="map icon"></span>
+                    <img src="assets/icons/invalid-gray.svg" alt="icon">
+                    <span class="office-location__city">Tiberias - Galilee</span>
+                </span>
+            </div>
+            <div class="offices-list__item">
+                <span class="office-number">04-6122000</span>
+                <span class="office-email">ISTHaderaBranch@issta</span>
+                <span class="office-schedule">
+                    <span>M - Th:</span>
+                    <span>17:00 - 09:00</span>
+                    <a href="#">show more</a>
+                </span>
+                <span class="office-location_block office-location">
+                    <span class="office-location__street">Kakel 104<img src="assets/icons/map-brown.svg" alt="map icon"></span>
+                    <img src="assets/icons/invalid-gray.svg" alt="icon">
+                    <span class="office-location__city">Carmial - Kakel</span>
+                </span>
+            </div>
+            <div class="offices-list__item">
+                <span class="office-number">04-6122000</span>
+                <span class="office-email">ISTHaderaBranch@issta</span>
+                <span class="office-schedule">
+                    <span>M - Th:</span>
+                    <span>17:00 - 09:00</span>
+                    <a href="#">show more</a>
+                </span>
+                <span class="office-location_block office-location">
+                    <span class="office-location__street">Complex in front of mountains 5<img src="assets/icons/map-brown.svg" alt="map icon"></span>
+                    <img src="assets/icons/invalid-gray.svg" alt="icon">
+                    <span class="office-location__city">Upper Nazareth</span>
+                </span>
+            </div>
+            <div class="offices-list__item">
+                <span class="office-number">04-6122000</span>
+                <span class="office-email">ISTHaderaBranch@issta</span>
+                <span class="office-schedule">
+                    <span>M - Th:</span>
+                    <span>17:00 - 09:00</span>
+                    <a href="#">show more</a>
+                </span>
+                <span class="office-location_block office-location">
+                    <span class="office-location__street">Rabbi Levin Street 9<img src="assets/icons/map-brown.svg" alt="map icon"></span>
+                    <img src="assets/icons/invalid-gray.svg" alt="icon">
+                    <span class="office-location__city">Afula</span>
+                </span>
+            </div>
+        </div>
+        <div class="offices-list__table">
+            <h4>Branches in the central area</h4>
+            <div class="offices-list__item">
+                <span class="office-number">04-6122000</span>
+                <span class="office-email">ISTHaderaBranch@issta</span>
+                <span class="office-schedule">
+                    <span>M - Th:</span>
+                    <span>17:00 - 09:00</span>
+                    <a href="#">show more</a>
+                </span>
+                <span class="office-location_block office-location">
+                    <span class="office-location__street">Yoseftal St. 92<img src="assets/icons/map-brown.svg" alt="map icon"></span>
+                    <img src="assets/icons/invalid-gray.svg" alt="icon">
+                    <span class="office-location__city">Bat Yam</span>
+                </span>
+            </div>
+            <div class="offices-list__item">
+                <span class="office-number">04-6122000</span>
+                <span class="office-email">ISTHaderaBranch@issta</span>
+                <span class="office-schedule">
+                    <span>M - Th:</span>
+                    <span>17:00 - 09:00</span>
+                    <a href="#">show more</a>
+                </span>
+                <span class="office-location_block office-location">
+                    <span class="office-location__street">The Lamp of Light 8<img src="assets/icons/map-brown.svg" alt="map icon"></span>
+                    <img src="assets/icons/invalid-gray.svg" alt="icon">
+                    <span class="office-location__city">Tel Aviv Issta House</span>
+                </span>
+            </div>
+            <div class="offices-list__item">
+                <span class="office-number">04-6122000</span>
+                <span class="office-email">ISTHaderaBranch@issta</span>
+                <span class="office-schedule">
+                    <span>M - Th:</span>
+                    <span>17:00 - 09:00</span>
+                    <a href="#">show more</a>
+                </span>
+                <span class="office-location_block office-location">
+                    <span class="office-location__street">Ben Gurion Terminal 3<img src="assets/icons/map-brown.svg" alt="map icon"></span>
+                    <img src="assets/icons/invalid-gray.svg" alt="icon">
+                    <span class="office-location__city">Ben Gurion Airport</span>
+                </span>
+            </div>
+            <div class="offices-list__item">
+                <span class="office-number">04-6122000</span>
+                <span class="office-email">ISTHaderaBranch@issta</span>
+                <span class="office-schedule">
+                    <span>M - Th:</span>
+                    <span>17:00 - 09:00</span>
+                    <a href="#">show more</a>
+                </span>
+                <span class="office-location_block office-location">
+                    <span class="office-location__street">Jabotinsky 51<img src="assets/icons/map-brown.svg" alt="map icon"></span>
+                    <img src="assets/icons/invalid-gray.svg" alt="icon">
+                    <span class="office-location__city">Rishon Lezion</span>
+                </span>
+            </div>
+            <div class="offices-list__item">
+                <span class="office-number">04-6122000</span>
+                <span class="office-email">ISTHaderaBranch@issta</span>
+                <span class="office-schedule">
+                    <span>M - Th:</span>
+                    <span>17:00 - 09:00</span>
+                    <a href="#">show more</a>
+                </span>
+                <span class="office-location_block office-location">
+                    <span class="office-location__street">Yaakov 5<img src="assets/icons/map-brown.svg" alt="map icon"></span>
+                    <img src="assets/icons/invalid-gray.svg" alt="icon">
+                    <span class="office-location__city">Rehovot</span>
+                </span>
+            </div>
+            <div class="offices-list__item">
+                <span class="office-number">04-6122000</span>
+                <span class="office-email">ISTHaderaBranch@issta</span>
+                <span class="office-schedule">
+                    <span>M - Th:</span>
+                    <span>17:00 - 09:00</span>
+                    <a href="#">show more</a>
+                </span>
+                <span class="office-location_block office-location">
+                    <span class="office-location__street">Herzl 91<img src="assets/icons/map-brown.svg" alt="map icon"></span>
+                    <img src="assets/icons/invalid-gray.svg" alt="icon">
+                    <span class="office-location__city">Ramla</span>
+                </span>
+            </div>
+            <div class="offices-list__item">
+                <span class="office-number">04-6122000</span>
+                <span class="office-email">ISTHaderaBranch@issta</span>
+                <span class="office-schedule">
+                    <span>M - Th:</span>
+                    <span>17:00 - 09:00</span>
+                    <a href="#">show more</a>
+                </span>
+                <span class="office-location_block office-location">
+                    <span class="office-location__street">Dizengoff 50<img src="assets/icons/map-brown.svg" alt="map icon"></span>
+                    <img src="assets/icons/invalid-gray.svg" alt="icon">
+                    <span class="office-location__city">Tel Aviv - Pro Dezingoff Center</span>
+                </span>
+            </div>
+            <div class="offices-list__item">
+                <span class="office-number">04-6122000</span>
+                <span class="office-email">ISTHaderaBranch@issta</span>
+                <span class="office-schedule">
+                    <span>M - Th:</span>
+                    <span>17:00 - 09:00</span>
+                    <a href="#">show more</a>
+                </span>
+                <span class="office-location_block office-location">
+                    <span class="office-location__street">The Lamp of Light 8<img src="assets/icons/map-brown.svg" alt="map icon"></span>
+                    <img src="assets/icons/invalid-gray.svg" alt="icon">
+                    <span class="office-location__city">Tel Aviv Hot</span>
+                </span>
+            </div>
+        </div>
+        <div class="offices-list__table">
+            <h4>Branches in the southern region</h4>
+            <div class="offices-list__item">
+                <span class="office-number">04-6122000</span>
+                <span class="office-email">ISTHaderaBranch@issta</span>
+                <span class="office-schedule">
+                    <span>M - Th:</span>
+                    <span>17:00 - 09:00</span>
+                    <a href="#">show more</a>
+                </span>
+                <span class="office-location_block office-location">
+                    <span class="office-location__street">Sderot HaTamarim 2<img src="assets/icons/map-brown.svg" alt="map icon"></span>
+                    <img src="assets/icons/invalid-gray.svg" alt="icon">
+                    <span class="office-location__city">Eilat</span>
+                </span>
+            </div>
+            <div class="offices-list__item">
+                <span class="office-number">04-6122000</span>
+                <span class="office-email">ISTHaderaBranch@issta</span>
+                <span class="office-schedule">
+                    <span>M - Th:</span>
+                    <span>17:00 - 09:00</span>
+                    <a href="#">show more</a>
+                </span>
+                <span class="office-location_block office-location">
+                    <span class="office-location__street">Jerusalem Boulevard 12<img src="assets/icons/map-brown.svg" alt="map icon"></span>
+                    <img src="assets/icons/invalid-gray.svg" alt="icon">
+                    <span class="office-location__city">Ashdod</span>
+                </span>
+            </div>
+            <div class="offices-list__item">
+                <span class="office-number">04-6122000</span>
+                <span class="office-email">ISTHaderaBranch@issta</span>
+                <span class="office-schedule">
+                    <span>M - Th:</span>
+                    <span>17:00 - 09:00</span>
+                    <a href="#">show more</a>
+                </span>
+                <span class="office-location_block office-location">
+                    <span class="office-location__street">Henrietta Szold 8<img src="assets/icons/map-brown.svg" alt="map icon"></span>
+                    <img src="assets/icons/invalid-gray.svg" alt="icon">
+                    <span class="office-location__city">Beersheba</span>
+                </span>
+            </div>
+            <div class="offices-list__item">
+                <span class="office-number">04-6122000</span>
+                <span class="office-email">ISTHaderaBranch@issta</span>
+                <span class="office-schedule">
+                    <span>M - Th:</span>
+                    <span>17:00 - 09:00</span>
+                    <a href="#">show more</a>
+                </span>
+                <span class="office-location_block office-location">
+                    <span class="office-location__street">Kings of Israel 178<img src="assets/icons/map-brown.svg" alt="map icon"></span>
+                    <img src="assets/icons/invalid-gray.svg" alt="icon">
+                    <span class="office-location__city">Kiryat Gat</span>
+                </span>
+            </div>
+            <div class="offices-list__item">
+                <span class="office-number">04-6122000</span>
+                <span class="office-email">ISTHaderaBranch@issta</span>
+                <span class="office-schedule">
+                    <span>M - Th:</span>
+                    <span>17:00 - 09:00</span>
+                    <a href="#">show more</a>
+                </span>
+                <span class="office-location_block office-location">
+                    <span class="office-location__street">Sapir College, Sha'ar Hanegev<img src="assets/icons/map-brown.svg" alt="map icon"></span>
+                    <img src="assets/icons/invalid-gray.svg" alt="icon">
+                    <span class="office-location__city">Sapir College</span>
+                </span>
+            </div>
+        </div>
+        <div class="offices-list__table">
+            <h4>Branches in the Jerusalem area</h4>
+            <div class="offices-list__item">
+                <span class="office-number">04-6122000</span>
+                <span class="office-email">ISTHaderaBranch@issta</span>
+                <span class="office-schedule">
+                    <span>M - Th:</span>
+                    <span>17:00 - 09:00</span>
+                    <a href="#">show more</a>
+                </span>
+                <span class="office-location_block office-location">
+                    <span class="office-location__street">Yigal Alon 6<img src="assets/icons/map-brown.svg" alt="map icon"></span>
+                    <img src="assets/icons/invalid-gray.svg" alt="icon">
+                    <span class="office-location__city">Beit Shemesh</span>
+                </span>
+            </div>
+            <div class="offices-list__item">
+                <span class="office-number">04-6122000</span>
+                <span class="office-email">ISTHaderaBranch@issta</span>
+                <span class="office-schedule">
+                    <span>M - Th:</span>
+                    <span>17:00 - 09:00</span>
+                    <a href="#">show more</a>
+                </span>
+                <span class="office-location_block office-location">
+                    <span class="office-location__street">The Prophets 31<img src="assets/icons/map-brown.svg" alt="map icon"></span>
+                    <img src="assets/icons/invalid-gray.svg" alt="icon">
+                    <span class="office-location__city">Jerusalem</span>
+                </span>
+            </div>
+            <div class="offices-list__item">
+                <span class="office-number">04-6122000</span>
+                <span class="office-email">ISTHaderaBranch@issta</span>
+                <span class="office-schedule">
+                    <span>M - Th:</span>
+                    <span>17:00 - 09:00</span>
+                    <a href="#">show more</a>
+                </span>
+                <span class="office-location_block office-location">
+                    <span class="office-location__street">Herbert Samuel 5<img src="assets/icons/map-brown.svg" alt="map icon"></span>
+                    <img src="assets/icons/invalid-gray.svg" alt="icon">
+                    <span class="office-location__city">Nahalat Shiva</span>
+                </span>
+            </div>
+        </div>
+        <div class="offices-list__table">
+            <h4>Branches in the Sharon area</h4>
+            <div class="offices-list__item">
+                <span class="office-number">04-6122000</span>
+                <span class="office-email">ISTHaderaBranch@issta</span>
+                <span class="office-schedule">
+                    <span>M - Th:</span>
+                    <span>17:00 - 09:00</span>
+                    <a href="#">show more</a>
+                </span>
+                <span class="office-location_block office-location">
+                    <span class="office-location__street">Rothschild 57<img src="assets/icons/map-brown.svg" alt="map icon"></span>
+                    <img src="assets/icons/invalid-gray.svg" alt="icon">
+                    <span class="office-location__city">Kfar Saba</span>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- section services -->
+<section class="section-block services contact-from__offices">
+    <div class="section-inner">
+        <div class="service-item">
+            <div class="service-item__bg"></div>
+            <img src="assets/icons/service-chat.svg" class="service-item__icon" alt="icon">
+            <div class="service-item__content">
+                <h3 class="service-item__title">Online chat</h3>
+                <p class="service-item__text">with a company representative is available during business hours Sun-Thu 9; 00-18; 00</p>
+            </div>
+        </div>
+        <div class="service-item">
+            <div class="service-item__bg"></div>
+            <img src="assets/icons/service-order.svg" class="service-item__icon" alt="icon">
+            <div class="service-item__content">
+                <h3 class="service-item__title">Order processing</h3>
+                <p class="service-item__text">to process an existing order,
+                    call: 2134567890</p>
+            </div>
+        </div>
+        <div class="service-item">
+            <div class="service-item__bg"></div>
+            <img src="assets/icons/service-operator.svg" class="service-item__icon" alt="icon">
+            <div class="service-item__content">
+                <h3 class="service-item__title">Consultation</h3>
+                <p class="service-item__text">To order a consultation with a company agent, call 34567890 during business hours Sun-Thu 9; 00-17; 00</p>
+            </div>
+        </div>
+        <div class="service-item">
+            <div class="service-item__bg"></div>
+            <img src="assets/icons/service-networking.svg" class="service-item__icon" alt="icon">
+            <div class="service-item__content">
+                <h3 class="service-item__title">Personal area</h3>
+                <p class="service-item__text">Everything is important in one place. Useful information and various self-service operations. To go to your personal account,
+                    <a href="#">click here</a>
+                </p>
+            </div>
+        </div>
+        <div class="service-item">
+            <div class="service-item__bg"></div>
+            <img src="assets/icons/service-form.svg" class="service-item__icon" alt="icon">
+            <div class="service-item__content">
+                <h3 class="service-item__title">Application form</h3>
+                <p class="service-item__text"><a href="#">Click here</a> to fill out the online form</p>
+            </div>
+        </div>
+        <div class="service-item">
+            <div class="service-item__bg"></div>
+            <img src="assets/icons/service-facebook.svg" class="service-item__icon" alt="icon">
+            <div class="service-item__content">
+                <h3 class="service-item__title">Facebook</h3>
+                <p class="service-item__text">The response from a company representative in a personal message on our Facebook page
+                    <a href="#">Start</a> a conversation with a company representative.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- / section services -->
+
 <!-- section-social -->
-<section class="section-block section-social">
+<section class="section-block section-social contact-from__passengers">
     <div class="section-inner">
         <h2 class="heading-2 text-center">We are in social networks</h2>
         <hr class="green-line">
@@ -297,7 +732,7 @@
                         <img src="assets/icons/tripadvisor.svg" alt="trip advisor">
                     </div>
                 </div>
-                <div class="contact-top__subscribe contact-subscribe" >
+                <div class="contact-top__subscribe contact-subscribe">
                     <a href="#" class="contact-subscribe__button">המשרה</a>
                     <div class="contact-subscribe__text_block">
                         <p class="contact-subscribe__title">ליימ בותכ</p>
@@ -315,7 +750,8 @@
 <!-- / section footer -->
 
 <!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 <!-- Mobile menu -->
 <script src="assets/mmenu/dist/mmenu-light.js"></script>
 <script src="assets/js/main.js"></script>

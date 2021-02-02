@@ -34,6 +34,21 @@ $bp-xxlarge-1920: 120em; // 1920px
   bottom: 0;
 }
 
+@mixin transit($what: all, $s, $how: ease) {
+  -webkit-transition: $what, $s $how;
+  -moz-transition: $what, $s $how;
+  -ms-transition: $what, $s $how;
+  -o-transition: $what, $s $how;
+  transition: $what, $s $how;
+}
+
+@mixin br($rad) {
+  -webkit-border-radius: $rad;
+  -moz-border-radius: $rad;
+  -ms-border-radius: $rad;
+  border-radius: $rad;
+}
+
 @mixin start-button($fs, $color, $bg-color) {
   font-weight: 500;
   font-size: $fs;
@@ -65,6 +80,7 @@ $bp-xxlarge-1920: 120em; // 1920px
     margin-left: 20px;
   }
 }
+
 // === Mixins end === //
 
 // ==== Elements ==== //
@@ -216,6 +232,7 @@ body {
   label {
     padding-bottom: 10px;
   }
+
   .form-textarea {
     resize: none;
     height: 202px;
@@ -229,6 +246,7 @@ body {
     color: $color-main;
   }
 }
+
 // === Common end === //
 
 // Main ticket search form
@@ -323,9 +341,11 @@ body {
 
     div.activator-content {
       text-align: right;
+
       label {
         font-size: 16px;
       }
+
       div {
         font-weight: 500;
         font-size: 20px;
@@ -336,9 +356,11 @@ body {
 
   form .filters-block {
     flex-wrap: wrap;
+
     &__item:first-child {
       margin-bottom: 9px;
     }
+
     &__item {
       text-align: right;
       flex-basis: 100%;
@@ -346,6 +368,7 @@ body {
       justify-content: flex-end;
       align-items: center;
     }
+
     &__item input {
       margin-left: 10px;
     }
@@ -358,24 +381,31 @@ body {
   form .from-block {
     order: 1;
   }
+
   form .to-block {
     order: 2;
   }
+
   form .date-block {
     order: 3;
   }
+
   form .route-block {
     order: 4;
   }
+
   form .department-block {
     order: 5;
   }
+
   form .passengers-block {
     order: 6;
   }
+
   form .filters-block {
     order: 7;
   }
+
   form .search-block {
     order: 10;
     text-align: center;
@@ -515,9 +545,11 @@ body {
     }
     form div.activator-content {
       text-align: right;
+
       label {
         font-size: 18px;
       }
+
       div {
         font-size: 24px;
         margin-top: 13px;
@@ -555,6 +587,7 @@ body {
   &.padding-9 .filter__buttons-btn {
     padding: 9px 50px;
   }
+
   &.padding-14 .filter__buttons-btn {
     padding: 14px 50px;
   }
@@ -591,7 +624,9 @@ body {
       width: auto;
       border-radius: 50px;
       flex-basis: 50%;
+      @include transit(all, 0.250s, ease);
     }
+
   }
 
   @media (min-width: $bp-small-768) {
@@ -658,7 +693,7 @@ body {
   left: 0;
   right: 0;
 
-  .my-menu-open  {
+  .my-menu-open {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -671,6 +706,7 @@ body {
     &__text {
       color: #fff;
     }
+
     &__logo {
       margin-top: -5px;
       width: 90px;
@@ -680,12 +716,16 @@ body {
       display: none;
     }
   }
+
   .mobile-menu {
     &__profile {
       display: flex;
       justify-content: flex-end;
     }
-    &__profile-button { flex-basis: 15%; }
+
+    &__profile-button {
+      flex-basis: 15%;
+    }
 
     @media (min-width: $bp-medium-992) {
       display: none;
@@ -700,22 +740,27 @@ body {
 // Breadcrumbs
 .breadcrumbs {
   padding-top: 32px;
+
   &__list {
     display: flex;
     flex-direction: row-reverse;
   }
+
   &__item {
     margin-left: 10px;
     font-size: 14px;
     font-weight: 400;
     color: #908C8E;
+
     a {
       color: #908C8E;
     }
+
     a.active {
       color: $color-brown;
     }
   }
+
   &__item a:not(.active):before {
     content: '';
     display: inline-block;
@@ -788,7 +833,7 @@ body {
           line-height: 21px;
           text-align: right;
           text-transform: uppercase;
-          margin-left: 30px;
+          margin-left: 40px;
 
           color: $color-main;
         }
@@ -796,6 +841,7 @@ body {
         li {
           position: relative;
         }
+
         li.active .active-line {
           position: absolute;
           width: 60%;
@@ -809,6 +855,7 @@ body {
           content: "";
           position: absolute;
         }
+
         li.active a:before {
           width: 100%;
           height: 37px;
@@ -818,6 +865,7 @@ body {
           background: #FFFFFF;
           opacity: 0.4;
         }
+
         li.active a:after {
           z-index: 10;
           content: "";
@@ -845,6 +893,7 @@ body {
       text-align: right;
       margin-bottom: 22px;
     }
+
     &__icons {
       padding-top: 35px;
       padding-bottom: 45px;
@@ -874,8 +923,9 @@ body {
       }
     }
   }
+
   @media (min-width: $bp-small-576) {
-    .section-header-search  {
+    .section-header-search {
       padding-top: 250px;
     }
     .section-header-search__icons-item {
@@ -898,7 +948,7 @@ body {
       height: 100vh;
     }
 
-    .section-header-search  {
+    .section-header-search {
       padding-top: 0px;
     }
 
@@ -927,6 +977,7 @@ body {
     }
   }
 }
+
 // ### header end
 
 // ## slider
@@ -1097,6 +1148,7 @@ body {
     }
   }
 }
+
 // ### slider end
 
 // ## cheap
@@ -1224,6 +1276,7 @@ body {
     }
   }
 }
+
 // ### cheap end
 
 
@@ -1244,6 +1297,7 @@ body {
       position: relative;
       padding-top: 14px;
       padding-bottom: 20px;
+      margin-bottom: 20px;
 
       &-bg {
         position: absolute;
@@ -1291,16 +1345,20 @@ body {
   @media (min-width: $bp-medium-992) {
     &__content {
       flex-wrap: nowrap;
+
       &-item + &-item {
         margin-left: 30px;
       }
+
       &-item {
+        margin-bottom: 0;
         width: 330px;
         flex-basis: unset;
       }
     }
   }
 }
+
 // ### social end
 
 // ## popular
@@ -1324,6 +1382,7 @@ body {
 
     &-group {
       margin-bottom: 40px;
+
       &__title {
         color: $color-main;
         font-size: 24px;
@@ -1466,6 +1525,7 @@ body {
         font-size: 18px;
         margin-bottom: 12px;
       }
+
       &__price-cost,
       &__city-to {
         font-size: 26px;
@@ -1552,6 +1612,7 @@ body {
     }
   }
 }
+
 // ### popular end
 
 // ## news
@@ -1613,17 +1674,20 @@ body {
         text-align: right;
         padding: 5px 25px 5px 0;
       }
+
       &__title {
         flex-basis: 100%;
         font-size: 21px;
         font-weight: 400;
       }
+
       &__date {
         flex-basis: 100%;
         align-self: flex-end;
         font-size: 18px;
         color: $color-primary;
       }
+
       &__image {
         min-width: 90px;
         min-height: 90px;
@@ -1632,6 +1696,7 @@ body {
       }
     }
   }
+
   .news-item:nth-last-of-type(n+2) {
     border-bottom: 1px solid #C4C4C4;
   }
@@ -1639,12 +1704,14 @@ body {
   @media (min-width: $bp-small-576) {
     &__buttons {
       justify-content: space-between;
+
       a.news-buttons__coronavirus {
         margin-bottom: 0;
       }
     }
     &__content {
       justify-content: space-between;
+
       .news-item {
         flex-basis: 45%;
         padding: 40px 0;
@@ -1670,6 +1737,7 @@ body {
     }
   }
 }
+
 // ### news end
 
 // ## footer
@@ -1702,13 +1770,16 @@ body {
     .footer-nav__menu {
       display: none;
     }
+
     .footer-menu__title_space {
       display: none;
       height: 24px;
     }
+
     .footer-menu__title_notclick {
       display: none;
     }
+
     .footer-menu__title,
     .footer-menu__title_notclick {
       position: relative;
@@ -1716,6 +1787,7 @@ body {
       color: $color-surface;
       margin-bottom: 6px;
     }
+
     .footer-menu__title:after,
     .footer-menu__title:before {
       content: '';
@@ -1727,20 +1799,25 @@ body {
       cursor: pointer;
       transition: all 0.3s ease 0s;
     }
+
     .footer-menu__title:before {
       transform: rotate(45deg);
       left: 0;
     }
+
     .footer-menu__title:after {
       transform: rotate(-45deg);
       left: 7px;
     }
+
     .footer-menu__title.active:before {
       transform: rotate(-45deg);
     }
+
     .footer-menu__title.active:after {
       transform: rotate(45deg);
     }
+
     .footer-menu__item {
       margin-bottom: 6px;
 
@@ -1749,6 +1826,7 @@ body {
         font-size: 14px;
         font-weight: 400;
       }
+
       span {
         margin-right: 10px;
       }
@@ -1798,16 +1876,19 @@ body {
           color: #78EBAA;
           margin-bottom: 5px;
         }
+
         &__number {
           font-weight: 500;
           font-size: 24px;
           color: $color-white;
         }
+
         img {
           margin-top: 22px;
           margin-left: 10px;
         }
       }
+
       .contact-info {
         flex-basis: 50%;
         text-align: right;
@@ -1816,17 +1897,22 @@ body {
         &__logo {
           margin-bottom: 30px;
         }
+
         &__logo img {
           width: 132px;
           height: 53px;
         }
+
         &__text {
           font-size: 14px;
           color: #E9E9E9;
           margin-bottom: 10px;
         }
-        &__tripadvisor {}
+
+        &__tripadvisor {
+        }
       }
+
       .contact-subscribe {
         flex-basis: 100%;
         display: flex;
@@ -1844,11 +1930,13 @@ body {
           padding: 9px 35px;
           border: 1px solid #4F4F4F;
         }
+
         &__title {
           font-size: 10px;
           color: #fff;
           font-weight: 300;
         }
+
         &__email {
           font-size: 14px;
           font-weight: 400;
@@ -1856,6 +1944,7 @@ body {
         }
       }
     }
+
     &__copyright {
       max-width: 500px;
       margin-left: auto;
@@ -1901,6 +1990,7 @@ body {
       .footer-menu__title_space {
         display: block;
       }
+
       .footer-menu__title {
         display: none;
       }
@@ -1919,6 +2009,7 @@ body {
   }
 
 }
+
 // ### footer end
 // =================== Home page END ======================
 
@@ -1931,6 +2022,7 @@ body {
   background: url(../img/bg-header-with-plane-icon-and-clouds.svg) no-repeat 50% top;
   background-size: cover;
 }
+
 .ordering {
   .section-inner {
     display: flex;
@@ -1960,6 +2052,7 @@ body {
     flex-basis: 100%;
     text-align: right;
     padding-bottom: 12px;
+
     p {
       display: inline-block;
       color: $color-brown;
@@ -1979,6 +2072,7 @@ body {
     p:not(:last-child) {
       margin-bottom: 5px;
     }
+
     .round-trip__date {
       color: #908C8E;
     }
@@ -1994,10 +2088,12 @@ body {
       left: -32px;
       top: 21px;
     }
+
     &:after {
       right: -32px;
       top: 21px;
     }
+
     &:before, &:after {
       content: '';
       position: absolute;
@@ -2016,9 +2112,11 @@ body {
 
 .order-details-card .return {
   padding-top: 14px;
+
   &__to {
     text-align: right;
   }
+
   &__connect {
     transform: rotate(180deg);
   }
@@ -2026,6 +2124,7 @@ body {
 
 .order-details-card .payment-details {
   padding-top: 20px;
+
   .btn-flight_details {
     @include start-button(14px, $color-primary, transparent);
     position: relative;
@@ -2052,13 +2151,16 @@ body {
       border-bottom: 2px solid $color-primary;
     }
   }
+
   &__footer {
     display: flex;
     justify-content: space-between;
+
     .payment-details__cost {
       font-weight: 500;
       font-size: 24px;
     }
+
     .payment-details__text {
       font-weight: 500;
       font-size: 16px;
@@ -2069,6 +2171,7 @@ body {
 .customer-details {
   flex-basis: 60%;
   text-align: right;
+
   &__steps {
     display: flex;
     justify-content: flex-end;
@@ -2086,6 +2189,7 @@ body {
         content: '';
         position: absolute;
       }
+
       &:after {
         width: 100%;
         border-bottom: 2px solid #CE833F;
@@ -2093,6 +2197,7 @@ body {
         left: 0;
         bottom: -28px;
       }
+
       &:before {
         right: 0;
         bottom: -44px;
@@ -2107,6 +2212,7 @@ body {
       &.active:after {
         opacity: 1;
       }
+
       &.active:before {
         background: #CE833F;
       }
@@ -2115,29 +2221,37 @@ body {
         content: none;
       }
     }
+
     .step .step-text {
       font-size: 16px;
       font-weight: 400;
       margin-right: 8px;
     }
+
     .step .step-number {
-      font-size:42px;
+      font-size: 42px;
       font-weight: 500;
     }
+
     .step.active .step-text {
       color: $color-brown;
     }
+
     .step.active .step-number {
       color: $color-main;
     }
 
   }
-  &__title {}
+
+  &__title {
+  }
+
   &__form {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding-top: 70px;
+
     .form__footer {
       flex-basis: 100%;
       padding-top: 30px;
@@ -2156,32 +2270,41 @@ body {
         margin-left: 5px;
       }
     }
+
     .form-text__group {
       flex-basis: 44%;
     }
+
     .customer-title {
       flex-basis: 10%;
     }
+
     .customer-email {
       flex-basis: 55%;
     }
+
     .form-text__group,
     .customer-title,
     .customer-email {
       margin-bottom: 20px;
     }
+
     .form__footer button {
       @include start-button(16px, #fff, $color-primary);
       padding: 10px 70px;
     }
+
     .form__footer label {
       font-size: 10px;
       color: $color-surface;
       line-height: 14px;
     }
-    .form__footer input#privacy-policy {}
+
+    .form__footer input#privacy-policy {
+    }
   }
 }
+
 // ### Ordering end
 
 // ## services
@@ -2189,11 +2312,13 @@ body {
   background: url("../img/bg-section-services.svg") no-repeat center center;
   padding-top: 340px;
   padding-bottom: 100px;
+
   .section-inner {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
+
   .service-item {
     max-width: 467px;
     width: 467px;
@@ -2234,15 +2359,18 @@ body {
 
       text-align: right;
     }
+
     &__title {
       font-weight: 500;
       font-size: 24px;
       margin-bottom: 10px;
     }
+
     &__text {
       font-size: 12px;
       line-height: 16px;
     }
+
     &__text a {
       font-weight: 700;
       color: #fff;
@@ -2250,6 +2378,7 @@ body {
     }
   }
 }
+
 // ### services end
 
 // ===================  List of flights page END ======================
@@ -2300,12 +2429,15 @@ body {
     flex-basis: 100%;
     margin-bottom: 48px;
   }
+
   &__message {
     flex-basis: 73%;
     text-align: right;
+
     .contact-form__title {
       max-width: 660px;
     }
+
     form {
       display: flex;
       flex-wrap: wrap;
@@ -2315,6 +2447,7 @@ body {
         flex-basis: 100%;
         margin-bottom: 40px;
       }
+
       .form-text__group {
         flex-grow: 1;
         margin-left: 40px;
@@ -2331,6 +2464,7 @@ body {
       padding: 18px 37px;
     }
   }
+
   &__numbers {
     flex-basis: 26%;
     text-align: right;
@@ -2338,20 +2472,24 @@ body {
     .contact-form__title {
       max-width: 180px;
     }
+
     .contact-form__number {
       padding-bottom: 30px;
       text-align: right;
     }
+
     .contact-form__number p {
       font-weight: 500;
       font-size: 36px;
       color: $color-main;
       margin-bottom: 4px;
     }
+
     .contact-form__number span {
       font-size: 18px;
       color: $color-surface;
     }
+
     .contact-form__callme {
       @include start-button(16px, #fff, $color-primary);
       padding: 18px 50px;
@@ -2365,6 +2503,259 @@ body {
   padding-top: 100px;
   padding-bottom: 200px;
 }
+
+// ## contact from offices
+.contacts .contact-from__offices {
+  width: 100%;
+}
+.contacts .contact-offices {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 80px;
+
+  &__address {
+    flex-basis: 100%;
+    text-align: right;
+
+    h3 {
+      font-size: 24px;
+      font-weight: 400;
+      color: $color-surface;
+      margin-bottom: 30px;
+    }
+    h4 {
+      font-weight: 500;
+      font-size: 21px;
+      margin-bottom: 12px;
+    }
+    ul.address-list {
+      max-width: 350px;
+      margin-left: auto;
+      li {
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 6px;
+        line-height: 30px;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: flex-end;
+      }
+      li span {
+        font-weight: 500;
+      }
+      li div {
+        display: flex;
+        min-width: 34px;
+        padding-left: 18px;
+      }
+    }
+  }
+  &__map {
+    flex-basis: 100%;
+
+    iframe {
+      @include br(20px);
+    }
+  }
+}
+
+.contacts .offices-list {
+  background: url("../img/bg-offices-list.svg") no-repeat 50% 100%;
+  padding-bottom: 210px;
+
+  .contact-form__inner {
+    max-width: 1180px;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    h3 {
+      height: 26px;
+    }
+    .search__element {
+      margin: 0;
+    }
+  }
+}
+
+.contacts .offices-list__table {
+  h4 {
+    font-weight: 500;
+    font-size: 18px;
+    text-align: right;
+    padding-top: 12px;
+    padding-bottom: 14px;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 97%;
+      border-bottom: 1px dashed #E0E0E0;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 15px;
+      right: 0;
+      transform: rotate(180deg);
+      bottom: -6px;
+      background: url("../icons/plane-black.svg") no-repeat center center;
+    }
+  }
+
+  .offices-list__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 18px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #E0E0E0;
+
+    .office-number {
+      flex-basis: 15%;
+    }
+    .office-email {
+      flex-basis: 25%;
+    }
+
+    .office-number, .office-email {
+      font-weight: 500;
+      font-size: 16px;
+    }
+    .office-schedule {
+      flex-basis: 10%;
+      font-weight: 400;
+      font-size: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      text-align: right;
+
+      & > * {
+        flex-basis: 100%;
+      }
+
+      span:first-child {
+        margin-bottom: 2px;
+      }
+
+      a {
+        font-size: 13px;
+        color: $color-primary;
+        text-decoration: underline;
+        margin-top: 3px;
+      }
+    }
+
+    .office-location {
+      flex-basis: 45%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+      font-size: 16px;
+
+      &__street {
+        display: flex;
+        align-items: center;
+        flex-basis: 60%;
+        justify-content: flex-end;
+        text-align: right;
+        color: $color-brown;
+        margin-right: 30px;
+
+        img {
+          margin-left: 15px;
+        }
+      }
+      img {
+        margin-top: -2px;
+      }
+      &__city {
+        flex-basis: 35%;
+        text-align: right;
+        margin-left: 26px;
+      }
+    }
+  }
+}
+
+.contacts .services {
+  background: url("../img/bg-offices-services-down.svg") no-repeat center center;
+  background-size: cover;
+  padding-top: 0;
+  padding-bottom: 140px;
+
+  .section-inner {
+    max-width: 1180px;
+    padding: 0;
+
+    .service-item {
+      width: auto;
+      flex-basis: 32.4%;
+    }
+  }
+}
+// ### contact from offices end
+
+@media (min-width: $bp-small-768) {
+  .contacts .contact-offices {
+    &__address {
+      flex-basis: 50%;
+      padding-right: 50px;
+    }
+    &__map {
+      flex-basis: 50%;
+    }
+  }
+}
+
+@media (max-width: $bp-medium-1200) {
+  .contacts .contact-form .contact-form__title {
+    margin-bottom: 50px;
+  }
+  .contacts .contact-form {
+    &__message {
+      form .form-textarea__group {
+        margin-bottom: 20px;
+
+        .form-textarea {
+          height: 171px;
+        }
+      }
+    }
+    &__message .contact-form__title,
+    &__numbers .contact-form__title {
+      font-size: 20px;
+    }
+
+    .contact-form__number p {
+      font-size: 24px;
+    }
+
+    .contact-form__number span {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: $bp-medium-1200) and (min-width: $bp-small-576) {
+  .contacts .contact-form .section-inner,
+  .contacts .section-social .section-inner {
+    max-width: 80%;
+  }
+}
+
 // =================== Contacts / passengers END ====================
 
 
