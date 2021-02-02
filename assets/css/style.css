@@ -1054,6 +1054,8 @@ body {
   display: flex;
 }
 .section-header-nav__menu ul li a {
+  position: relative;
+  z-index: 10;
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
@@ -1061,6 +1063,39 @@ body {
   text-transform: uppercase;
   margin-left: 30px;
   color: #2D2B2C;
+}
+.section-header-nav__menu ul li {
+  position: relative;
+}
+.section-header-nav__menu ul li.active .active-line {
+  position: absolute;
+  width: 60%;
+  right: 0;
+  bottom: -12px;
+  border-bottom: 4px solid #0EB155;
+}
+.section-header-nav__menu ul li.active a:before, .section-header-nav__menu ul li.active a:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+}
+.section-header-nav__menu ul li.active a:before {
+  width: 100%;
+  height: 37px;
+  right: -40%;
+  top: -10px;
+  bottom: 10px;
+  background: #FFFFFF;
+  opacity: 0.4;
+}
+.section-header-nav__menu ul li.active a:after {
+  z-index: 10;
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: -33%;
+  background: url("../icons/plane-black.svg") no-repeat center center;
 }
 .section-header .section-header-search {
   flex-grow: 1;

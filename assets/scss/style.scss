@@ -781,6 +781,8 @@ body {
         display: flex;
 
         li a {
+          position: relative;
+          z-index: 10;
           font-weight: 500;
           font-size: 14px;
           line-height: 21px;
@@ -789,6 +791,41 @@ body {
           margin-left: 30px;
 
           color: $color-main;
+        }
+
+        li {
+          position: relative;
+        }
+        li.active .active-line {
+          position: absolute;
+          width: 60%;
+          right: 0;
+          bottom: -12px;
+          border-bottom: 4px solid $color-primary;
+        }
+
+        li.active a:before, li.active a:after {
+          z-index: -1;
+          content: "";
+          position: absolute;
+        }
+        li.active a:before {
+          width: 100%;
+          height: 37px;
+          right: -40%;
+          top: -10px;
+          bottom: 10px;
+          background: #FFFFFF;
+          opacity: 0.4;
+        }
+        li.active a:after {
+          z-index: 10;
+          content: "";
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          right: -33%;
+          background: url("../icons/plane-black.svg") no-repeat center center;
         }
       }
     }
