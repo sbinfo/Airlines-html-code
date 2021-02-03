@@ -1691,6 +1691,8 @@ body {
       &__image {
         min-width: 90px;
         min-height: 90px;
+        width: 90px;
+        height: 90px;
         object-fit: cover;
         border-radius: 50%;
       }
@@ -2018,12 +2020,21 @@ body {
 
 // ===================  List of flights page ======================
 // ## ordering
-.customer-details header.header-customer-details {
+
+//#passenger___details {
+//  display: none;
+//}
+
+#customer___details {
+  display: none;
+}
+
+.ordering .header-customer-details {
   background: url(../img/bg-header-with-plane-icon-and-clouds.svg) no-repeat 50% top;
   background-size: cover;
 }
 
-.ordering {
+.section-order {
   .section-inner {
     display: flex;
     justify-content: space-between;
@@ -2168,7 +2179,7 @@ body {
   }
 }
 
-.customer-details {
+.order-filling {
   flex-basis: 60%;
   text-align: right;
 
@@ -2244,6 +2255,7 @@ body {
   }
 
   &__title {
+    margin-top: 40px;
   }
 
   &__form {
@@ -2305,6 +2317,83 @@ body {
   }
 }
 
+
+// Passenger
+.passenger-details .order-filling__select_person {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 60px;
+    border-bottom: 1px solid #E9E9E9;
+
+    .select-person__item {
+      text-align: center;
+      padding: 16px 30px 10px 30px;
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 14px;;
+
+      .active-icon {
+        display: none;
+      }
+      .deactive-icon {
+        display: block;
+      }
+    }
+
+    .select-person__item.active {
+      background: rgb(230 246 237);
+
+      .active-icon {
+        display: block;
+      }
+      .deactive-icon {
+        display: none;
+      }
+      p {
+        color: $color-primary;
+      }
+    }
+    img {
+      min-width: 40px;
+      min-height: 40px;
+      width: 40px;
+      height: 40px;
+      margin-bottom: 16px;
+    }
+}
+
+.passenger-details {
+    .form {
+      padding-top: 40px;
+      .passenger-gender {
+        flex-basis: 44%;
+      }
+    }
+}
+
+.passenger-details .form__footer {
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding-top: 0;
+
+  .form__warning_text {
+    flex-basis: 100%;
+    font-weight: 500;
+    font-size: 12px;
+    margin-bottom: 22px;
+  }
+  button[type=submit] {
+    padding: 10px 30px;
+  }
+  & > div {
+    flex-wrap: wrap;
+    p {
+      display: flex;
+      margin-bottom: 13px;
+    }
+  }
+}
 // ### Ordering end
 
 // ## services
@@ -2720,6 +2809,21 @@ body {
   }
 }
 
+@media (max-width: $bp-medium-1200) and (min-width: $bp-small-768) {
+  .contacts .offices-list .contact-form__inner,
+  .contacts .services .section-inner {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: $bp-medium-1200) and (min-width: $bp-small-576) {
+  .contacts .contact-form .section-inner,
+  .contacts .section-social .section-inner {
+    max-width: 80%;
+  }
+}
+
 @media (max-width: $bp-medium-1200) {
   .contacts .contact-form .contact-form__title {
     margin-bottom: 50px;
@@ -2748,14 +2852,6 @@ body {
     }
   }
 }
-
-@media (max-width: $bp-medium-1200) and (min-width: $bp-small-576) {
-  .contacts .contact-form .section-inner,
-  .contacts .section-social .section-inner {
-    max-width: 80%;
-  }
-}
-
 // =================== Contacts / passengers END ====================
 
 

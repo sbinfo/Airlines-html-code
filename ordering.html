@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="customer-details">
+<body class="ordering">
 
 <!-- section-header -->
 <header class="section-block section-header header-customer-details">
@@ -85,16 +85,13 @@
             </ul>
         </div>
 
-        <div class="ordering">
-            <h1 class="heading-1-with-line">Ordering</h1>
-        </div>
-
+        <h1 class="heading-1-with-line">Ordering</h1>
     </div>
 </header>
 <!-- / section-header -->
 
 <!-- section ordering -->
-<section class="section-block ordering">
+<section class="section-block section-order">
     <div class="section-inner">
         <!-- order-details -->
         <div class="order-details">
@@ -104,7 +101,6 @@
                     <button class="filter__buttons-btn active">order summary</button>
                 </div>
             </div>
-
             <div class="order-details-card">
                 <div class="round-trip">
                     <div class="round-trip__title"><p>Round trip</p></div>
@@ -150,9 +146,9 @@
             </div>
         </div>
 
-        <!-- customer-details -->
-        <div class="customer-details">
-            <div class="customer-details__steps">
+        <!-- customer details -->
+        <div id="customer___details" class="order-filling">
+            <div class="order-filling__steps">
                 <div class="step step-4">
                     <span class="step-text">Payment</span>
                     <span class="step-number">04</span>
@@ -170,8 +166,9 @@
                     <span class="step-number">01</span>
                 </div>
             </div>
-            <h3 class="customer-details__title heading-3--right_line">Customer details</h3>
-            <form action="" class="customer-details__form form">
+
+            <h3 class="order-filling__title heading-3--right_line">Customer details</h3>
+            <form action="" class="order-filling__form form">
                 <div class="form-text__group customer-last_name">
                     <label for="last-name">Last name</label>
                     <input type="text" id="last-name" class="form-text">
@@ -206,7 +203,87 @@
                     </div>
                 </div>
             </form>
+
         </div>
+        <!-- customer details -->
+
+        <!-- passenger details -->
+        <div id="passenger___details" class="order-filling passenger-details">
+            <div class="order-filling__steps">
+                <div class="step step-4">
+                    <span class="step-text">Payment</span>
+                    <span class="step-number">04</span>
+                </div>
+                <div class="step step-3">
+                    <span class="step-text">Extra services</span>
+                    <span class="step-number">03</span>
+                </div>
+                <div class="step step-2 active">
+                    <span class="step-text">Passenger details</span>
+                    <span class="step-number">02</span>
+                </div>
+                <div class="step step-1 active">
+                    <span class="step-text">Customer details</span>
+                    <span class="step-number">01</span>
+                </div>
+            </div>
+
+            <h3 class="order-filling__title heading-3--right_line">Passenger details</h3>
+            <div class="order-filling__select_person">
+                <div class="select-person__item">
+                    <img src="assets/icons/user-1.svg" alt="person" class="active-icon">
+                    <img src="assets/icons/user-2.svg" alt="person" class="deactive-icon">
+                    <p>Adult</p>
+                </div>
+                <div class="select-person__item active">
+                    <img src="assets/icons/user-1.svg" alt="person" class="active-icon">
+                    <img src="assets/icons/user-2.svg" alt="person" class="deactive-icon">
+                    <p>Ivan</p>
+                </div>
+            </div>
+
+            <form action="" class="order-filling__form form">
+                <div class="form-text__group passenger-last_name customer-last_name">
+                    <label for="passenger__last-name">Last name</label>
+                    <input type="text" id="passenger__last-name" class="form-text">
+                </div>
+                <div class="form-text__group passenger-first_name customer-first_name">
+                    <label for="passenger__first-name">First name</label>
+                    <input type="text" id="passenger__first-name" class="form-text">
+                </div>
+                <div class="form-select__group passenger-title customer-title">
+                    <label for="passenger__select-title">Title</label>
+                    <select id="passenger__select-title" dir="rtl" class="form-select">
+                        <option>Mr</option>
+                        <option>Mrs</option>
+                    </select>
+                </div>
+                <div class="form-select__group passenger-gender customer-gender">
+                    <label for="passenger__select-gender">Gender</label>
+                    <select id="passenger__select-gender" dir="rtl" class="form-select">
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+                </div>
+                <div class="form-text__group passenger-email customer-email">
+                    <label for="passenger__email">Email</label>
+                    <input type="email" id="passenger__email" class="form-text">
+                </div>
+
+                <div class="form__footer">
+                    <p class="form__warning_text">Disclaimer: The boxes must be marked with a V</p>
+                    <button type="submit">Next Pessenger</button>
+
+                    <div>
+                       <p><label for="passenger__privacy_policy">Duty to check - I know that I and all the passengers in the booking I made have the duty to be equipped with a proper English-language corona check conducted at most 48 hours before the flight and that I must present it at the airport.</label>
+                           <input id="passenger__privacy_policy" type="checkbox"></p>
+                        <p><label for="passenger__privacy_policy2">Wearing a mask - I know that it applies to me and all passengers in the reservation that I made the obligation to wear a mask throughout the flight.</label>
+                            <input id="passenger__privacy_policy2" type="checkbox"></p>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- passenger details -->
     </div>
 </section>
 <!-- / section ordering -->

@@ -20,12 +20,12 @@ $(document).ready(function(){
     // Contact page
     function switchContactPage() {
         if ($("#filter-btn_offices").hasClass('active')) {
-            $('.contact-from__passengers').hide(250);
-            $('.contact-from__offices').show(250);
+            $('.contact-from__passengers').hide();
+            $('.contact-from__offices').show();
         }
         if ($('#filter-btn_passengers').hasClass('active')) {
-            $('.contact-from__offices').hide(250);
-            $('.contact-from__passengers').show(250);
+            $('.contact-from__offices').hide();
+            $('.contact-from__passengers').show();
         }
     }
     switchContactPage();
