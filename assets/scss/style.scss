@@ -49,6 +49,12 @@ $bp-xxlarge-1920: 120em; // 1920px
   border-radius: $rad;
 }
 
+@mixin box-shadow($value) {
+  -webkit-box-shadow: $value;
+  -moz-box-shadow: $value;
+  box-shadow: $value;
+}
+
 @mixin start-button($fs, $color, $bg-color) {
   font-weight: 500;
   font-size: $fs;
@@ -2021,14 +2027,16 @@ body {
 // ===================  List of flights page ======================
 // ## ordering
 
-//#passenger___details {
-//  display: none;
-//}
-
-#customer___details {
-  display: none;
+#order-passenger___details {
+  //display: none;
 }
 
+#oreder-customer___details {
+  display: none;
+}
+#order-extra___services {
+  display: none;
+}
 .ordering .header-customer-details {
   background: url(../img/bg-header-with-plane-icon-and-clouds.svg) no-repeat 50% top;
   background-size: cover;
@@ -2044,6 +2052,9 @@ body {
 .order-details {
   min-width: 448px;
   flex-basis: 30%;
+  .filter-buttons .filter__buttons-btn {
+    padding: 9px 9px;
+  }
 }
 
 .order-details-card {
@@ -2128,7 +2139,7 @@ body {
     text-align: right;
   }
 
-  &__connect {
+  &__connect img {
     transform: rotate(180deg);
   }
 }
@@ -2147,11 +2158,13 @@ body {
     &:before {
       left: 0;
       transform: rotate(45deg);
+      @include transit(all, 0.250s, ease);
     }
 
     &:after {
       left: 5px;
       transform: rotate(-45deg);
+      @include transit(all, 0.250s, ease);
     }
 
     &:before, &:after {
@@ -2160,6 +2173,19 @@ body {
       top: 36%;
       width: 8px;
       border-bottom: 2px solid $color-primary;
+    }
+  }
+
+  .btn-flight_details.opened {
+    &:before {
+      left: 0;
+      transform: rotate(-45deg);
+
+    }
+
+    &:after {
+      left: 5px;
+      transform: rotate(45deg);
     }
   }
 
@@ -2394,6 +2420,236 @@ body {
     }
   }
 }
+
+// extra services
+.ordering  .extra-services {
+  h3.order-filling__title {
+    margin-bottom: 55px;
+  }
+}
+
+.ordering  .extra-services__list .extra-services__item {
+  display: flex;
+  justify-content: space-between;
+  padding: 23px 33px 65px 33px;
+  margin-bottom: 33px;
+  @include box-shadow(0px 2px 11px rgba(0, 0, 0, 0.12));
+
+  .extra-services__button {
+    flex-basis: 25%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    button {
+      @include start-button(16px, #fff, $color-primary);
+      padding: 12px 30px;
+      width: 100%;
+    }
+  }
+  .extra-services__details {
+    flex-basis: 75%;
+    display: flex;
+
+    &_info {
+      flex-basis: 58%;
+      font-size: 14px;
+      font-weight: 400;
+      color: $color-surface;
+      .space-separator {
+        width: 100%;
+        height: 20px;
+        display: block;
+      }
+      p {
+        margin-top: 20px;
+      }
+    }
+    &_cities {
+      flex-basis: 30%;
+      h4 {
+        font-weight: 500;
+        font-size: 18px;
+      }
+      p {
+        margin-top: 20px;
+        font-weight: 500;
+        font-size: 14px;
+      }
+    }
+    &_icon {
+      flex-basis: 12%;
+      img {}
+    }
+  }
+}
+
+// order details extra
+.details-extra__info_title {
+  width: 100%;
+  font-size: 12px;
+  font-weight: 400;
+  color: $color-surface;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  margin-top: 15px;
+}
+.details-extra__info_title.non-title {
+  margin-bottom: 17px;
+  span {
+    display: none;
+  }
+}
+.order-details .details-extra__group {
+  width: 100%;
+}
+.order-details .details-extra {
+  flex-basis: 100%;
+  @include box-shadow(0px 2px 11px rgba(0, 0, 0, 0.12));
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 12px;
+    padding: 10px 20px;
+    background: #E4EBEA;
+  }
+  &__content {
+    padding: 20px;
+    display: flex;
+    text-align: right;
+    font-size: 12px;
+    font-weight: 400;
+
+    .extra-data p,
+    .extra-more_detail p {
+      margin-top: 10px;
+    }
+
+    .extra-data {
+      flex-basis: 30%;
+      text-align: left;
+    }
+    .extra-more_detail {
+      flex-basis: 58%;
+      padding-right: 10px;
+    }
+    .extra-company {
+      flex-basis: 12%;
+      text-align: center;
+      font-size: 10px;
+
+      img {
+        border: 1px solid #e4ebea;
+        border-radius: 50%;
+        min-width: 36px;
+        min-height: 36px;
+        width: 36px;
+        height: 36px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px 20px 20px;
+
+    img {
+      margin-right: 12px;
+    }
+
+    .extra-footer__icons {
+      display: flex;
+      align-items: baseline;
+      justify-content: flex-start;
+    }
+
+    .luggage-count {
+      position: relative;
+      span {
+        content: "x2";
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        top: -6px;
+        right: 5px;
+        font-size: 9px;
+        border-radius: 50%;
+        background-color: $color-brown;
+        color: #fff;
+      }
+    }
+
+    button {
+      @include start-button(12px, $color-primary, transparent);
+      text-decoration: underline;
+    }
+  }
+}
+
+.order-details .details-extra__more {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    margin: 0 20px;
+    border-bottom: 1px solid #E9E9E9;
+  }
+
+  &-title {
+    flex-basis: 100%;
+    text-align: right;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+
+  .extra-more-1 {
+    flex-basis: 40%;
+  }
+  .extra-more-2 {
+    flex-basis: 60%;
+  }
+
+
+  .extra-more-1,
+  .extra-more-2 {
+    p {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      font-size: 12px;
+      margin-bottom: 10px;
+
+      .extra-more__status {
+        font-weight: 400;
+        margin-right: 15px;
+      }
+      .extra-more__info {
+        font-weight: 500;
+      }
+      img {
+        margin-left: 10px;
+      }
+    }
+  }
+
+}
+
 // ### Ordering end
 
 // ## services

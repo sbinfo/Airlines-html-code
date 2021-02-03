@@ -17,6 +17,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 $(document).ready(function(){
+    // Order page
+    $(".details-extra__more").hide();
+    $(".details-extra__btn_open").on('click', function () {
+       const selectedParent = $(this).closest(".details-extra");
+       if (selectedParent.children('.details-extra__more').hasClass('extra-more-not_show')) {
+           selectedParent.children('.details-extra__more').removeClass('extra-more-not_show');
+           selectedParent.children('.details-extra__more').show(250);
+       } else {
+           selectedParent.children('.details-extra__more').addClass('extra-more-not_show');
+           selectedParent.children('.details-extra__more').hide(250);
+       }
+    });
+
+    $(".order-details__extra").hide();
+    $(".btn-flight_details").on('click', function () {
+         if ( $(".order-details__extra").is(":hidden") ) {
+             $(".order-details__extra").show(250);
+             $(this).addClass('opened');
+         } else if ( $(".order-details__extra").is(":visible") ) {
+             $(".order-details__extra").hide(250);
+             $(this).removeClass('opened');
+         }
+    });
+
+    // Order page end
+
     // Contact page
     function switchContactPage() {
         if ($("#filter-btn_offices").hasClass('active')) {
