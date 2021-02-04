@@ -2040,11 +2040,11 @@ body {
   }
 }
 
-#oreder-customer___details {
+#order-passenger___details {
   display: none;
 }
 
-#order-extra___services {
+#oreder-customer___details {
   display: none;
 }
 
@@ -2219,7 +2219,7 @@ body {
 }
 
 .order-filling {
-  flex-basis: 60%;
+  flex-basis: 64%;
   text-align: right;
 }
 .order-filling__steps {
@@ -2410,13 +2410,17 @@ body {
 }
 
 .ordering .extra-services__list .extra-services__item {
-  display: flex;
-  justify-content: space-between;
-  padding: 23px 33px 65px 33px;
   margin-bottom: 33px;
   -webkit-box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.12);
   -moz-box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.12);
   box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.12);
+}
+.ordering .extra-services__list .extra-services__item-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 23px 33px 65px 33px;
 }
 .ordering .extra-services__list .extra-services__item .extra-services__button {
   flex-basis: 25%;
@@ -2470,6 +2474,265 @@ body {
 .ordering .extra-services__list .extra-services__item .extra-services__details_icon {
   flex-basis: 12%;
 }
+.ordering .extra-services__item.edit .extra-services__item-inner {
+  display: none;
+}
+
+.ordering .luggage-edit__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+.ordering .luggage-edit__header button {
+  font-weight: 500;
+  font-size: 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  color: #fff;
+  background: #15AD56;
+  padding: 8px 16px;
+  font-weight: 400;
+}
+.ordering .luggage-edit__header div {
+  display: flex;
+}
+.ordering .luggage-edit__header span {
+  font-weight: 500;
+  font-size: 16px;
+}
+.ordering .luggage-edit__header img {
+  min-width: 13px;
+  width: 13px;
+  margin-left: 25px;
+}
+.ordering .luggage-edit__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 15px 12px;
+  background: #F7F7F7;
+}
+
+.ordering .luggage-edit__content .luggage-titles {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 14px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #908C8E;
+}
+.ordering .luggage-edit__content .luggage-titles span:first-child {
+  flex-basis: 65%;
+}
+.ordering .luggage-edit__content .luggage-titles span:last-child {
+  flex-basis: 35%;
+}
+
+.ordering .luggage-edit__content .luggage-passengers {
+  flex-basis: 100%;
+}
+.ordering .luggage-edit__content .luggage-passengers .passengers-item {
+  display: flex;
+}
+.ordering .luggage-edit__content .luggage-passengers .passengers-item:not(:first-child) .luggage-detail {
+  border-top: 0;
+}
+.ordering .luggage-edit__content .luggage-passengers .passengers-item.active .luggage-detail .luggage-select-inner .luggage-select-text {
+  background-color: rgba(14, 177, 85, 0.1);
+  border: 1px solid #0EB155;
+}
+.ordering .luggage-edit__content .luggage-passengers .passengers-item.active .luggage-flight__block {
+  border: 11px solid #E9E9E9;
+}
+.ordering .luggage-edit__content .luggage-passengers .passengers-item.active .luggage-flight__block .luggage-flight-inner {
+  border: 2px solid #0EB155;
+}
+
+.ordering .luggage-edit__content .luggage-detail {
+  flex-basis: 65%;
+  background-color: #fff;
+  border: 11px solid #E9E9E9;
+}
+.ordering .luggage-edit__content .luggage-detail div.luggage {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 20px;
+}
+.ordering .luggage-edit__content .luggage-detail .luggage-btn-add {
+  flex-basis: 25%;
+  position: relative;
+}
+.ordering .luggage-edit__content .luggage-detail .luggage-btn-add label {
+  font-size: 12px;
+  font-weight: 400;
+  position: relative;
+  color: #0EB155;
+}
+.ordering .luggage-edit__content .luggage-detail .luggage-btn-add button {
+  outline: none;
+  border: none;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: -33px;
+  top: -2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.17);
+  -moz-box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.17);
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.17);
+  color: #0EB155;
+  background-color: #fff;
+}
+.ordering .luggage-edit__content .luggage-detail .luggage-select .luggage-select-inner {
+  display: flex;
+  justify-content: flex-end;
+}
+.ordering .luggage-edit__content .luggage-detail .luggage-select .luggage-delete-space {
+  width: 28px;
+  margin-right: 14px;
+}
+.ordering .luggage-edit__content .luggage-detail .luggage-select .luggage-select-inner .luggage-delete {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 14px;
+  width: 28px;
+}
+.ordering .luggage-edit__content .luggage-detail .luggage-select .luggage-select-inner .luggage-select-text {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  padding: 5px 28px;
+  margin-right: 20px;
+  background-color: #fff;
+  min-width: 120px;
+  min-height: 43px;
+  color: #0EB155;
+  border: 1px solid #C4C4C4;
+}
+.ordering .luggage-edit__content .luggage-detail .luggage-select .luggage-select-inner .luggage-select-text > span {
+  flex-basis: 100%;
+  font-weight: 400;
+}
+.ordering .luggage-edit__content .luggage-detail .luggage-select .luggage-select-inner .luggage-select-text span.luggage-weight {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ordering .luggage-edit__content .luggage-detail .luggage-select .luggage-select-inner .luggage-select-text span.luggage-cost {
+  font-size: 12px;
+}
+.ordering .luggage-edit__content .luggage-detail .luggage-select .luggage-information {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6px;
+  font-size: 12px;
+}
+.ordering .luggage-edit__content .luggage-detail .luggage-select .luggage-information p {
+  flex-basis: 73%;
+  text-align: right;
+  margin-right: 20px;
+}
+.ordering .luggage-edit__content .luggage-detail .luggage-passenger-details {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+.ordering .luggage-edit__content .luggage-detail .luggage-passenger-details img {
+  margin-left: 10px;
+  min-width: 30px;
+  width: 30px;
+  min-height: 30px;
+  height: 30px;
+}
+
+.ordering .luggage-edit__content .luggage-flight {
+  flex-basis: 35%;
+}
+.ordering .luggage-edit__content .luggage-flight__block {
+  border: 11px solid transparent;
+}
+.ordering .luggage-edit__content .luggage-flight .luggage-flight-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 23px 15px;
+  background-color: #fff;
+}
+.ordering .luggage-edit__content .luggage-flight__to .luggage-flight-city, .ordering .luggage-edit__content .luggage-flight__from .luggage-flight-city {
+  font-size: 12px;
+  color: #908C8E;
+}
+.ordering .luggage-edit__content .luggage-flight__to .luggage-flight-abbr, .ordering .luggage-edit__content .luggage-flight__from .luggage-flight-abbr {
+  font-size: 20px;
+  color: #2D2B2C;
+}
+.ordering .luggage-edit__content .luggage-flight__to {
+  text-align: left;
+}
+.ordering .luggage-edit__content .luggage-flight__from {
+  text-align: right;
+}
+.ordering .luggage-edit__content .luggage-flight__status {
+  flex-basis: 55%;
+  text-align: center;
+  position: relative;
+}
+.ordering .luggage-edit__content .luggage-flight__status:before, .ordering .luggage-edit__content .luggage-flight__status:after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 15%;
+  border: 1px solid #908C8E;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}
+.ordering .luggage-edit__content .luggage-flight__status:before {
+  left: 0;
+  background-color: #fff;
+}
+.ordering .luggage-edit__content .luggage-flight__status:after {
+  right: 0;
+  background-color: #908C8E;
+}
+.ordering .luggage-edit__content .luggage-flight__status .luggage-status-plane {
+  position: relative;
+}
+.ordering .luggage-edit__content .luggage-flight__status .luggage-status-plane:before,
+.ordering .luggage-edit__content .luggage-flight__status .luggage-status-plane:after {
+  content: "";
+  width: 24%;
+  position: absolute;
+  top: 40%;
+  border-bottom: 1px dashed #908C8E;
+}
+.ordering .luggage-edit__content .luggage-flight__status .luggage-status-plane:before {
+  left: 20px;
+}
+.ordering .luggage-edit__content .luggage-flight__status .luggage-status-plane:after {
+  right: 20px;
+}
+
 .details-extra__info_title {
   width: 100%;
   font-size: 12px;

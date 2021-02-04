@@ -2028,15 +2028,17 @@ body {
 // ## ordering
 
 #order-passenger___details {
-  //display: none;
+  display: none;
 }
 
 #oreder-customer___details {
   display: none;
 }
+
 #order-extra___services {
-  display: none;
+  //display: none;
 }
+
 .ordering .header-customer-details {
   background: url(../img/bg-header-with-plane-icon-and-clouds.svg) no-repeat 50% top;
   background-size: cover;
@@ -2052,6 +2054,7 @@ body {
 .order-details {
   min-width: 448px;
   flex-basis: 30%;
+
   .filter-buttons .filter__buttons-btn {
     padding: 9px 9px;
   }
@@ -2206,7 +2209,7 @@ body {
 }
 
 .order-filling {
-  flex-basis: 60%;
+  flex-basis: 64%;
   text-align: right;
 
   &__steps {
@@ -2346,56 +2349,61 @@ body {
 
 // Passenger
 .passenger-details .order-filling__select_person {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    padding-top: 60px;
-    border-bottom: 1px solid #E9E9E9;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 60px;
+  border-bottom: 1px solid #E9E9E9;
 
-    .select-person__item {
-      text-align: center;
-      padding: 16px 30px 10px 30px;
-      cursor: pointer;
-      font-weight: 500;
-      font-size: 14px;;
+  .select-person__item {
+    text-align: center;
+    padding: 16px 30px 10px 30px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;;
 
-      .active-icon {
-        display: none;
-      }
-      .deactive-icon {
-        display: block;
-      }
+    .active-icon {
+      display: none;
     }
 
-    .select-person__item.active {
-      background: rgb(230 246 237);
+    .deactive-icon {
+      display: block;
+    }
+  }
 
-      .active-icon {
-        display: block;
-      }
-      .deactive-icon {
-        display: none;
-      }
-      p {
-        color: $color-primary;
-      }
+  .select-person__item.active {
+    background: rgb(230 246 237);
+
+    .active-icon {
+      display: block;
     }
-    img {
-      min-width: 40px;
-      min-height: 40px;
-      width: 40px;
-      height: 40px;
-      margin-bottom: 16px;
+
+    .deactive-icon {
+      display: none;
     }
+
+    p {
+      color: $color-primary;
+    }
+  }
+
+  img {
+    min-width: 40px;
+    min-height: 40px;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 16px;
+  }
 }
 
 .passenger-details {
-    .form {
-      padding-top: 40px;
-      .passenger-gender {
-        flex-basis: 44%;
-      }
+  .form {
+    padding-top: 40px;
+
+    .passenger-gender {
+      flex-basis: 44%;
     }
+  }
 }
 
 .passenger-details .form__footer {
@@ -2409,11 +2417,14 @@ body {
     font-size: 12px;
     margin-bottom: 22px;
   }
+
   button[type=submit] {
     padding: 10px 30px;
   }
+
   & > div {
     flex-wrap: wrap;
+
     p {
       display: flex;
       margin-bottom: 13px;
@@ -2422,30 +2433,37 @@ body {
 }
 
 // extra services
-.ordering  .extra-services {
+.ordering .extra-services {
   h3.order-filling__title {
     margin-bottom: 55px;
   }
 }
 
-.ordering  .extra-services__list .extra-services__item {
-  display: flex;
-  justify-content: space-between;
-  padding: 23px 33px 65px 33px;
+.ordering .extra-services__list .extra-services__item {
   margin-bottom: 33px;
   @include box-shadow(0px 2px 11px rgba(0, 0, 0, 0.12));
+
+  &-inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 23px 33px 65px 33px;
+  }
 
   .extra-services__button {
     flex-basis: 25%;
     display: flex;
     align-items: flex-end;
     justify-content: center;
+
     button {
       @include start-button(16px, #fff, $color-primary);
       padding: 12px 30px;
       width: 100%;
     }
   }
+
   .extra-services__details {
     flex-basis: 75%;
     display: flex;
@@ -2455,32 +2473,328 @@ body {
       font-size: 14px;
       font-weight: 400;
       color: $color-surface;
+
       .space-separator {
         width: 100%;
         height: 20px;
         display: block;
       }
+
       p {
         margin-top: 20px;
       }
     }
+
     &_cities {
       flex-basis: 30%;
+
       h4 {
         font-weight: 500;
         font-size: 18px;
       }
+
       p {
         margin-top: 20px;
         font-weight: 500;
         font-size: 14px;
       }
     }
+
     &_icon {
       flex-basis: 12%;
-      img {}
+
+      img {
+      }
     }
   }
+}
+
+.ordering .extra-services__item.edit {
+  .extra-services__item-inner {
+    display: none;
+  }
+}
+
+.ordering .luggage-edit {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+
+    button {
+      @include start-button(10px, #fff, $color-green);
+      padding: 8px 16px;
+      font-weight: 400;
+    }
+
+    div {
+      display: flex;
+    }
+
+    span {
+      font-weight: 500;
+      font-size: 16px;
+    }
+
+    img {
+      min-width: 13px;
+      width: 13px;
+      margin-left: 25px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 15px 12px;
+    background: #F7F7F7;
+  }
+}
+
+.ordering .luggage-edit__content {
+}
+
+.ordering .luggage-edit__content .luggage-titles {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 14px;
+  font-weight: 500;
+  font-size: 14px;
+  color: $color-surface;
+
+  span:first-child {
+    flex-basis: 65%;
+  }
+
+  span:last-child {
+    flex-basis: 35%;
+  }
+}
+
+.ordering .luggage-edit__content .luggage-passengers {
+  flex-basis: 100%;
+  .passengers-item {
+    display: flex;
+  }
+  .passengers-item:not(:first-child) {
+    .luggage-detail {
+      border-top: 0;
+    }
+  }
+  .passengers-item.active {
+    .luggage-detail {
+      .luggage-select-inner .luggage-select-text {
+        background-color: rgb(14, 177, 85, 0.1);
+        border: 1px solid #0EB155;
+      }
+    }
+
+    .luggage-flight__block {
+      border: 11px solid #E9E9E9;
+      .luggage-flight-inner {
+        border: 2px solid #0EB155;
+      }
+    }
+  }
+}
+
+.ordering .luggage-edit__content .luggage-detail {
+  flex-basis: 65%;
+  background-color: #fff;
+  border: 11px solid #E9E9E9;
+
+  div.luggage {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 20px;
+  }
+
+  .luggage-btn-add {
+    flex-basis: 25%;
+    position: relative;
+    label {
+      font-size: 12px;
+      font-weight: 400;
+      position: relative;
+      color: $color-primary;
+    }
+    button {
+      outline: none;
+      border: none;
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      right: -33px;
+      top: -2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include br(50%);
+      @include box-shadow(0px 3px 8px rgba(0, 0, 0, 0.17));
+      color: $color-primary;
+      background-color: #fff;
+    }
+  }
+
+  .luggage-select {
+
+    .luggage-select-inner {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .luggage-delete-space {
+      width: 28px;
+      margin-right: 14px;
+    }
+
+    .luggage-select-inner .luggage-delete {
+      display: flex;
+      align-items: center;
+      background: transparent;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      margin-right: 14px;
+      width: 28px;
+      img {}
+    }
+    .luggage-select-inner .luggage-select-text {
+      display: flex;
+      flex-wrap: wrap;
+      text-align: center;
+      padding: 5px 28px;
+      margin-right: 20px;
+      background-color: #fff;
+      min-width: 120px;
+      min-height: 43px;
+      color: $color-primary;
+      border: 1px solid #C4C4C4;
+
+      & > span {
+        flex-basis: 100%;
+        font-weight: 400;
+      }
+
+      span.luggage-weight {
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      span.luggage-cost {
+        font-size: 12px;
+      }
+    }
+
+    .luggage-information {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 6px;
+      font-size: 12px;
+
+      p {
+        flex-basis: 73%;
+        text-align: right;
+        margin-right: 20px;
+      }
+    }
+  }
+
+  .luggage-passenger-details {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+
+    img {
+      margin-left: 10px;
+      min-width: 30px;
+      width: 30px;
+      min-height: 30px;
+      height: 30px;
+    }
+  }
+}
+
+.ordering .luggage-edit__content .luggage-flight {
+  flex-basis: 35%;
+
+  &__block {
+    border: 11px solid transparent;
+  }
+
+  .luggage-flight-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 23px 15px;
+    background-color: #fff;
+  }
+
+  &__to .luggage-flight-city,
+  &__from .luggage-flight-city {
+    font-size: 12px;
+    color: $color-surface;
+  }
+  &__to .luggage-flight-abbr,
+  &__from .luggage-flight-abbr {
+    font-size: 20px;
+    color: $color-main;
+  }
+  &__to {
+    text-align: left;
+  }
+  &__from {
+    text-align: right;
+  }
+  &__status {
+    flex-basis: 55%;
+    text-align: center;
+    position: relative;
+
+    &:before, &:after {
+      content: "";
+      width: 12px;
+      height: 12px;
+      position: absolute;
+      top: 15%;
+      border: 1px solid #908C8E;
+      @include br(50%);
+    }
+    &:before {
+      left: 0;
+      background-color: #fff;
+    }
+    &:after {
+      right: 0;
+      background-color: $color-surface;
+    }
+
+    .luggage-status-plane {
+      position: relative;
+    }
+    .luggage-status-plane:before,
+    .luggage-status-plane:after {
+      content: "";
+      width: 24%;
+      position: absolute;
+      top: 40%;
+      border-bottom: 1px dashed #908C8E;
+    }
+    .luggage-status-plane:before {
+      left: 20px;
+    }
+    .luggage-status-plane:after {
+      right: 20px;
+    }
+  }
+
 }
 
 // order details extra
@@ -2494,15 +2808,19 @@ body {
   margin-bottom: 6px;
   margin-top: 15px;
 }
+
 .details-extra__info_title.non-title {
   margin-bottom: 17px;
+
   span {
     display: none;
   }
 }
+
 .order-details .details-extra__group {
   width: 100%;
 }
+
 .order-details .details-extra {
   flex-basis: 100%;
   @include box-shadow(0px 2px 11px rgba(0, 0, 0, 0.12));
@@ -2515,6 +2833,7 @@ body {
     padding: 10px 20px;
     background: #E4EBEA;
   }
+
   &__content {
     padding: 20px;
     display: flex;
@@ -2531,10 +2850,12 @@ body {
       flex-basis: 30%;
       text-align: left;
     }
+
     .extra-more_detail {
       flex-basis: 58%;
       padding-right: 10px;
     }
+
     .extra-company {
       flex-basis: 12%;
       text-align: center;
@@ -2551,6 +2872,7 @@ body {
       }
     }
   }
+
   &__footer {
     display: flex;
     justify-content: space-between;
@@ -2568,6 +2890,7 @@ body {
 
     .luggage-count {
       position: relative;
+
       span {
         content: "x2";
         display: flex;
@@ -2621,6 +2944,7 @@ body {
   .extra-more-1 {
     flex-basis: 40%;
   }
+
   .extra-more-2 {
     flex-basis: 60%;
   }
@@ -2639,9 +2963,11 @@ body {
         font-weight: 400;
         margin-right: 15px;
       }
+
       .extra-more__info {
         font-weight: 500;
       }
+
       img {
         margin-left: 10px;
       }
@@ -2853,6 +3179,7 @@ body {
 .contacts .contact-from__offices {
   width: 100%;
 }
+
 .contacts .contact-offices {
   display: flex;
   flex-wrap: wrap;
@@ -2870,14 +3197,17 @@ body {
       color: $color-surface;
       margin-bottom: 30px;
     }
+
     h4 {
       font-weight: 500;
       font-size: 21px;
       margin-bottom: 12px;
     }
+
     ul.address-list {
       max-width: 350px;
       margin-left: auto;
+
       li {
         font-size: 16px;
         font-weight: 400;
@@ -2888,9 +3218,11 @@ body {
         align-items: center;
         justify-content: flex-end;
       }
+
       li span {
         font-weight: 500;
       }
+
       li div {
         display: flex;
         min-width: 34px;
@@ -2898,6 +3230,7 @@ body {
       }
     }
   }
+
   &__map {
     flex-basis: 100%;
 
@@ -2921,9 +3254,11 @@ body {
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
+
     h3 {
       height: 26px;
     }
+
     .search__element {
       margin: 0;
     }
@@ -2971,6 +3306,7 @@ body {
     .office-number {
       flex-basis: 15%;
     }
+
     .office-email {
       flex-basis: 25%;
     }
@@ -2979,6 +3315,7 @@ body {
       font-weight: 500;
       font-size: 16px;
     }
+
     .office-schedule {
       flex-basis: 10%;
       font-weight: 400;
@@ -3023,9 +3360,11 @@ body {
           margin-left: 15px;
         }
       }
+
       img {
         margin-top: -2px;
       }
+
       &__city {
         flex-basis: 35%;
         text-align: right;
@@ -3051,6 +3390,7 @@ body {
     }
   }
 }
+
 // ### contact from offices end
 
 @media (min-width: $bp-small-768) {
@@ -3059,6 +3399,7 @@ body {
       flex-basis: 50%;
       padding-right: 50px;
     }
+
     &__map {
       flex-basis: 50%;
     }
@@ -3094,6 +3435,7 @@ body {
         }
       }
     }
+
     &__message .contact-form__title,
     &__numbers .contact-form__title {
       font-size: 20px;
@@ -3108,6 +3450,7 @@ body {
     }
   }
 }
+
 // =================== Contacts / passengers END ====================
 
 
