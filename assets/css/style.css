@@ -512,6 +512,24 @@ body {
   font-weight: 400;
 }
 
+.form-textarea__group.success,
+.form-select__group.success,
+.form-text__group.success {
+  border: 1px solid #0EB155;
+  background: #f2fbf6;
+}
+.form-textarea__group.success .form-text,
+.form-textarea__group.success .form-select,
+.form-textarea__group.success .form-textarea,
+.form-select__group.success .form-text,
+.form-select__group.success .form-select,
+.form-select__group.success .form-textarea,
+.form-text__group.success .form-text,
+.form-text__group.success .form-select,
+.form-text__group.success .form-textarea {
+  background: #f2fbf6;
+}
+
 .form-text__group,
 .form-select__group {
   height: 55px;
@@ -2049,6 +2067,10 @@ body {
   display: none;
 }
 
+#order-extra___services {
+  display: none;
+}
+
 .ordering .header-customer-details {
   background: url(../img/bg-header-with-plane-icon-and-clouds.svg) no-repeat 50% top;
   background-size: cover;
@@ -2217,6 +2239,30 @@ body {
 .order-details-card .payment-details__footer .payment-details__text {
   font-weight: 500;
   font-size: 16px;
+}
+
+.section-order .order-details-terms {
+  background-color: #fff;
+  -webkit-box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.2);
+  padding: 25px 45px 25px 25px;
+}
+.section-order .order-details-terms ul li {
+  position: relative;
+  text-align: right;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+.section-order .order-details-terms ul li:after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #2E2C2D;
+  position: absolute;
+  right: -22px;
+  top: 4px;
 }
 
 .order-filling {
@@ -2764,11 +2810,15 @@ body {
   background: #F7F7F7;
   padding: 15px 20px;
 }
-.ordering .extra-details-edit .sits-edit__information {
+.ordering .extra-details-edit .sits-edit__information, .ordering .extra-details-edit .sits-edit__information_seat {
+  display: none;
+}
+.ordering .extra-details-edit .sits-edit__information, .ordering .extra-details-edit .sits-edit__information_seat {
+  display: block;
   max-width: 245px;
   background: #fff;
 }
-.ordering .extra-details-edit .sits-edit__information .information-header {
+.ordering .extra-details-edit .sits-edit__information .information-header, .ordering .extra-details-edit .sits-edit__information_seat .information-header {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
@@ -2776,47 +2826,53 @@ body {
   padding: 10px 20px 10px 10px;
   border-bottom: 1px solid #E6E6E6;
 }
-.ordering .extra-details-edit .sits-edit__information .information-header .information-close {
+.ordering .extra-details-edit .sits-edit__information .information-header .information-close, .ordering .extra-details-edit .sits-edit__information_seat .information-header .information-close {
   flex-basis: 10%;
   background: transparent;
   outline: none;
   border: none;
   cursor: pointer;
 }
-.ordering .extra-details-edit .sits-edit__information .information-header .information-title {
+.ordering .extra-details-edit .sits-edit__information .information-header .information-title, .ordering .extra-details-edit .sits-edit__information_seat .information-header .information-title {
   flex-basis: 70%;
   font-size: 14px;
   font-weight: normal;
   color: #0EB155;
   text-align: right;
 }
-.ordering .extra-details-edit .sits-edit__information .information-colors, .ordering .extra-details-edit .sits-edit__information .information-helpful {
+.ordering .extra-details-edit .sits-edit__information .information-colors, .ordering .extra-details-edit .sits-edit__information .information-helpful, .ordering .extra-details-edit .sits-edit__information_seat .information-colors, .ordering .extra-details-edit .sits-edit__information_seat .information-helpful {
   padding: 20px;
 }
 .ordering .extra-details-edit .sits-edit__information .information-colors .colors-heading,
 .ordering .extra-details-edit .sits-edit__information .information-colors .helpful-heading, .ordering .extra-details-edit .sits-edit__information .information-helpful .colors-heading,
-.ordering .extra-details-edit .sits-edit__information .information-helpful .helpful-heading {
+.ordering .extra-details-edit .sits-edit__information .information-helpful .helpful-heading, .ordering .extra-details-edit .sits-edit__information_seat .information-colors .colors-heading,
+.ordering .extra-details-edit .sits-edit__information_seat .information-colors .helpful-heading, .ordering .extra-details-edit .sits-edit__information_seat .information-helpful .colors-heading,
+.ordering .extra-details-edit .sits-edit__information_seat .information-helpful .helpful-heading {
   font-weight: 500;
   font-size: 15px;
 }
 .ordering .extra-details-edit .sits-edit__information .information-colors .color-item,
 .ordering .extra-details-edit .sits-edit__information .information-colors .helpful-item, .ordering .extra-details-edit .sits-edit__information .information-helpful .color-item,
-.ordering .extra-details-edit .sits-edit__information .information-helpful .helpful-item {
+.ordering .extra-details-edit .sits-edit__information .information-helpful .helpful-item, .ordering .extra-details-edit .sits-edit__information_seat .information-colors .color-item,
+.ordering .extra-details-edit .sits-edit__information_seat .information-colors .helpful-item, .ordering .extra-details-edit .sits-edit__information_seat .information-helpful .color-item,
+.ordering .extra-details-edit .sits-edit__information_seat .information-helpful .helpful-item {
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
 .ordering .extra-details-edit .sits-edit__information .information-colors .color-item .color-name,
 .ordering .extra-details-edit .sits-edit__information .information-colors .helpful-item .helpful-title, .ordering .extra-details-edit .sits-edit__information .information-helpful .color-item .color-name,
-.ordering .extra-details-edit .sits-edit__information .information-helpful .helpful-item .helpful-title {
+.ordering .extra-details-edit .sits-edit__information .information-helpful .helpful-item .helpful-title, .ordering .extra-details-edit .sits-edit__information_seat .information-colors .color-item .color-name,
+.ordering .extra-details-edit .sits-edit__information_seat .information-colors .helpful-item .helpful-title, .ordering .extra-details-edit .sits-edit__information_seat .information-helpful .color-item .color-name,
+.ordering .extra-details-edit .sits-edit__information_seat .information-helpful .helpful-item .helpful-title {
   font-size: 13px;
   font-weight: 400;
   color: #908C8E;
 }
-.ordering .extra-details-edit .sits-edit__information .information-colors .color-list .color-item {
+.ordering .extra-details-edit .sits-edit__information .information-colors .color-list .color-item, .ordering .extra-details-edit .sits-edit__information_seat .information-colors .color-list .color-item {
   margin-top: 15px;
 }
-.ordering .extra-details-edit .sits-edit__information .information-colors .color-list .color-item .color-image {
+.ordering .extra-details-edit .sits-edit__information .information-colors .color-list .color-item .color-image, .ordering .extra-details-edit .sits-edit__information_seat .information-colors .color-list .color-item .color-image {
   width: 24px;
   height: 24px;
   display: inline-block;
@@ -2826,31 +2882,97 @@ body {
   border-radius: 3px;
   margin-left: 12px;
 }
-.ordering .extra-details-edit .sits-edit__information .information-colors .color-list .color-item .gray {
+.ordering .extra-details-edit .sits-edit__information .information-colors .color-list .color-item .gray, .ordering .extra-details-edit .sits-edit__information_seat .information-colors .color-list .color-item .gray {
   background: #C4C4C4;
 }
-.ordering .extra-details-edit .sits-edit__information .information-colors .color-list .color-item .brown {
+.ordering .extra-details-edit .sits-edit__information .information-colors .color-list .color-item .brown, .ordering .extra-details-edit .sits-edit__information_seat .information-colors .color-list .color-item .brown {
   background: #CE833F;
 }
-.ordering .extra-details-edit .sits-edit__information .information-colors .color-list .color-item .pink {
+.ordering .extra-details-edit .sits-edit__information .information-colors .color-list .color-item .pink, .ordering .extra-details-edit .sits-edit__information_seat .information-colors .color-list .color-item .pink {
   background: #C837AB;
 }
-.ordering .extra-details-edit .sits-edit__information .information-colors .color-list .color-item .lightblue {
+.ordering .extra-details-edit .sits-edit__information .information-colors .color-list .color-item .lightblue, .ordering .extra-details-edit .sits-edit__information_seat .information-colors .color-list .color-item .lightblue {
   background: #6992FD;
 }
-.ordering .extra-details-edit .sits-edit__information .information-colors .color-list .color-item .darkblue {
+.ordering .extra-details-edit .sits-edit__information .information-colors .color-list .color-item .darkblue, .ordering .extra-details-edit .sits-edit__information_seat .information-colors .color-list .color-item .darkblue {
   background: #425DA2;
 }
-.ordering .extra-details-edit .sits-edit__information .information-colors .color-list .color-item .green {
+.ordering .extra-details-edit .sits-edit__information .information-colors .color-list .color-item .green, .ordering .extra-details-edit .sits-edit__information_seat .information-colors .color-list .color-item .green {
   background: #0EB155;
 }
-.ordering .extra-details-edit .sits-edit__information .information-helpful .helpful-item {
+.ordering .extra-details-edit .sits-edit__information .information-helpful .helpful-item, .ordering .extra-details-edit .sits-edit__information_seat .information-helpful .helpful-item {
   margin-top: 20px;
 }
-.ordering .extra-details-edit .sits-edit__information .information-helpful .helpful-item .helpful-icon {
+.ordering .extra-details-edit .sits-edit__information .information-helpful .helpful-item .helpful-icon, .ordering .extra-details-edit .sits-edit__information_seat .information-helpful .helpful-item .helpful-icon {
   width: 18px;
   height: 18px;
   margin-left: 16px;
+}
+.ordering .extra-details-edit .sits-edit__information_seat .information-content {
+  height: 90%;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 21px;
+}
+.ordering .extra-details-edit .sits-edit__information_seat .information-content h4.content-header {
+  font-weight: normal;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.ordering .extra-details-edit .sits-edit__information_seat .information-content ul.content-list li {
+  display: flex;
+  justify-content: flex-end;
+  font-weight: normal;
+  font-size: 13px;
+  color: #908C8E;
+  padding-bottom: 14px;
+}
+.ordering .extra-details-edit .sits-edit__information_seat .information-content ul.content-list li span {
+  display: flex;
+  align-items: center;
+}
+.ordering .extra-details-edit .sits-edit__information_seat .information-content ul.content-list li span:after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  border-bottom: 1px solid #908C8E;
+  margin-left: 11px;
+}
+.ordering .extra-details-edit .sits-edit__information_seat .information-content .content-buttons {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  align-items: center;
+}
+.ordering .extra-details-edit .sits-edit__information_seat .information-content .content-buttons button {
+  width: 97px;
+}
+.ordering .extra-details-edit .sits-edit__information_seat .information-content .content-buttons button.seat-cancel {
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  color: #0EB155;
+  background: transparent;
+  border: 1px solid #0EB155;
+  padding: 9px 0;
+}
+.ordering .extra-details-edit .sits-edit__information_seat .information-content .content-buttons button.seat-add {
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  color: #fff;
+  background: #0EB155;
+  border: 1px solid #0EB155;
+  padding: 9px 0;
 }
 .ordering .extra-details-edit .sits-edit__seat_map {
   width: 340px;
@@ -3196,7 +3318,8 @@ body {
   width: 100%;
   text-align: center;
   border-top: 1px solid #E6E6E6;
-  padding-top: 20px;
+  padding-top: 30px;
+  margin-top: 40px;
 }
 .ordering .continue-payment .btn-continue-payment {
   font-weight: 500;
@@ -3209,6 +3332,124 @@ body {
   color: #fff;
   background: #0EB155;
   padding: 12px 30px;
+}
+
+.ordering .order-payment.order-filling {
+  flex-basis: 60%;
+}
+
+.ordering .order-payment .order-filling__subtitle {
+  font-size: 14px;
+  font-weight: 400;
+  color: #908C8E;
+  margin-top: 50px;
+  margin-left: auto;
+  max-width: 75%;
+}
+.ordering .order-payment .discount-coupon {
+  padding-top: 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.ordering .order-payment .discount-coupon .discount-title {
+  margin-left: 30px;
+  font-weight: 500;
+  font-size: 16px;
+}
+.ordering .order-payment form.payer-details.order-filling__form {
+  padding-top: 40px;
+}
+.ordering .order-payment form.payer-details.order-filling__form h5.payer-details-title {
+  font-weight: 500;
+  font-size: 16px;
+  flex-basis: 100%;
+  margin-bottom: 20px;
+}
+.ordering .order-payment form.payer-details.order-filling__form .payer-email {
+  flex-basis: 55%;
+}
+.ordering .order-payment form.payer-details.order-filling__form .credit-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+.ordering .order-payment form.payer-details.order-filling__form .credit-card .payer-details-title {
+  flex-basis: 100%;
+}
+.ordering .order-payment form.payer-details.order-filling__form .credit-card__icons input.form-text, .ordering .order-payment form.payer-details.order-filling__form .credit-card__last_name input.form-text, .ordering .order-payment form.payer-details.order-filling__form .credit-card__first_name input.form-text, .ordering .order-payment form.payer-details.order-filling__form .credit-card__number input.form-text, .ordering .order-payment form.payer-details.order-filling__form .credit-card__date input.form-text, .ordering .order-payment form.payer-details.order-filling__form .credit-card__cvv input.form-text, .ordering .order-payment form.payer-details.order-filling__form .credit-card__payment input.form-text, .ordering .order-payment form.payer-details.order-filling__form .credit-card__total input.form-text {
+  width: 100%;
+}
+.ordering .order-payment form.payer-details.order-filling__form .credit-card__icons, .ordering .order-payment form.payer-details.order-filling__form .credit-card__last_name {
+  flex-basis: 49%;
+}
+.ordering .order-payment form.payer-details.order-filling__form .credit-card__first_name, .ordering .order-payment form.payer-details.order-filling__form .credit-card__number {
+  flex-basis: 50%;
+}
+.ordering .order-payment form.payer-details.order-filling__form .credit-card__date, .ordering .order-payment form.payer-details.order-filling__form .credit-card__cvv {
+  flex-basis: 24%;
+}
+.ordering .order-payment form.payer-details.order-filling__form .credit-card__payment {
+  flex-basis: 39%;
+}
+.ordering .order-payment form.payer-details.order-filling__form .credit-card__total {
+  flex-basis: 10%;
+}
+.ordering .order-payment form.payer-details.order-filling__form .credit-card__icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 55px;
+}
+.ordering .order-payment form.payer-details.order-filling__form .credit-card__icons img + img {
+  margin-left: 20px;
+}
+.ordering .order-payment form.payer-details.order-filling__form a.what-is-cvv,
+.ordering .order-payment form.payer-details.order-filling__form .form__footer a {
+  margin-top: -10px;
+  color: #0EB155;
+  font-weight: 400;
+  font-size: 12px;
+}
+.ordering .order-payment form.payer-details.order-filling__form .payment-regulations {
+  padding-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.ordering .order-payment form.payer-details.order-filling__form .payment-regulations__submit {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 25px;
+}
+.ordering .order-payment form.payer-details.order-filling__form .payment-regulations ul li {
+  font-weight: normal;
+  font-size: 12px;
+  margin-bottom: 13px;
+}
+.ordering .order-payment form.payer-details.order-filling__form .payment-regulations__submit, .ordering .order-payment form.payer-details.order-filling__form .payment-regulations__list, .ordering .order-payment form.payer-details.order-filling__form .payment-regulations__accept {
+  flex-basis: 100%;
+  text-align: right;
+}
+.ordering .order-payment form.payer-details.order-filling__form .payment-regulations__list li:after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #2D2B2C;
+  display: inline-block;
+  margin-left: 14px;
+  margin-right: 4px;
+}
+.ordering .order-payment form.payer-details.order-filling__form .payment-regulations__accept {
+  color: #908C8E;
+}
+.ordering .order-payment form.payer-details.order-filling__form .payment-regulations__accept label {
+  font-size: 12px;
+  padding-right: 11px;
 }
 
 .services {

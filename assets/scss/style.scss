@@ -237,6 +237,19 @@ body {
   }
 }
 
+.form-textarea__group.success,
+.form-select__group.success,
+.form-text__group.success {
+  border: 1px solid #0EB155;
+  background: rgb(242 251 246);
+
+  .form-text,
+  .form-select,
+  .form-textarea {
+    background: rgb(242 251 246);
+  }
+}
+
 .form-text__group,
 .form-select__group {
   height: 55px;
@@ -2044,7 +2057,7 @@ body {
 }
 
 #order-extra___services {
-  //display: none;
+  display: none;
 }
 
 .ordering .header-customer-details {
@@ -2212,6 +2225,32 @@ body {
     .payment-details__text {
       font-weight: 500;
       font-size: 16px;
+    }
+  }
+}
+
+.section-order .order-details-terms {
+  background-color: #fff;
+  @include box-shadow(0px 1px 6px rgba(0, 0, 0, 0.2));
+  padding: 25px 45px 25px 25px;
+
+  ul {
+    li {
+      position: relative;
+      text-align: right;
+      font-size: 14px;
+      margin-bottom: 24px;
+
+      &:after {
+        content: "";
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: #2E2C2D;
+        position: absolute;
+        right: -22px;
+        top: 4px;
+      }
     }
   }
 }
@@ -2850,7 +2889,14 @@ body {
     padding: 15px 20px;
   }
 
-  &__information {
+  &__information,
+  &__information_seat {
+    display: none;
+  }
+
+  &__information,
+  &__information_seat {
+    display: block;
     max-width: 245px;
     background: #fff;
 
@@ -2878,7 +2924,6 @@ body {
         text-align: right;
       }
     }
-
     // .information-header
 
     .information-colors, .information-helpful {
@@ -2955,7 +3000,68 @@ body {
     }
     // .information-helpful
   }
-  // .sits-edit__information
+  //.sits-edit__information, .sits-edit__information_seat
+
+  &__information_seat {
+    .information-content {
+      height: 90%;
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 21px;
+      h4.content-header {
+        font-weight: normal;
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+
+      ul.content-list {
+        li {
+          display: flex;
+          justify-content: flex-end;
+          font-weight: normal;
+          font-size: 13px;
+          color: $color-surface;
+          padding-bottom: 14px;
+        }
+        li span {
+          display: flex;
+          align-items: center;
+        }
+        li span:after {
+          content: "";
+          display: inline-block;
+          width: 20px;
+          border-bottom: 1px solid $color-surface;
+          margin-left: 11px;
+        }
+      }
+
+      .content-buttons {
+        display: flex;
+        justify-content: space-between;
+        flex-grow: 1;
+        align-items: center;
+
+        button {
+          width: 97px;
+        }
+
+        button.seat-cancel {
+          @include start-button(14px, $color-primary, transparent);
+          border: 1px solid $color-primary;
+          padding: 9px 0;
+        }
+        button.seat-add {
+          @include start-button(14px, #fff, $color-primary);
+          border: 1px solid $color-primary;
+          padding: 9px 0;
+        }
+      }
+    }
+
+  }
+  //.sits-edit__information_seat
 
   &__seat_map {
     width: 340px;
@@ -3073,13 +3179,10 @@ body {
         }
       }
       //.flight-location.active
-
-
     }
     //.flight-location
   }
   //.sits-edit__flight
-
 }
 // .ordering .extra-details-edit .sits-edit
 
@@ -3349,13 +3452,158 @@ body {
   width: 100%;
   text-align: center;
   border-top: 1px solid #E6E6E6;
-  padding-top: 20px;
+  padding-top: 30px;
+  margin-top: 40px;
   .btn-continue-payment {
     @include start-button(16px, #fff, $color-primary);
     padding: 12px 30px;
   }
 }
 
+// payment
+.ordering .order-payment.order-filling {
+  flex-basis: 60%;
+}
+.ordering .order-payment {
+  .order-filling__subtitle {
+    font-size: 14px;
+    font-weight: 400;
+    color: $color-surface;
+    margin-top: 50px;
+    margin-left: auto;
+    max-width: 75%;
+  }
+  .discount-coupon {
+    padding-top: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .discount-number { }
+    .discount-title {
+      margin-left: 30px;
+      font-weight: 500;
+      font-size: 16px;
+    }
+  }
+  form.payer-details.order-filling__form {
+    padding-top: 40px;
+    h5.payer-details-title {
+      font-weight: 500;
+      font-size: 16px;
+      flex-basis: 100%;
+      margin-bottom: 20px;
+    }
+    .payer-email {
+      flex-basis: 55%;
+    }
+    .credit-card {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding-top: 20px;
+
+      .payer-details-title {
+        flex-basis: 100%;
+      }
+
+      &__icons,
+      &__last_name,
+      &__first_name,
+      &__number,
+      &__date,
+      &__cvv,
+      &__payment,
+      &__total {
+        input.form-text {
+          width: 100%;
+        }
+      }
+
+      &__icons,
+      &__last_name {
+        flex-basis: 49%;
+      }
+      &__first_name,
+      &__number {
+        flex-basis: 50%;
+      }
+
+      &__date,
+      &__cvv {
+        flex-basis: 24%;
+      }
+
+      &__payment {
+        flex-basis: 39%;
+      }
+      &__total {
+        flex-basis: 10%;
+      }
+
+      &__icons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 55px;
+        & img + img {
+          margin-left: 20px;
+        }
+      }
+    }
+    //.credit-card
+
+    a.what-is-cvv,
+    .form__footer a{
+      margin-top: -10px;
+      color: $color-primary;
+      font-weight: 400;
+      font-size: 12px;
+    }
+
+    .payment-regulations {
+      padding-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      &__submit {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 25px;
+      }
+      ul li {
+        font-weight: normal;
+        font-size: 12px;
+        margin-bottom: 13px;
+      }
+      &__submit,
+      &__list,
+      &__accept {
+        flex-basis: 100%;
+        text-align: right;
+      }
+      &__list {
+        li:after {
+          content: "";
+          width: 7px;
+          height: 7px;
+          @include br(50%);
+          background-color: $color-main;
+          display: inline-block;
+          margin-left: 14px;
+          margin-right: 4px;
+        }
+      }
+      &__accept {
+        color: $color-surface;
+        label {
+          font-size: 12px;
+          padding-right: 11px;
+        }
+      }
+    }
+    //.payment-regulations.form__footer
+  }
+  // form.payer-details.
+}
 // ### Ordering end
 
 // ## services

@@ -98,10 +98,12 @@
         <div class="order-details">
             <div class="filter-buttons">
                 <div class="order-details-filter filter__buttons active-brown bg-white section-popular__nav-filter padding-9">
-                    <button class="filter__buttons-btn">terms of the tranzaction</button>
-                    <button class="filter__buttons-btn active">order summary</button>
+                    <button class="filter__buttons-btn order-details-btn_terms">terms of the tranzaction</button>
+                    <button class="filter__buttons-btn order-details-btn_summary active">order summary</button>
                 </div>
             </div>
+            <!-- /.filter-buttons -->
+
             <div class="order-details-card">
                 <div class="round-trip">
                     <div class="round-trip__title"><p>Round trip</p></div>
@@ -629,6 +631,19 @@
                     </div>
                 </div>
             </div>
+            <!-- /.order-details-card -->
+
+            <div style="display: none" class="order-details-terms">
+                <ul class="details-terms-list">
+                    <li>Duty to check - I know that I and all the passengers in the booking I made have the duty to be equipped with a proper English-language corona check that was conducted at most 48 hours before the flight and that I must present it at the airport.</li>
+                    <li>Wearing a mask - I know that it applies to me and all passengers in the reservation that I made the obligation to wear a mask throughout the flight.</li>
+                    <li>Customer Please note that this reservation consists of two separate flight tickets where each ticket is an independent product.</li>
+                    <li>The flight ticket will be delivered to you, up to 24 hours before the flight date</li>
+                    <li>Ista may terminate the offer at any time without prior notice.</li>
+                    <li>Prices are for online customers on the site, additional handling fees for customers by phone or at branches</li>
+                </ul>
+            </div>
+            <!-- /.order-details-terms -->
         </div>
 
         <!-- customer details -->
@@ -801,7 +816,7 @@
             <h3 class="order-filling__title heading-3--right_line">Seat and luggage selection</h3>
 
             <div class="extra-services__list">
-                <!-- extra luggage block -->
+                <!-- extra-luggage-edit -->
                 <div class="extra-services__item extra-luggage-edit">
                     <!-- luggage-info -->
                     <div class="extra-details-info --luggage-info">
@@ -964,11 +979,10 @@
                         </div>
                     </div> <!-- luggage-edit -->
                 </div>
-                <!-- / extra luggage block -->
+                <!-- /.extra-luggage-edit -->
 
-                <!-- extra sits block -->
+                <!-- extra-sits-edit -->
                 <div class="extra-services__item extra-sits-edit">
-                    <!-- sits info -->
                     <div class="extra-details-info --sits-info">
                         <div class="extra-services__button">
                             <button type="button" class="--sits-edit-open">Edit</button>
@@ -988,14 +1002,14 @@
                                 <img src="assets/icons/order/seats1.svg" alt="seats">
                             </div>
                         </div>
-                    </div> <!-- / sits info -->
+                    </div> <!-- /.--sits-info -->
 
                     <!-- sits details edit -->
                     <div class="extra-details-edit sits-edit --sits-edit">
                         <div class="sits-edit__header">
                             <button class="--sits-save">Save and close</button>
                             <div>
-                                <span>Luggage</span>
+                                <span>Location of seats</span>
                                 <img src="assets/icons/order/seats1.svg" alt="" class="sits-edit-logo">
                             </div>
                         </div>
@@ -1061,6 +1075,29 @@
                                     </ul>
                                 </div>
                                 <!-- /.information-helpful -->
+                            </div>
+                            <div class="sits-edit__information_seat active">
+                                <div class="information-header">
+                                    <button class="information-close">
+                                        <img src="assets/icons/order/x-gray.svg" alt="close">
+                                    </button>
+                                    <h4 class="information-title">Show information about the seat</h4>
+                                </div>
+                                <div class="information-content">
+                                    <div>
+                                        <h4 class="content-header">21J | Seat C with extra legroom</h4>
+                                        <ul class="content-list">
+                                            <li><span>For a fee</span></li>
+                                            <li><span>partition seat</span></li>
+                                            <li><span>more legroom</span></li>
+                                            <li><span>built-in sockets</span></li>
+                                        </ul>
+                                    </div>
+                                    <div class="content-buttons">
+                                        <button class="seat-cancel">Cancel</button>
+                                        <button class="seat-add">Add $89</button>
+                                    </div>
+                                </div>
                             </div>
                             <!-- /.sits-edit__information -->
                             <div class="sits-edit__seat_map">
@@ -1384,7 +1421,8 @@
                         <!-- /.sits-edit__content -->
                     </div>
                     <!-- / sits details edit -->
-                </div> <!-- / Sits edit -->
+                </div>
+                <!-- /.extra-sits-edit -->
             </div>
             <!-- /.extra-services__list -->
 
@@ -1393,6 +1431,144 @@
             </div>
         </div>
         <!-- / extra services -->
+
+        <!-- order-payment -->
+        <div id="order-payment___details" class="order-filling order-payment">
+            <div class="order-filling__steps">
+                <div class="step step-4 active">
+                    <span class="step-text">Payment</span>
+                    <span class="step-number">04</span>
+                </div>
+                <div class="step step-3 active">
+                    <span class="step-text">Extra services</span>
+                    <span class="step-number">03</span>
+                </div>
+                <div class="step step-2 active">
+                    <span class="step-text">Passenger details</span>
+                    <span class="step-number">02</span>
+                </div>
+                <div class="step step-1 active">
+                    <span class="step-text">Customer details</span>
+                    <span class="step-number">01</span>
+                </div>
+            </div>
+
+            <h3 class="order-filling__title heading-3--right_line">Payment</h3>
+            <p class="order-filling__subtitle">Please note that your credit card information is not stored on the Issta website and the
+                credit charge is secured by the international PCI standard, the strictest security standard in</p>
+
+            <div class="discount-coupon">
+                <div class="discount-number form-text__group success">
+                    <label for="discount-number">Implementaion</label>
+                    <input type="text" id="discount-number" class="form-text">
+                </div>
+                <h5 class="discount-title ">Do you have a discount coupon?</h5>
+            </div>
+
+            <form action="" class="order-filling__form payer-details form">
+                <h5 class="payer-details-title">Payer details</h5>
+                <div class="form-text__group payer-last_name">
+                    <label for="payer-last_name">Last name</label>
+                    <input type="text" id="payer-last_name" class="form-text">
+                </div>
+                <div class="form-text__group payer-first_name">
+                    <label for="payer-first_name">First name</label>
+                    <input type="text" id="payer-first_name" class="form-text">
+                </div>
+                <div class="form-select__group payer-title">
+                    <label for="payer-title">Title</label>
+                    <select id="payer-title" dir="rtl" class="form-select">
+                        <option>Mr</option>
+                        <option>Mrs</option>
+                    </select>
+                </div>
+                <div class="form-text__group payer-phone">
+                    <label for="payer-phone">Phone</label>
+                    <input type="email" id="payer-phone" class="form-text">
+                </div>
+                <div class="form-text__group payer-email">
+                    <label for="payer-email">Email</label>
+                    <input type="email" id="payer-email" class="form-text">
+                </div>
+
+                <div class="credit-card">
+                    <h5 class="payer-details-title">Credit card details</h5>
+                    <div class="credit-card__icons">
+                        <img src="assets/icons/order/diners-club-logo%201.svg" alt="diners club">
+                        <img src="assets/icons/order/Isracard%201.svg" alt="Isracard">
+                        <img src="assets/icons/order/American_Express_logo_(2018)%201.svg" alt="American Express">
+                        <img src="assets/icons/order/VISA.svg" alt="visa">
+                        <img src="assets/icons/order/mastercard.svg" alt="mastercard">
+                    </div>
+                    <!-- /.credit-card-icons -->
+                    <div class="form-select__group credit-card__payment">
+                        <label for="credit-card__payment"></label>
+                        <select id="credit-card__payment" dir="rtl" class="form-select">
+                            <option>One payment $2.712</option>
+                            <option>Two payment $1.382</option>
+                        </select>
+                    </div>
+                    <div class="form-text__group credit-card__total">
+                        <label for="credit-card__total">Total payment</label>
+                        <input type="text" id="credit-card__total" class="form-text">
+                    </div>
+                    <div class="form-text__group credit-card__last_name">
+                        <label for="credit-card__last_name">Last name</label>
+                        <input type="text" id="credit-card__last_name" class="form-text">
+                    </div>
+                    <div class="form-text__group credit-card__first_name">
+                        <label for="credit-card__first_name">First name</label>
+                        <input type="text" id="credit-card__first_name" class="form-text">
+                    </div>
+                    <div class="form-text__group credit-card__cvv">
+                        <label for="credit-card__cvv">CVV *</label>
+                        <input type="number" id="credit-card__cvv" class="form-text">
+                    </div>
+                    <div class="form-text__group credit-card__date">
+                        <label for="credit-card__date">Expiration date *</label>
+                        <input type="date" id="credit-card__date" class="form-text">
+                    </div>
+                    <div class="form-text__group credit-card__number">
+                        <label for="credit-card__number">Card number *</label>
+                        <input type="number" id="credit-card__number" class="form-text">
+                    </div>
+                    <a href="#" target="_blank" class="what-is-cvv">What is aCVV ?</a>
+                </div>
+                <!-- /.credit-card -->
+
+                <div class="form__footer payment-regulations">
+
+                    <ul class="payment-regulations__list">
+                        <li>It is your responsibility to read the <a href="#" target="_blank">terms of use of the site and all the terms and conditions</a>
+                            regarding your order.</li>
+                        <li>The travel documents will be received by e-mail, if necessary the collection of documents
+                            from Issta will be coordinated.</li>
+                    </ul>
+
+                    <ul class="payment-regulations__accept">
+                        <li> <label for="understand-entry_conditions">I read and understood the entry conditions to the destination as detailed on the Ministry of
+                            Health website link</label>
+                            <input id="understand-entry_conditions" type="checkbox">
+                        </li>
+                        <li> <label for="understand-outbound_and_returning">I have read and understood the guidelines of the Ministry of Health to outbound and returning
+                            to her link</label>
+                            <input id="understand-outbound_and_returning" type="checkbox">
+                        </li>
+                        <li> <label for="did-yout-talk">Did you talk to one of our experts?</label>
+                            <input id="did-yout-talk" type="checkbox">
+                        </li>
+                        <li> <label for="payment-privacy-policy">I confirm that I have read and agree to <a href="#" target="_blank">all the terms of the transaction</a> in this order *.</label>
+                            <input id="payment-privacy-policy" type="checkbox">
+                        </li>
+                    </ul>
+                    <div class="payment-regulations__submit">
+                        <button type="submit">invitation</button>
+                    </div>
+                </div> <!-- /.form__footer -->
+            </form>
+            <!-- /.payer-details -->
+        </div>
+        <!-- / order-payment -->
 
         <!-- luggage -->
         <!-- / luggage -->

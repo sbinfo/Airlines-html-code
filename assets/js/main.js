@@ -18,6 +18,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
 $(document).ready(function(){
     /*** Order page ***/
+
+    $(".order-details-filter.filter__buttons button.order-details-btn_terms").on('click', function() {
+        $(this).addClass('active');
+        $(".order-details-filter.filter__buttons button.order-details-btn_summary").removeClass('active');
+        $(".order-details .order-details-card").hide();
+        $(".order-details .order-details-terms").show(250);
+    });
+    $(".order-details-filter.filter__buttons button.order-details-btn_summary").on('click', function() {
+        $(this).addClass('active');
+        $(".order-details-filter.filter__buttons button.order-details-btn_terms").removeClass('active');
+        $(".order-details .order-details-terms").hide();
+        $(".order-details .order-details-card").show(250);
+    });
+
     $(".details-extra__more").hide();
     $(".details-extra__btn_open").on('click', function () {
        const selectedParent = $(this).closest(".details-extra");
@@ -64,6 +78,17 @@ $(document).ready(function(){
         $(".extra-sits-edit .--sits-edit").hide(250);
         $('.extra-sits-edit .--sits-info').show();
     });
+
+    $(".sits-edit__information_seat").hide();
+    $(".sits-edit__information_seat .information-close").on('click', function() {
+        $(".sits-edit__information_seat").hide();
+        $(".sits-edit__information").show();
+    })
+
+    // seat map - select
+    // $(".seat-map span.seat").on("click", function () {
+    //
+    // });
 
     /*** Order page end ***/
 
