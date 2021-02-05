@@ -2217,7 +2217,7 @@ body {
 }
 
 .order-filling {
-  flex-basis: 64%;
+  flex-basis: 66%;
   text-align: right;
 
   &__steps {
@@ -2819,8 +2819,33 @@ body {
 
 // sits edit
 .ordering .extra-details-edit .sits-edit {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+
+    button {
+      @include start-button(10px, #fff, $color-primary);
+      padding: 8px 16px;
+      font-weight: 400;
+    }
+
+    > div {
+      display: flex;
+      align-items: center;
+    }
+
+    img.sits-edit-logo {
+      min-width: 30px;
+      width: 30px;
+      margin-left: 25px;
+    }
+  }
+
   &__content {
     display: flex;
+    justify-content: space-between;
     background: #F7F7F7;
     padding: 15px 20px;
   }
@@ -2937,9 +2962,123 @@ body {
   }
 
   &__flight {
-    max-width: 350px;
-    width: 350px;
+    max-width: 300px;
+    width: 300px;
+
+    .flight-location {
+      border: 11px solid transparent;
+
+      .flight-location-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 23px 15px;
+        background-color: #fff;
+
+        .flight-location-city {
+          font-size: 12px;
+          color: #908C8E;
+        }
+        .flight-location-abbr {
+          font-size: 20px;
+          color: #2D2B2C;
+        }
+
+        .flight-location__to {
+          text-align: left;
+        }
+        .flight-location__status {
+          flex-basis: 55%;
+          text-align: center;
+          position: relative;
+
+          &:before {
+            left: 0;
+            background-color: #fff;
+          }
+          &:after {
+            right: 0;
+            background-color: #908C8E;
+          }
+
+          &:before,
+          &:after {
+            content: "";
+            width: 12px;
+            height: 12px;
+            position: absolute;
+            top: 15%;
+            border: 1px solid #908C8E;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            border-radius: 50%;
+          }
+
+          .flight-location-plane {
+            position: relative;
+
+            &:before {
+              left: 20px;
+            }
+            &:after {
+              right: 20px;
+            }
+
+            &:before,
+            &:after {
+              content: "";
+              width: 24%;
+              position: absolute;
+              top: 40%;
+              border-bottom: 1px dashed #908C8E;
+            }
+          }
+        }
+        .flight-location__from {
+          text-align: right;
+        }
+      }
+      //.flight-location-inner
+
+      .flight-location-passengers {
+        display: none;
+      }
+
+      &.active {
+        border: 11px solid #E9E9E9;
+        .flight-location-inner {
+          border: 2px solid #0EB155;
+        }
+
+        .flight-location-passengers {
+          display: block;
+          .passenger {
+            padding: 15px 32px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            img {
+              max-width: 21px;
+              width: 21px;
+              max-height: 21px;
+              height: 21px;
+              margin-left: 10px;
+            }
+            &.active {
+              background-color: rgb(14,177,85,0.1);
+            }
+          }
+        }
+      }
+      //.flight-location.active
+
+
+    }
+    //.flight-location
   }
+  //.sits-edit__flight
 
 }
 // .ordering .extra-details-edit .sits-edit
@@ -2950,8 +3089,7 @@ body {
     height: 400px;
     overflow-y: scroll;
     direction: rtl;
-    padding-left: 15px;
-    margin-left: 20px;
+    margin-left: 10px;
 
     &::-webkit-scrollbar {
       width: 6px;
@@ -3205,6 +3343,17 @@ body {
     }
   }
 
+}
+
+.ordering .continue-payment {
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid #E6E6E6;
+  padding-top: 20px;
+  .btn-continue-payment {
+    @include start-button(16px, #fff, $color-primary);
+    padding: 12px 30px;
+  }
 }
 
 // ### Ordering end

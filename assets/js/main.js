@@ -54,15 +54,15 @@ $(document).ready(function(){
     })
 
     // sits edit
-    // $(".--sits-edit").hide(250);
+    $(".--sits-edit").hide(250);
     $("button.--sits-edit-open").on('click', function () {
         $('.extra-sits-edit .--sits-info').hide();
         $(".extra-sits-edit .--sits-edit").show(250);
     });
 
     $("button.--sits-save").on('click', function () {
-        $(".extra-sits-edit .--sits-edit").hide();
-        $('.extra-sits-edit .--sits-info').show(250);
+        $(".extra-sits-edit .--sits-edit").hide(250);
+        $('.extra-sits-edit .--sits-info').show();
     });
 
     /*** Order page end ***/
