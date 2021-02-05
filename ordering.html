@@ -801,10 +801,12 @@
             <h3 class="order-filling__title heading-3--right_line">Seat and luggage selection</h3>
 
             <div class="extra-services__list">
-                <div class="extra-services__item">
-                    <div class="extra-services__item-inner">
+                <!-- extra luggage block -->
+                <div class="extra-services__item extra-luggage-edit">
+                    <!-- luggage-info -->
+                    <div class="extra-details-info --luggage-info">
                         <div class="extra-services__button">
-                            <button type="button">Edit</button>
+                            <button type="button" class="--luggage-edit-open">Edit</button>
                         </div>
                         <div class="extra-services__details">
                             <div class="extra-services__details_info">
@@ -821,32 +823,12 @@
                                 <img src="assets/icons/order/luggage.svg" alt="luggage">
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="extra-services__item edit">
-                    <div class="extra-services__item-inner">
-                        <div class="extra-services__button">
-                            <button type="button">Edit</button>
-                        </div>
-                        <div class="extra-services__details">
-                            <div class="extra-services__details_info">
-                                <span class="space-separator"></span>
-                                <p>2 pieces of checked baggage</p>
-                                <p>Not selected</p>
-                            </div>
-                            <div class="extra-services__details_cities">
-                                <h4>Luggage</h4>
-                                <p>Punta Cana - Kiev</p>
-                                <p>Kiev - Punta Cana</p>
-                            </div>
-                            <div class="extra-services__details_icon">
-                                <img src="assets/icons/order/luggage.svg" alt="luggage">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="luggage-edit">
+                    </div> <!-- / luggage-info -->
+
+                    <!-- luggage-edit -->
+                    <div class="extra-details-edit --luggage-edit">
                         <div class="luggage-edit__header">
-                            <button class="luggage-save">Save and close</button>
+                            <button class="--luggage-save">Save and close</button>
                             <div>
                                 <span>Luggage</span>
                                 <img src="assets/icons/order/luggage.svg" alt="">
@@ -980,12 +962,16 @@
                             </div>
 
                         </div>
-                    </div>
+                    </div> <!-- luggage-edit -->
                 </div>
-                <div class="extra-services__item">
-                    <div class="extra-services__item-inner">
+                <!-- / extra luggage block -->
+
+                <!-- extra sits block -->
+                <div class="extra-services__item extra-sits-edit">
+                    <!-- sits info -->
+                    <div class="extra-details-info --sits-info">
                         <div class="extra-services__button">
-                            <button type="button">Edit</button>
+                            <button type="button" class="--sits-edit-open">Edit</button>
                         </div>
                         <div class="extra-services__details">
                             <div class="extra-services__details_info">
@@ -1002,8 +988,348 @@
                                 <img src="assets/icons/order/seats1.svg" alt="seats">
                             </div>
                         </div>
+                    </div> <!-- / sits info -->
+
+                    <!-- sits details edit -->
+                    <div class="extra-details-edit sits-edit --sits-edit">
+                        <div class="luggage-edit__header">
+                            <button class="--sits-save">Save and close</button>
+                            <div>
+                                <span>Luggage</span>
+                                <img src="assets/icons/order/seats1.svg" alt="">
+                            </div>
+                        </div>
+                        <!-- /.luggage-edit__header -->
+                        <div class="sits-edit__content">
+                            <div class="sits-edit__information">
+                                <div class="information-header">
+                                    <button class="information-close">
+                                        <img src="assets/icons/order/x-gray.svg" alt="close">
+                                    </button>
+                                    <h4 class="information-title">Close the information about the seat</h4>
+                                </div>
+                                <!-- /.information-header -->
+                                <div class="information-colors">
+                                    <h4 class="colors-heading">Seat information</h4>
+                                    <ul class="color-list">
+                                        <li class="color-item not--available">
+                                            <span class="color-name">Not available</span>
+                                            <span class="color-image gray"></span>
+                                        </li>
+                                        <li class="color-item business--class">
+                                            <span class="color-name">Business class seat</span>
+                                            <span class="color-image brown"></span>
+                                        </li>
+                                        <li class="color-item premium--class">
+                                            <span class="color-name">Premium class seat</span>
+                                            <span class="color-image pink"></span>
+                                        </li>
+                                        <li class="color-item economy--class">
+                                            <span class="color-name">Economy class seat</span>
+                                            <span class="color-image lightblue"></span>
+                                        </li>
+                                        <li class="color-item extra--legroom">
+                                            <span class="color-name">Seat with extra legroom</span>
+                                            <span class="color-image darkblue"></span>
+                                        </li>
+                                        <li class="color-item your-choice">
+                                            <span class="color-name">Your choice</span>
+                                            <span class="color-image green"></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- /.information-colors -->
+                                <div class="information-helpful">
+                                    <h4 class="helpful-heading">Helpful information</h4>
+                                    <ul class="helpful-list">
+                                        <li class="helpful-item">
+                                            <span class="helpful-title">Onboard kitchen</span>
+                                            <img src="assets/icons/order/kitchen.svg" alt="" class="helpful-icon">
+                                        </li>
+                                        <li class="helpful-item">
+                                            <span class="helpful-title">Emergency exit</span>
+                                            <img src="assets/icons/order/red-line.svg" alt="" class="helpful-icon">
+                                        </li>
+                                        <li class="helpful-item">
+                                            <span class="helpful-title">WC</span>
+                                            <img src="assets/icons/order/wc.svg" alt="" class="helpful-icon">
+                                        </li>
+                                        <li class="helpful-item">
+                                            <span class="helpful-title">Baby bassinet</span>
+                                            <img src="assets/icons/order/blue-line.svg" alt="" class="helpful-icon">
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- /.information-helpful -->
+                            </div>
+                            <!-- /.sits-edit__information -->
+                            <div class="sits-edit__seat_map">
+                                <div class="seat-map">
+                                    <div class="plane">
+                                        <div class="plane-inner">
+                                            <div class="seat-row">
+                                                <span class="seat-text">A</span>
+                                                <span class="seat-text">B</span>
+                                                <span class="seat-text">C</span>
+                                                <span class="seat-space"></span>
+                                                <span class="seat-text">H</span>
+                                                <span class="seat-text">J</span>
+                                                <span class="seat-text">K</span>
+                                            </div>
+                                            <div class="seat-row row-21">
+                                                <span class="seat seat-a not--available"></span>
+                                                <span class="seat seat-b not--available"></span>
+                                                <span class="seat seat-c not--available"></span>
+                                                <span class="seat-space">21</span>
+                                                <span class="seat seat-h not--available"></span>
+                                                <span class="seat seat-j extra--legroom"></span>
+                                                <span class="seat seat-k extra--legroom"></span>
+                                            </div>
+                                            <div class="seat-row row-22">
+                                                <span class="seat seat-a extra--legroom"></span>
+                                                <span class="seat seat-b extra--legroom"></span>
+                                                <span class="seat seat-c extra--legroom"></span>
+                                                <span class="seat-space">22</span>
+                                                <span class="seat seat-h not--available"></span>
+                                                <span class="seat seat-j not--available"></span>
+                                                <span class="seat seat-k not--available"></span>
+                                            </div>
+                                            <div class="seat-row row-23">
+                                                <span class="seat seat-a"></span>
+                                                <span class="seat seat-b"></span>
+                                                <span class="seat seat-c not--available"></span>
+                                                <span class="seat-space">23</span>
+                                                <span class="seat seat-h"></span>
+                                                <span class="seat seat-j"></span>
+                                                <span class="seat seat-k not--available"></span>
+                                            </div>
+                                            <div class="seat-row row-24">
+                                                <span class="seat seat-a"></span>
+                                                <span class="seat seat-b"></span>
+                                                <span class="seat seat-c"></span>
+                                                <span class="seat-space">24</span>
+                                                <span class="seat seat-h"></span>
+                                                <span class="seat seat-j"></span>
+                                                <span class="seat seat-k your--choice"></span>
+                                            </div>
+                                            <div class="seat-row row-25">
+                                                <span class="seat seat-a"></span>
+                                                <span class="seat seat-b"></span>
+                                                <span class="seat seat-c"></span>
+                                                <span class="seat-space">25</span>
+                                                <span class="seat seat-h"></span>
+                                                <span class="seat seat-j"></span>
+                                                <span class="seat seat-k"></span>
+                                            </div>
+                                            <div class="seat-row row-26">
+                                                <span class="seat seat-a"></span>
+                                                <span class="seat seat-b"></span>
+                                                <span class="seat seat-c"></span>
+                                                <span class="seat-space">26</span>
+                                                <span class="seat seat-h"></span>
+                                                <span class="seat seat-j not--available"></span>
+                                                <span class="seat seat-k"></span>
+                                            </div>
+                                            <div class="seat-row row-27">
+                                                <span class="seat seat-a"></span>
+                                                <span class="seat seat-b"></span>
+                                                <span class="seat seat-c"></span>
+                                                <span class="seat-space">27</span>
+                                                <span class="seat seat-h"></span>
+                                                <span class="seat seat-j"></span>
+                                                <span class="seat seat-k"></span>
+                                            </div>
+                                            <div class="seat-row">
+                                                <span class="seat-space seat-space-line"></span>
+                                                <span class="seat-space"></span>
+                                                <span class="seat-space"></span>
+                                                <span class="seat-space"></span>
+                                                <span class="seat-space"></span>
+                                                <span class="seat-space seat-space-line"></span>
+                                            </div>
+                                            <div class="seat-row row-34">
+                                                <span class="seat seat-a"></span>
+                                                <span class="seat seat-b"></span>
+                                                <span class="seat seat-c"></span>
+                                                <span class="seat-space">34</span>
+                                                <span class="seat seat-h"></span>
+                                                <span class="seat seat-j"></span>
+                                                <span class="seat seat-k"></span>
+                                            </div>
+                                            <div class="seat-row">
+                                                <span class="seat-space seat-space-line"></span>
+                                                <span class="seat-space"></span>
+                                                <span class="seat-space"></span>
+                                                <span class="seat-space"></span>
+                                                <span class="seat-space"></span>
+                                                <span class="seat-space"></span>
+                                            </div>
+                                            <div class="seat-row row-35">
+                                                <span class="seat seat-a"></span>
+                                                <span class="seat seat-b"></span>
+                                                <span class="seat seat-c"></span>
+                                                <span class="seat-space">35</span>
+                                                <span class="seat seat-h"></span>
+                                                <span class="seat seat-j"></span>
+                                                <span class="seat seat-k"></span>
+                                            </div>
+                                            <div class="seat-row row-36">
+                                                <span class="seat seat-a not--available"></span>
+                                                <span class="seat seat-b"></span>
+                                                <span class="seat seat-c"></span>
+                                                <span class="seat-space">36</span>
+                                                <span class="seat seat-h"></span>
+                                                <span class="seat seat-j"></span>
+                                                <span class="seat seat-k"></span>
+                                            </div>
+                                            <div class="seat-row row-37">
+                                                <span class="seat seat-a"></span>
+                                                <span class="seat seat-b"></span>
+                                                <span class="seat seat-c"></span>
+                                                <span class="seat-space">37</span>
+                                                <span class="seat seat-h"></span>
+                                                <span class="seat seat-j not--available"></span>
+                                                <span class="seat seat-k not--available"></span>
+                                            </div>
+                                            <div class="seat-row row-38">
+                                                <span class="seat seat-a"></span>
+                                                <span class="seat seat-b"></span>
+                                                <span class="seat seat-c"></span>
+                                                <span class="seat-space">38</span>
+                                                <span class="seat seat-h"></span>
+                                                <span class="seat seat-j"></span>
+                                                <span class="seat seat-k"></span>
+                                            </div>
+                                            <div class="seat-row row-39">
+                                                <span class="seat seat-a"></span>
+                                                <span class="seat seat-b"></span>
+                                                <span class="seat seat-c"></span>
+                                                <span class="seat-space">39</span>
+                                                <span class="seat seat-h"></span>
+                                                <span class="seat seat-j"></span>
+                                                <span class="seat seat-k"></span>
+                                            </div>
+                                            <div class="seat-row row-40">
+                                                <span class="seat seat-a"></span>
+                                                <span class="seat seat-b not--available"></span>
+                                                <span class="seat seat-c"></span>
+                                                <span class="seat-space">40</span>
+                                                <span class="seat seat-h not--available"></span>
+                                                <span class="seat seat-j"></span>
+                                                <span class="seat seat-k"></span>
+                                            </div>
+                                            <div class="seat-row row-41">
+                                                <span class="seat seat-a"></span>
+                                                <span class="seat seat-b"></span>
+                                                <span class="seat seat-c"></span>
+                                                <span class="seat-space">41</span>
+                                                <span class="seat seat-h"></span>
+                                                <span class="seat seat-j"></span>
+                                                <span class="seat seat-k"></span>
+                                            </div>
+                                            <div class="seat-row row-42">
+                                                <span class="seat seat-a"></span>
+                                                <span class="seat seat-b"></span>
+                                                <span class="seat seat-c"></span>
+                                                <span class="seat-space">42</span>
+                                                <span class="seat seat-h"></span>
+                                                <span class="seat seat-j"></span>
+                                                <span class="seat seat-k"></span>
+                                            </div>
+                                            <div class="seat-row row-43">
+                                                <span class="seat seat-a"></span>
+                                                <span class="seat seat-b"></span>
+                                                <span class="seat seat-c"></span>
+                                                <span class="seat-space">43</span>
+                                                <span class="seat seat-h"></span>
+                                                <span class="seat seat-j"></span>
+                                                <span class="seat seat-k"></span>
+                                            </div>
+                                            <div class="seat-row row-44">
+                                                <span class="seat seat-a"></span>
+                                                <span class="seat seat-b"></span>
+                                                <span class="seat seat-c"></span>
+                                                <span class="seat-space">44</span>
+                                                <span class="seat seat-h"></span>
+                                                <span class="seat seat-j"></span>
+                                                <span class="seat seat-k"></span>
+                                            </div>
+                                            <div class="seat-row row-45">
+                                                <span class="seat seat-a"></span>
+                                                <span class="seat seat-b"></span>
+                                                <span class="seat seat-c"></span>
+                                                <span class="seat-space">45</span>
+                                                <span class="seat seat-h"></span>
+                                                <span class="seat seat-j"></span>
+                                                <span class="seat seat-k"></span>
+                                            </div>
+                                            <div class="seat-row row-46">
+                                                <span class="seat seat-a"></span>
+                                                <span class="seat seat-b"></span>
+                                                <span class="seat seat-c"></span>
+                                                <span class="seat-space">46</span>
+                                                <span class="seat seat-h"></span>
+                                                <span class="seat seat-j"></span>
+                                                <span class="seat seat-k"></span>
+                                            </div>
+                                            <div class="seat-row row-47">
+                                                <span class="seat seat-a"></span>
+                                                <span class="seat seat-b"></span>
+                                                <span class="seat seat-c"></span>
+                                                <span class="seat-space">47</span>
+                                                <span class="seat seat-h"></span>
+                                                <span class="seat seat-j"></span>
+                                                <span class="seat seat-k"></span>
+                                            </div>
+                                            <div class="seat-row row-48">
+                                                <span class="seat seat-a not--available"></span>
+                                                <span class="seat seat-b not--available"></span>
+                                                <span class="seat seat-c not--available"></span>
+                                                <span class="seat-space">48</span>
+                                                <span class="seat seat-h"></span>
+                                                <span class="seat seat-j"></span>
+                                                <span class="seat seat-k"></span>
+                                            </div>
+                                            <div class="seat-row row-49">
+                                                <span class="seat seat-a"></span>
+                                                <span class="seat seat-b"></span>
+                                                <span class="seat seat-c"></span>
+                                                <span class="seat-space">49</span>
+                                                <span class="seat seat-h"></span>
+                                                <span class="seat seat-j"></span>
+                                                <span class="seat seat-k"></span>
+                                            </div>
+                                            <div class="seat-row row-50">
+                                                <span class="seat seat-a"></span>
+                                                <span class="seat seat-b not--available"></span>
+                                                <span class="seat seat-c"></span>
+                                                <span class="seat-space">50</span>
+                                                <span class="seat seat-h"></span>
+                                                <span class="seat seat-j"></span>
+                                                <span class="seat seat-k"></span>
+                                            </div>
+                                            <div class="seat-row row-51">
+                                                <span class="seat seat-a"></span>
+                                                <span class="seat seat-b"></span>
+                                                <span class="seat seat-c"></span>
+                                                <span class="seat-space">51</span>
+                                                <span class="seat seat-h"></span>
+                                                <span class="seat seat-j"></span>
+                                                <span class="seat seat-k not--available"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.seat-map -->
+                            </div>
+                            <!-- /.sits-edit__seat_map -->
+                            <div class="sits-edit__flight"></div>
+                            <!-- /.sits-edit__flight -->
+                        </div>
+                        <!-- /.sits-edit__content -->
                     </div>
-                </div>
+                    <!-- / sits details edit -->
+                </div> <!-- / Sits edit -->
             </div>
         </div>
         <!-- / extra services -->

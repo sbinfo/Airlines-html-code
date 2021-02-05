@@ -14,6 +14,13 @@ $color-gray: #595758;
 $color-light-gray: #BCCDC2;
 $color-surface: #908C8E;
 
+$seat-not-available: #C4C4C4;
+$seat-business: #CE833F;
+$seat-premium: #C837AB;
+$seat-economy: #6992FD;
+$seat-extra-legroom: #425DA2;
+$seat-your-choice: #0EB155;
+
 // Screen resolution
 $bp-small-576: 36em; // 567px
 $bp-small-768: 48em; // 768px
@@ -181,6 +188,7 @@ ul {
 
 body {
   font-family: 'Rubik', sans-serif;
+  font-weight: normal;
   color: $color-main;
 }
 
@@ -2443,7 +2451,7 @@ body {
   margin-bottom: 33px;
   @include box-shadow(0px 2px 11px rgba(0, 0, 0, 0.12));
 
-  &-inner {
+  .extra-details-info {
     width: 100%;
     height: 100%;
     display: flex;
@@ -2509,14 +2517,8 @@ body {
   }
 }
 
-.ordering .extra-services__item.edit {
-  .extra-services__item-inner {
-    display: none;
-  }
-}
-
-.ordering .luggage-edit {
-  &__header {
+.ordering .extra-details-edit {
+  .luggage-edit__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -2544,7 +2546,7 @@ body {
     }
   }
 
-  &__content {
+  .luggage-edit__content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -2577,14 +2579,17 @@ body {
 
 .ordering .luggage-edit__content .luggage-passengers {
   flex-basis: 100%;
+
   .passengers-item {
     display: flex;
   }
+
   .passengers-item:not(:first-child) {
     .luggage-detail {
       border-top: 0;
     }
   }
+
   .passengers-item.active {
     .luggage-detail {
       .luggage-select-inner .luggage-select-text {
@@ -2595,6 +2600,7 @@ body {
 
     .luggage-flight__block {
       border: 11px solid #E9E9E9;
+
       .luggage-flight-inner {
         border: 2px solid #0EB155;
       }
@@ -2616,12 +2622,14 @@ body {
   .luggage-btn-add {
     flex-basis: 25%;
     position: relative;
+
     label {
       font-size: 12px;
       font-weight: 400;
       position: relative;
       color: $color-primary;
     }
+
     button {
       outline: none;
       border: none;
@@ -2661,8 +2669,11 @@ body {
       cursor: pointer;
       margin-right: 14px;
       width: 28px;
-      img {}
+
+      img {
+      }
     }
+
     .luggage-select-inner .luggage-select-text {
       display: flex;
       flex-wrap: wrap;
@@ -2742,17 +2753,21 @@ body {
     font-size: 12px;
     color: $color-surface;
   }
+
   &__to .luggage-flight-abbr,
   &__from .luggage-flight-abbr {
     font-size: 20px;
     color: $color-main;
   }
+
   &__to {
     text-align: left;
   }
+
   &__from {
     text-align: right;
   }
+
   &__status {
     flex-basis: 55%;
     text-align: center;
@@ -2767,10 +2782,12 @@ body {
       border: 1px solid #908C8E;
       @include br(50%);
     }
+
     &:before {
       left: 0;
       background-color: #fff;
     }
+
     &:after {
       right: 0;
       background-color: $color-surface;
@@ -2779,6 +2796,7 @@ body {
     .luggage-status-plane {
       position: relative;
     }
+
     .luggage-status-plane:before,
     .luggage-status-plane:after {
       content: "";
@@ -2787,15 +2805,228 @@ body {
       top: 40%;
       border-bottom: 1px dashed #908C8E;
     }
+
     .luggage-status-plane:before {
       left: 20px;
     }
+
     .luggage-status-plane:after {
       right: 20px;
     }
   }
 
 }
+
+// sits edit
+.ordering .extra-details-edit .sits-edit {
+  &__content {
+    display: flex;
+    background: #F7F7F7;
+    padding: 15px 20px;
+  }
+
+  &__information {
+    max-width: 245px;
+    background: #fff;
+
+    .information-header {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px 10px 10px;
+      border-bottom: 1px solid #E6E6E6;
+
+      .information-close {
+        flex-basis: 10%;
+        background: transparent;
+        outline: none;
+        border: none;
+        cursor: pointer;
+      }
+
+      .information-title {
+        flex-basis: 70%;
+        font-size: 14px;
+        font-weight: normal;
+        color: $color-primary;
+        text-align: right;
+      }
+    }
+
+    // .information-header
+
+    .information-colors, .information-helpful {
+      padding: 20px;
+
+      .colors-heading,
+      .helpful-heading {
+        font-weight: 500;
+        font-size: 15px;
+      }
+
+      .color-item,
+      .helpful-item {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+
+      .color-item .color-name,
+      .helpful-item .helpful-title {
+        font-size: 13px;
+        font-weight: 400;
+        color: $color-surface;
+      }
+    }
+    // .information-colors, .information-helpful
+
+    .information-colors .color-list .color-item {
+      margin-top: 15px;
+      .color-image {
+        width: 24px;
+        height: 24px;
+        display: inline-block;
+        @include br(3px);
+        margin-left: 12px;
+      }
+
+      .gray {
+        background: #C4C4C4;
+      }
+
+      .brown {
+        background: $color-brown;
+      }
+
+      .pink {
+        background: #C837AB;
+      }
+
+      .lightblue {
+        background: #6992FD;
+      }
+
+      .darkblue {
+        background: #425DA2;
+      }
+
+      .green {
+        background: $color-primary;
+      }
+    }
+    // .information-colors .color-list .color-item
+
+    .information-helpful {
+      .helpful-item {
+        margin-top: 20px;
+
+        .helpful-icon {
+          width: 18px;
+          height: 18px;
+          margin-left: 16px;
+        }
+      }
+    }
+    // .information-helpful
+  }
+  // .sits-edit__information
+
+  &__seat_map {
+    width: 340px;
+  }
+
+  &__flight {
+    max-width: 350px;
+    width: 350px;
+  }
+
+}
+// .ordering .extra-details-edit .sits-edit
+
+.seat-map {
+  width: 340px;
+  .plane {
+    height: 400px;
+    overflow-y: scroll;
+    direction: rtl;
+    padding-left: 15px;
+    margin-left: 20px;
+
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    //&::-webkit-scrollbar-track {
+    //  background-color: darkred;
+    //}
+    &::-webkit-scrollbar-thumb {
+      background-color: $color-surface;
+      border-radius: 20px;
+    }
+  }
+  .plane .plane-inner {
+    direction: ltr;
+    max-width: 296px;
+    width: 296px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+
+    .seat-row {
+      flex-basis: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+
+      .seat,
+      .seat-text,
+      .seat-space {
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .seat-text {}
+      .seat-space {
+        &.seat-space-line {
+          position: relative;
+          &:before {
+            content: "";
+            height: 22px;
+            border-right: 2px solid #FF0000;
+          }
+        }
+      }
+      .seat {
+        @include br(3px);
+        background-color: $seat-economy;
+
+        &.not--available {
+          background-color: $seat-not-available;
+        }
+        &.business--class {
+          background-color: $seat-business;
+        }
+        &.premium--class {
+          background-color: $seat-premium;
+        }
+        &.economy--class {
+          background-color: $seat-economy;
+        }
+        &.extra--legroom {
+          background-color: $seat-extra-legroom;
+        }
+        &.your--choice {
+          background-color: $seat-your-choice;
+        }
+      }
+    }
+  }
+}
+// .seat-map
 
 // order details extra
 .details-extra__info_title {

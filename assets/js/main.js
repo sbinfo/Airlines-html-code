@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 $(document).ready(function(){
-    // Order page
+    /*** Order page ***/
     $(".details-extra__more").hide();
     $(".details-extra__btn_open").on('click', function () {
        const selectedParent = $(this).closest(".details-extra");
@@ -41,7 +41,31 @@ $(document).ready(function(){
          }
     });
 
-    // Order page end
+    // luggage edit
+    $(".--luggage-edit").hide(250);
+    $("button.--luggage-edit-open").on('click', function () {
+        $('.extra-luggage-edit .--luggage-info').hide();
+        $(".extra-luggage-edit .--luggage-edit").show(250);
+    });
+
+    $(".--luggage-edit button.--luggage-save").on('click', function () {
+        $(".extra-luggage-edit .--luggage-edit").hide(250);
+        $('.extra-luggage-edit .--luggage-info').show();
+    })
+
+    // sits edit
+    // $(".--sits-edit").hide(250);
+    $("button.--sits-edit-open").on('click', function () {
+        $('.extra-sits-edit .--sits-info').hide();
+        $(".extra-sits-edit .--sits-edit").show(250);
+    });
+
+    $("button.--sits-save").on('click', function () {
+        $(".extra-sits-edit .--sits-edit").hide();
+        $('.extra-sits-edit .--sits-info').show(250);
+    });
+
+    /*** Order page end ***/
 
     // Contact page
     function switchContactPage() {

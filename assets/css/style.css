@@ -457,6 +457,7 @@ ul {
 
 body {
   font-family: "Rubik", sans-serif;
+  font-weight: normal;
   color: #2D2B2C;
 }
 
@@ -2415,7 +2416,7 @@ body {
   -moz-box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.12);
   box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.12);
 }
-.ordering .extra-services__list .extra-services__item-inner {
+.ordering .extra-services__list .extra-services__item .extra-details-info {
   width: 100%;
   height: 100%;
   display: flex;
@@ -2474,17 +2475,13 @@ body {
 .ordering .extra-services__list .extra-services__item .extra-services__details_icon {
   flex-basis: 12%;
 }
-.ordering .extra-services__item.edit .extra-services__item-inner {
-  display: none;
-}
-
-.ordering .luggage-edit__header {
+.ordering .extra-details-edit .luggage-edit__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
 }
-.ordering .luggage-edit__header button {
+.ordering .extra-details-edit .luggage-edit__header button {
   font-weight: 500;
   font-size: 10px;
   text-transform: uppercase;
@@ -2497,19 +2494,19 @@ body {
   padding: 8px 16px;
   font-weight: 400;
 }
-.ordering .luggage-edit__header div {
+.ordering .extra-details-edit .luggage-edit__header div {
   display: flex;
 }
-.ordering .luggage-edit__header span {
+.ordering .extra-details-edit .luggage-edit__header span {
   font-weight: 500;
   font-size: 16px;
 }
-.ordering .luggage-edit__header img {
+.ordering .extra-details-edit .luggage-edit__header img {
   min-width: 13px;
   width: 13px;
   margin-left: 25px;
 }
-.ordering .luggage-edit__content {
+.ordering .extra-details-edit .luggage-edit__content {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -2731,6 +2728,182 @@ body {
 }
 .ordering .luggage-edit__content .luggage-flight__status .luggage-status-plane:after {
   right: 20px;
+}
+
+.ordering .extra-details-edit .sits-edit__content {
+  display: flex;
+  background: #F7F7F7;
+  padding: 15px 20px;
+}
+.ordering .extra-details-edit .sits-edit__information {
+  max-width: 245px;
+  background: #fff;
+}
+.ordering .extra-details-edit .sits-edit__information .information-header {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px 10px 10px;
+  border-bottom: 1px solid #E6E6E6;
+}
+.ordering .extra-details-edit .sits-edit__information .information-header .information-close {
+  flex-basis: 10%;
+  background: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.ordering .extra-details-edit .sits-edit__information .information-header .information-title {
+  flex-basis: 70%;
+  font-size: 14px;
+  font-weight: normal;
+  color: #0EB155;
+  text-align: right;
+}
+.ordering .extra-details-edit .sits-edit__information .information-colors, .ordering .extra-details-edit .sits-edit__information .information-helpful {
+  padding: 20px;
+}
+.ordering .extra-details-edit .sits-edit__information .information-colors .colors-heading,
+.ordering .extra-details-edit .sits-edit__information .information-colors .helpful-heading, .ordering .extra-details-edit .sits-edit__information .information-helpful .colors-heading,
+.ordering .extra-details-edit .sits-edit__information .information-helpful .helpful-heading {
+  font-weight: 500;
+  font-size: 15px;
+}
+.ordering .extra-details-edit .sits-edit__information .information-colors .color-item,
+.ordering .extra-details-edit .sits-edit__information .information-colors .helpful-item, .ordering .extra-details-edit .sits-edit__information .information-helpful .color-item,
+.ordering .extra-details-edit .sits-edit__information .information-helpful .helpful-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.ordering .extra-details-edit .sits-edit__information .information-colors .color-item .color-name,
+.ordering .extra-details-edit .sits-edit__information .information-colors .helpful-item .helpful-title, .ordering .extra-details-edit .sits-edit__information .information-helpful .color-item .color-name,
+.ordering .extra-details-edit .sits-edit__information .information-helpful .helpful-item .helpful-title {
+  font-size: 13px;
+  font-weight: 400;
+  color: #908C8E;
+}
+.ordering .extra-details-edit .sits-edit__information .information-colors .color-list .color-item {
+  margin-top: 15px;
+}
+.ordering .extra-details-edit .sits-edit__information .information-colors .color-list .color-item .color-image {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+  margin-left: 12px;
+}
+.ordering .extra-details-edit .sits-edit__information .information-colors .color-list .color-item .gray {
+  background: #C4C4C4;
+}
+.ordering .extra-details-edit .sits-edit__information .information-colors .color-list .color-item .brown {
+  background: #CE833F;
+}
+.ordering .extra-details-edit .sits-edit__information .information-colors .color-list .color-item .pink {
+  background: #C837AB;
+}
+.ordering .extra-details-edit .sits-edit__information .information-colors .color-list .color-item .lightblue {
+  background: #6992FD;
+}
+.ordering .extra-details-edit .sits-edit__information .information-colors .color-list .color-item .darkblue {
+  background: #425DA2;
+}
+.ordering .extra-details-edit .sits-edit__information .information-colors .color-list .color-item .green {
+  background: #0EB155;
+}
+.ordering .extra-details-edit .sits-edit__information .information-helpful .helpful-item {
+  margin-top: 20px;
+}
+.ordering .extra-details-edit .sits-edit__information .information-helpful .helpful-item .helpful-icon {
+  width: 18px;
+  height: 18px;
+  margin-left: 16px;
+}
+.ordering .extra-details-edit .sits-edit__seat_map {
+  width: 340px;
+}
+.ordering .extra-details-edit .sits-edit__flight {
+  max-width: 350px;
+  width: 350px;
+}
+
+.seat-map {
+  width: 340px;
+}
+.seat-map .plane {
+  height: 400px;
+  overflow-y: scroll;
+  direction: rtl;
+  padding-left: 15px;
+  margin-left: 20px;
+}
+.seat-map .plane::-webkit-scrollbar {
+  width: 6px;
+}
+.seat-map .plane::-webkit-scrollbar-thumb {
+  background-color: #908C8E;
+  border-radius: 20px;
+}
+.seat-map .plane .plane-inner {
+  direction: ltr;
+  max-width: 296px;
+  width: 296px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+}
+.seat-map .plane .plane-inner .seat-row {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.seat-map .plane .plane-inner .seat-row .seat,
+.seat-map .plane .plane-inner .seat-row .seat-text,
+.seat-map .plane .plane-inner .seat-row .seat-space {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.seat-map .plane .plane-inner .seat-row .seat-space.seat-space-line {
+  position: relative;
+}
+.seat-map .plane .plane-inner .seat-row .seat-space.seat-space-line:before {
+  content: "";
+  height: 22px;
+  border-right: 2px solid #FF0000;
+}
+.seat-map .plane .plane-inner .seat-row .seat {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #6992FD;
+}
+.seat-map .plane .plane-inner .seat-row .seat.not--available {
+  background-color: #C4C4C4;
+}
+.seat-map .plane .plane-inner .seat-row .seat.business--class {
+  background-color: #CE833F;
+}
+.seat-map .plane .plane-inner .seat-row .seat.premium--class {
+  background-color: #C837AB;
+}
+.seat-map .plane .plane-inner .seat-row .seat.economy--class {
+  background-color: #6992FD;
+}
+.seat-map .plane .plane-inner .seat-row .seat.extra--legroom {
+  background-color: #425DA2;
+}
+.seat-map .plane .plane-inner .seat-row .seat.your--choice {
+  background-color: #0EB155;
 }
 
 .details-extra__info_title {
