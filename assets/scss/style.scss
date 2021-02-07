@@ -4082,13 +4082,53 @@ body {
 // =================== Contacts / passengers END ====================
 
 
+// =================== Blog =======================
+.blog {
+  .header-blog {
+    background: url("../img/blog/bg-blog.svg") no-repeat center 0;
+    background-size: cover;
 
+    .header-blog__title h1 {
+      font-size: 36px;
+      margin-top: 34px;
+    }
+  }
 
+  .section-blog-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
+    .blog-header-button a {
+      @include start-button(16px, #fff, $color-brown);
+      padding: 13px 80px;
+    }
 
+    .blog-header-search.search__element {
+      width: 50%;
+      margin: 0 0 0 auto;
+    }
+  }
 
+  .section-social {
+    background: url("../img/blog/bg-down.jpg") center center;
+    background-size: cover;
+    padding-top: 80px;
+    padding-bottom: 120px;
 
+    h2.heading-2 {
+      text-align: right;
+    }
+    hr.green-line {
+      margin: 12px 0 12px auto;
+    }
+    &__content {
+      justify-content: flex-end;
+    }
+  }
+}
 
+// =================== Blog End ====================
 
 
 
