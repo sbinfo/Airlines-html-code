@@ -686,7 +686,8 @@ body {
     border-radius: 50px;
     border: none;
     outline: none;
-    padding-left: 20px;
+    padding: 0px 15px;
+    text-align: right;
   }
 
   &-button {
@@ -2057,6 +2058,10 @@ body {
 }
 
 #order-extra___services {
+  //display: none;
+}
+
+#order-payment___details {
   display: none;
 }
 

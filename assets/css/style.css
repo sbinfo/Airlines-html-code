@@ -932,7 +932,8 @@ body {
   border-radius: 50px;
   border: none;
   outline: none;
-  padding-left: 20px;
+  padding: 0px 15px;
+  text-align: right;
 }
 .search__element-button {
   background: transparent;
@@ -2067,7 +2068,7 @@ body {
   display: none;
 }
 
-#order-extra___services {
+#order-payment___details {
   display: none;
 }
 
