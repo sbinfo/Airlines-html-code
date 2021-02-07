@@ -3883,6 +3883,55 @@ body {
   width: 50%;
   margin: 0 0 0 auto;
 }
+.blog .section-blog-content {
+  padding-top: 60px;
+}
+.blog .section-blog-content .blog-actual-posts {
+  display: flex;
+  justify-content: space-between;
+}
+.blog .section-blog-content .blog-actual-posts .blog-post-item {
+  flex-basis: 49%;
+  position: relative;
+  height: 380px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.blog .section-blog-content .blog-actual-posts .blog-post-item div.post-info {
+  text-align: right;
+  padding: 0 30px 30px 0;
+  z-index: 10;
+}
+.blog .section-blog-content .blog-actual-posts .blog-post-item p.post-title {
+  font-weight: 500;
+  font-size: 24px;
+  color: #fff;
+}
+.blog .section-blog-content .blog-actual-posts .blog-post-item span.post-date {
+  color: #fff;
+  font-weight: normal;
+  font-size: 16px;
+}
+.blog .section-blog-content .blog-actual-posts .blog-post-item .post-image {
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.blog .section-blog-content .blog-actual-posts .blog-post-item .post-gradient {
+  background: linear-gradient(180deg, rgba(46, 44, 45, 0) 65.25%, rgba(46, 44, 45, 0.8) 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
 .blog .section-social {
   background: url("../img/blog/bg-down.jpg") center center;
   background-size: cover;
