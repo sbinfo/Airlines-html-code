@@ -1743,6 +1743,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 250px;
+  max-height: 55px;
 }
 .section-news__buttons .news-buttons__coronavirus img,
 .section-news__buttons .news-buttons__important img {
@@ -4061,7 +4062,8 @@ body {
 }
 .post .section-post .post-block .post-sidebar {
   flex-basis: 27%;
-  border-right: 1px solid #C4C4C4;
+  height: 100%;
+  border-right: 1px solid #efefef;
   padding: 0 38px 0 0;
 }
 .post .section-post .post-block .post-sidebar .sidebar-item {
@@ -4074,7 +4076,7 @@ body {
   margin-bottom: 25px;
 }
 .post .section-post .post-block .post-sidebar .sidebar-item {
-  border-bottom: 5px solid #E9E9E9;
+  border-bottom: 5px solid #efefef;
 }
 .post .section-post .post-block .post-sidebar .sidebar-item:not(:first-child) {
   padding-top: 54px;
@@ -4087,7 +4089,7 @@ body {
   justify-content: space-between;
 }
 .post .section-post .post-block .post-sidebar .sidebar-item ul.sidebar-item-list li.list-item:not(:last-child) {
-  border-bottom: 1px solid #C4C4C4;
+  border-bottom: 1px solid #efefef;
 }
 .post .section-post .post-block .post-sidebar .sidebar-item ul.sidebar-item-list li.list-item .list-item-content {
   flex-grow: 1;
@@ -4196,4 +4198,160 @@ body {
   font-weight: 500;
   font-size: 30px;
   margin-bottom: 20px;
+}
+
+.faq .section-faq h3.faq-wrapper-title:after {
+  width: 100%;
+  bottom: -12px;
+}
+.faq .faq-wrapper {
+  padding-bottom: 60px;
+}
+.faq .section-faq .faq-list {
+  padding-top: 50px;
+}
+.faq .section-faq .faq-list .faq-list-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 14px 22px 30px;
+  margin-bottom: 20px;
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+}
+.faq .section-faq .faq-list .faq-list-item .faq-item-content h4.faq-item-title {
+  font-weight: normal;
+  font-size: 21px;
+  padding-top: 5px;
+  color: #2D2B2C;
+  transition: 0.5s;
+}
+.faq .section-faq .faq-list .faq-list-item .faq-item-content p.faq-item-text {
+  display: none;
+  font-weight: normal;
+  font-size: 16px;
+  color: #908C8E;
+  margin-top: 30px;
+  line-height: 26px;
+}
+.faq .section-faq .faq-list .faq-list-item .faq-item-icon {
+  background: url("../icons/blog/faq-deactive.svg") no-repeat center center;
+  max-width: 32px;
+  max-height: 32px;
+  min-width: 32px;
+  min-height: 32px;
+  width: 32px;
+  height: 32px;
+  margin-left: 25px;
+  transition: 0.5s;
+}
+.faq .section-faq .faq-list .faq-list-item.active .faq-item-content h4.faq-item-title {
+  color: #CE833F;
+}
+.faq .section-faq .faq-list .faq-list-item.active .faq-item-content p.faq-item-text {
+  display: block;
+  margin-top: 30px;
+}
+.faq .section-faq .faq-list .faq-list-item.active .faq-item-icon {
+  background: url("../icons/blog/faq-active.svg") no-repeat center center;
+  transition: 0.5s;
+}
+
+.general-information .section-information .section-inner {
+  display: flex;
+}
+.general-information .section-information .section-inner .information-content {
+  width: 100%;
+  display: flex;
+  text-align: right;
+}
+.general-information .section-information .section-inner .information-content .tab {
+  flex-basis: 70%;
+  padding-right: 22px;
+}
+.general-information .section-information .section-inner .information-content h3.information-header {
+  margin-bottom: 60px;
+}
+.general-information .section-information .section-inner .information-content .information-text-group {
+  font-size: 18px;
+  line-height: 26px;
+  padding-bottom: 26px;
+}
+.general-information .section-information .section-inner .information-content .information-text-group .information-subtitle {
+  font-weight: 500;
+  color: #2D2B2C;
+}
+.general-information .section-information .section-inner .information-content .information-text-group .information-paragraph {
+  font-weight: 400;
+  color: #908C8E;
+}
+.general-information .section-information .section-inner .information-content .information-nav {
+  flex-basis: 30%;
+  padding-left: 40px;
+  border-left: 1px solid #efefef;
+}
+.general-information .section-information .section-inner .information-content .information-nav ul {
+  width: 100%;
+}
+.general-information .section-information .section-inner .information-content .information-nav ul li {
+  margin: 0;
+  border-bottom: 1px solid #E9E9E9;
+  cursor: pointer;
+  outline: none;
+  transition: 0.5s;
+}
+.general-information .section-information .section-inner .information-content .information-nav ul li:focus {
+  outline: none;
+  margin: 0;
+}
+.general-information .section-information .section-inner .information-content .information-nav ul li.ui-state-active {
+  background: #e7f8ee;
+  position: relative;
+}
+.general-information .section-information .section-inner .information-content .information-nav ul li.ui-state-active a {
+  color: #0EB155;
+}
+.general-information .section-information .section-inner .information-content .information-nav ul li.ui-state-active a:after {
+  content: "";
+  background: url("../icons/blog/plane-green.svg") no-repeat center center;
+  width: 35px;
+  height: 20px;
+  position: absolute;
+  right: 10px;
+  top: 30%;
+}
+.general-information .section-information .section-inner .information-content .information-nav ul li a {
+  font-weight: 500;
+  font-size: 18px;
+  color: #2D2B2C;
+  padding: 20px 50px 26px;
+}
+.general-information .ui-tabs-vertical {
+  width: 55em;
+}
+.general-information .ui-tabs-vertical .ui-tabs-nav {
+  padding: 0.2em 0.1em 0.2em 0.2em;
+  float: left;
+  width: 12em;
+}
+.general-information .ui-tabs-vertical .ui-tabs-nav li {
+  clear: left;
+  width: 100%;
+  border-bottom-width: 1px !important;
+  border-right-width: 0 !important;
+  margin: 0 -1px 0.2em 0;
+}
+.general-information .ui-tabs-vertical .ui-tabs-nav li a {
+  display: block;
+}
+.general-information .ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active {
+  padding-bottom: 0;
+  padding-right: 0.1em;
+  border-right-width: 1px;
+}
+.general-information .ui-tabs-vertical .ui-tabs-panel {
+  padding: 1em;
+  float: right;
+  width: 40em;
 }

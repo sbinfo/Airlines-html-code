@@ -85,11 +85,6 @@ $(document).ready(function(){
         $(".sits-edit__information").show();
     })
 
-    // seat map - select
-    // $(".seat-map span.seat").on("click", function () {
-    //
-    // });
-
     /*** Order page end ***/
 
     // Contact page
@@ -113,6 +108,18 @@ $(document).ready(function(){
     })
 
     // Contact page End
+
+    // FAQ
+    $(".faq-list .faq-list-item").on("click", function () {
+        $(this).toggleClass("active", 500);
+    });
+
+    // General Information
+    $("#information-tabs").tabs({
+        hide: 400, show: 400
+        // show: { effect: "slideDown", duration: "slow" }
+    }).addClass( "ui-tabs-vertical ui-helper-clearfix" );
+    $( "#information-tabs li" ).removeClass( "ui-corner-top" ).addClass( "ui-corner-left" );
 
     // footer spoiler
     $('.footer-menu__title').on('click', function() {

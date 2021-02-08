@@ -1668,6 +1668,7 @@ body {
       justify-content: center;
       align-items: center;
       width: 250px;
+      max-height: 55px;
 
       img {
         margin-right: 10px;
@@ -4309,7 +4310,8 @@ body {
 
     .post-block .post-sidebar {
       flex-basis: 27%;
-      border-right: 1px solid #C4C4C4;
+      height: 100%;
+      border-right: 1px solid #efefef;
       padding: 0 38px 0 0;
       .sidebar-item {
         text-align: right;
@@ -4322,7 +4324,7 @@ body {
         }
       }
       .sidebar-item {
-        border-bottom: 5px solid #E9E9E9;
+        border-bottom: 5px solid #efefef;
       }
       .sidebar-item:not(:first-child) {
         padding-top: 54px;
@@ -4339,7 +4341,7 @@ body {
         }
 
         li.list-item:not(:last-child) {
-          border-bottom: 1px solid #C4C4C4;
+          border-bottom: 1px solid #efefef;
         }
 
         li.list-item .list-item-content {
@@ -4481,6 +4483,170 @@ body {
 
 }
 // =================== Blog Post End =================
+
+
+// =================== FAQ =====================
+.faq {
+  .section-faq {
+    h3.faq-wrapper-title:after {
+      width: 100%;
+      bottom: -12px;
+    }
+  }
+
+  .faq-wrapper {
+    padding-bottom: 60px;
+  }
+
+  .section-faq .faq-list {
+    padding-top: 50px;
+    .faq-list-item {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+
+      padding: 14px 22px 30px;
+      margin-bottom: 20px;
+      @include box-shadow(0px 0px 8px rgba(0, 0, 0, 0.1));
+
+      .faq-item-content {
+        h4.faq-item-title {
+          font-weight: normal;
+          font-size: 21px;
+          padding-top: 5px;
+          color: $color-main;
+          transition: 0.5s;
+        }
+        p.faq-item-text {
+          display: none;
+          font-weight: normal;
+          font-size: 16px;
+          color: $color-surface;
+          margin-top: 30px;
+          line-height: 26px;
+        }
+      }
+      .faq-item-icon {
+        background: url("../icons/blog/faq-deactive.svg") no-repeat center center;
+        max-width: 32px;
+        max-height: 32px;
+        min-width: 32px;
+        min-height: 32px;
+        width: 32px;
+        height: 32px;
+        margin-left: 25px;
+        transition: 0.5s;
+      }
+    }
+    // .faq-list-item
+
+    .faq-list-item.active {
+      .faq-item-content {
+        h4.faq-item-title {
+          color: $color-brown;
+        }
+        p.faq-item-text {
+          display: block;
+          margin-top: 30px;
+        }
+      }
+      .faq-item-icon {
+        background: url("../icons/blog/faq-active.svg") no-repeat center center;
+        transition: 0.5s;
+      }
+    }
+    //.faq-list-item.active
+  }
+}
+// =================== FAQ End =================
+
+
+// =================== general-information =====================
+.general-information {
+  .section-information .section-inner {
+    display: flex;
+    .information-content {
+      width: 100%;
+      display: flex;
+      text-align: right;
+
+      .tab {
+        flex-basis: 70%;
+        padding-right: 22px;
+      }
+
+      h3.information-header {
+        margin-bottom: 60px;
+      }
+      .information-text-group {
+        font-size: 18px;
+        line-height: 26px;
+        padding-bottom: 26px;
+
+        .information-subtitle {
+          font-weight: 500;
+          color: $color-main;
+        }
+        .information-paragraph {
+          font-weight: 400;
+          color: $color-surface;
+        }
+      }
+      .information-nav {
+        flex-basis: 30%;
+        padding-left: 40px;
+        border-left: 1px solid #efefef;
+        ul {
+          width: 100%;
+        }
+        ul li {
+          margin: 0;
+          border-bottom: 1px solid #E9E9E9;
+          cursor: pointer;
+          outline: none;
+          transition: 0.5s;
+
+          &:focus {
+            outline: none;
+            margin: 0;
+          }
+
+          &.ui-state-active {
+            background: #e7f8ee;
+            position: relative;
+            a {
+              color: $color-primary;
+            }
+            a:after {
+              content: "";
+              background: url("../icons/blog/plane-green.svg") no-repeat center center;
+              width: 35px;
+              height: 20px;
+              position: absolute;
+              right: 10px;
+              top: 30%;
+            }
+          }
+
+          a {
+            font-weight: 500;
+            font-size: 18px;
+            color: $color-main;
+            padding: 20px 50px 26px;
+          }
+        }
+      }
+    }
+  }
+
+  .ui-tabs-vertical { width: 55em; }
+  .ui-tabs-vertical .ui-tabs-nav { padding: .2em .1em .2em .2em; float: left; width: 12em; }
+  .ui-tabs-vertical .ui-tabs-nav li { clear: left; width: 100%; border-bottom-width: 1px !important; border-right-width: 0 !important; margin: 0 -1px .2em 0; }
+  .ui-tabs-vertical .ui-tabs-nav li a { display:block; }
+  .ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active { padding-bottom: 0; padding-right: .1em; border-right-width: 1px; }
+  .ui-tabs-vertical .ui-tabs-panel { padding: 1em; float: right; width: 40em;}
+}
+// =================== general-information End =================
 
 
 
