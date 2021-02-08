@@ -4382,15 +4382,101 @@ body {
       }
     }
     // .post-block .post-sidebar
-
-    .post-block .post-content {
-      flex-basis: 70%;
-    }
-    // .post-block .post-content
   }
   // .section-post
 
-  .section-post .post-content {}
+  .section-post .post-wrapper {
+    flex-basis: 70%;
+    text-align: right;
+    border-bottom: 1px dashed #C4C4C4;
+
+    .post-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: start;
+      position: relative;
+      height: 540px;
+      margin-bottom: 70px;
+
+      img.post-image {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+      }
+      .post-header-content {
+        flex-basis: 100%;
+        background: rgba(46, 44, 45, 0.8);
+        padding: 28px 30px;
+
+        .post-title {
+          color: #fff;
+          font-weight: 500;
+          font-size: 30px;
+          margin-bottom: 12px;
+        }
+        .post-date {
+          color: #fff;
+          font-weight: normal;
+          font-size: 16px;
+        }
+      }
+    }
+    // .post-header
+
+    .post-content {
+      p {
+        color: $color-surface;
+        font-weight: normal;
+        margin-bottom: 40px;
+      }
+
+      p.quote-text {
+          font-weight: 300;
+          font-size: 30px;
+          color: $color-surface;
+      }
+      p.quote-text .quote-icon {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        padding-bottom: 20px;
+        &:after {
+          content: "";
+          background: url("../icons/blog/quote.svg") no-repeat center center;
+          display: block;
+          width: 32px;
+          height: 28px;
+        }
+      }
+
+      p.selected-text {
+        color: $color-main;
+        position: relative;
+        padding-right: 20px;
+
+        &:after {
+          content: "";
+          height: 100%;
+          border-right: 5px solid #CE833F;
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+      }
+
+      h3 {
+        font-weight: 500;
+        font-size: 30px;
+        margin-bottom: 20px;
+      }
+    }
+    // .post-content
+  }
   // .section-post .post-content
 
 }

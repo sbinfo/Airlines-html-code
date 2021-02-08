@@ -4117,6 +4117,83 @@ body {
   width: 36px;
   height: 36px;
 }
-.post .section-post .post-block .post-content {
+.post .section-post .post-wrapper {
   flex-basis: 70%;
+  text-align: right;
+  border-bottom: 1px dashed #C4C4C4;
+}
+.post .section-post .post-wrapper .post-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: start;
+  position: relative;
+  height: 540px;
+  margin-bottom: 70px;
+}
+.post .section-post .post-wrapper .post-header img.post-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.post .section-post .post-wrapper .post-header .post-header-content {
+  flex-basis: 100%;
+  background: rgba(46, 44, 45, 0.8);
+  padding: 28px 30px;
+}
+.post .section-post .post-wrapper .post-header .post-header-content .post-title {
+  color: #fff;
+  font-weight: 500;
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+.post .section-post .post-wrapper .post-header .post-header-content .post-date {
+  color: #fff;
+  font-weight: normal;
+  font-size: 16px;
+}
+.post .section-post .post-wrapper .post-content p {
+  color: #908C8E;
+  font-weight: normal;
+  margin-bottom: 40px;
+}
+.post .section-post .post-wrapper .post-content p.quote-text {
+  font-weight: 300;
+  font-size: 30px;
+  color: #908C8E;
+}
+.post .section-post .post-wrapper .post-content p.quote-text .quote-icon {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 20px;
+}
+.post .section-post .post-wrapper .post-content p.quote-text .quote-icon:after {
+  content: "";
+  background: url("../icons/blog/quote.svg") no-repeat center center;
+  display: block;
+  width: 32px;
+  height: 28px;
+}
+.post .section-post .post-wrapper .post-content p.selected-text {
+  color: #2D2B2C;
+  position: relative;
+  padding-right: 20px;
+}
+.post .section-post .post-wrapper .post-content p.selected-text:after {
+  content: "";
+  height: 100%;
+  border-right: 5px solid #CE833F;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.post .section-post .post-wrapper .post-content h3 {
+  font-weight: 500;
+  font-size: 30px;
+  margin-bottom: 20px;
 }
