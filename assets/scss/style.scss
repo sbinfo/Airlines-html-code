@@ -927,7 +927,7 @@ body {
       padding-bottom: 45px;
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
+      justify-content: space-between;
 
       &-item + &-item {
         margin-left: 140px;
@@ -939,9 +939,10 @@ body {
 
       &-item {
         display: flex;
+        flex-wrap: wrap;
         justify-content: flex-end;
         align-items: center;
-        width: 250px;
+        flex-basis: 100%;
         margin-bottom: 10px;
 
         .text {
@@ -952,18 +953,41 @@ body {
     }
   }
 
+  @media (max-width: 767px) {
+    .section-header-search__icons {
+      width: 65%;
+      margin: 0 auto;
+    }
+    .section-header-search__icons-item  {
+      margin-bottom: 40px;
+      & > div {
+        flex-basis: 100%;
+      }
+      .text {
+        order: 10;
+        text-align: center;
+        margin: 0;
+      }
+      .icon {
+        margin-bottom: 15px;
+        text-align: center;
+      }
+    }
+  }
+
   @media (min-width: $bp-small-576) {
     .section-header-search {
       padding-top: 250px;
     }
     .section-header-search__icons-item {
-      width: 400px;
+      flex-basis: 30%;
+      flex-wrap: nowrap;
     }
   }
 
   @media (min-width: $bp-medium-992) {
-    .section-header-search__icons-item {
-      width: 250px;
+    .section-header-search__icons {
+      justify-content: center;
     }
     &-nav {
       display: flex;
@@ -978,10 +1002,6 @@ body {
 
     .section-header-search {
       padding-top: 0px;
-    }
-
-    .section-header-search__icons-item {
-      margin-left: 60px;
     }
   }
 
@@ -1636,7 +1656,7 @@ body {
 
 // ## popular
 .section-popular {
-  padding-top: 80px;
+  padding-top: 20px;
   background: url("../img/bg-map.svg") no-repeat 50% center;
 
   &__nav {
@@ -1651,10 +1671,10 @@ body {
 
   &__table {
     padding-top: 40px;
-    padding-bottom: 80px;
+    padding-bottom: 0;
 
     &-group {
-      margin-bottom: 40px;
+      margin-bottom: 20px;
 
       &__title {
         color: $color-main;
@@ -1789,6 +1809,7 @@ body {
   }
 
   @media (min-width: $bp-medium-992) {
+    padding-top: 50px;
     .table-open__image {
       height: 160px;
     }
@@ -1807,6 +1828,7 @@ body {
   }
 
   @media (min-width: $bp-xlarge-1620) {
+    padding-top: 70px;
     &__table-group__list {
       grid-template-areas: '1fr 1fr 1fr 1fr';
       grid-template-columns: 24% 24% 24% 24%;
@@ -1899,7 +1921,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
 
     .news-buttons__coronavirus,
     .news-buttons__important {

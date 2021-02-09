@@ -1141,7 +1141,7 @@ body {
   padding-bottom: 45px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
 }
 .section-header .section-header-search__icons-item + .section-header .section-header-search__icons-item {
   margin-left: 140px;
@@ -1151,26 +1151,49 @@ body {
 }
 .section-header .section-header-search__icons-item {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-end;
   align-items: center;
-  width: 250px;
+  flex-basis: 100%;
   margin-bottom: 10px;
 }
 .section-header .section-header-search__icons-item .text {
   margin-right: 20px;
   text-align: right;
 }
+@media (max-width: 767px) {
+  .section-header .section-header-search__icons {
+    width: 65%;
+    margin: 0 auto;
+  }
+  .section-header .section-header-search__icons-item {
+    margin-bottom: 40px;
+  }
+  .section-header .section-header-search__icons-item > div {
+    flex-basis: 100%;
+  }
+  .section-header .section-header-search__icons-item .text {
+    order: 10;
+    text-align: center;
+    margin: 0;
+  }
+  .section-header .section-header-search__icons-item .icon {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+}
 @media (min-width: 36em) {
   .section-header .section-header-search {
     padding-top: 250px;
   }
   .section-header .section-header-search__icons-item {
-    width: 400px;
+    flex-basis: 30%;
+    flex-wrap: nowrap;
   }
 }
 @media (min-width: 62em) {
-  .section-header .section-header-search__icons-item {
-    width: 250px;
+  .section-header .section-header-search__icons {
+    justify-content: center;
   }
   .section-header-nav {
     display: flex;
@@ -1183,9 +1206,6 @@ body {
   }
   .section-header .section-header-search {
     padding-top: 0px;
-  }
-  .section-header .section-header-search__icons-item {
-    margin-left: 60px;
   }
 }
 @media (min-width: 85.375em) {
@@ -1698,7 +1718,7 @@ body {
 }
 
 .section-popular {
-  padding-top: 80px;
+  padding-top: 20px;
   background: url("../img/bg-map.svg") no-repeat 50% center;
 }
 .section-popular__nav {
@@ -1711,10 +1731,10 @@ body {
 }
 .section-popular__table {
   padding-top: 40px;
-  padding-bottom: 80px;
+  padding-bottom: 0;
 }
 .section-popular__table-group {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 .section-popular__table-group__title {
   color: #2D2B2C;
@@ -1826,6 +1846,9 @@ body {
   }
 }
 @media (min-width: 62em) {
+  .section-popular {
+    padding-top: 50px;
+  }
   .section-popular .table-open__image {
     height: 160px;
   }
@@ -1838,6 +1861,9 @@ body {
   }
 }
 @media (min-width: 101.25em) {
+  .section-popular {
+    padding-top: 70px;
+  }
   .section-popular__table-group__list {
     grid-template-areas: "1fr 1fr 1fr 1fr";
     grid-template-columns: 24% 24% 24% 24%;
@@ -1912,7 +1938,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
 }
 .section-news__buttons .news-buttons__coronavirus,
 .section-news__buttons .news-buttons__important {
