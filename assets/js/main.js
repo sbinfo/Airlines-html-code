@@ -117,7 +117,6 @@ $(document).ready(function(){
     // General Information
     $("#information-tabs").tabs({
         hide: 400, show: 400
-        // show: { effect: "slideDown", duration: "slow" }
     }).addClass( "ui-tabs-vertical ui-helper-clearfix" );
     $( "#information-tabs li" ).removeClass( "ui-corner-top" ).addClass( "ui-corner-left" );
 
