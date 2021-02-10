@@ -355,6 +355,11 @@ h1, h2, h3, h4, h5, h6, p, span, ul, ol, a, button, input {
   border-radius: 50px;
   color: #fff;
   background: #15AD56;
+  -webkit-transition: all, 0.5s ease;
+  -moz-transition: all, 0.5s ease;
+  -ms-transition: all, 0.5s ease;
+  -o-transition: all, 0.5s ease;
+  transition: all, 0.5s ease;
   padding: 16px 84px;
   cursor: pointer;
 }
@@ -369,6 +374,11 @@ h1, h2, h3, h4, h5, h6, p, span, ul, ol, a, button, input {
   border-radius: 50px;
   color: #15AD56;
   background: #fff;
+  -webkit-transition: all, 0.5s ease;
+  -moz-transition: all, 0.5s ease;
+  -ms-transition: all, 0.5s ease;
+  -o-transition: all, 0.5s ease;
+  transition: all, 0.5s ease;
   padding: 16px 105px;
   cursor: pointer;
 }
@@ -543,6 +553,78 @@ body {
   height: 202px;
 }
 
+.form-radios__group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.form-radios__group .form-radio-item {
+  flex-basis: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 24px;
+}
+.form-radios__group .form-radio-item .radio-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  margin-right: 40px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: right;
+}
+.form-radios__group .form-radio-item .radio-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  margin-left: 20px;
+}
+.form-radios__group .form-radio-item .radio-container .radiomark {
+  position: absolute;
+  top: 0;
+  right: -40px;
+  height: 25px;
+  width: 25px;
+  background-color: #fff;
+  border: 3px solid #DADADA;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+.form-radios__group .form-radio-item .radio-container input:checked ~ .radiomark {
+  background-color: #0EB155;
+  border: 3px solid #4caf50;
+  transition: 0.5s;
+}
+.form-radios__group .form-radio-item .radio-container .radiomark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.form-radios__group .form-radio-item .radio-container input:checked ~ .radiomark:after {
+  display: block;
+}
+.form-radios__group .form-radio-item .radio-container .radiomark:after {
+  top: 0px;
+  left: 0;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #0EB155;
+  border: 3px solid #fff;
+  transition: 0.5s;
+}
+.form-radios__group .form-radio-item .radio-container label {
+  font-weight: normal;
+  font-size: 18px;
+}
+
 @media (min-width: 48em) {
   .heading-2 {
     font-weight: 500;
@@ -603,8 +685,21 @@ body {
   border-radius: 50px;
   color: #fff;
   background: #15AD56;
+  -webkit-transition: all, 0.5s ease;
+  -moz-transition: all, 0.5s ease;
+  -ms-transition: all, 0.5s ease;
+  -o-transition: all, 0.5s ease;
+  transition: all, 0.5s ease;
   padding: 12px 80px;
   cursor: pointer;
+  -webkit-transition: all, 0.5s ease;
+  -moz-transition: all, 0.5s ease;
+  -ms-transition: all, 0.5s ease;
+  -o-transition: all, 0.5s ease;
+  transition: all, 0.5s ease;
+}
+.main-ticket-search_form .search-block-btn-success:hover {
+  background: #27c76b;
 }
 .main-ticket-search_form form {
   position: relative;
@@ -760,6 +855,11 @@ body {
     border-radius: 50px;
     color: #fff;
     background: #15AD56;
+    -webkit-transition: all, 0.5s ease;
+    -moz-transition: all, 0.5s ease;
+    -ms-transition: all, 0.5s ease;
+    -o-transition: all, 0.5s ease;
+    transition: all, 0.5s ease;
     padding: 11px 50px;
     cursor: pointer;
   }
@@ -820,6 +920,11 @@ body {
     border-radius: 50px;
     color: #fff;
     background: #15AD56;
+    -webkit-transition: all, 0.5s ease;
+    -moz-transition: all, 0.5s ease;
+    -ms-transition: all, 0.5s ease;
+    -o-transition: all, 0.5s ease;
+    transition: all, 0.5s ease;
     padding: 11px 80px;
     cursor: pointer;
   }
@@ -845,6 +950,11 @@ body {
     border-radius: 50px;
     color: #fff;
     background: #15AD56;
+    -webkit-transition: all, 0.5s ease;
+    -moz-transition: all, 0.5s ease;
+    -ms-transition: all, 0.5s ease;
+    -o-transition: all, 0.5s ease;
+    transition: all, 0.5s ease;
     padding: 16px 84px;
     cursor: pointer;
   }
@@ -865,6 +975,15 @@ body {
   border: none;
   outline: none;
   cursor: pointer;
+  display: inline-block;
+  -webkit-transition: all, 0.8s ease;
+  -moz-transition: all, 0.8s ease;
+  -ms-transition: all, 0.8s ease;
+  -o-transition: all, 0.8s ease;
+  transition: all, 0.8s ease;
+}
+.filter__buttons .filter__buttons-btn:hover {
+  color: #CE833F;
 }
 .filter__buttons.padding-9 .filter__buttons-btn {
   padding: 9px 50px;
@@ -1094,7 +1213,7 @@ body {
 }
 .section-header-nav__menu ul li.active .active-line {
   position: absolute;
-  width: 60%;
+  width: 50%;
   right: 0;
   bottom: -12px;
   border-bottom: 4px solid #0EB155;
@@ -1107,7 +1226,7 @@ body {
 .section-header-nav__menu ul li.active a:before {
   width: 100%;
   height: 37px;
-  right: -40%;
+  right: -50%;
   top: -10px;
   bottom: 10px;
   background: #FFFFFF;
@@ -1119,7 +1238,7 @@ body {
   width: 20px;
   height: 20px;
   position: absolute;
-  right: -33%;
+  right: -42%;
   background: url("../icons/plane-black.svg") no-repeat center center;
 }
 .section-header .section-header-search {
@@ -1953,6 +2072,11 @@ body {
   align-items: center;
   width: 250px;
   max-height: 55px;
+  -webkit-transition: all, 0.5s ease;
+  -moz-transition: all, 0.5s ease;
+  -ms-transition: all, 0.5s ease;
+  -o-transition: all, 0.5s ease;
+  transition: all, 0.5s ease;
 }
 .section-news__buttons .news-buttons__coronavirus img,
 .section-news__buttons .news-buttons__important img {
@@ -1961,9 +2085,16 @@ body {
 .section-news__buttons .news-buttons__coronavirus {
   color: #2D2B2C;
 }
+.section-news__buttons .news-buttons__coronavirus:hover {
+  color: #fff;
+  background-color: #0EB155;
+}
 .section-news__buttons .news-buttons__important {
   color: #fff;
   background-color: #0EB155;
+}
+.section-news__buttons .news-buttons__important:hover {
+  background: #27c76b;
 }
 .section-news__content {
   display: flex;
@@ -2203,6 +2334,11 @@ body {
   border-radius: 50px;
   color: #fff;
   background: #0EB155;
+  -webkit-transition: all, 0.5s ease;
+  -moz-transition: all, 0.5s ease;
+  -ms-transition: all, 0.5s ease;
+  -o-transition: all, 0.5s ease;
+  transition: all, 0.5s ease;
   padding: 9px 35px;
   border: 1px solid #4F4F4F;
 }
@@ -2274,7 +2410,7 @@ body {
   display: none;
 }
 
-#oreder-customer___details {
+#order-extra___services {
   display: none;
 }
 
@@ -2400,6 +2536,11 @@ body {
   border-radius: 50px;
   color: #0EB155;
   background: transparent;
+  -webkit-transition: all, 0.5s ease;
+  -moz-transition: all, 0.5s ease;
+  -ms-transition: all, 0.5s ease;
+  -o-transition: all, 0.5s ease;
+  transition: all, 0.5s ease;
   position: relative;
   font-weight: 500;
   padding-left: 20px;
@@ -2587,6 +2728,11 @@ body {
   border-radius: 50px;
   color: #fff;
   background: #0EB155;
+  -webkit-transition: all, 0.5s ease;
+  -moz-transition: all, 0.5s ease;
+  -ms-transition: all, 0.5s ease;
+  -o-transition: all, 0.5s ease;
+  transition: all, 0.5s ease;
   padding: 10px 70px;
 }
 .order-filling__form .form__footer label {
@@ -2696,6 +2842,11 @@ body {
   border-radius: 50px;
   color: #fff;
   background: #0EB155;
+  -webkit-transition: all, 0.5s ease;
+  -moz-transition: all, 0.5s ease;
+  -ms-transition: all, 0.5s ease;
+  -o-transition: all, 0.5s ease;
+  transition: all, 0.5s ease;
   padding: 12px 30px;
   width: 100%;
 }
@@ -2748,6 +2899,11 @@ body {
   border-radius: 50px;
   color: #fff;
   background: #15AD56;
+  -webkit-transition: all, 0.5s ease;
+  -moz-transition: all, 0.5s ease;
+  -ms-transition: all, 0.5s ease;
+  -o-transition: all, 0.5s ease;
+  transition: all, 0.5s ease;
   padding: 8px 16px;
   font-weight: 400;
 }
@@ -3003,6 +3159,11 @@ body {
   border-radius: 50px;
   color: #fff;
   background: #0EB155;
+  -webkit-transition: all, 0.5s ease;
+  -moz-transition: all, 0.5s ease;
+  -ms-transition: all, 0.5s ease;
+  -o-transition: all, 0.5s ease;
+  transition: all, 0.5s ease;
   padding: 8px 16px;
   font-weight: 400;
 }
@@ -3169,6 +3330,11 @@ body {
   border-radius: 50px;
   color: #0EB155;
   background: transparent;
+  -webkit-transition: all, 0.5s ease;
+  -moz-transition: all, 0.5s ease;
+  -ms-transition: all, 0.5s ease;
+  -o-transition: all, 0.5s ease;
+  transition: all, 0.5s ease;
   border: 1px solid #0EB155;
   padding: 9px 0;
 }
@@ -3182,6 +3348,11 @@ body {
   border-radius: 50px;
   color: #fff;
   background: #0EB155;
+  -webkit-transition: all, 0.5s ease;
+  -moz-transition: all, 0.5s ease;
+  -ms-transition: all, 0.5s ease;
+  -o-transition: all, 0.5s ease;
+  transition: all, 0.5s ease;
   border: 1px solid #0EB155;
   padding: 9px 0;
 }
@@ -3470,6 +3641,11 @@ body {
   border-radius: 50px;
   color: #0EB155;
   background: transparent;
+  -webkit-transition: all, 0.5s ease;
+  -moz-transition: all, 0.5s ease;
+  -ms-transition: all, 0.5s ease;
+  -o-transition: all, 0.5s ease;
+  transition: all, 0.5s ease;
   text-decoration: underline;
 }
 
@@ -3542,6 +3718,11 @@ body {
   border-radius: 50px;
   color: #fff;
   background: #0EB155;
+  -webkit-transition: all, 0.5s ease;
+  -moz-transition: all, 0.5s ease;
+  -ms-transition: all, 0.5s ease;
+  -o-transition: all, 0.5s ease;
+  transition: all, 0.5s ease;
   padding: 12px 30px;
 }
 
@@ -3793,6 +3974,11 @@ body {
   border-radius: 50px;
   color: #fff;
   background: #0EB155;
+  -webkit-transition: all, 0.5s ease;
+  -moz-transition: all, 0.5s ease;
+  -ms-transition: all, 0.5s ease;
+  -o-transition: all, 0.5s ease;
+  transition: all, 0.5s ease;
   padding: 18px 37px;
 }
 .contacts .contact-form__numbers {
@@ -3826,6 +4012,11 @@ body {
   border-radius: 50px;
   color: #fff;
   background: #0EB155;
+  -webkit-transition: all, 0.5s ease;
+  -moz-transition: all, 0.5s ease;
+  -ms-transition: all, 0.5s ease;
+  -o-transition: all, 0.5s ease;
+  transition: all, 0.5s ease;
   padding: 18px 50px;
 }
 
@@ -4099,6 +4290,11 @@ body {
   border-radius: 50px;
   color: #fff;
   background: #CE833F;
+  -webkit-transition: all, 0.5s ease;
+  -moz-transition: all, 0.5s ease;
+  -ms-transition: all, 0.5s ease;
+  -o-transition: all, 0.5s ease;
+  transition: all, 0.5s ease;
   padding: 13px 80px;
 }
 .blog .section-blog-header .blog-header-search.search__element {
@@ -4118,6 +4314,16 @@ body {
   height: 380px;
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.blog .section-blog-content .blog-actual-posts .blog-post-item > a {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
   align-items: flex-end;
   justify-content: flex-end;
 }
@@ -4219,6 +4425,11 @@ body {
   border-radius: 50px;
   color: #0EB155;
   background: transparent;
+  -webkit-transition: all, 0.5s ease;
+  -moz-transition: all, 0.5s ease;
+  -ms-transition: all, 0.5s ease;
+  -o-transition: all, 0.5s ease;
+  transition: all, 0.5s ease;
   text-transform: none;
   font-weight: 500;
   padding: 8px 26px;
@@ -4248,6 +4459,11 @@ body {
   border-radius: 50px;
   color: #0EB155;
   background: transparent;
+  -webkit-transition: all, 0.5s ease;
+  -moz-transition: all, 0.5s ease;
+  -ms-transition: all, 0.5s ease;
+  -o-transition: all, 0.5s ease;
+  transition: all, 0.5s ease;
   display: flex;
   align-items: center;
 }
@@ -4563,4 +4779,148 @@ body {
   padding: 1em;
   float: right;
   width: 40em;
+}
+
+.cancel-reservation .cancel-reservaion-form {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+.cancel-reservation .cancel-reservaion-form .cancel-form-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 30px;
+}
+.cancel-reservation .cancel-reservaion-form .cancel-form-group .cancel-form-group-header {
+  flex-basis: 100%;
+}
+.cancel-reservation .cancel-reservaion-form .cancel-form-group .cancel-form-group-header h4.heading-4 {
+  font-weight: 500;
+  font-size: 24px;
+}
+.cancel-reservation .cancel-reservaion-form .cancel-form-group .cancel-form-group-header p.subtitle {
+  font-weight: normal;
+  font-size: 18px;
+  color: #908C8E;
+  text-align: center;
+  margin-top: 16px;
+}
+.cancel-reservation .cancel-reservaion-form .cancel-form-group > div {
+  flex-basis: 49%;
+  margin-top: 20px;
+}
+.cancel-reservation .cancel-reservaion-form .cancel-form-group > div:last-child {
+  margin-left: auto;
+}
+.cancel-reservation .cancel-reservaion-form .request-subject .form-select__group {
+  margin-left: auto;
+}
+.cancel-reservation .cancel-reservaion-form .request-subject .form-textarea__group {
+  flex-basis: 100%;
+}
+.cancel-reservation .cancel-reservaion-form .info-warning {
+  font-weight: normal;
+  font-size: 12px;
+  margin-top: 20px;
+  text-align: right;
+}
+.cancel-reservation .cancel-reservaion-form .info-warning .red-element {
+  color: red;
+}
+.cancel-reservation .cancel-reservaion-form .cancel-reservation-send {
+  text-align: center;
+  padding-top: 40px;
+}
+.cancel-reservation .cancel-reservaion-form .cancel-reservation-send button.send-button {
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  color: #fff;
+  background: #0EB155;
+  -webkit-transition: all, 0.5s ease;
+  -moz-transition: all, 0.5s ease;
+  -ms-transition: all, 0.5s ease;
+  -o-transition: all, 0.5s ease;
+  transition: all, 0.5s ease;
+  padding: 10px 80px;
+}
+
+.all-flights .section-header .main-ticket-search_form form > div {
+  flex-basis: 100%;
+}
+.all-flights .section-popular__nav {
+  max-width: 85%;
+}
+.all-flights .section-popular .view-more-wrapper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 60px;
+  text-align: center;
+}
+.all-flights .section-popular .view-more-wrapper button.view-more-flights {
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  color: #0EB155;
+  background: transparent;
+  -webkit-transition: all, 0.5s ease;
+  -moz-transition: all, 0.5s ease;
+  -ms-transition: all, 0.5s ease;
+  -o-transition: all, 0.5s ease;
+  transition: all, 0.5s ease;
+  padding: 13px 0;
+  border: 1px solid #0EB155;
+  width: 70%;
+}
+.all-flights .section-popular .view-more-wrapper button.view-more-flights:hover {
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  color: #fff;
+  background: #0EB155;
+  -webkit-transition: all, 0.5s ease;
+  -moz-transition: all, 0.5s ease;
+  -ms-transition: all, 0.5s ease;
+  -o-transition: all, 0.5s ease;
+  transition: all, 0.5s ease;
+  border: 1px solid #0EB155;
+}
+@media (min-width: 36em) {
+  .all-flights .section-header .main-ticket-search_form form > div {
+    flex-basis: 50%;
+    margin: 0;
+    padding: 20px;
+  }
+}
+@media (min-width: 62em) {
+  .all-flights .section-header {
+    padding-bottom: 60px;
+  }
+  .all-flights .section-header .main-ticket-search_form form > div {
+    flex-basis: 20%;
+    padding: 20px 0;
+  }
+  .all-flights .section-header button.search-block-btn-success {
+    font-size: 22px;
+  }
+  .all-flights .section-social {
+    margin-bottom: 70px;
+  }
+}
+@media (min-width: 101.25em) {
+  .all-flights .section-header button.search-block-btn-success {
+    padding: 11px 50px;
+  }
 }

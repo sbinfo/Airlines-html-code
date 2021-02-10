@@ -13,6 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
         drawer.open();
     });
     /* Mobile menu end */
+
+
 });
 
 
@@ -85,6 +87,23 @@ $(document).ready(function(){
         $(".sits-edit__information").show();
     })
 
+    // ordering steeps
+    $("#order-customer___details form button[type=submit]").on("click", function () {
+        event.preventDefault();
+        $("#order-customer___details").hide(); // step 1 hide
+        $("#order-passenger___details").show(250); // step 2 show
+    });
+    $("#order-passenger___details form button[type=submit]").on("click", function () {
+        event.preventDefault();
+        $("#order-passenger___details").hide(); // step 2 hide
+        $("#order-extra___services").show(250); // step 3 show
+    });
+    $("#order-extra___services .continue-payment button").on("click", function () {
+        event.preventDefault();
+        $("#order-extra___services").hide(); // step 2 hide
+        $("#order-payment___details").show(250); // step 3 show
+    });
+
     /*** Order page end ***/
 
     // Contact page
@@ -115,10 +134,13 @@ $(document).ready(function(){
     });
 
     // General Information
-    $("#information-tabs").tabs({
-        hide: 400, show: 400
-    }).addClass( "ui-tabs-vertical ui-helper-clearfix" );
-    $( "#information-tabs li" ).removeClass( "ui-corner-top" ).addClass( "ui-corner-left" );
+    if ( $("#information-tabs").length > 0 ) {
+        $("#information-tabs").tabs({
+            hide: 400, show: 400
+        }).addClass( "ui-tabs-vertical ui-helper-clearfix" );
+        $( "#information-tabs li" ).removeClass( "ui-corner-top" ).addClass( "ui-corner-left" );
+    }
+
 
     // footer spoiler
     $('.footer-menu__title').on('click', function() {

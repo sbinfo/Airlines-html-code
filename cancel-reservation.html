@@ -5,18 +5,19 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>General information</title>
+    <title>Cancel reservation</title>
 
     <!-- Mobile menu - slick nav -->
     <link rel="stylesheet" href="assets/mmenu/dist/mmenu-light.css">
 
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="blog general-information">
+<body class="cancel-reservation">
 
 <!-- section-header -->
 <header class="section-block section-header header-blog">
-    <div class="bg-header"></div>
+    <div class="section-header-bg-clouds"></div>
+    <div class="section-header-bg-gradient"></div>
     <div class="section-inner">
         <!-- Menu -->
         <div class="header-menu">
@@ -64,7 +65,7 @@
                         <li class="section-header-nav__menu-item"><a href="blog.html">to passengers <span class="active-line"></span></a></li>
                         <li class="section-header-nav__menu-item"><a href="ordering.html">order <span class="active-line"></span></a></li>
                         <li class="section-header-nav__menu-item"><a href="#">Cheap flights abroad <span class="active-line"></span></a></li>
-                        <li class="section-header-nav__menu-item active"><a href="general-information.html">Terms of use <span class="active-line"></span></a></li>
+                        <li class="section-header-nav__menu-item"><a href="general-information.html">Terms of use <span class="active-line"></span></a></li>
                     </ul>
                 </nav>
                 <div class="section-header-nav__logo">
@@ -78,7 +79,7 @@
         <div class="breadcrumbs">
             <ul class="breadcrumbs__list">
                 <li class="breadcrumbs__item"><a href="#">Home page</a></li>
-                <li class="breadcrumbs__item"><a href="#" class="active">Terms of use</a></li>
+                <li class="breadcrumbs__item"><a href="#" class="active">Cancel reservation</a></li>
             </ul>
         </div>
 
@@ -90,152 +91,96 @@
 </header>
 <!-- / section-header -->
 
-<div class="section-block section-information">
+<div class="section-block section-cancel-reservation">
     <div class="section-inner">
+        <form action="" class="cancel-reservaion-form">
 
-        <div id="information-tabs" class="information-content">
-            <div id="about-ista" class="tab">
-                <h3 class="information-header heading-3--right_line">About Ista</h3>
-
-                <div class="information-text-group">
-                    <h5 class="information-subtitle">Payment by phone:</h5>
-                    <p class="information-paragraph">You can call and make your reservation by phone in front of one of our
-                        travel agents, to whom you will also provide your credit card details. The actual billing will be
-                        done by your personal agent in
-                        Issta, only after receiving final confirmation from the supplier about your order</p>
+            <div class="cancel-form-group personal-info">
+                <div class="cancel-form-group-header">
+                    <h4 class="heading-4 text-center">Personal Information</h4>
+                    <hr class="green-line">
                 </div>
-                <div class="information-text-group">
-                    <h5 class="information-subtitle">Prices of services</h5>
-                    <p class="information-paragraph">The prices of the services offered in Israel are usually lower than the
-                        official prices of the service provider abroad (for example: compared to the price list of the hotel
-                        or car rental company).
-                        However, it is possible that at some point in time the prices in Israel will be higher.</p>
-                    <p class="information-paragraph">The prices of the services may change without prior notice and in any
-                        case, the determining and binding prices are the prices in the country.</p>
+                <div class="form-text__group">
+                    <label for="last_name">Last name</label>
+                    <input type="text" id="last_name" class="form-text">
                 </div>
-                <div class="information-text-group">
-                    <h5 class="information-subtitle">Price guarantee</h5>
-                    <p class="information-paragraph">The price increase will apply to all bookings that have already been
-                        made,
-                        unless they have been paid in advance in full and the travel documents (flight ticket, hotel
-                        voucher, car voucher, etc.) are already in the passenger's hands.
-                        If there is a discrepancy between the prices listed on the website and the prices at the reservation
-                        center,
-                        the price at the reservation center is the determining factor</p>
+                <div class="form-text__group">
+                    <label for="first_name">First name</label>
+                    <input type="text" id="first_name" class="form-text">
                 </div>
-            </div>
-            <div id="about-us" class="tab">
-                <h3 class="information-header heading-3--right_line">About us</h3>
-
-                <div class="information-text-group">
-                    <p class="information-paragraph">Issta Israel Ltd. is an essay travel agency and therefore acts as an
-                        intermediary between the passenger and the various service providers, such as: flight providers,
-                        hotels, transportation, special packages, etc. The services offered on this site are performed at
-                        the responsibility of various service</p>
-                    <p class="information-paragraph">Issta Israel Ltd. is an essay travel agency and therefore acts as an
-                        intermediary between the passenger and the various service providers, such as: flight providers,
-                        hotels, transportation, special packages, etc. The services offered on this site are performed at
-                        the responsibility of various service providers.</p>
-                    <p class="information-paragraph">Issta Israel Ltd. is not responsible in any way for any malfunctions,
-                        due to poor performance of the services related to service providers, or due to factors that are not
-                        dependent on the supplier such as: strikes, weather, holidays, etc. By Issta Israel, the customer
-                        agrees to all the terms and conditions set forth in this section and in the important information
-                        sections relating to the various products.</p>
-                    <p class="information-paragraph">It is hereby agreed that any claim and / or claim of the passenger
-                        against Issta Israel Ltd., must be submitted in writing before the company no later than 30 days
-                        after the passenger returns to Israel.</p>
+                <div class="form-text__group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" class="form-text">
                 </div>
-                <div class="information-text-group">
-                    <h5 class="information-subtitle">Terms of payment</h5>
-                    <p class="information-paragraph">Issta Israel will not be required to refund any differences resulting
-                        from these changes, regardless of the date of execution and / or confirmation of the order.
-                        For your convenience, there are several credit card payment options available to you:</p>
+                <div class="form-text__group">
+                    <label for="phone">Phone entered in order</label>
+                    <input type="number" id="phone" class="form-text">
                 </div>
-            </div>
-            <div id="terms-of-us" class="tab">
-                <h3 class="information-header heading-3--right_line">Term of use</h3>
-
-                <div class="information-text-group">
-                    <p class="information-paragraph">Issta Israel Ltd. is an essay travel agency and therefore acts as an
-                        intermediary between the passenger and the various service providers, such as: flight providers,
-                        hotels, transportation, special packages, etc. The services offered on this site are performed at
-                        the responsibility of various service</p>
-                    <p class="information-paragraph">Issta Israel Ltd. is an essay travel agency and therefore acts as an
-                        intermediary between the passenger and the various service providers, such as: flight providers,
-                        hotels, transportation, special packages, etc. The services offered on this site are performed at
-                        the responsibility of various service providers.</p>
-                    <p class="information-paragraph">Issta Israel Ltd. is not responsible in any way for any malfunctions,
-                        due to poor performance of the services related to service providers, or due to factors that are not
-                        dependent on the supplier such as: strikes, weather, holidays, etc. By Issta Israel, the customer
-                        agrees to all the terms and conditions set forth in this section and in the important information
-                        sections relating to the various products.</p>
-                    <p class="information-paragraph">It is hereby agreed that any claim and / or claim of the passenger
-                        against Issta Israel Ltd., must be submitted in writing before the company no later than 30 days
-                        after the passenger returns to Israel.</p>
-                </div>
-                <div class="information-text-group">
-                    <h5 class="information-subtitle">Terms of payment</h5>
-                    <p class="information-paragraph">Issta Israel will not be required to refund any differences resulting
-                        from these changes, regardless of the date of execution and / or confirmation of the order.
-                        For your convenience, there are several credit card payment options available to you:</p>
-                </div>
-                <div class="information-text-group">
-                    <h5 class="information-subtitle">Payment on site:</h5>
-                    <p class="information-paragraph">You can fill in the credit card details that appear on the booking form
-                        on the website and send them to us together with the other booking details.
-                        Our site is secure (see information security site), and your details are reserved with us for
-                        exclusive use for your orders.
-                        Typing in credit card details and payer details is designed to make it easier for you to complete
-                        your order in a quick and easy way.
-                        The actual billing will be done by your personal agent in Ista, only after receiving final
-                        confirmation from the supplier about your order.</p>
-                </div>
-                <div class="information-text-group">
-                    <h5 class="information-subtitle">Payment by phone:</h5>
-                    <p class="information-paragraph">You can call and make your reservation by phone in front of one of our
-                        travel agents, to whom you will also provide your credit card details. The actual billing will be
-                        done by your personal agent in
-                        Issta, only after receiving final confirmation from the supplier about your order</p>
-                </div>
-                <div class="information-text-group">
-                    <h5 class="information-subtitle">Prices of services</h5>
-                    <p class="information-paragraph">The prices of the services offered in Israel are usually lower than the
-                        official prices of the service provider abroad (for example: compared to the price list of the hotel
-                        or car rental company).
-                        However, it is possible that at some point in time the prices in Israel will be higher.</p>
-                    <p class="information-paragraph">The prices of the services may change without prior notice and in any
-                        case, the determining and binding prices are the prices in the country.</p>
-                </div>
-                <div class="information-text-group">
-                    <h5 class="information-subtitle">Price guarantee</h5>
-                    <p class="information-paragraph">The price increase will apply to all bookings that have already been
-                        made,
-                        unless they have been paid in advance in full and the travel documents (flight ticket, hotel
-                        voucher, car voucher, etc.) are already in the passenger's hands.
-                        If there is a discrepancy between the prices listed on the website and the prices at the reservation
-                        center,
-                        the price at the reservation center is the determining factor</p>
+                <div class="form-text__group">
+                    <label for="id_number">ID number</label>
+                    <input type="number" id="id_number" class="form-text">
                 </div>
             </div>
 
-            <div class="information-nav">
-                <ul>
-                    <li><a href="#about-ista">About Ista</a></li>
-                    <li><a href="#about-us">About us</a></li>
-                    <li><a href="#terms-of-us">Terms of us</a></li>
-                </ul>
-            </div>
-        </div>
-        <!-- /.information-content -->
+            <div class="cancel-form-group order-details">
+                <div class="cancel-form-group-header">
+                    <h4 class="heading-4 text-center">Order details</h4>
+                    <hr class="green-line">
+                    <p class="subtitle">Ordered placed at</p>
+                </div>
+                <div class="form-text__group">
+                    <label for="order_no">Order no. / Contact no.</label>
+                    <input type="number" id="order_no" class="form-text">
+                </div>
+                <div class="form-radios__group">
+                    <div class="form-radio-item">
+                        <label for="on_website" class="radio-container">On a website
+                            <input type="radio" name="order-details-radio" checked id="on_website" class="form-radio">
+                            <span class="radiomark"></span>
+                        </label>
+                    </div>
+                    <div class="form-radio-item">
+                        <label for="call_center" class="radio-container">Through the call center
+                            <input type="radio" name="order-details-radio" id="call_center" class="form-radio">
+                            <span class="radiomark"></span>
+                        </label>
+                    </div>
+                    <div class="form-radio-item">
+                        <label for="issta_branch" class="radio-container">Through an agent at the Issta branch
+                            <input type="radio" name="order-details-radio" id="issta_branch" class="form-radio">
+                            <span class="radiomark"></span>
+                        </label>
 
-<!--        <div class="information-nav">-->
-<!--            <ul >-->
-<!--                <li><a href="#about-ista">About Ista</a></li>-->
-<!--                <li><a href="#about-us">About us</a></li>-->
-<!--                <li><a href="#terms-of-us">Terms of us</a></li>-->
-<!--            </ul>-->
-<!--        </div>-->
-        <!-- /.information-menu -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="cancel-form-group request-subject">
+                <div class="cancel-form-group-header">
+                    <h4 class="heading-4 text-center">Request subject</h4>
+                    <hr class="green-line">
+                    <p class="subtitle">Ordered placed at</p>
+                </div>
+                <div class="form-select__group">
+                    <label for="request_subject">Request subject</label>
+                    <select id="request_subject" dir="rtl" class="form-select">
+                        <option>Cancel reservation</option>
+                        <option>Request subject</option>
+                        <option>Order change</option>
+                        <option>Request of service</option>
+                    </select>
+                </div>
+                <div class="form-textarea__group">
+                    <label for="the_request">The essence of the request</label>
+                    <textarea id="the_request" class="form-textarea"></textarea>
+                </div>
+            </div>
+
+            <div class="info-warning"><span class="red-element">*</span>The cancellation fee is in accordance with the contract of employment, unless the airline has canceled the flight</div>
+            <div class="cancel-reservation-send">
+                <button class="send-button">Send</button>
+            </div>
+        </form>
     </div>
 </div>
 
