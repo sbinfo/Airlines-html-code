@@ -675,6 +675,10 @@ body {
   z-index: 1;
   backdrop-filter: blur(10px);
 }
+.main-ticket-search_form-inner .main-ticket-search-bg-opacity {
+  background: #4585a2;
+  opacity: 0.1;
+}
 .main-ticket-search_form .search-block-btn-success {
   font-weight: 500;
   font-size: 26px;
@@ -1679,6 +1683,15 @@ body {
   padding: 10px 20px;
   text-transform: uppercase;
   color: #CE833F;
+  text-align: center;
+  -webkit-transition: all, 0.5s ease;
+  -moz-transition: all, 0.5s ease;
+  -ms-transition: all, 0.5s ease;
+  -o-transition: all, 0.5s ease;
+  transition: all, 0.5s ease;
+}
+.section-cheap__buttons-item:hover {
+  border: 1px solid #CE833F;
 }
 .section-cheap__buttons-item.active {
   border: 1px solid #CE833F;
@@ -1688,11 +1701,11 @@ body {
 }
 .section-cheap__table {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 .section-cheap__table-item {
-  width: 360px;
+  flex-basis: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1704,14 +1717,7 @@ body {
 .section-cheap__table-item-price {
   font-weight: 500;
   font-size: 14px;
-}
-.section-cheap__table-item-date {
-  font-size: 11px;
-  font-weight: 400;
-}
-.section-cheap__table-item-date span.status {
-  font-size: 14px;
-  color: #CE833F;
+  width: 55px;
 }
 .section-cheap__table-item-city {
   display: flex;
@@ -1722,9 +1728,79 @@ body {
 .section-cheap__table-item-city img.flag-icon {
   margin-left: 8px;
 }
+.section-cheap__table-item-date {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.section-cheap__table-item-date > div {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  position: relative;
+  text-align: right;
+}
+.section-cheap__table-item-date .cheap-date-return {
+  padding-right: 40px;
+}
+.section-cheap__table-item-date .cheap-date-return:after {
+  content: "";
+  width: 20px;
+  height: 21px;
+  background: url("../icons/arrows-green.svg") no-repeat center center;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+}
+.section-cheap__table-item-date .cheap-date-round_trip {
+  padding-left: 20px;
+}
+.section-cheap__table-item-date .cheap-date-title {
+  font-weight: normal;
+  font-size: 14px;
+  color: #CE833F;
+  margin-right: 8px;
+}
+.section-cheap__table-item-date .cheap-date-number {
+  font-weight: normal;
+  font-size: 16px;
+}
+@media (max-width: 48em) {
+  .section-cheap__buttons {
+    flex-wrap: wrap;
+  }
+  .section-cheap .section-cheap__buttons-item + .section-cheap__buttons-item {
+    margin-left: 0;
+  }
+  .section-cheap__buttons-item {
+    margin-bottom: 10px;
+    width: 90%;
+    text-align: center;
+  }
+}
+@media (max-width: 75em) {
+  .section-cheap__table-item-date {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .section-cheap__table-item-date .cheap-date-return {
+    padding-right: 0;
+    margin-bottom: 25px;
+  }
+  .section-cheap__table-item-date .cheap-date-return:after {
+    right: 40%;
+    bottom: -22px;
+  }
+  .section-cheap__table-item-date .cheap-date-round_trip {
+    padding-left: 0;
+  }
+}
 @media (min-width: 36em) {
-  .section-cheap__table-item {
-    width: 340px;
+  .section-cheap .section-cheap__table {
+    justify-content: space-between;
+  }
+  .section-cheap .section-cheap__table .section-cheap__table-item {
+    flex-basis: 49%;
   }
 }
 @media (min-width: 48em) {
@@ -1759,11 +1835,6 @@ body {
   .section-cheap__table-item-city img.flag-icon {
     width: 35px;
     margin-left: 15px;
-  }
-}
-@media (min-width: 85.375em) {
-  .section-cheap__table-item {
-    width: 590px;
   }
 }
 
@@ -4923,4 +4994,8 @@ body {
   .all-flights .section-header button.search-block-btn-success {
     padding: 11px 50px;
   }
+}
+
+.lowcost-flights .section-cheap__buttons-item {
+  padding: 12px 20px;
 }

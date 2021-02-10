@@ -415,6 +415,10 @@ body {
       z-index: 1;
       backdrop-filter: blur(10px);
     }
+    .main-ticket-search-bg-opacity {
+      background: #4585a2;
+      opacity: 0.1;
+    }
   }
 
   .search-block-btn-success {
@@ -1579,6 +1583,12 @@ body {
       padding: 10px 20px;
       text-transform: uppercase;
       color: $color-brown;
+      text-align: center;
+      @include transit(all, 0.5s, ease);
+
+      &:hover {
+        border: 1px solid $color-brown;
+      }
     }
 
     &-item.active {
@@ -1592,11 +1602,11 @@ body {
 
   &__table {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 
     &-item {
-      width: 360px;
+      flex-basis: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -1609,16 +1619,7 @@ body {
       &-price {
         font-weight: 500;
         font-size: 14px;
-      }
-
-      &-date {
-        font-size: 11px;
-        font-weight: 400;
-
-        span.status {
-          font-size: 14px;
-          color: $color-brown;
-        }
+        width: 55px;
       }
 
       &-city {
@@ -1634,9 +1635,91 @@ body {
     }
   }
 
+  &__table-item-date {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    > div {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      position: relative;
+      text-align: right;
+    }
+
+    .cheap-date-return {
+      padding-right: 40px;
+      &:after {
+        content: "";
+        width: 20px;
+        height: 21px;
+        background: url("../icons/arrows-green.svg") no-repeat center center;
+        display: inline-block;
+        position: absolute;
+        right: 0;
+      }
+    }
+
+    .cheap-date-round_trip {
+      padding-left: 20px;
+    }
+
+    .cheap-date-title {
+      font-weight: normal;
+      font-size: 14px;
+      color: $color-brown;
+      margin-right: 8px;
+    }
+
+    .cheap-date-number {
+      font-weight: normal;
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: $bp-small-768) {
+    &__buttons {
+      flex-wrap: wrap;
+    }
+
+    .section-cheap__buttons-item + .section-cheap__buttons-item {
+      margin-left: 0;
+    }
+
+    &__buttons-item {
+      margin-bottom: 10px;
+      width: 90%;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: $bp-medium-1200) {
+    &__table-item-date {
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .cheap-date-return {
+        padding-right: 0;
+        margin-bottom: 25px;
+
+        &:after {
+          right: 40%;
+          bottom: -22px;
+        }
+      }
+      .cheap-date-round_trip {
+        padding-left: 0;
+      }
+    }
+  }
+
   @media (min-width: $bp-small-576) {
-    &__table-item {
-      width: 340px;
+    .section-cheap__table {
+        justify-content: space-between;
+      .section-cheap__table-item {
+        flex-basis: 49%;
+      }
     }
   }
 
@@ -1674,11 +1757,6 @@ body {
         width: 35px;
         margin-left: 15px;
       }
-    }
-  }
-  @media (min-width: $bp-large-1366) {
-    &__table-item {
-      width: 590px;
     }
   }
 }
@@ -5351,6 +5429,21 @@ body {
 }
 
 // =================== all-flights End =================
+
+
+// =================== lowcost-flights =================
+.lowcost-flights {
+  .section-header {}
+
+  .section-cheap {
+    &__buttons-item {
+      padding: 12px 20px;
+    }
+  }
+}
+// =================== lowcost-flights End =================
+
+
 
 
 

@@ -5,27 +5,21 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Home page</title>
+    <title>Low cost flights</title>
 
-    <!-- Slider -->
-    <link rel="stylesheet" href="assets/owl/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/owl/owl.theme.default.min.css">
     <!-- Mobile menu - slick nav -->
     <link rel="stylesheet" href="assets/mmenu/dist/mmenu-light.css">
 
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
-
-
+<body class="lowcost-flights all-flights">
 
 <!-- section-header -->
-<header class="section-block section-header vh100">
+<header class="section-block section-header">
     <div class="section-header-bg-clouds"></div>
     <div class="section-header-bg-gradient"></div>
 
     <div class="section-inner">
-
         <!-- Menu -->
         <div class="header-menu">
             <!-- mobile menu -->
@@ -71,7 +65,7 @@
                         <li class="section-header-nav__menu-item"><a href="contacts.html">Contacts <span class="active-line"></span></a></li>
                         <li class="section-header-nav__menu-item"><a href="blog.html">to passengers <span class="active-line"></span></a></li>
                         <li class="section-header-nav__menu-item"><a href="ordering.html">order <span class="active-line"></span></a></li>
-                        <li class="section-header-nav__menu-item"><a href="#">Cheap flights abroad <span class="active-line"></span></a></li>
+                        <li class="section-header-nav__menu-item active"><a href="all-flights.html">Cheap flights abroad <span class="active-line"></span></a></li>
                         <li class="section-header-nav__menu-item"><a href="general-information.html">Terms of use <span class="active-line"></span></a></li>
                     </ul>
                 </nav>
@@ -83,23 +77,33 @@
         </div>
         <!-- / Menu -->
 
+        <div class="breadcrumbs">
+            <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item"><a href="#">Home page</a></li>
+                <li class="breadcrumbs__item"><a href="#" class="active">Blog</a></li>
+            </ul>
+        </div>
+
         <!-- section-header-search -->
         <div class="section-header-search">
-            <h1 class="section-header-search__title">Flight search</h1>
-
             <div class="section-header-search__form main-ticket-search_form">
-                <div class="main-ticket-search_form__filters">
-                    <div class="main-ticket-search_form__filters-button">flight status</div>
-                    <div class="main-ticket-search_form__filters-button">manage trips/check-in</div>
-                    <div class="main-ticket-search_form__filters-button active">book</div>
-                </div>
-
                 <div class="main-ticket-search_form-inner">
                     <form action="">
                         <div class="search-block">
-                            <button type="submit" class="search-block-btn-success">search</button>
+                            <button type="submit" class="search-block-btn-success">update</button>
                         </div>
 
+                        <div class="passengers-block">
+                            <div class="passengers-activator-click activator-click">
+                                <button class="passengers-activator-click__button">
+                                    <img src="assets/icons/arrow_down.svg" alt="arrow down">
+                                </button>
+                            </div>
+                            <div class="passengers-activator-content activator-content">
+                                <label class="passengers-activator-content__label">Number of passengers</label>
+                                <div class="passengers-activator-content__placeholder">2</div>
+                            </div>
+                        </div>
                         <div class="date-block">
                             <div class="date-activator-click activator-click">
                                 <button class="date-activator-click__button">
@@ -111,7 +115,6 @@
                                 <div class="date-activator-content__placeholder">21/01/21 - 13/01/21</div>
                             </div>
                         </div>
-
                         <div class="to-block">
                             <div class="to-activator-click activator-click">
                                 <button class="to-activator-click__button">
@@ -138,77 +141,9 @@
                                 <div class="from-activator-content__placeholder">Tel-Aviv</div>
                             </div>
                         </div>
-                        <hr class="white-separator">
-                        <div class="filters-block">
-                            <div class="filters-block__item">
-                                <label for="flexible_dates">Flexible dates +/- 3 days</label>
-                                <input type="checkbox" id="flexible_dates" class="checkbox-white">
-                            </div>
-                            <div class="filters-block__item">
-                                <label for="direct_flights_only">Direct flights only</label>
-                                <input type="checkbox" id="direct_flights_only" class="checkbox-white">
-                            </div>
-                        </div>
-
-                        <div class="route-block">
-                            <div class="route-activator-click activator-click">
-                                <button class="route-activator-click__button">
-                                    <img src="assets/icons/arrow_down.svg" alt="arrow down">
-                                </button>
-                            </div>
-                            <div class="route-activator-content activator-content">
-                                <label class="route-activator-content__label">Route</label>
-                                <div class="route-activator-content__placeholder">Round trip</div>
-                            </div>
-                        </div>
-
-                        <div class="department-block">
-                            <div class="department-activator-click activator-click">
-                                <button class="department-activator-click__button">
-                                    <img src="assets/icons/arrow_down.svg" alt="arrow down">
-                                </button>
-                            </div>
-                            <div class="department-activator-content activator-content">
-                                <label class="department-activator-content__label">Department</label>
-                                <div class="department-activator-content__placeholder">Economy class</div>
-                            </div>
-                        </div>
-
-                        <div class="passengers-block">
-                            <div class="passengers-activator-click activator-click">
-                                <button class="passengers-activator-click__button">
-                                    <img src="assets/icons/arrow_down.svg" alt="arrow down">
-                                </button>
-                            </div>
-                            <div class="passengers-activator-content activator-content">
-                                <label class="passengers-activator-content__label">Number of passengers</label>
-                                <div class="passengers-activator-content__placeholder">2</div>
-                            </div>
-                        </div>
                     </form>
                     <div class="main-ticket-search_form-inner__background"></div>
                     <div class="main-ticket-search_form-inner__background main-ticket-search-bg-opacity"></div>
-                </div>
-            </div>
-
-            <div class="section-header-search__icons">
-                <div class="section-header-search__icons-item">
-                    <div class="text">Available for you 24/7</div>
-                    <div class="icon">
-                        <img src="assets/icons/mobile-payment.svg" alt="mobile payment">
-                    </div>
-                </div>
-                <div class="section-header-search__icons-item">
-                    <div class="text">Convenient payment scheme</div>
-                    <div class="icon">
-                        <img src="assets/icons/tickets.svg" alt="tickets">
-                    </div>
-                </div>
-                <div class="section-header-search__icons-item">
-                    <div class="text">A whole world of travel products in one place</div>
-                    <div class="icon">
-                        <img src="assets/icons/airplane.svg" alt="airplane">
-                    </div>
                 </div>
             </div>
         </div> <!-- section-header-search -->
@@ -216,90 +151,17 @@
 </header>
 <!-- / section-header -->
 
-<!-- section-slider -->
-<section class="section-block section-slider">
-    <div class="section-slider-inner">
-        <div class="slider owl-carousel">
-            <div class="slider-item">
-                <div class="slider-item__secondary_block">
-                    <div class="slider-item__secondary_block-inner">
-                        <div class="slider-item__secondary_block-title">Sri Lanka</div>
-                        <div class="slider-item__secondary_block-subtitle">Meet the new program</div>
-                    </div>
-                </div>
-                <img src="https://i2.wp.com/www.traveloffpath.com/wp-content/uploads/2020/08/Bali-Will-Not-Open-Borders-For-Tourism-Until-2021-Governor-Announces-3.jpg?resize=759%2C500&ssl=1"
-                     alt="slider image">
-                <div class="slider-item__primary_block">
-                    <div class="bg-clouds"></div>
-                    <div class="slider-item__primary_block-content">
-                        <div>
-                            <div class="slider-item__primary_block-title">Sri Lanka</div>
-                            <div class="slider-item__primary_block-subtitle">Meet the new program</div>
-                        </div>
-                        <div class="slider-item__primary_block-button">
-                            <a href="#" class="button-white">More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="slider-item">
-                <div class="slider-item__secondary_block">
-                    <div class="slider-item__secondary_block-inner">
-                        <div class="slider-item__secondary_block-title">Holidays in Greece</div>
-                        <div class="slider-item__secondary_block-subtitle">Resorts of Greece</div>
-                    </div>
-                </div>
-                <img src="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Fsundaytimes%2Fprod%2Fweb%2Fbin%2Fa9023898-3d32-11ea-955e-6a5fc41152f3.jpg?crop=5770%2C3246%2C77%2C706&resize=1180"
-                     alt="slider image">
-                <div class="slider-item__primary_block">
-                    <div class="bg-clouds"></div>
-                    <div class="slider-item__primary_block-content">
-                        <div>
-                            <div class="slider-item__primary_block-title">Holidays in Greece</div>
-                            <div class="slider-item__primary_block-subtitle">Resorts of Greece</div>
-                        </div>
-                        <div class="slider-item__primary_block-button">
-                            <a href="#" class="button-white">More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="slider-item">
-                <div class="slider-item__secondary_block">
-                    <div class="slider-item__secondary_block-inner">
-                        <div class="slider-item__secondary_block-title">Free ride UAE</div>
-                        <div class="slider-item__secondary_block-subtitle">Free ride UAE</div>
-                    </div>
-                </div>
-                <img src="https://files.tpg.ua/pages2/87854/UAE_main.jpg"
-                     alt="slider image">
-                <div class="slider-item__primary_block">
-                    <div class="bg-clouds"></div>
-                    <div class="slider-item__primary_block-content">
-                        <div>
-                            <div class="slider-item__primary_block-title">Free ride UAE</div>
-                            <div class="slider-item__primary_block-subtitle">Free ride UAE</div>
-                        </div>
-                        <div class="slider-item__primary_block-button">
-                            <a href="#" class="button-white">More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- / section-slider -->
-
 <!-- section-cheap -->
 <section class="section-block section-cheap">
     <div class="section-inner">
         <h2 class="heading-2 text-center">Cheap flights abroad</h2>
         <hr class="green-line">
         <div class="section-cheap__buttons">
-            <a href="#" class="section-cheap__buttons-item">USA</a>
-            <a href="#" class="section-cheap__buttons-item">Tel Aviv</a>
-            <a href="#" class="section-cheap__buttons-item active">favorable prices</a>
+            <a href="#" class="section-cheap__buttons-item">transavia flights</a>
+            <a href="#" class="section-cheap__buttons-item">wizz air flights</a>
+            <a href="#" class="section-cheap__buttons-item">rainier flights</a>
+            <a href="#" class="section-cheap__buttons-item">easy jet flights</a>
+            <a href="#" class="section-cheap__buttons-item active">Low cost flights</a>
         </div>
         <div class="section-cheap__table">
             <div class="section-cheap__table-item">
@@ -511,6 +373,7 @@
 </section>
 <!-- / section-cheap -->
 
+
 <!-- section-social -->
 <section class="section-block section-social">
     <div class="section-inner">
@@ -559,271 +422,6 @@
     </div>
 </section>
 <!-- / section-social -->
-
-<!-- section-popular -->
-<section class="section-block section-popular">
-    <div class="section-inner">
-        <h2 class="heading-2 text-center">Popular destinations</h2>
-        <hr class="green-line">
-        <div class="section-popular__nav text-center">
-            <div class="home-popular-filter filter__buttons active-brown bg-white section-popular__nav-filter padding-14">
-                <button class="filter__buttons-btn">countries</button>
-                <button class="filter__buttons-btn">cities</button>
-                <button class="filter__buttons-btn active">recommended</button>
-            </div>
-            <div class="search__element section-popular__nav-search">
-                <input type="text" class="search__element-input">
-                <button class="search__element-button">
-                    <img src="assets/icons/search.svg" alt="search icon">
-                </button>
-            </div>
-        </div>
-        <div class="section-popular__table">
-            <div class="section-popular__table-group">
-                <div class="section-popular__table-group__title">Spain</div>
-                <div class="section-popular__table-group__list">
-
-                    <div class="table-open">
-                        <div class="flight-table__item">
-                            <div class="flight-table__item__price">
-                                <div class="flight-table__item__price-title">Mon, Th</div>
-                                <div class="flight-table__item__price-cost">$ 272</div>
-                            </div>
-                            <div class="flight-table__item__city">
-                                <div class="flight-table__item__city-from">Tel-Aviv</div>
-                                <div class="flight-table__item__city-to">לונדון</div>
-                            </div>
-                        </div>
-                        <div class="table-open__image">
-                            <img src="assets/img/stock-photo-happy-asian-woman-travels.svg">
-                        </div>
-                        <div class="table-open__footer">
-                            <div class="table-open__footer__price">
-                                <div class="table-open__footer__price-title">Mon, Th</div>
-                                <div class="table-open__footer__price-cost">$ 272</div>
-                            </div>
-                            <div class="table-group__item__city">
-                                <div class="table-open__footer__city-from">Tel-Aviv</div>
-                                <div class="table-open__footer__city-to">לונדון</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section-popular__table-group__list-item new--item">
-                        <div class="flight-table__item">
-                            <div class="flight-table__item__price">
-                                <div class="flight-table__item__price-title">Mon, Th</div>
-                                <div class="flight-table__item__price-cost">$ 272</div>
-                            </div>
-                            <div class="flight-table__item__city">
-                                <div class="flight-table__item__city-from">Tel-Aviv</div>
-                                <div class="flight-table__item__city-to">לונדון</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section-popular__table-group__list-item">
-                        <div class="flight-table__item">
-                            <div class="flight-table__item__price">
-                                <div class="flight-table__item__price-title">Mon, Th</div>
-                                <div class="flight-table__item__price-cost">$ 272</div>
-                            </div>
-                            <div class="flight-table__item__city">
-                                <div class="flight-table__item__city-from">Tel-Aviv</div>
-                                <div class="flight-table__item__city-to">לונדון</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section-popular__table-group__list-item">
-                        <div class="flight-table__item">
-                            <div class="flight-table__item__price">
-                                <div class="flight-table__item__price-title">Mon, Th</div>
-                                <div class="flight-table__item__price-cost">$ 272</div>
-                            </div>
-                            <div class="flight-table__item__city">
-                                <div class="flight-table__item__city-from">Tel-Aviv</div>
-                                <div class="flight-table__item__city-to">לונדון</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section-popular__table-group__list-item">
-                        <div class="flight-table__item">
-                            <div class="flight-table__item__price">
-                                <div class="flight-table__item__price-title">Mon, Th</div>
-                                <div class="flight-table__item__price-cost">$ 272</div>
-                            </div>
-                            <div class="flight-table__item__city">
-                                <div class="flight-table__item__city-from">Tel-Aviv</div>
-                                <div class="flight-table__item__city-to">לונדון</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section-popular__table-group__list-item">
-                        <div class="flight-table__item">
-                            <div class="flight-table__item__price">
-                                <div class="flight-table__item__price-title">Mon, Th</div>
-                                <div class="flight-table__item__price-cost">$ 272</div>
-                            </div>
-                            <div class="flight-table__item__city">
-                                <div class="flight-table__item__city-from">Tel-Aviv</div>
-                                <div class="flight-table__item__city-to">לונדון</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section-popular__table-group__list-item new--item">
-                        <div class="flight-table__item">
-                            <div class="flight-table__item__price">
-                                <div class="flight-table__item__price-title">Mon, Th</div>
-                                <div class="flight-table__item__price-cost">$ 272</div>
-                            </div>
-                            <div class="flight-table__item__city">
-                                <div class="flight-table__item__city-from">Tel-Aviv</div>
-                                <div class="flight-table__item__city-to">לונדון</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section-popular__table-group__list-item">
-                        <div class="flight-table__item">
-                            <div class="flight-table__item__price">
-                                <div class="flight-table__item__price-title">Mon, Th</div>
-                                <div class="flight-table__item__price-cost">$ 272</div>
-                            </div>
-                            <div class="flight-table__item__city">
-                                <div class="flight-table__item__city-from">Tel-Aviv</div>
-                                <div class="flight-table__item__city-to">לונדון</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section-popular__table-group__list-item">
-                        <div class="flight-table__item">
-                            <div class="flight-table__item__price">
-                                <div class="flight-table__item__price-title">Mon, Th</div>
-                                <div class="flight-table__item__price-cost">$ 272</div>
-                            </div>
-                            <div class="flight-table__item__city">
-                                <div class="flight-table__item__city-from">Tel-Aviv</div>
-                                <div class="flight-table__item__city-to">לונדון</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section-popular__table-group__list-item">
-                        <div class="flight-table__item">
-                            <div class="flight-table__item__price">
-                                <div class="flight-table__item__price-title">Mon, Th</div>
-                                <div class="flight-table__item__price-cost">$ 272</div>
-                            </div>
-                            <div class="flight-table__item__city">
-                                <div class="flight-table__item__city-from">Tel-Aviv</div>
-                                <div class="flight-table__item__city-to">לונדון</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="section-popular__table-group">
-                <div class="section-popular__table-group__title">Bulgaria</div>
-                <div class="section-popular__table-group__list">
-                    <div class="section-popular__table-group__list-item">
-                        <div class="flight-table__item">
-                            <div class="flight-table__item__price">
-                                <div class="flight-table__item__price-title">Mon, Th</div>
-                                <div class="flight-table__item__price-cost">$ 272</div>
-                            </div>
-                            <div class="flight-table__item__city">
-                                <div class="flight-table__item__city-from">Tel-Aviv</div>
-                                <div class="flight-table__item__city-to">לונדון</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section-popular__table-group__list-item">
-                        <div class="flight-table__item">
-                            <div class="flight-table__item__price">
-                                <div class="flight-table__item__price-title">Mon, Th</div>
-                                <div class="flight-table__item__price-cost">$ 272</div>
-                            </div>
-                            <div class="flight-table__item__city">
-                                <div class="flight-table__item__city-from">Tel-Aviv</div>
-                                <div class="flight-table__item__city-to">לונדון</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section-popular__table-group__list-item">
-                        <div class="flight-table__item">
-                            <div class="flight-table__item__price">
-                                <div class="flight-table__item__price-title">Mon, Th</div>
-                                <div class="flight-table__item__price-cost">$ 272</div>
-                            </div>
-                            <div class="flight-table__item__city">
-                                <div class="flight-table__item__city-from">Tel-Aviv</div>
-                                <div class="flight-table__item__city-to">לונדון</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section-popular__table-group__list-item">
-                        <div class="flight-table__item">
-                            <div class="flight-table__item__price">
-                                <div class="flight-table__item__price-title">Mon, Th</div>
-                                <div class="flight-table__item__price-cost">$ 272</div>
-                            </div>
-                            <div class="flight-table__item__city">
-                                <div class="flight-table__item__city-from">Tel-Aviv</div>
-                                <div class="flight-table__item__city-to">לונדון</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section-popular__table-group__list-item">
-                        <div class="flight-table__item">
-                            <div class="flight-table__item__price">
-                                <div class="flight-table__item__price-title">Mon, Th</div>
-                                <div class="flight-table__item__price-cost">$ 272</div>
-                            </div>
-                            <div class="flight-table__item__city">
-                                <div class="flight-table__item__city-from">Tel-Aviv</div>
-                                <div class="flight-table__item__city-to">לונדון</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section-popular__table-group__list-item">
-                        <div class="flight-table__item">
-                            <div class="flight-table__item__price">
-                                <div class="flight-table__item__price-title">Mon, Th</div>
-                                <div class="flight-table__item__price-cost">$ 272</div>
-                            </div>
-                            <div class="flight-table__item__city">
-                                <div class="flight-table__item__city-from">Tel-Aviv</div>
-                                <div class="flight-table__item__city-to">לונדון</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section-popular__table-group__list-item">
-                        <div class="flight-table__item">
-                            <div class="flight-table__item__price">
-                                <div class="flight-table__item__price-title">Mon, Th</div>
-                                <div class="flight-table__item__price-cost">$ 272</div>
-                            </div>
-                            <div class="flight-table__item__city">
-                                <div class="flight-table__item__city-from">Tel-Aviv</div>
-                                <div class="flight-table__item__city-to">לונדון</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section-popular__table-group__list-item">
-                        <div class="flight-table__item">
-                            <div class="flight-table__item__price">
-                                <div class="flight-table__item__price-title">Mon, Th</div>
-                                <div class="flight-table__item__price-cost">$ 272</div>
-                            </div>
-                            <div class="flight-table__item__city">
-                                <div class="flight-table__item__city-from">Tel-Aviv</div>
-                                <div class="flight-table__item__city-to">לונדון</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- / section-popular -->
 
 <!-- section news -->
 <section class="section-block section-news">
@@ -998,20 +596,10 @@
 </footer>
 <!-- / section footer -->
 
-
-
 <!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"
-        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-<script src="assets/js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
-<!-- Carousel -->
-<script src="assets/owl/js/owl.carousel.js"></script>
-<script src="assets/owl/js/owl.navigation.js"></script>
-<script src="assets/owl/js/owl.autoplay.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 <!-- Mobile menu -->
 <script src="assets/mmenu/dist/mmenu-light.js"></script>
-
-<script src="assets/js/home.js"></script>
 <script src="assets/js/main.js"></script>
 
 </body>
