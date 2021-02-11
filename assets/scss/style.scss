@@ -5433,16 +5433,304 @@ body {
 
 // =================== lowcost-flights =================
 .lowcost-flights {
-  .section-header {}
-
   .section-cheap {
+    background: url(../img/bg-cheap.svg) no-repeat center bottom;
+    background-size: contain;
+    padding-bottom: 150px;
+
     &__buttons-item {
       padding: 12px 20px;
+    }
+
+    .cheap-view-more {
+      width: 100%;
+      text-align: center;
+      padding-top: 50px;
+      button.btn-view-more {
+        width: 80%;
+        @include start-button(16px, #000, transparent);
+        font-weight: 500;
+        border: 1px solid #000;
+        padding: 12px;
+
+        &:hover {
+          background-color: #fff;
+          color: #000;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $bp-medium-1024) {
+    .section-cheap {
+      padding-bottom: 90px;
     }
   }
 }
 // =================== lowcost-flights End =================
 
+
+// =================== flight-status =================
+.flight-status {
+  .section-header {
+
+    .flight-title-wrapper {
+      h1.heading-1-with-line {
+        margin-top: 80px;
+        margin-bottom: 20px;
+      }
+      h3.header-subtitle {
+        text-align: right;
+        font-weight: normal;
+        font-size: 24px;
+        margin-right: 106px;
+      }
+      padding-bottom: 50px;
+    }
+  }
+  // .section-header
+
+  .section-flights-table {
+    background: url("../img/bg-section-services.svg") no-repeat center 110%;
+    background-size: contain;
+    padding-bottom: 500px;
+  }
+  .section-flights-table .flights-table {
+    border: 1px solid #E9E9E9;
+
+    .table-header {
+      display: flex;
+      font-weight: 500;
+      font-size: 12px;
+      text-transform: uppercase;
+      padding: 14px 30px;
+
+      > span {
+        text-align: right;
+        &:first-child {
+          flex-basis: 25%;
+        }
+        &:nth-last-child(-n+2) {
+          flex-basis: 15%;
+        }
+        &.table-cell-space {
+          flex-basis: 45%;
+        }
+      }
+    }
+    .table-content {
+
+      .status-row {
+        border-top: 1px solid #E9E9E9;
+        border-bottom: 1px solid #E9E9E9;
+
+        &:nth-child(1n) {
+          background-color: #fff;
+        }
+
+        &:nth-child(2n) {
+          background-color: #F8F8F8;
+        }
+      }
+
+      .status-item {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px 30px;
+
+        > div {
+          //flex-basis: 33%;
+          text-align: right;
+        }
+      }
+
+      .status-item .arrival {
+        flex-basis: 25%;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+
+        a.btn-view-details {
+          font-weight: 500;
+          font-size: 14px;
+          color: $color-primary;
+          position: relative;
+          padding-left: 18px;
+          @include transit(all, 0.5s, ease);
+
+          &:before,
+          &:after {
+            content: "";
+            width: 8px;
+            height: 2px;
+            background-color: $color-primary;
+            position: absolute;
+            left: 0;
+            @include transit(all, 0.5s, ease);
+          }
+          &:before {
+            transform: rotate(-45deg);
+            top: 4px;
+          }
+          &:after {
+            transform: rotate(45deg);
+            top: 9px;
+          }
+
+          &:hover {
+            color: #24d873;
+          }
+
+          &:hover::before,
+          &:hover::after {
+            background-color: #24d873;
+          }
+        }
+
+        .arrival-time {
+          .arrival-time {
+            font-weight: normal;
+            font-size: 16px;
+            margin-bottom: 4px;
+          }
+
+          .arrival-place {
+            font-weight: normal;
+            font-size: 14px;
+            color: $color-brown;
+          }
+        }
+      }
+      // .status-item .arrival
+      .status-item .schedule {
+        position: relative;
+        text-align: center;
+        flex-basis: 41%;
+        margin-left: 4%;
+        border-bottom: 1px dashed #ccc;
+        padding-bottom: 8px;
+        margin-top: -10px;
+
+        p {
+          margin-left: 70px;
+          color: #82D2A4;
+        }
+
+        &:after {
+          content: "";
+          background: url("../icons/plane-brown.svg") no-repeat center center;
+          width: 30px;
+          height: 26px;
+          position: absolute;
+          right: -36px;
+          bottom: -14px;
+        }
+      }
+      //.status-item .schedule
+
+      .status-item .departure {
+        flex-basis: 15%;
+
+        .departure-time {
+          font-weight: normal;
+          font-size: 16px;
+          margin-bottom: 4px;
+        }
+
+        .departure-place {
+          font-weight: normal;
+          font-size: 14px;
+          color: $color-brown;
+        }
+
+      }
+      // .status-item .departure
+
+      .status-item .flight {
+        flex-basis: 15%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        .flight-text {
+          margin-right: 20px;
+        }
+        img.flight-icon {
+          max-width: 38px;
+          max-height: 38px;
+          min-width: 38px;
+          min-width: 38px;
+          width: 38px;
+          height: 38px;
+          border-radius: 50%;
+        }
+      }
+      // .status-item .flight
+
+      .status-connection {
+        display: none;
+
+        &.show {
+          display: block;
+
+          &:last-child {
+            padding-bottom: 15px;
+          }
+
+          .connection-info {
+            font-weight: normal;
+            font-size: 12px;
+            color: $color-brown;
+            text-align: right;
+            padding: 14px 0;
+
+            p {
+              padding-right: 100px;
+              position: relative;
+
+              &:before,
+              &:after {
+                content: "";
+                background-color: #F9C18F;
+                position: absolute;
+                top: 44%;
+                height: 1px;
+              }
+
+              &:before {
+                width: 80%;
+                left: 30px;
+              }
+
+              &:after {
+                width: 4%;
+                right: 30px;
+              }
+            }
+            span.connection-time {}
+          }
+        }
+      }
+      // .status-connection
+    }
+  }
+
+  @media(max-width: $bp-medium-992) {
+    .section-flights-table {
+      background-size: auto;
+      padding-bottom: 170px;
+    }
+  }
+
+  @media (max-width: $bp-medium-1200) {
+    .section-flights-table {
+      padding-bottom: 300px;
+    }
+  }
+}
+// =================== flight-statusEnd =================
 
 
 
