@@ -5730,7 +5730,118 @@ body {
     }
   }
 }
-// =================== flight-statusEnd =================
+// =================== flight-status End =================
+
+
+// =================== list-of-flights =================
+.list-of-flights {
+  .flights-list-wrapper {
+
+    .flights-filter-buttons {
+      text-align: right;
+      border-bottom: 2px solid #E4EBEA;
+      margin-bottom: 20px;
+
+      button {
+        @include start-button(14px, #000, #E4EBEA);
+        border-radius: 5px 5px 0 0;
+        font-weight: 400;
+        font-size: 14px;
+        padding: 11px 20px;
+      }
+      button.active {
+        color: #fff;
+        background-color: $color-brown;
+      }
+      button:not(.active):hover {
+        color: #fff;
+        background-color: #ce833f7d;
+      }
+    }
+    // .flights-filter-buttons
+
+    .flights-list {
+      display: flex;
+      flex-wrap: wrap;
+
+      .flights-list-header {
+        flex-basis: 100%;
+        display: flex;
+
+        .flights-list-filter_buttons {
+          flex-basis: 70%;
+
+          .filter__buttons {
+            border: none;
+            background-color: #E4EBEA;
+          }
+          .filter__buttons .filter__buttons-btn {
+            padding: 8px;
+
+            .filter-name {
+              display: block;
+            }
+            .filter-details {
+              display: block;
+              font-size: 12px;
+            }
+          }
+        }
+        .flights-follow_button {
+          padding-left: 30px;
+          flex-basis: 30%;
+
+          button.btn-follow {
+            @include start-button(16px, $color-brown, #fff);
+            @include box-shadow(0px 2px 12px rgba(0, 0, 0, 0.17));
+            @include br(5px);
+            width: 100%;
+            padding: 15px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:after {
+              content: "";
+              background: url("../icons/bell.svg") no-repeat center center;
+              width: 20px;
+              height: 20px;
+              display: inline-block;
+              margin-left: 10px;
+              margin-top: -2px;
+              @include transit(all, 0.5s, ease);
+            }
+
+            &:hover {
+              background-color: $color-brown;
+              color: #fff;
+            }
+
+            &:hover::after {
+              background: url("../icons/bell-white.svg") no-repeat center center;
+            }
+          }
+        }
+      }
+      .flights-list-results {}
+
+
+    }
+  }
+
+  .flights-sidebar .flights-sidebar-filters {
+    padding-left: 30px;
+    .filter-item {
+
+    }
+    button.reset-filters {
+
+    }
+  }
+
+}
+// =================== list-of-flights End =================
 
 
 
