@@ -14,6 +14,8 @@ $color-gray: #595758;
 $color-light-gray: #BCCDC2;
 $color-surface: #908C8E;
 
+$color-primary-hover: #27c76b;
+
 $seat-not-available: #C4C4C4;
 $seat-business: #CE833F;
 $seat-premium: #C837AB;
@@ -356,6 +358,78 @@ body {
 
   }
 }
+
+.form-checkbox-group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  padding-right: 30px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 20px;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  .checkbox-text {
+    display: inline-block;
+    color: #908C8E;
+    font-weight: 300;
+    font-size: 14px;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 20px;
+    width: 20px;
+    border: 1px solid #D9D9D9;
+    border-radius: 2px;
+    @include transit(all, 0.4s, ease);
+  }
+
+  &:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  input:checked ~ .checkmark {
+    background-color: $color-primary;
+    border-color: $color-primary;
+  }
+
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  .checkmark:after {
+    left: 5px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+//.form-checkbox-group
 
 @media (min-width: $bp-small-768) {
   .heading-2 {
@@ -5830,14 +5904,153 @@ body {
     }
   }
 
+  .flights-list-results {
+    flex-basis: 70%;
+  }
+
+  .flights-sidebar {
+    flex-basis: 30%;
+  }
+
   .flights-sidebar .flights-sidebar-filters {
+    width: 100%;
     padding-left: 30px;
+    text-align: right;
+
     .filter-item {
+      border-bottom: 1px solid #E9E9E9;
+      padding: 20px 20px 20px 0;
 
-    }
-    button.reset-filters {
+      &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      &__open {
+        display: inline-block;
+        position: relative;
+        margin-left: 20px;
 
+        &:before,
+        &:after {
+          content: "";
+          width: 8px;
+          height: 2px;
+          position: absolute;
+          top: 0;
+          background-color: $color-main;
+          cursor: pointer;
+          @include transit(all, 0.5s, ease);
+        }
+
+        &:before {
+          left: 0;
+          transform: rotate(-40deg);
+        }
+        &:after {
+          transform: rotate(40deg);
+          left: -5px;
+        }
+      }
+      &__title {
+        position: relative;
+        text-align: right;
+        font-weight: 400;
+        font-size: 16px;
+      }
+
+      ul.filter-item-list {
+        display: none;
+
+        li {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        span.filter-airlines-price {
+          padding-left: 60px;
+          font-size: 14px;
+          font-weight: 400;
+          color: rgba(249, 193, 143, 1);
+        }
+
+        li:not(:last-child) {
+          margin-bottom: 16px;
+        }
+      }
+
+      .show-more-wrapper button.show-more {
+        @include start-button(14px, $color-primary, transparent);
+        text-transform: none;
+        text-decoration: underline;
+        margin-top: 18px;
+
+        &:hover {
+          color: $color-primary-hover;
+        }
+      }
     }
+    // .filter-item
+
+    .filter-item.open {
+
+      .filter-item__header {
+        padding-bottom: 36px;
+      }
+
+      .filter-item__title {
+        font-weight: 500;
+        font-size: 18px;
+
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: -10px;
+          right: 0;
+          width: 50px;
+          border-bottom: 6px solid #0EB155;
+        }
+      }
+
+      .filter-item__open {
+        &:before {
+          left: 0;
+          transform: rotate(40deg);
+          background-color: $color-surface;
+        }
+        &:after {
+          left: -5px;
+          transform: rotate(-40deg);
+          background-color: $color-surface;
+        }
+      }
+
+      ul.filter-item-list {
+        display: block;
+      }
+    }
+    // .filter-item.open
+
+
+    .reset-filter-wrapper {
+      width: 100%;
+      text-align: center;
+
+      button.reset-filters {
+        @include start-button(16px, $color-primary, transparent);
+        font-weight: 400;
+        border: 1px solid $color-primary;
+        padding: 12px 30px;
+        margin: 45px 0 0;
+
+        &:hover {
+          color: #fff;
+          background-color: $color-primary;
+        }
+      }
+    }
+    //..reset-filter-wrapper
   }
 
 }

@@ -178,25 +178,221 @@
                         </button>
                     </div>
                 </div>
+                <!-- /.flights-list-filter_buttons -->
                 <div class="flights-follow_button">
                     <button type="button" class="btn-follow">follow the price</button>
                 </div>
             </div>
+            <!-- /.flights-list-header -->
+
             <div class="flights-list-results">
 
             </div>
+            <!-- /.flights-list-results -->
+
             <div class="flights-sidebar">
                 <div class="flights-sidebar-filters">
-                    <div class="filter-item filter-popular"></div>
-                    <div class="filter-item ticket-price"></div>
-                    <div class="filter-item airlines"></div>
-                    <div class="filter-item max-connections"></div>
-                    <div class="filter-item duration"></div>
-                    <div class="filter-item stopover"></div>
-                    <div class="filter-item departure-arrival-times"></div>
-                    <button type="button" class="reset-filters">Reset all filters</button>
+
+                    <div class="filter-item open filter-popular">
+                        <div class="filter-item__header">
+                            <span class="filter-item__open"></span>
+                            <h5 class="filter-item__title">Popular filters</h5>
+                        </div>
+                        <ul class="filter-item-list">
+                            <li>
+                                <label class="form-checkbox-group">
+                                    <span class="checkbox-text">Direct flight only</span>
+                                    <input type="checkbox" checked>
+                                    <span class="checkmark"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="form-checkbox-group">
+                                    <span class="checkbox-text">One way</span>
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.filter-item filter-popular -->
+
+                    <div class="filter-item open ticket-price">
+                        <div class="filter-item__header">
+                            <span class="filter-item__open"></span>
+                            <h5 class="filter-item__title">Ticket price</h5>
+                        </div>
+                        <ul class="filter-item-list">
+                            <li>
+                                <label for="ticket-price">
+                                    <span class="min-price">$100</span>
+                                    <span class="max-price">$500</span>
+                                </label>
+                                <div class="custom-range">
+                                    <input type="range" id="ticket-price" min="50" max="10000" value="150" class="slider">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.filter-item ticket-price -->
+
+                    <div class="filter-item open airlines">
+                        <div class="filter-item__header">
+                            <span class="filter-item__open"></span>
+                            <h5 class="filter-item__title">Airlines</h5>
+                        </div>
+                        <ul class="filter-item-list">
+                            <li>
+                                <span class="filter-airlines-price">202$</span>
+                                <label class="form-checkbox-group">
+                                    <span class="checkbox-text">Show all</span>
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <span class="filter-airlines-price">273$</span>
+                                <label class="form-checkbox-group">
+                                    <span class="checkbox-text">El Al</span>
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <span class="filter-airlines-price">374$</span>
+                                <label class="form-checkbox-group">
+                                    <span class="checkbox-text">Turkish Airlines</span>
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <span class="filter-airlines-price">276$</span>
+                                <label class="form-checkbox-group">
+                                    <span class="checkbox-text">Klm Airlines</span>
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <span class="filter-airlines-price">376$</span>
+                                <label class="form-checkbox-group">
+                                    <span class="checkbox-text">Air France</span>
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            <li>
+                                <span class="filter-airlines-price">376$</span>
+                                <label class="form-checkbox-group">
+                                    <span class="checkbox-text">Ukraine International Airlines</span>
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </li>
+                        </ul>
+                        <div class="show-more-wrapper">
+                            <button class="show-more">Show more</button>
+                        </div>
+                    </div>
+                    <!-- /.filter-item airlines -->
+
+                    <div class="filter-item open max-connections">
+                        <div class="filter-item__header">
+                            <span class="filter-item__open"></span>
+                            <h5 class="filter-item__title">Max connections</h5>
+                        </div>
+                        <ul class="filter-item-list">
+                            <li>
+                                <span class="filter-airlines-price">202$</span>
+                                <label class="form-checkbox-group">
+                                    <span class="checkbox-text">Direct flights</span>
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <span class="filter-airlines-price">273$</span>
+                                <label class="form-checkbox-group">
+                                    <span class="checkbox-text">1 connection</span>
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <span class="filter-airlines-price">374$</span>
+                                <label class="form-checkbox-group">
+                                    <span class="checkbox-text">2 and more</span>
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.max-connections -->
+
+                    <div class="filter-item open duration">
+                        <div class="filter-item__header">
+                            <span class="filter-item__open"></span>
+                            <h5 class="filter-item__title">Duration</h5>
+                        </div>
+                        <ul class="filter-item-list">
+                            <li>
+                                <p>Time on the way there</p>
+                                <label for="time-on-way">
+                                    <span class="min-price"13h 00min - </span>
+                                    <span class="max-price">36h 00min</span>
+                                </label>
+                                <div class="custom-range">
+                                    <input type="range" id="time-on-way" min="50" max="10000" value="150" class="slider">
+                                </div>
+                            </li>
+                            <li>
+                                <p>Time to go back</p>
+                                <label for="time-go-back">
+                                    <span class="min-price">14h 00min - </span>
+                                    <span class="max-price">36h 00min</span>
+                                </label>
+                                <div class="custom-range">
+                                    <input type="range" id="time-go-back" min="50" max="10000" value="150" class="slider">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.duration -->
+
+                    <div class="filter-item open stopover">
+                        <div class="filter-item__header">
+                            <span class="filter-item__open"></span>
+                            <h5 class="filter-item__title">Stopover</h5>
+                        </div>
+                        <ul class="filter-item-list">
+                            <li>
+                                <label for="stopover">
+                                    <span class="min-price">12h 30min -</span>
+                                    <span class="max-price">36h 00min</span>
+                                </label>
+                                <div class="custom-range">
+                                    <input type="range" id="stopover" min="50" max="10000" value="150" class="slider">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.stopover -->
+
+                    <div class="filter-item open departure-arrival-times">
+                        <div class="filter-item__header">
+                            <span class="filter-item__open"></span>
+                            <h5 class="filter-item__title">Popular filters</h5>
+                        </div>
+                    </div>
+                    <!-- /.departure-arrival-times -->
+
+                    <div class="reset-filter-wrapper">
+                        <button type="button" class="reset-filters">Reset all filters</button>
+                    </div>
                 </div>
             </div>
+            <!-- /.flights-sidebar -->
         </div>
     </div>
 </section>

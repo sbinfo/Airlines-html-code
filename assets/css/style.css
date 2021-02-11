@@ -625,6 +625,74 @@ body {
   font-size: 18px;
 }
 
+.form-checkbox-group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  padding-right: 30px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 20px;
+}
+.form-checkbox-group input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.form-checkbox-group .checkbox-text {
+  display: inline-block;
+  color: #908C8E;
+  font-weight: 300;
+  font-size: 14px;
+}
+.form-checkbox-group .checkmark {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 20px;
+  width: 20px;
+  border: 1px solid #D9D9D9;
+  border-radius: 2px;
+  -webkit-transition: all, 0.4s ease;
+  -moz-transition: all, 0.4s ease;
+  -ms-transition: all, 0.4s ease;
+  -o-transition: all, 0.4s ease;
+  transition: all, 0.4s ease;
+}
+.form-checkbox-group:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.form-checkbox-group input:checked ~ .checkmark {
+  background-color: #0EB155;
+  border-color: #0EB155;
+}
+.form-checkbox-group .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.form-checkbox-group input:checked ~ .checkmark:after {
+  display: block;
+}
+.form-checkbox-group .checkmark:after {
+  left: 5px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
 @media (min-width: 48em) {
   .heading-2 {
     font-weight: 500;
@@ -5367,6 +5435,151 @@ body {
 .list-of-flights .flights-list-wrapper .flights-list .flights-list-header .flights-follow_button button.btn-follow:hover::after {
   background: url("../icons/bell-white.svg") no-repeat center center;
 }
+.list-of-flights .flights-list-results {
+  flex-basis: 70%;
+}
+.list-of-flights .flights-sidebar {
+  flex-basis: 30%;
+}
 .list-of-flights .flights-sidebar .flights-sidebar-filters {
+  width: 100%;
   padding-left: 30px;
+  text-align: right;
+}
+.list-of-flights .flights-sidebar .flights-sidebar-filters .filter-item {
+  border-bottom: 1px solid #E9E9E9;
+  padding: 20px 20px 20px 0;
+}
+.list-of-flights .flights-sidebar .flights-sidebar-filters .filter-item__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.list-of-flights .flights-sidebar .flights-sidebar-filters .filter-item__open {
+  display: inline-block;
+  position: relative;
+  margin-left: 20px;
+}
+.list-of-flights .flights-sidebar .flights-sidebar-filters .filter-item__open:before, .list-of-flights .flights-sidebar .flights-sidebar-filters .filter-item__open:after {
+  content: "";
+  width: 8px;
+  height: 2px;
+  position: absolute;
+  top: 0;
+  background-color: #2D2B2C;
+  cursor: pointer;
+  -webkit-transition: all, 0.5s ease;
+  -moz-transition: all, 0.5s ease;
+  -ms-transition: all, 0.5s ease;
+  -o-transition: all, 0.5s ease;
+  transition: all, 0.5s ease;
+}
+.list-of-flights .flights-sidebar .flights-sidebar-filters .filter-item__open:before {
+  left: 0;
+  transform: rotate(-40deg);
+}
+.list-of-flights .flights-sidebar .flights-sidebar-filters .filter-item__open:after {
+  transform: rotate(40deg);
+  left: -5px;
+}
+.list-of-flights .flights-sidebar .flights-sidebar-filters .filter-item__title {
+  position: relative;
+  text-align: right;
+  font-weight: 400;
+  font-size: 16px;
+}
+.list-of-flights .flights-sidebar .flights-sidebar-filters .filter-item ul.filter-item-list {
+  display: none;
+}
+.list-of-flights .flights-sidebar .flights-sidebar-filters .filter-item ul.filter-item-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.list-of-flights .flights-sidebar .flights-sidebar-filters .filter-item ul.filter-item-list span.filter-airlines-price {
+  padding-left: 60px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #f9c18f;
+}
+.list-of-flights .flights-sidebar .flights-sidebar-filters .filter-item ul.filter-item-list li:not(:last-child) {
+  margin-bottom: 16px;
+}
+.list-of-flights .flights-sidebar .flights-sidebar-filters .filter-item .show-more-wrapper button.show-more {
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  color: #0EB155;
+  background: transparent;
+  -webkit-transition: all, 0.5s ease;
+  -moz-transition: all, 0.5s ease;
+  -ms-transition: all, 0.5s ease;
+  -o-transition: all, 0.5s ease;
+  transition: all, 0.5s ease;
+  text-transform: none;
+  text-decoration: underline;
+  margin-top: 18px;
+}
+.list-of-flights .flights-sidebar .flights-sidebar-filters .filter-item .show-more-wrapper button.show-more:hover {
+  color: #27c76b;
+}
+.list-of-flights .flights-sidebar .flights-sidebar-filters .filter-item.open .filter-item__header {
+  padding-bottom: 36px;
+}
+.list-of-flights .flights-sidebar .flights-sidebar-filters .filter-item.open .filter-item__title {
+  font-weight: 500;
+  font-size: 18px;
+}
+.list-of-flights .flights-sidebar .flights-sidebar-filters .filter-item.open .filter-item__title:after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  right: 0;
+  width: 50px;
+  border-bottom: 6px solid #0EB155;
+}
+.list-of-flights .flights-sidebar .flights-sidebar-filters .filter-item.open .filter-item__open:before {
+  left: 0;
+  transform: rotate(40deg);
+  background-color: #908C8E;
+}
+.list-of-flights .flights-sidebar .flights-sidebar-filters .filter-item.open .filter-item__open:after {
+  left: -5px;
+  transform: rotate(-40deg);
+  background-color: #908C8E;
+}
+.list-of-flights .flights-sidebar .flights-sidebar-filters .filter-item.open ul.filter-item-list {
+  display: block;
+}
+.list-of-flights .flights-sidebar .flights-sidebar-filters .reset-filter-wrapper {
+  width: 100%;
+  text-align: center;
+}
+.list-of-flights .flights-sidebar .flights-sidebar-filters .reset-filter-wrapper button.reset-filters {
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  color: #0EB155;
+  background: transparent;
+  -webkit-transition: all, 0.5s ease;
+  -moz-transition: all, 0.5s ease;
+  -ms-transition: all, 0.5s ease;
+  -o-transition: all, 0.5s ease;
+  transition: all, 0.5s ease;
+  font-weight: 400;
+  border: 1px solid #0EB155;
+  padding: 12px 30px;
+  margin: 45px 0 0;
+}
+.list-of-flights .flights-sidebar .flights-sidebar-filters .reset-filter-wrapper button.reset-filters:hover {
+  color: #fff;
+  background-color: #0EB155;
 }

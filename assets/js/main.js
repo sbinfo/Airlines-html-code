@@ -141,6 +141,16 @@ $(document).ready(function(){
         $( "#information-tabs li" ).removeClass( "ui-corner-top" ).addClass( "ui-corner-left" );
     }
 
+    /* list of flights */
+    $(".flights-sidebar span.filter-item__open").on("click", function () {
+        if ($(".flights-sidebar .filter-item.open").has(this).length) {
+            $(this).parents('.filter-item').removeClass("open");
+        } else {
+            $(this).parents('.filter-item').addClass("open");
+        }
+    });
+    /* /.list of flights */
+
 
     // footer spoiler
     $('.footer-menu__title').on('click', function() {
