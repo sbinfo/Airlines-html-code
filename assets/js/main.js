@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 $(document).ready(function(){
     /*** Order page ***/
-
     $(".order-details-filter.filter__buttons button.order-details-btn_terms").on('click', function() {
         $(this).addClass('active');
         $(".order-details-filter.filter__buttons button.order-details-btn_summary").removeClass('active');
@@ -155,7 +154,73 @@ $(document).ready(function(){
     // footer spoiler
     $('.footer-menu__title').on('click', function() {
         $(this).toggleClass('active').next().slideToggle(300);
-    })
+    });
+
+
+
+    /*** list-of-flights ***/
+
+    /**
+     * Create Range Slider
+     * @param sliderClass (Id Name without - #)
+     * @param labelClass (Id Name without - #)
+     * @param min
+     * @param max
+     * @param values
+     */
+    function createRangeSlider(sliderClass, labelClass, min = 50, max = 1000, values = [100, 300]) {
+        $("#" + sliderClass).slider({
+            animate: "slow",
+            range: true,
+            min,
+            max,
+            isRTL: true,
+            values,
+            slide: function( event, ui ) {
+                $("#" + labelClass).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+            }
+        });
+        $("#" + labelClass).val( "$" + $("#" + sliderClass).slider( "values", 0 ) + " - $" + $("#" + sliderClass).slider( "values", 1 ) );
+    }
+
+
+    function createRangeSliderDuration(sliderClass, labelClass, min = 60, max = 1000, values = [120, 360]) {
+
+        function converDataToDuration(max, min) {
+            let maxTime = max;
+            let minTime = min;
+            let maxHours = Math.floor(maxTime / 60);
+            let maxMinutes = maxTime % 60;
+            let minHours = Math.floor(minTime / 60);
+            let minMinutes = minTime % 60;
+            $("#" + labelClass).val(  maxHours + "h " + maxMinutes + "min"  + " - " + minHours + "h " + minMinutes + "min");
+        }
+
+        $("#" + sliderClass).slider({
+            animate: "slow",
+            range: true,
+            min,
+            max,
+            step: 5,
+            isRTL: true,
+            values,
+            slide: function( event, ui ) {
+                converDataToDuration(ui.values[1], ui.values[0]);
+            }
+        });
+        converDataToDuration( $("#" + sliderClass).slider( "values", 1 ),  $("#" + sliderClass).slider( "values", 0 ));
+    }
+
+    // create ticket-price-slider
+    createRangeSlider("ticket-price-slider", "ticket-price-amount");
+
+    //create duration on the way slider
+    createRangeSliderDuration("duration-onway-slider", "duration-onway-amount");
+    //create duration on the way slider
+    createRangeSliderDuration("duration-goback-slider", "duration-goback-amount");
+
+    /*** /.list-of-flights ***/
+
 });
 
 
