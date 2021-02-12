@@ -266,6 +266,8 @@ $(document).ready(function(){
     // create slider back arrival-back-in-slider
     createDateRangeSlider("arrival-back-in-slider", "arrival-back-in-amount");
 
+    // more offers
+
     /*** /.list-of-flights ***/
 
 });
