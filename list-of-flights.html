@@ -410,12 +410,11 @@
                         </div>
                         <ul class="filter-item-list">
                             <li>
-                                <label>
-                                    <span class="min-price">12h 30min -</span>
-                                    <span class="max-price">36h 00min</span>
-                                </label>
-                                <div class="ion-range-slider">
-                                    <input type="text" class="js-range-slider" name="my_range" value="" />
+                                <div class="range-slider-wrapper">
+                                    <p class="range-slider-label">
+                                        <input type="text" id="stopover-amount" dir="rtl" readonly>
+                                    </p>
+                                    <div id="stopover-slider" class="range-slider"></div>
                                 </div>
                             </li>
                         </ul>
@@ -425,8 +424,60 @@
                     <div class="filter-item open departure-arrival-times">
                         <div class="filter-item__header">
                             <span class="filter-item__open"></span>
-                            <h5 class="filter-item__title">Popular filters</h5>
+                            <h5 class="filter-item__title">Departure and arrival times</h5>
                         </div>
+                        <h4 class="departure-flight-details">
+                            <span class="to">Punta Cana</span>
+                            <img src="assets/icons/plane-for-filters.svg" alt="">
+                            <span class="from">Boryspil</span>
+
+                        </h4>
+                        <ul class="filter-item-list flight-there-time">
+                            <li>
+                                <p class="filter-item-title">Departure from Boryspil:</p>
+                                <div class="range-slider-wrapper">
+                                    <p class="range-slider-label">
+                                        <input type="text" id="depart-from-amount" dir="rtl" readonly>
+                                    </p>
+                                    <div id="depart-from-slider" class="range-slider"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="filter-item-title">Arrival in Punta Cana:</p>
+                                <div class="range-slider-wrapper">
+                                    <p class="range-slider-label">
+                                        <input type="text" id="arrival-in-amount" dir="rtl" readonly>
+                                    </p>
+                                    <div id="arrival-in-slider" class="range-slider"></div>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <h4 class="departure-flight-details">
+                            <span class="to">Boryspil</span>
+                            <img src="assets/icons/plane-for-filters.svg" alt="">
+                            <span class="from">Punta Cana</span>
+                        </h4>
+                        <ul class="filter-item-list flight-back-time">
+                            <li>
+                                <p class="filter-item-title">Departure from Punta Cana</p>
+                                <div class="range-slider-wrapper">
+                                    <p class="range-slider-label">
+                                        <input type="text" id="depart-back-from-amount" dir="rtl" readonly>
+                                    </p>
+                                    <div id="depart-back-from-slider" class="range-slider"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="filter-item-title">Arrival in Boryspil</p>
+                                <div class="range-slider-wrapper">
+                                    <p class="range-slider-label">
+                                        <input type="text" id="arrival-back-in-amount" dir="rtl" readonly>
+                                    </p>
+                                    <div id="arrival-back-in-slider" class="range-slider"></div>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                     <!-- /.departure-arrival-times -->
 

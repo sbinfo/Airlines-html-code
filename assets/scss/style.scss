@@ -465,6 +465,7 @@ body {
   p.range-slider-label {
     padding-bottom: 17px;
     input {
+      width: 100% !important;
       border: none !important;
       color: $color-surface !important;
       font-size: 14px !important;
@@ -6089,6 +6090,26 @@ body {
     }
     // .filter-item
 
+    .departure-arrival-times {
+      h4.departure-flight-details {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-bottom: 12px;
+        font-weight: 500;
+        font-size: 16px;
+
+        img {
+          margin: 0 10px;
+          transform: rotate(-100deg);
+        }
+      }
+
+      .flight-there-time {
+        margin-bottom: 40px;
+      }
+    }
+
     .filter-item.airlines,
     .filter-item.max-connections {
       ul.filter-item-list li {
@@ -6096,7 +6117,8 @@ body {
       }
     }
 
-    .ticket-price {
+    .filter-item.ticket-price,
+    .filter-item.stopover {
       .filter-item-list li {
         display: flex;
         flex-wrap: wrap;
@@ -6107,7 +6129,8 @@ body {
       }
     }
 
-    .filter-item.duration ul.filter-item-list li {
+    .filter-item.duration ul.filter-item-list li,
+    .filter-item.departure-arrival-times ul.filter-item-list li {
       display: flex;
       flex-wrap: wrap;
 
@@ -6118,8 +6141,9 @@ body {
       p.filter-item-title {
         font-weight: 500;
         font-size: 14px;
-        color: $color-surface;
+        color: #646464;
         flex-basis: 100%;
+        margin-bottom: 6px;
       }
       .range-slider-wrapper {
         flex-basis: 80%;

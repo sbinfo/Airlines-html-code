@@ -162,14 +162,14 @@ $(document).ready(function(){
 
     /**
      * Create Range Slider
-     * @param sliderClass (Id Name without - #)
-     * @param labelClass (Id Name without - #)
+     * @param sliderId (Id Name without - #)
+     * @param labelId (Id Name without - #)
      * @param min
      * @param max
      * @param values
      */
-    function createRangeSlider(sliderClass, labelClass, min = 50, max = 1000, values = [100, 300]) {
-        $("#" + sliderClass).slider({
+    function createRangeSlider(sliderId, labelId, min = 50, max = 1000, values = [100, 300]) {
+        $("#" + sliderId).slider({
             animate: "slow",
             range: true,
             min,
@@ -177,14 +177,22 @@ $(document).ready(function(){
             isRTL: true,
             values,
             slide: function( event, ui ) {
-                $("#" + labelClass).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+                $("#" + labelId).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
             }
         });
-        $("#" + labelClass).val( "$" + $("#" + sliderClass).slider( "values", 0 ) + " - $" + $("#" + sliderClass).slider( "values", 1 ) );
+        $("#" + labelId).val( "$" + $("#" + sliderId).slider( "values", 0 ) + " - $" + $("#" + sliderId).slider( "values", 1 ) );
     }
 
 
-    function createRangeSliderDuration(sliderClass, labelClass, min = 60, max = 1000, values = [120, 360]) {
+    /**
+     * Create Duration Range Slider
+     * @param sliderId (Id Name without - #)
+     * @param labelId (Id Name without - #)
+     * @param min
+     * @param max
+     * @param values
+     */
+    function createRangeSliderDuration(sliderId, labelId, min = 60, max = 1000, values = [120, 360]) {
 
         function converDataToDuration(max, min) {
             let maxTime = max;
@@ -193,10 +201,10 @@ $(document).ready(function(){
             let maxMinutes = maxTime % 60;
             let minHours = Math.floor(minTime / 60);
             let minMinutes = minTime % 60;
-            $("#" + labelClass).val(  maxHours + "h " + maxMinutes + "min"  + " - " + minHours + "h " + minMinutes + "min");
+            $("#" + labelId).val(  maxHours + "h " + maxMinutes + "min"  + " - " + minHours + "h " + minMinutes + "min");
         }
 
-        $("#" + sliderClass).slider({
+        $("#" + sliderId).slider({
             animate: "slow",
             range: true,
             min,
@@ -208,16 +216,55 @@ $(document).ready(function(){
                 converDataToDuration(ui.values[1], ui.values[0]);
             }
         });
-        converDataToDuration( $("#" + sliderClass).slider( "values", 1 ),  $("#" + sliderClass).slider( "values", 0 ));
+        converDataToDuration( $("#" + sliderId).slider( "values", 1 ),  $("#" + sliderId).slider( "values", 0 ));
+    }
+
+
+    /**
+     * Create Date Range Slider
+     * @param sliderId
+     * @param labelId
+     * @param min
+     * @param max
+     * @param values
+     */
+    let currentTime = new Date().getTime() / 1000;
+    let maxTime = new Date('2022.01.01').getTime() / 1000;
+    function createDateRangeSlider(sliderId, labelId, min = currentTime, max = maxTime, values = [ currentTime + 1000000, currentTime + 5000000 ]) {
+        $("#" + sliderId).slider({
+            range: true,
+            isRTL: true,
+            min,
+            max,
+            step: 86400,
+            values,
+            slide: function( event, ui ) {
+                $("#" + labelId).val( (new Date(ui.values[1] * 1000).toDateString() )
+                    + " - " + (new Date(ui.values[0] *1000)).toDateString() );
+            }
+        });
+        $("#" + labelId).val( (new Date($("#" + sliderId).slider( "values", 1 )*1000).toDateString())
+            + " - " + (new Date($("#" + sliderId).slider( "values", 0 )*1000)).toDateString());
     }
 
     // create ticket-price-slider
     createRangeSlider("ticket-price-slider", "ticket-price-amount");
 
     //create duration on the way slider
-    createRangeSliderDuration("duration-onway-slider", "duration-onway-amount");
+    createRangeSliderDuration("duration-onway-slider", "duration-onway-amount",80, 500, [180, 300]);
     //create duration on the way slider
     createRangeSliderDuration("duration-goback-slider", "duration-goback-amount");
+    //create stopover slider
+    createRangeSliderDuration("stopover-slider", "stopover-amount", 180, 800, [320, 500]);
+
+    //create slider there depart-from-slider
+    createDateRangeSlider("depart-from-slider", "depart-from-amount");
+    //create slider there arrival-in-slider
+    createDateRangeSlider("arrival-in-slider", "arrival-in-amount");
+    // create slider back depart-back-from-slider
+    createDateRangeSlider("depart-back-from-slider", "depart-back-from-amount");
+    // create slider back arrival-back-in-slider
+    createDateRangeSlider("arrival-back-in-slider", "arrival-back-in-amount");
 
     /*** /.list-of-flights ***/
 
