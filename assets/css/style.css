@@ -5495,7 +5495,7 @@ body {
 }
 .list-of-flights .flights-sidebar .flights-sidebar-filters .filter-item {
   border-bottom: 1px solid #E9E9E9;
-  padding: 20px 20px 30px 0;
+  padding: 20px 20px 20px 0;
 }
 .list-of-flights .flights-sidebar .flights-sidebar-filters .filter-item__header {
   display: flex;
@@ -5553,6 +5553,7 @@ body {
   margin-bottom: 16px;
 }
 .list-of-flights .flights-sidebar .flights-sidebar-filters .filter-item .show-more-wrapper button.show-more {
+  display: none;
   font-weight: 500;
   font-size: 14px;
   text-transform: uppercase;
@@ -5575,9 +5576,7 @@ body {
   color: #27c76b;
 }
 .list-of-flights .flights-sidebar .flights-sidebar-filters .departure-arrival-times h4.departure-flight-details {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  display: none;
   margin-bottom: 12px;
   font-weight: 500;
   font-size: 16px;
@@ -5627,6 +5626,17 @@ body {
   font-weight: 500;
   font-size: 14px;
   color: #908C8E;
+}
+.list-of-flights .flights-sidebar .flights-sidebar-filters .filter-item.open {
+  padding: 20px 20px 30px 0;
+}
+.list-of-flights .flights-sidebar .flights-sidebar-filters .filter-item.open .show-more-wrapper button.show-more {
+  display: inline-block;
+}
+.list-of-flights .flights-sidebar .flights-sidebar-filters .filter-item.open h4.departure-flight-details {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 .list-of-flights .flights-sidebar .flights-sidebar-filters .filter-item.open .filter-item__header {
   padding-bottom: 36px;
