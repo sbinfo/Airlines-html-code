@@ -1,0 +1,2553 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>List of flights</title>
+
+    <!-- Mobile menu - slick nav -->
+    <link rel="stylesheet" href="assets/mmenu/dist/mmenu-light.css">
+    <!-- jQuery UI css -->
+    <link rel="stylesheet" href="assets/libs/jquery-ui-themes-1.12.1/themes/base/jquery-ui.css">
+    <!-- jQuery range slider css -->
+    <link rel="stylesheet" href="assets/libs/jquery.ui.slider-rtl/jquery.ui.slider-rtl.css">
+    <!-- Custom css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="list-of-flights all-flights">
+
+<!-- section-header -->
+<header class="section-block section-header">
+    <div class="section-header-bg-clouds"></div>
+    <div class="section-header-bg-gradient"></div>
+
+    <div class="section-inner">
+        <!-- Menu -->
+        <div class="header-menu">
+            <!-- mobile menu -->
+            <a href="#my-menu" class="my-menu-open">
+                <span class="my-menu-open__text">MENU</span>
+                <img src="assets/img/logo_white.png" alt="logo" class="my-menu-open__logo">
+            </a>
+            <nav id="my-menu" class="mobile-menu">
+                <div class="mobile-menu__profile">
+                    <a href="#" class="mobile-menu__profile-button">
+                        <img src="assets/icons/account.png" alt="account">
+                    </a>
+                    <a href="#" class="mobile-menu__profile-button">
+                        <img src="assets/icons/image_search.png" alt="search image">
+                    </a>
+                </div>
+                <ul>
+                    <li class="Selected"><a href="#">Contacts</a></li>
+                    <li><span>About us</span>
+                        <ul>
+                            <li><a href="#">to passengers</a></li>
+                            <li><a href="#">Cheap flights abroad</a></li>
+                            <li><a href="#">all flights</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- / mobile menu -->
+
+            <!-- section-header-nav -->
+            <div class="section-header-nav">
+                <div class="section-header-nav__profile">
+                    <a href="#" class="section-header-nav__profile-button">
+                        <img src="assets/icons/account.png" alt="account">
+                    </a>
+                    <a href="#" class="section-header-nav__profile-button">
+                        <img src="assets/icons/image_search.png" alt="search image">
+                    </a>
+                </div>
+                <nav class="section-header-nav__menu">
+                    <ul>
+                        <li class="section-header-nav__menu-item"><a href="contacts.html">Contacts <span class="active-line"></span></a></li>
+                        <li class="section-header-nav__menu-item"><a href="blog.html">to passengers <span class="active-line"></span></a></li>
+                        <li class="section-header-nav__menu-item"><a href="ordering.html">order <span class="active-line"></span></a></li>
+                        <li class="section-header-nav__menu-item active"><a href="all-flights.html">Cheap flights abroad <span class="active-line"></span></a></li>
+                        <li class="section-header-nav__menu-item"><a href="general-information.html">Terms of use <span class="active-line"></span></a></li>
+                    </ul>
+                </nav>
+                <div class="section-header-nav__logo">
+                    <a href="/"><img src="assets/img/logo_black.png" alt="Logo"></a>
+                </div>
+            </div>
+            <!-- / section-header-nav -->
+        </div>
+        <!-- / Menu -->
+
+        <div class="breadcrumbs">
+            <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item"><a href="#">Home page</a></li>
+                <li class="breadcrumbs__item"><a href="#">Search results</a></li>
+                <li class="breadcrumbs__item"><a href="#" class="active">Tel-Aviv -- Punta Cana</a></li>
+            </ul>
+        </div>
+
+        <!-- section-header-search -->
+        <div class="section-header-search">
+            <div class="section-header-search__form main-ticket-search_form">
+                <div class="main-ticket-search_form-inner">
+                    <form action="">
+                        <div class="search-block">
+                            <button type="submit" class="search-block-btn-success">update</button>
+                        </div>
+
+                        <div class="passengers-block">
+                            <div class="passengers-activator-click activator-click">
+                                <button class="passengers-activator-click__button">
+                                    <img src="assets/icons/arrow_down.svg" alt="arrow down">
+                                </button>
+                            </div>
+                            <div class="passengers-activator-content activator-content">
+                                <label class="passengers-activator-content__label">Number of passengers</label>
+                                <div class="passengers-activator-content__placeholder">2</div>
+                            </div>
+                        </div>
+                        <div class="date-block">
+                            <div class="date-activator-click activator-click">
+                                <button class="date-activator-click__button">
+                                    <img src="assets/icons/arrow_down.svg" alt="arrow down">
+                                </button>
+                            </div>
+                            <div class="date-activator-content activator-content">
+                                <label class="date-activator-content__label">Depart-Return</label>
+                                <div class="date-activator-content__placeholder">21/01/21 - 13/01/21</div>
+                            </div>
+                        </div>
+                        <div class="to-block">
+                            <div class="to-activator-click activator-click">
+                                <button class="to-activator-click__button">
+                                    <img src="assets/icons/close.svg" alt="arrow down">
+                                </button>
+                            </div>
+                            <div class="to-activator-content activator-content">
+                                <label class="to-activator-content__label">To</label>
+                                <div class="to-activator-content__placeholder">Phuket</div>
+                            </div>
+                        </div>
+
+                        <div class="from-block">
+                            <button type="button" class="date-activator__btn_switch">
+                                <img src="assets/icons/arrows.png">
+                            </button>
+                            <div class="from-activator-click activator-click">
+                                <button class="from-activator-click__button">
+                                    <img src="assets/icons/close.svg" alt="arrow down">
+                                </button>
+                            </div>
+                            <div class="from-activator-content activator-content">
+                                <label class="from-activator-content__label">From</label>
+                                <div class="from-activator-content__placeholder">Tel-Aviv</div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="main-ticket-search_form-inner__background"></div>
+                    <div class="main-ticket-search_form-inner__background main-ticket-search-bg-opacity"></div>
+                </div>
+            </div>
+        </div> <!-- section-header-search -->
+    </div>
+</header>
+<!-- / section-header -->
+
+<!-- section ordering -->
+<section class="section-block flights-list-wrapper">
+    <div class="section-inner">
+        <div class="flights-filter-buttons">
+            <button type="button" class="month-view">month view</button>
+            <button type="button" class="flexible-dates">Flexible dates +/-3 days</button>
+            <button type="button" class="all-results active">all results</button>
+        </div>
+        <div class="flights-list">
+            <div class="flights-list-header">
+                <div class="flights-list-filter_buttons">
+                    <div class="filter__buttons active-brown bg-white section-popular__nav-filter padding-14">
+                        <button class="filter__buttons-btn">
+                            <span class="filter-name">Fast</span>
+                            <span class="filter-details"><b>8 312 ₴</b>  15h 5min</span>
+                        </button>
+                        <button class="filter__buttons-btn">
+                            <span class="filter-name">cheap</span>
+                            <span class="filter-details"><b>7 452 ₴</b>   15h 5min</span>
+                        </button>
+                        <button class="filter__buttons-btn active">
+                            <span class="filter-name">recommended</span>
+                            <span class="filter-details"><b>9 312 ₴</b>    15h 5min</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- /.flights-list-filter_buttons -->
+                <div class="flights-follow_button">
+                    <button type="button" class="btn-follow">follow the price</button>
+                </div>
+            </div>
+            <!-- /.flights-list-header -->
+
+            <div class="flights-results">
+                <div class="flights-results-table">
+                    <div class="price-details">
+                        <p class="price-details-row">
+                            <img src="assets/icons/order/luggage1-gray.svg" alt="">
+                            <img src="assets/icons/order/luggage2-gray.svg" alt="">
+                        </p>
+                        <p class="price-details-row luggage-text">With luggage</p>
+                        <p class="price-details-row places-info">Last 8 places</p>
+                        <p class="price-details-row current-price">$281</p>
+                        <p class="price-details-row price-for">Price for 1 adult</p>
+                        <p class="price-details-row price-flight-detail">
+                            <a href="#" class="btn-flight-details">flight details</a>
+                        </p>
+                        <p class="price-details-row price-total">Total to pay: $ 562</p>
+                        <div class="price-details-row price-more-offers">
+                            <button type="button">More offers</button>
+                            <ul class="more-offers-list">
+                                <li>
+                                    <a href="#" class="active">
+                                        <span class="offer-price">$ 180 163</span>
+                                        <span class="offer-website">SuperKassa.ru</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="offer-price">$ 194,795</span>
+                                        <span class="offer-website">SuperSaver</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="offer-price">$ 170 163</span>
+                                        <span class="offer-website">Onetwotrip.ua</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="offer-price">$ 180 052</span>
+                                        <span class="offer-website">KupiBilet.ru</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flight-details">
+
+                        <div class="flight-there-details">
+                            <div class="flight-there-details-content">
+                                <div class="to">
+                                    <p class="time">13:49</p>
+                                    <p class="city-name">Punta Cana</p>
+                                    <p class="date">26 Jan 2021</p>
+                                    <p class="week">Tue.</p>
+                                </div>
+                                <div class="graphic">
+                                    <div class="graphic-top-section">
+                                        <img src="assets/icons/plane-to-gray.svg" alt="">
+                                        <div class="flight-duration">
+                                            On the way: <span class="flight-duration-value">1d 13h 19min</span>
+                                        </div>
+                                        <img src="assets/icons/plane-from-gray.svg" alt="">
+
+                                        <span class="graphic-time-length time-length-2"></span>
+                                        <span class="graphic-time-length time-length-1"></span>
+                                    </div>
+                                    <div class="graphic-line"></div>
+                                    <div class="graphic-info-section">
+                                        <span>KBP</span>
+                                        <span>FRA</span>
+                                        <span>FRA</span>
+                                        <span>PUJ</span>
+                                    </div>
+
+                                </div>
+                                <div class="from">
+                                    <p class="time">6:30</p>
+                                    <p class="city-name">Kiev</p>
+                                    <p class="date">25 Jan 2021</p>
+                                    <p class="week">Mon.</p>
+                                </div>
+                                <div class="airline-info">
+                                    <div class="airline-icon-wrapper">
+                                        <img src="assets/icons/ly-icon.svg" class="airline-icon" alt="">
+                                    </div>
+                                    <p class="airline-text">EA AI</p>
+                                </div>
+                            </div>
+                            <!-- /.flight-there-details-content -->
+                            <div class="flight-details-extra flight-there-details-extra">
+                                <div class="details-extra__group" style="">
+                                    <div class="details-extra__info_title non-title">
+                                        <span>16г 26хв</span>
+                                        <span>Transfer to New York</span>
+                                    </div>
+                                    <div class="details-extra return__extra_services">
+                                        <div class="details-extra__header">
+                                            <div class="details-extra__flight_duration">9g 10min</div>
+                                            <div class="details-extra__flight_info">FLIGHT LH-402</div>
+                                        </div>
+                                        <div class="details-extra__content">
+                                            <div class="extra-data">
+                                                <p>Jan 25, Mon.</p>
+                                                <p>Jan 25, Mon.</p>
+                                            </div>
+                                            <div class="extra-more_detail">
+                                                <p>13:05 <b>FROM</b> Frankfurt am Main</p>
+                                                <p>16:15 <b>EWR</b> Newark-Liberty</p>
+                                            </div>
+                                            <div class="extra-company">
+                                                <img src="assets/icons/order/LY2.svg" alt="ly">
+                                                <p>EA AI</p>
+                                            </div>
+                                        </div>
+                                        <div class="details-extra__footer extra-footer">
+                                            <div class="extra-footer__icons">
+                                                <img src="assets/icons/order/luggage1-gray.svg" alt="luggage">
+                                                <img src="assets/icons/order/luggage1-gray.svg" alt="luggage">
+                                                <div class="luggage-count">
+                                                    <img src="assets/icons/order/luggage2-gray.svg" alt="luggage">
+                                                    <span>x2</span>
+                                                </div>
+                                            </div>
+                                            <button class="details-extra__btn_open">Flight information</button>
+                                        </div>
+                                        <div class="details-extra__more extra-more-not_show" style="display: none;">
+                                            <p class="details-extra__more-title">AIRBUS A330-300</p>
+                                            <div class="extra-more-1">
+                                                <p><span class="extra-more__status">18%</span>
+                                                    <span class="extra-more__info">Late aircraft:</span>
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">No.</span>
+                                                    <span class="extra-more__info">Multimedia:</span>
+                                                    <img src="assets/icons/order/video-player.svg" alt="video-player">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Canvas</span>
+                                                    <span class="extra-more__info">Wi-Fi:</span>
+                                                    <img src="assets/icons/order/wi-fi.svg" alt="wifi icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Alcohol:</span>
+                                                    <img src="assets/icons/order/martini.svg" alt="martini icon">
+                                                </p>
+                                            </div>
+                                            <div class="extra-more-2">
+                                                <p><span class="extra-more__status">14 minutes</span>
+                                                    <span class="extra-more__info">Average delay:</span>
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Hot food:</span>
+                                                    <img src="assets/icons/order/cutlery.svg" alt="cutlery icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">USB and sockets:</span>
+                                                    <img src="assets/icons/order/power-plug.svg" alt="usb icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Used drinks:</span>
+                                                    <img src="assets/icons/order/coffee.svg" alt="coffee icon">
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.details-extra__group -->
+                                <div class="details-extra__group" style="">
+                                    <div class="details-extra__info_title">
+                                        <span>16г 26хв</span>
+                                        <span>Transfer to New York</span>
+                                    </div>
+                                    <div class="details-extra return__extra_services">
+                                        <div class="details-extra__header">
+                                            <div class="details-extra__flight_duration">9g 10min</div>
+                                            <div class="details-extra__flight_info">FLIGHT LH-402</div>
+                                        </div>
+                                        <div class="details-extra__content">
+                                            <div class="extra-data">
+                                                <p>Jan 25, Mon.</p>
+                                                <p>Jan 25, Mon.</p>
+                                            </div>
+                                            <div class="extra-more_detail">
+                                                <p>13:05 <b>FROM</b> Frankfurt am Main</p>
+                                                <p>16:15 <b>EWR</b> Newark-Liberty</p>
+                                            </div>
+                                            <div class="extra-company">
+                                                <img src="assets/icons/order/LY2.svg" alt="ly">
+                                                <p>EA AI</p>
+                                            </div>
+                                        </div>
+                                        <div class="details-extra__footer extra-footer">
+                                            <div class="extra-footer__icons">
+                                                <img src="assets/icons/order/luggage1-gray.svg" alt="luggage">
+                                                <img src="assets/icons/order/luggage1-gray.svg" alt="luggage">
+                                                <div class="luggage-count">
+                                                    <img src="assets/icons/order/luggage2-gray.svg" alt="luggage">
+                                                    <span>x2</span>
+                                                </div>
+                                            </div>
+                                            <button class="details-extra__btn_open">Flight information</button>
+                                        </div>
+                                        <div class="details-extra__more extra-more-not_show" style="display: none;">
+                                            <p class="details-extra__more-title">AIRBUS A330-300</p>
+                                            <div class="extra-more-1">
+                                                <p><span class="extra-more__status">18%</span>
+                                                    <span class="extra-more__info">Late aircraft:</span>
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">No.</span>
+                                                    <span class="extra-more__info">Multimedia:</span>
+                                                    <img src="assets/icons/order/video-player.svg" alt="video-player">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Canvas</span>
+                                                    <span class="extra-more__info">Wi-Fi:</span>
+                                                    <img src="assets/icons/order/wi-fi.svg" alt="wifi icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Alcohol:</span>
+                                                    <img src="assets/icons/order/martini.svg" alt="martini icon">
+                                                </p>
+                                            </div>
+                                            <div class="extra-more-2">
+                                                <p><span class="extra-more__status">14 minutes</span>
+                                                    <span class="extra-more__info">Average delay:</span>
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Hot food:</span>
+                                                    <img src="assets/icons/order/cutlery.svg" alt="cutlery icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">USB and sockets:</span>
+                                                    <img src="assets/icons/order/power-plug.svg" alt="usb icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Used drinks:</span>
+                                                    <img src="assets/icons/order/coffee.svg" alt="coffee icon">
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.details-extra__group -->
+                                <div class="details-extra__group" style="">
+                                    <div class="details-extra__info_title">
+                                        <span>16г 26хв</span>
+                                        <span>Transfer to New York</span>
+                                    </div>
+                                    <div class="details-extra return__extra_services">
+                                        <div class="details-extra__header">
+                                            <div class="details-extra__flight_duration">9g 10min</div>
+                                            <div class="details-extra__flight_info">FLIGHT LH-402</div>
+                                        </div>
+                                        <div class="details-extra__content">
+                                            <div class="extra-data">
+                                                <p>Jan 25, Mon.</p>
+                                                <p>Jan 25, Mon.</p>
+                                            </div>
+                                            <div class="extra-more_detail">
+                                                <p>13:05 <b>FROM</b> Frankfurt am Main</p>
+                                                <p>16:15 <b>EWR</b> Newark-Liberty</p>
+                                            </div>
+                                            <div class="extra-company">
+                                                <img src="assets/icons/order/LY2.svg" alt="ly">
+                                                <p>EA AI</p>
+                                            </div>
+                                        </div>
+                                        <div class="details-extra__footer extra-footer">
+                                            <div class="extra-footer__icons">
+                                                <img src="assets/icons/order/luggage1-gray.svg" alt="luggage">
+                                                <img src="assets/icons/order/luggage1-gray.svg" alt="luggage">
+                                                <div class="luggage-count">
+                                                    <img src="assets/icons/order/luggage2-gray.svg" alt="luggage">
+                                                    <span>x2</span>
+                                                </div>
+                                            </div>
+                                            <button class="details-extra__btn_open">Flight information</button>
+                                        </div>
+                                        <div class="details-extra__more extra-more-not_show" style="display: none;">
+                                            <p class="details-extra__more-title">AIRBUS A330-300</p>
+                                            <div class="extra-more-1">
+                                                <p><span class="extra-more__status">18%</span>
+                                                    <span class="extra-more__info">Late aircraft:</span>
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">No.</span>
+                                                    <span class="extra-more__info">Multimedia:</span>
+                                                    <img src="assets/icons/order/video-player.svg" alt="video-player">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Canvas</span>
+                                                    <span class="extra-more__info">Wi-Fi:</span>
+                                                    <img src="assets/icons/order/wi-fi.svg" alt="wifi icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Alcohol:</span>
+                                                    <img src="assets/icons/order/martini.svg" alt="martini icon">
+                                                </p>
+                                            </div>
+                                            <div class="extra-more-2">
+                                                <p><span class="extra-more__status">14 minutes</span>
+                                                    <span class="extra-more__info">Average delay:</span>
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Hot food:</span>
+                                                    <img src="assets/icons/order/cutlery.svg" alt="cutlery icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">USB and sockets:</span>
+                                                    <img src="assets/icons/order/power-plug.svg" alt="usb icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Used drinks:</span>
+                                                    <img src="assets/icons/order/coffee.svg" alt="coffee icon">
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.details-extra__group -->
+                            </div>
+                        </div>
+                        <!-- /.flight-there-details -->
+
+                        <div class="flight-back-details">
+                            <div class="flight-back-details-content">
+                                <div class="flight-back-title">BACK: PUNTA CANA - KYIV</div>
+                                <div class="to">
+                                    <p class="time">12:55</p>
+                                    <p class="city-name">Kieva</p>
+                                    <p class="date">5 Feb 2021</p>
+                                    <p class="week">Mon.</p>
+                                </div>
+                                <div class="graphic">
+                                    <div class="graphic-top-section">
+                                        <img src="assets/icons/plane-to-gray.svg" alt="">
+                                        <div class="flight-duration">
+                                            On the way: <span class="flight-duration-value">1d 13h 19min</span>
+                                        </div>
+                                        <img src="assets/icons/plane-from-gray.svg" alt="">
+
+                                        <span class="graphic-time-length time-length-2"></span>
+                                        <span class="graphic-time-length time-length-1"></span>
+                                    </div>
+                                    <div class="graphic-line"></div>
+                                    <div class="graphic-info-section">
+                                        <span>KBP</span>
+                                        <span>FRA</span>
+                                        <span>FRA</span>
+                                        <span>PUJ</span>
+                                    </div>
+
+                                </div>
+                                <div class="from">
+                                    <p class="time">13:11</p>
+                                    <p class="city-name">Punta Cana</p>
+                                    <p class="date">4 Feb 2021</p>
+                                    <p class="week">Tue.</p>
+                                </div>
+                                <div class="airline-info">
+                                    <div class="airline-icon-wrapper">
+                                        <img src="assets/icons/ua-icon.svg" class="airline-icon" alt="">
+                                    </div>
+                                    <p class="airline-text">EasyJet</p>
+                                </div>
+                            </div>
+                            <!-- /.flight-back-details-content -->
+                            <div class="flight-details-extra flight-back-details-extra">
+                                <div class="details-extra__group" style="">
+                                    <div class="details-extra__info_title non-title">
+                                        <span>16г 26хв</span>
+                                        <span>Transfer to New York</span>
+                                    </div>
+                                    <div class="details-extra return__extra_services">
+                                        <div class="details-extra__header">
+                                            <div class="details-extra__flight_duration">9g 10min</div>
+                                            <div class="details-extra__flight_info">FLIGHT LH-402</div>
+                                        </div>
+                                        <div class="details-extra__content">
+                                            <div class="extra-data">
+                                                <p>Jan 25, Mon.</p>
+                                                <p>Jan 25, Mon.</p>
+                                            </div>
+                                            <div class="extra-more_detail">
+                                                <p>13:05 <b>FROM</b> Frankfurt am Main</p>
+                                                <p>16:15 <b>EWR</b> Newark-Liberty</p>
+                                            </div>
+                                            <div class="extra-company">
+                                                <img src="assets/icons/order/LY2.svg" alt="ly">
+                                                <p>EA AI</p>
+                                            </div>
+                                        </div>
+                                        <div class="details-extra__footer extra-footer">
+                                            <div class="extra-footer__icons">
+                                                <img src="assets/icons/order/luggage1-gray.svg" alt="luggage">
+                                                <img src="assets/icons/order/luggage1-gray.svg" alt="luggage">
+                                                <div class="luggage-count">
+                                                    <img src="assets/icons/order/luggage2-gray.svg" alt="luggage">
+                                                    <span>x2</span>
+                                                </div>
+                                            </div>
+                                            <button class="details-extra__btn_open">Flight information</button>
+                                        </div>
+                                        <div class="details-extra__more extra-more-not_show" style="display: none;">
+                                            <p class="details-extra__more-title">AIRBUS A330-300</p>
+                                            <div class="extra-more-1">
+                                                <p><span class="extra-more__status">18%</span>
+                                                    <span class="extra-more__info">Late aircraft:</span>
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">No.</span>
+                                                    <span class="extra-more__info">Multimedia:</span>
+                                                    <img src="assets/icons/order/video-player.svg" alt="video-player">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Canvas</span>
+                                                    <span class="extra-more__info">Wi-Fi:</span>
+                                                    <img src="assets/icons/order/wi-fi.svg" alt="wifi icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Alcohol:</span>
+                                                    <img src="assets/icons/order/martini.svg" alt="martini icon">
+                                                </p>
+                                            </div>
+                                            <div class="extra-more-2">
+                                                <p><span class="extra-more__status">14 minutes</span>
+                                                    <span class="extra-more__info">Average delay:</span>
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Hot food:</span>
+                                                    <img src="assets/icons/order/cutlery.svg" alt="cutlery icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">USB and sockets:</span>
+                                                    <img src="assets/icons/order/power-plug.svg" alt="usb icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Used drinks:</span>
+                                                    <img src="assets/icons/order/coffee.svg" alt="coffee icon">
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.details-extra__group -->
+                                <div class="details-extra__group" style="">
+                                    <div class="details-extra__info_title">
+                                        <span>16г 26хв</span>
+                                        <span>Transfer to New York</span>
+                                    </div>
+                                    <div class="details-extra return__extra_services">
+                                        <div class="details-extra__header">
+                                            <div class="details-extra__flight_duration">9g 10min</div>
+                                            <div class="details-extra__flight_info">FLIGHT LH-402</div>
+                                        </div>
+                                        <div class="details-extra__content">
+                                            <div class="extra-data">
+                                                <p>Jan 25, Mon.</p>
+                                                <p>Jan 25, Mon.</p>
+                                            </div>
+                                            <div class="extra-more_detail">
+                                                <p>13:05 <b>FROM</b> Frankfurt am Main</p>
+                                                <p>16:15 <b>EWR</b> Newark-Liberty</p>
+                                            </div>
+                                            <div class="extra-company">
+                                                <img src="assets/icons/order/LY2.svg" alt="ly">
+                                                <p>EA AI</p>
+                                            </div>
+                                        </div>
+                                        <div class="details-extra__footer extra-footer">
+                                            <div class="extra-footer__icons">
+                                                <img src="assets/icons/order/luggage1-gray.svg" alt="luggage">
+                                                <img src="assets/icons/order/luggage1-gray.svg" alt="luggage">
+                                                <div class="luggage-count">
+                                                    <img src="assets/icons/order/luggage2-gray.svg" alt="luggage">
+                                                    <span>x2</span>
+                                                </div>
+                                            </div>
+                                            <button class="details-extra__btn_open">Flight information</button>
+                                        </div>
+                                        <div class="details-extra__more extra-more-not_show" style="display: none;">
+                                            <p class="details-extra__more-title">AIRBUS A330-300</p>
+                                            <div class="extra-more-1">
+                                                <p><span class="extra-more__status">18%</span>
+                                                    <span class="extra-more__info">Late aircraft:</span>
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">No.</span>
+                                                    <span class="extra-more__info">Multimedia:</span>
+                                                    <img src="assets/icons/order/video-player.svg" alt="video-player">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Canvas</span>
+                                                    <span class="extra-more__info">Wi-Fi:</span>
+                                                    <img src="assets/icons/order/wi-fi.svg" alt="wifi icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Alcohol:</span>
+                                                    <img src="assets/icons/order/martini.svg" alt="martini icon">
+                                                </p>
+                                            </div>
+                                            <div class="extra-more-2">
+                                                <p><span class="extra-more__status">14 minutes</span>
+                                                    <span class="extra-more__info">Average delay:</span>
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Hot food:</span>
+                                                    <img src="assets/icons/order/cutlery.svg" alt="cutlery icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">USB and sockets:</span>
+                                                    <img src="assets/icons/order/power-plug.svg" alt="usb icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Used drinks:</span>
+                                                    <img src="assets/icons/order/coffee.svg" alt="coffee icon">
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.details-extra__group -->
+                                <div class="details-extra__group" style="">
+                                    <div class="details-extra__info_title">
+                                        <span>16г 26хв</span>
+                                        <span>Transfer to New York</span>
+                                    </div>
+                                    <div class="details-extra return__extra_services">
+                                        <div class="details-extra__header">
+                                            <div class="details-extra__flight_duration">9g 10min</div>
+                                            <div class="details-extra__flight_info">FLIGHT LH-402</div>
+                                        </div>
+                                        <div class="details-extra__content">
+                                            <div class="extra-data">
+                                                <p>Jan 25, Mon.</p>
+                                                <p>Jan 25, Mon.</p>
+                                            </div>
+                                            <div class="extra-more_detail">
+                                                <p>13:05 <b>FROM</b> Frankfurt am Main</p>
+                                                <p>16:15 <b>EWR</b> Newark-Liberty</p>
+                                            </div>
+                                            <div class="extra-company">
+                                                <img src="assets/icons/order/LY2.svg" alt="ly">
+                                                <p>EA AI</p>
+                                            </div>
+                                        </div>
+                                        <div class="details-extra__footer extra-footer">
+                                            <div class="extra-footer__icons">
+                                                <img src="assets/icons/order/luggage1-gray.svg" alt="luggage">
+                                                <img src="assets/icons/order/luggage1-gray.svg" alt="luggage">
+                                                <div class="luggage-count">
+                                                    <img src="assets/icons/order/luggage2-gray.svg" alt="luggage">
+                                                    <span>x2</span>
+                                                </div>
+                                            </div>
+                                            <button class="details-extra__btn_open">Flight information</button>
+                                        </div>
+                                        <div class="details-extra__more extra-more-not_show" style="display: none;">
+                                            <p class="details-extra__more-title">AIRBUS A330-300</p>
+                                            <div class="extra-more-1">
+                                                <p><span class="extra-more__status">18%</span>
+                                                    <span class="extra-more__info">Late aircraft:</span>
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">No.</span>
+                                                    <span class="extra-more__info">Multimedia:</span>
+                                                    <img src="assets/icons/order/video-player.svg" alt="video-player">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Canvas</span>
+                                                    <span class="extra-more__info">Wi-Fi:</span>
+                                                    <img src="assets/icons/order/wi-fi.svg" alt="wifi icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Alcohol:</span>
+                                                    <img src="assets/icons/order/martini.svg" alt="martini icon">
+                                                </p>
+                                            </div>
+                                            <div class="extra-more-2">
+                                                <p><span class="extra-more__status">14 minutes</span>
+                                                    <span class="extra-more__info">Average delay:</span>
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Hot food:</span>
+                                                    <img src="assets/icons/order/cutlery.svg" alt="cutlery icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">USB and sockets:</span>
+                                                    <img src="assets/icons/order/power-plug.svg" alt="usb icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Used drinks:</span>
+                                                    <img src="assets/icons/order/coffee.svg" alt="coffee icon">
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.details-extra__group -->
+                            </div>
+                        </div>
+                        <!-- /.flight-back-details -->
+                    </div>
+                    <!-- /.flight-details -->
+                    <button type="button" class="btn-open-result-details active">
+                        <span class="open-icon"></span>
+                    </button>
+                </div>
+                <!-- /.flights-results-table 1 -->
+
+                <div class="flights-results-table">
+                    <div class="price-details">
+                        <p class="price-details-row">
+                            <img src="assets/icons/order/luggage1-gray.svg" alt="">
+                            <img src="assets/icons/order/luggage2-gray.svg" alt="">
+                        </p>
+                        <p class="price-details-row luggage-text">With luggage</p>
+                        <p class="price-details-row places-info">Last 8 places</p>
+                        <p class="price-details-row current-price">$281</p>
+                        <p class="price-details-row price-for">Price for 1 adult</p>
+                        <p class="price-details-row price-flight-detail">
+                            <a href="#" class="btn-flight-details">flight details</a>
+                        </p>
+                        <p class="price-details-row price-total">Total to pay: $ 562</p>
+                        <div class="price-details-row price-more-offers">
+                            <button type="button">More offers</button>
+                            <ul class="more-offers-list" style="display: none">
+                                <li>
+                                    <a href="#" class="active">
+                                        <span class="offer-price">$ 180 163</span>
+                                        <span class="offer-website">SuperKassa.ru</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="offer-price">$ 194,795</span>
+                                        <span class="offer-website">SuperSaver</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="offer-price">$ 170 163</span>
+                                        <span class="offer-website">Onetwotrip.ua</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="offer-price">$ 180 052</span>
+                                        <span class="offer-website">KupiBilet.ru</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flight-details">
+
+                        <div class="flight-there-details">
+                            <div class="flight-there-details-content">
+                                <div class="to">
+                                    <p class="time">13:49</p>
+                                    <p class="city-name">Punta Cana</p>
+                                    <p class="date">26 Jan 2021</p>
+                                    <p class="week">Tue.</p>
+                                </div>
+                                <div class="graphic">
+                                    <div class="graphic-top-section">
+                                        <img src="assets/icons/plane-to-gray.svg" alt="">
+                                        <div class="flight-duration">
+                                            On the way: <span class="flight-duration-value">1d 13h 19min</span>
+                                        </div>
+                                        <img src="assets/icons/plane-from-gray.svg" alt="">
+
+                                        <span class="graphic-time-length time-length-2"></span>
+                                        <span class="graphic-time-length time-length-1"></span>
+                                    </div>
+                                    <div class="graphic-line"></div>
+                                    <div class="graphic-info-section">
+                                        <span>KBP</span>
+                                        <span>FRA</span>
+                                        <span>FRA</span>
+                                        <span>PUJ</span>
+                                    </div>
+
+                                </div>
+                                <div class="from">
+                                    <p class="time">6:30</p>
+                                    <p class="city-name">Kiev</p>
+                                    <p class="date">25 Jan 2021</p>
+                                    <p class="week">Mon.</p>
+                                </div>
+                                <div class="airline-info">
+                                    <div class="airline-icon-wrapper">
+                                        <img src="assets/icons/ly-icon.svg" class="airline-icon" alt="">
+                                    </div>
+                                    <p class="airline-text">EA AI</p>
+                                </div>
+                            </div>
+                            <!-- /.flight-there-details-content -->
+                            <div class="flight-details-extra flight-there-details-extra" style="display: none">
+                                <div class="details-extra__group" style="">
+                                    <div class="details-extra__info_title non-title">
+                                        <span>16г 26хв</span>
+                                        <span>Transfer to New York</span>
+                                    </div>
+                                    <div class="details-extra return__extra_services">
+                                        <div class="details-extra__header">
+                                            <div class="details-extra__flight_duration">9g 10min</div>
+                                            <div class="details-extra__flight_info">FLIGHT LH-402</div>
+                                        </div>
+                                        <div class="details-extra__content">
+                                            <div class="extra-data">
+                                                <p>Jan 25, Mon.</p>
+                                                <p>Jan 25, Mon.</p>
+                                            </div>
+                                            <div class="extra-more_detail">
+                                                <p>13:05 <b>FROM</b> Frankfurt am Main</p>
+                                                <p>16:15 <b>EWR</b> Newark-Liberty</p>
+                                            </div>
+                                            <div class="extra-company">
+                                                <img src="assets/icons/order/LY2.svg" alt="ly">
+                                                <p>EA AI</p>
+                                            </div>
+                                        </div>
+                                        <div class="details-extra__footer extra-footer">
+                                            <div class="extra-footer__icons">
+                                                <img src="assets/icons/order/luggage1-gray.svg" alt="luggage">
+                                                <img src="assets/icons/order/luggage1-gray.svg" alt="luggage">
+                                                <div class="luggage-count">
+                                                    <img src="assets/icons/order/luggage2-gray.svg" alt="luggage">
+                                                    <span>x2</span>
+                                                </div>
+                                            </div>
+                                            <button class="details-extra__btn_open">Flight information</button>
+                                        </div>
+                                        <div class="details-extra__more extra-more-not_show" style="display: none;">
+                                            <p class="details-extra__more-title">AIRBUS A330-300</p>
+                                            <div class="extra-more-1">
+                                                <p><span class="extra-more__status">18%</span>
+                                                    <span class="extra-more__info">Late aircraft:</span>
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">No.</span>
+                                                    <span class="extra-more__info">Multimedia:</span>
+                                                    <img src="assets/icons/order/video-player.svg" alt="video-player">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Canvas</span>
+                                                    <span class="extra-more__info">Wi-Fi:</span>
+                                                    <img src="assets/icons/order/wi-fi.svg" alt="wifi icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Alcohol:</span>
+                                                    <img src="assets/icons/order/martini.svg" alt="martini icon">
+                                                </p>
+                                            </div>
+                                            <div class="extra-more-2">
+                                                <p><span class="extra-more__status">14 minutes</span>
+                                                    <span class="extra-more__info">Average delay:</span>
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Hot food:</span>
+                                                    <img src="assets/icons/order/cutlery.svg" alt="cutlery icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">USB and sockets:</span>
+                                                    <img src="assets/icons/order/power-plug.svg" alt="usb icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Used drinks:</span>
+                                                    <img src="assets/icons/order/coffee.svg" alt="coffee icon">
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.details-extra__group -->
+                                <div class="details-extra__group" style="">
+                                    <div class="details-extra__info_title">
+                                        <span>16г 26хв</span>
+                                        <span>Transfer to New York</span>
+                                    </div>
+                                    <div class="details-extra return__extra_services">
+                                        <div class="details-extra__header">
+                                            <div class="details-extra__flight_duration">9g 10min</div>
+                                            <div class="details-extra__flight_info">FLIGHT LH-402</div>
+                                        </div>
+                                        <div class="details-extra__content">
+                                            <div class="extra-data">
+                                                <p>Jan 25, Mon.</p>
+                                                <p>Jan 25, Mon.</p>
+                                            </div>
+                                            <div class="extra-more_detail">
+                                                <p>13:05 <b>FROM</b> Frankfurt am Main</p>
+                                                <p>16:15 <b>EWR</b> Newark-Liberty</p>
+                                            </div>
+                                            <div class="extra-company">
+                                                <img src="assets/icons/order/LY2.svg" alt="ly">
+                                                <p>EA AI</p>
+                                            </div>
+                                        </div>
+                                        <div class="details-extra__footer extra-footer">
+                                            <div class="extra-footer__icons">
+                                                <img src="assets/icons/order/luggage1-gray.svg" alt="luggage">
+                                                <img src="assets/icons/order/luggage1-gray.svg" alt="luggage">
+                                                <div class="luggage-count">
+                                                    <img src="assets/icons/order/luggage2-gray.svg" alt="luggage">
+                                                    <span>x2</span>
+                                                </div>
+                                            </div>
+                                            <button class="details-extra__btn_open">Flight information</button>
+                                        </div>
+                                        <div class="details-extra__more extra-more-not_show" style="display: none;">
+                                            <p class="details-extra__more-title">AIRBUS A330-300</p>
+                                            <div class="extra-more-1">
+                                                <p><span class="extra-more__status">18%</span>
+                                                    <span class="extra-more__info">Late aircraft:</span>
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">No.</span>
+                                                    <span class="extra-more__info">Multimedia:</span>
+                                                    <img src="assets/icons/order/video-player.svg" alt="video-player">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Canvas</span>
+                                                    <span class="extra-more__info">Wi-Fi:</span>
+                                                    <img src="assets/icons/order/wi-fi.svg" alt="wifi icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Alcohol:</span>
+                                                    <img src="assets/icons/order/martini.svg" alt="martini icon">
+                                                </p>
+                                            </div>
+                                            <div class="extra-more-2">
+                                                <p><span class="extra-more__status">14 minutes</span>
+                                                    <span class="extra-more__info">Average delay:</span>
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Hot food:</span>
+                                                    <img src="assets/icons/order/cutlery.svg" alt="cutlery icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">USB and sockets:</span>
+                                                    <img src="assets/icons/order/power-plug.svg" alt="usb icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Used drinks:</span>
+                                                    <img src="assets/icons/order/coffee.svg" alt="coffee icon">
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.details-extra__group -->
+                                <div class="details-extra__group" style="">
+                                    <div class="details-extra__info_title">
+                                        <span>16г 26хв</span>
+                                        <span>Transfer to New York</span>
+                                    </div>
+                                    <div class="details-extra return__extra_services">
+                                        <div class="details-extra__header">
+                                            <div class="details-extra__flight_duration">9g 10min</div>
+                                            <div class="details-extra__flight_info">FLIGHT LH-402</div>
+                                        </div>
+                                        <div class="details-extra__content">
+                                            <div class="extra-data">
+                                                <p>Jan 25, Mon.</p>
+                                                <p>Jan 25, Mon.</p>
+                                            </div>
+                                            <div class="extra-more_detail">
+                                                <p>13:05 <b>FROM</b> Frankfurt am Main</p>
+                                                <p>16:15 <b>EWR</b> Newark-Liberty</p>
+                                            </div>
+                                            <div class="extra-company">
+                                                <img src="assets/icons/order/LY2.svg" alt="ly">
+                                                <p>EA AI</p>
+                                            </div>
+                                        </div>
+                                        <div class="details-extra__footer extra-footer">
+                                            <div class="extra-footer__icons">
+                                                <img src="assets/icons/order/luggage1-gray.svg" alt="luggage">
+                                                <img src="assets/icons/order/luggage1-gray.svg" alt="luggage">
+                                                <div class="luggage-count">
+                                                    <img src="assets/icons/order/luggage2-gray.svg" alt="luggage">
+                                                    <span>x2</span>
+                                                </div>
+                                            </div>
+                                            <button class="details-extra__btn_open">Flight information</button>
+                                        </div>
+                                        <div class="details-extra__more extra-more-not_show" style="display: none;">
+                                            <p class="details-extra__more-title">AIRBUS A330-300</p>
+                                            <div class="extra-more-1">
+                                                <p><span class="extra-more__status">18%</span>
+                                                    <span class="extra-more__info">Late aircraft:</span>
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">No.</span>
+                                                    <span class="extra-more__info">Multimedia:</span>
+                                                    <img src="assets/icons/order/video-player.svg" alt="video-player">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Canvas</span>
+                                                    <span class="extra-more__info">Wi-Fi:</span>
+                                                    <img src="assets/icons/order/wi-fi.svg" alt="wifi icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Alcohol:</span>
+                                                    <img src="assets/icons/order/martini.svg" alt="martini icon">
+                                                </p>
+                                            </div>
+                                            <div class="extra-more-2">
+                                                <p><span class="extra-more__status">14 minutes</span>
+                                                    <span class="extra-more__info">Average delay:</span>
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Hot food:</span>
+                                                    <img src="assets/icons/order/cutlery.svg" alt="cutlery icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">USB and sockets:</span>
+                                                    <img src="assets/icons/order/power-plug.svg" alt="usb icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Used drinks:</span>
+                                                    <img src="assets/icons/order/coffee.svg" alt="coffee icon">
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.details-extra__group -->
+                            </div>
+                        </div>
+                        <!-- /.flight-there-details -->
+
+                        <div class="flight-back-details">
+                            <div class="flight-back-details-content">
+                                <div class="flight-back-title">BACK: PUNTA CANA - KYIV</div>
+                                <div class="to">
+                                    <p class="time">12:55</p>
+                                    <p class="city-name">Kieva</p>
+                                    <p class="date">5 Feb 2021</p>
+                                    <p class="week">Mon.</p>
+                                </div>
+                                <div class="graphic">
+                                    <div class="graphic-top-section">
+                                        <img src="assets/icons/plane-to-gray.svg" alt="">
+                                        <div class="flight-duration">
+                                            On the way: <span class="flight-duration-value">1d 13h 19min</span>
+                                        </div>
+                                        <img src="assets/icons/plane-from-gray.svg" alt="">
+
+                                        <span class="graphic-time-length time-length-2"></span>
+                                        <span class="graphic-time-length time-length-1"></span>
+                                    </div>
+                                    <div class="graphic-line"></div>
+                                    <div class="graphic-info-section">
+                                        <span>KBP</span>
+                                        <span>FRA</span>
+                                        <span>FRA</span>
+                                        <span>PUJ</span>
+                                    </div>
+
+                                </div>
+                                <div class="from">
+                                    <p class="time">13:11</p>
+                                    <p class="city-name">Punta Cana</p>
+                                    <p class="date">4 Feb 2021</p>
+                                    <p class="week">Tue.</p>
+                                </div>
+                                <div class="airline-info">
+                                    <div class="airline-icon-wrapper">
+                                        <img src="assets/icons/ua-icon.svg" class="airline-icon" alt="">
+                                    </div>
+                                    <p class="airline-text">EasyJet</p>
+                                </div>
+                            </div>
+                            <!-- /.flight-back-details-content -->
+                            <div class="flight-details-extra flight-back-details-extra" style="display: none">
+                                <div class="details-extra__group" style="">
+                                    <div class="details-extra__info_title non-title">
+                                        <span>16г 26хв</span>
+                                        <span>Transfer to New York</span>
+                                    </div>
+                                    <div class="details-extra return__extra_services">
+                                        <div class="details-extra__header">
+                                            <div class="details-extra__flight_duration">9g 10min</div>
+                                            <div class="details-extra__flight_info">FLIGHT LH-402</div>
+                                        </div>
+                                        <div class="details-extra__content">
+                                            <div class="extra-data">
+                                                <p>Jan 25, Mon.</p>
+                                                <p>Jan 25, Mon.</p>
+                                            </div>
+                                            <div class="extra-more_detail">
+                                                <p>13:05 <b>FROM</b> Frankfurt am Main</p>
+                                                <p>16:15 <b>EWR</b> Newark-Liberty</p>
+                                            </div>
+                                            <div class="extra-company">
+                                                <img src="assets/icons/order/LY2.svg" alt="ly">
+                                                <p>EA AI</p>
+                                            </div>
+                                        </div>
+                                        <div class="details-extra__footer extra-footer">
+                                            <div class="extra-footer__icons">
+                                                <img src="assets/icons/order/luggage1-gray.svg" alt="luggage">
+                                                <img src="assets/icons/order/luggage1-gray.svg" alt="luggage">
+                                                <div class="luggage-count">
+                                                    <img src="assets/icons/order/luggage2-gray.svg" alt="luggage">
+                                                    <span>x2</span>
+                                                </div>
+                                            </div>
+                                            <button class="details-extra__btn_open">Flight information</button>
+                                        </div>
+                                        <div class="details-extra__more extra-more-not_show" style="display: none;">
+                                            <p class="details-extra__more-title">AIRBUS A330-300</p>
+                                            <div class="extra-more-1">
+                                                <p><span class="extra-more__status">18%</span>
+                                                    <span class="extra-more__info">Late aircraft:</span>
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">No.</span>
+                                                    <span class="extra-more__info">Multimedia:</span>
+                                                    <img src="assets/icons/order/video-player.svg" alt="video-player">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Canvas</span>
+                                                    <span class="extra-more__info">Wi-Fi:</span>
+                                                    <img src="assets/icons/order/wi-fi.svg" alt="wifi icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Alcohol:</span>
+                                                    <img src="assets/icons/order/martini.svg" alt="martini icon">
+                                                </p>
+                                            </div>
+                                            <div class="extra-more-2">
+                                                <p><span class="extra-more__status">14 minutes</span>
+                                                    <span class="extra-more__info">Average delay:</span>
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Hot food:</span>
+                                                    <img src="assets/icons/order/cutlery.svg" alt="cutlery icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">USB and sockets:</span>
+                                                    <img src="assets/icons/order/power-plug.svg" alt="usb icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Used drinks:</span>
+                                                    <img src="assets/icons/order/coffee.svg" alt="coffee icon">
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.details-extra__group -->
+                                <div class="details-extra__group" style="">
+                                    <div class="details-extra__info_title">
+                                        <span>16г 26хв</span>
+                                        <span>Transfer to New York</span>
+                                    </div>
+                                    <div class="details-extra return__extra_services">
+                                        <div class="details-extra__header">
+                                            <div class="details-extra__flight_duration">9g 10min</div>
+                                            <div class="details-extra__flight_info">FLIGHT LH-402</div>
+                                        </div>
+                                        <div class="details-extra__content">
+                                            <div class="extra-data">
+                                                <p>Jan 25, Mon.</p>
+                                                <p>Jan 25, Mon.</p>
+                                            </div>
+                                            <div class="extra-more_detail">
+                                                <p>13:05 <b>FROM</b> Frankfurt am Main</p>
+                                                <p>16:15 <b>EWR</b> Newark-Liberty</p>
+                                            </div>
+                                            <div class="extra-company">
+                                                <img src="assets/icons/order/LY2.svg" alt="ly">
+                                                <p>EA AI</p>
+                                            </div>
+                                        </div>
+                                        <div class="details-extra__footer extra-footer">
+                                            <div class="extra-footer__icons">
+                                                <img src="assets/icons/order/luggage1-gray.svg" alt="luggage">
+                                                <img src="assets/icons/order/luggage1-gray.svg" alt="luggage">
+                                                <div class="luggage-count">
+                                                    <img src="assets/icons/order/luggage2-gray.svg" alt="luggage">
+                                                    <span>x2</span>
+                                                </div>
+                                            </div>
+                                            <button class="details-extra__btn_open">Flight information</button>
+                                        </div>
+                                        <div class="details-extra__more extra-more-not_show" style="display: none;">
+                                            <p class="details-extra__more-title">AIRBUS A330-300</p>
+                                            <div class="extra-more-1">
+                                                <p><span class="extra-more__status">18%</span>
+                                                    <span class="extra-more__info">Late aircraft:</span>
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">No.</span>
+                                                    <span class="extra-more__info">Multimedia:</span>
+                                                    <img src="assets/icons/order/video-player.svg" alt="video-player">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Canvas</span>
+                                                    <span class="extra-more__info">Wi-Fi:</span>
+                                                    <img src="assets/icons/order/wi-fi.svg" alt="wifi icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Alcohol:</span>
+                                                    <img src="assets/icons/order/martini.svg" alt="martini icon">
+                                                </p>
+                                            </div>
+                                            <div class="extra-more-2">
+                                                <p><span class="extra-more__status">14 minutes</span>
+                                                    <span class="extra-more__info">Average delay:</span>
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Hot food:</span>
+                                                    <img src="assets/icons/order/cutlery.svg" alt="cutlery icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">USB and sockets:</span>
+                                                    <img src="assets/icons/order/power-plug.svg" alt="usb icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Used drinks:</span>
+                                                    <img src="assets/icons/order/coffee.svg" alt="coffee icon">
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.details-extra__group -->
+                                <div class="details-extra__group" style="">
+                                    <div class="details-extra__info_title">
+                                        <span>16г 26хв</span>
+                                        <span>Transfer to New York</span>
+                                    </div>
+                                    <div class="details-extra return__extra_services">
+                                        <div class="details-extra__header">
+                                            <div class="details-extra__flight_duration">9g 10min</div>
+                                            <div class="details-extra__flight_info">FLIGHT LH-402</div>
+                                        </div>
+                                        <div class="details-extra__content">
+                                            <div class="extra-data">
+                                                <p>Jan 25, Mon.</p>
+                                                <p>Jan 25, Mon.</p>
+                                            </div>
+                                            <div class="extra-more_detail">
+                                                <p>13:05 <b>FROM</b> Frankfurt am Main</p>
+                                                <p>16:15 <b>EWR</b> Newark-Liberty</p>
+                                            </div>
+                                            <div class="extra-company">
+                                                <img src="assets/icons/order/LY2.svg" alt="ly">
+                                                <p>EA AI</p>
+                                            </div>
+                                        </div>
+                                        <div class="details-extra__footer extra-footer">
+                                            <div class="extra-footer__icons">
+                                                <img src="assets/icons/order/luggage1-gray.svg" alt="luggage">
+                                                <img src="assets/icons/order/luggage1-gray.svg" alt="luggage">
+                                                <div class="luggage-count">
+                                                    <img src="assets/icons/order/luggage2-gray.svg" alt="luggage">
+                                                    <span>x2</span>
+                                                </div>
+                                            </div>
+                                            <button class="details-extra__btn_open">Flight information</button>
+                                        </div>
+                                        <div class="details-extra__more extra-more-not_show" style="display: none;">
+                                            <p class="details-extra__more-title">AIRBUS A330-300</p>
+                                            <div class="extra-more-1">
+                                                <p><span class="extra-more__status">18%</span>
+                                                    <span class="extra-more__info">Late aircraft:</span>
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">No.</span>
+                                                    <span class="extra-more__info">Multimedia:</span>
+                                                    <img src="assets/icons/order/video-player.svg" alt="video-player">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Canvas</span>
+                                                    <span class="extra-more__info">Wi-Fi:</span>
+                                                    <img src="assets/icons/order/wi-fi.svg" alt="wifi icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Alcohol:</span>
+                                                    <img src="assets/icons/order/martini.svg" alt="martini icon">
+                                                </p>
+                                            </div>
+                                            <div class="extra-more-2">
+                                                <p><span class="extra-more__status">14 minutes</span>
+                                                    <span class="extra-more__info">Average delay:</span>
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Hot food:</span>
+                                                    <img src="assets/icons/order/cutlery.svg" alt="cutlery icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">USB and sockets:</span>
+                                                    <img src="assets/icons/order/power-plug.svg" alt="usb icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Used drinks:</span>
+                                                    <img src="assets/icons/order/coffee.svg" alt="coffee icon">
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.details-extra__group -->
+                            </div>
+                        </div>
+                        <!-- /.flight-back-details -->
+                    </div>
+                    <!-- /.flight-details -->
+                    <button type="button" class="btn-open-result-details">
+                        <span class="open-icon"></span>
+                    </button>
+                </div>
+                <!-- /.flights-results-table 2 -->
+
+                <div class="flights-results-table">
+                    <div class="price-details">
+                        <p class="price-details-row">
+                            <img src="assets/icons/order/luggage1-gray.svg" alt="">
+                            <img src="assets/icons/order/luggage2-gray.svg" alt="">
+                        </p>
+                        <p class="price-details-row luggage-text">With luggage</p>
+                        <p class="price-details-row places-info">Last 8 places</p>
+                        <p class="price-details-row current-price">$281</p>
+                        <p class="price-details-row price-for">Price for 1 adult</p>
+                        <p class="price-details-row price-flight-detail">
+                            <a href="#" class="btn-flight-details">flight details</a>
+                        </p>
+                        <p class="price-details-row price-total">Total to pay: $ 562</p>
+                        <div class="price-details-row price-more-offers">
+                            <button type="button">More offers</button>
+                            <ul class="more-offers-list" style="display: none">
+                                <li>
+                                    <a href="#" class="active">
+                                        <span class="offer-price">$ 180 163</span>
+                                        <span class="offer-website">SuperKassa.ru</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="offer-price">$ 194,795</span>
+                                        <span class="offer-website">SuperSaver</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="offer-price">$ 170 163</span>
+                                        <span class="offer-website">Onetwotrip.ua</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="offer-price">$ 180 052</span>
+                                        <span class="offer-website">KupiBilet.ru</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flight-details">
+
+                        <div class="flight-there-details">
+                            <div class="flight-there-details-content">
+                                <div class="to">
+                                    <p class="time">13:49</p>
+                                    <p class="city-name">Punta Cana</p>
+                                    <p class="date">26 Jan 2021</p>
+                                    <p class="week">Tue.</p>
+                                </div>
+                                <div class="graphic">
+                                    <div class="graphic-top-section">
+                                        <img src="assets/icons/plane-to-gray.svg" alt="">
+                                        <div class="flight-duration">
+                                            On the way: <span class="flight-duration-value">1d 13h 19min</span>
+                                        </div>
+                                        <img src="assets/icons/plane-from-gray.svg" alt="">
+
+                                        <span class="graphic-time-length time-length-2"></span>
+                                        <span class="graphic-time-length time-length-1"></span>
+                                    </div>
+                                    <div class="graphic-line"></div>
+                                    <div class="graphic-info-section">
+                                        <span>KBP</span>
+                                        <span>FRA</span>
+                                        <span>FRA</span>
+                                        <span>PUJ</span>
+                                    </div>
+
+                                </div>
+                                <div class="from">
+                                    <p class="time">6:30</p>
+                                    <p class="city-name">Kiev</p>
+                                    <p class="date">25 Jan 2021</p>
+                                    <p class="week">Mon.</p>
+                                </div>
+                                <div class="airline-info">
+                                    <div class="airline-icon-wrapper">
+                                        <img src="assets/icons/ly-icon.svg" class="airline-icon" alt="">
+                                    </div>
+                                    <p class="airline-text">EA AI</p>
+                                </div>
+                            </div>
+                            <!-- /.flight-there-details-content -->
+                            <div class="flight-details-extra flight-there-details-extra" style="display: none">
+                                <div class="details-extra__group" style="">
+                                    <div class="details-extra__info_title non-title">
+                                        <span>16г 26хв</span>
+                                        <span>Transfer to New York</span>
+                                    </div>
+                                    <div class="details-extra return__extra_services">
+                                        <div class="details-extra__header">
+                                            <div class="details-extra__flight_duration">9g 10min</div>
+                                            <div class="details-extra__flight_info">FLIGHT LH-402</div>
+                                        </div>
+                                        <div class="details-extra__content">
+                                            <div class="extra-data">
+                                                <p>Jan 25, Mon.</p>
+                                                <p>Jan 25, Mon.</p>
+                                            </div>
+                                            <div class="extra-more_detail">
+                                                <p>13:05 <b>FROM</b> Frankfurt am Main</p>
+                                                <p>16:15 <b>EWR</b> Newark-Liberty</p>
+                                            </div>
+                                            <div class="extra-company">
+                                                <img src="assets/icons/order/LY2.svg" alt="ly">
+                                                <p>EA AI</p>
+                                            </div>
+                                        </div>
+                                        <div class="details-extra__footer extra-footer">
+                                            <div class="extra-footer__icons">
+                                                <img src="assets/icons/order/luggage1-gray.svg" alt="luggage">
+                                                <img src="assets/icons/order/luggage1-gray.svg" alt="luggage">
+                                                <div class="luggage-count">
+                                                    <img src="assets/icons/order/luggage2-gray.svg" alt="luggage">
+                                                    <span>x2</span>
+                                                </div>
+                                            </div>
+                                            <button class="details-extra__btn_open">Flight information</button>
+                                        </div>
+                                        <div class="details-extra__more extra-more-not_show" style="display: none;">
+                                            <p class="details-extra__more-title">AIRBUS A330-300</p>
+                                            <div class="extra-more-1">
+                                                <p><span class="extra-more__status">18%</span>
+                                                    <span class="extra-more__info">Late aircraft:</span>
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">No.</span>
+                                                    <span class="extra-more__info">Multimedia:</span>
+                                                    <img src="assets/icons/order/video-player.svg" alt="video-player">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Canvas</span>
+                                                    <span class="extra-more__info">Wi-Fi:</span>
+                                                    <img src="assets/icons/order/wi-fi.svg" alt="wifi icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Alcohol:</span>
+                                                    <img src="assets/icons/order/martini.svg" alt="martini icon">
+                                                </p>
+                                            </div>
+                                            <div class="extra-more-2">
+                                                <p><span class="extra-more__status">14 minutes</span>
+                                                    <span class="extra-more__info">Average delay:</span>
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Hot food:</span>
+                                                    <img src="assets/icons/order/cutlery.svg" alt="cutlery icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">USB and sockets:</span>
+                                                    <img src="assets/icons/order/power-plug.svg" alt="usb icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Used drinks:</span>
+                                                    <img src="assets/icons/order/coffee.svg" alt="coffee icon">
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.details-extra__group -->
+                                <div class="details-extra__group" style="">
+                                    <div class="details-extra__info_title">
+                                        <span>16г 26хв</span>
+                                        <span>Transfer to New York</span>
+                                    </div>
+                                    <div class="details-extra return__extra_services">
+                                        <div class="details-extra__header">
+                                            <div class="details-extra__flight_duration">9g 10min</div>
+                                            <div class="details-extra__flight_info">FLIGHT LH-402</div>
+                                        </div>
+                                        <div class="details-extra__content">
+                                            <div class="extra-data">
+                                                <p>Jan 25, Mon.</p>
+                                                <p>Jan 25, Mon.</p>
+                                            </div>
+                                            <div class="extra-more_detail">
+                                                <p>13:05 <b>FROM</b> Frankfurt am Main</p>
+                                                <p>16:15 <b>EWR</b> Newark-Liberty</p>
+                                            </div>
+                                            <div class="extra-company">
+                                                <img src="assets/icons/order/LY2.svg" alt="ly">
+                                                <p>EA AI</p>
+                                            </div>
+                                        </div>
+                                        <div class="details-extra__footer extra-footer">
+                                            <div class="extra-footer__icons">
+                                                <img src="assets/icons/order/luggage1-gray.svg" alt="luggage">
+                                                <img src="assets/icons/order/luggage1-gray.svg" alt="luggage">
+                                                <div class="luggage-count">
+                                                    <img src="assets/icons/order/luggage2-gray.svg" alt="luggage">
+                                                    <span>x2</span>
+                                                </div>
+                                            </div>
+                                            <button class="details-extra__btn_open">Flight information</button>
+                                        </div>
+                                        <div class="details-extra__more extra-more-not_show" style="display: none;">
+                                            <p class="details-extra__more-title">AIRBUS A330-300</p>
+                                            <div class="extra-more-1">
+                                                <p><span class="extra-more__status">18%</span>
+                                                    <span class="extra-more__info">Late aircraft:</span>
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">No.</span>
+                                                    <span class="extra-more__info">Multimedia:</span>
+                                                    <img src="assets/icons/order/video-player.svg" alt="video-player">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Canvas</span>
+                                                    <span class="extra-more__info">Wi-Fi:</span>
+                                                    <img src="assets/icons/order/wi-fi.svg" alt="wifi icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Alcohol:</span>
+                                                    <img src="assets/icons/order/martini.svg" alt="martini icon">
+                                                </p>
+                                            </div>
+                                            <div class="extra-more-2">
+                                                <p><span class="extra-more__status">14 minutes</span>
+                                                    <span class="extra-more__info">Average delay:</span>
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Hot food:</span>
+                                                    <img src="assets/icons/order/cutlery.svg" alt="cutlery icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">USB and sockets:</span>
+                                                    <img src="assets/icons/order/power-plug.svg" alt="usb icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Used drinks:</span>
+                                                    <img src="assets/icons/order/coffee.svg" alt="coffee icon">
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.details-extra__group -->
+                                <div class="details-extra__group" style="">
+                                    <div class="details-extra__info_title">
+                                        <span>16г 26хв</span>
+                                        <span>Transfer to New York</span>
+                                    </div>
+                                    <div class="details-extra return__extra_services">
+                                        <div class="details-extra__header">
+                                            <div class="details-extra__flight_duration">9g 10min</div>
+                                            <div class="details-extra__flight_info">FLIGHT LH-402</div>
+                                        </div>
+                                        <div class="details-extra__content">
+                                            <div class="extra-data">
+                                                <p>Jan 25, Mon.</p>
+                                                <p>Jan 25, Mon.</p>
+                                            </div>
+                                            <div class="extra-more_detail">
+                                                <p>13:05 <b>FROM</b> Frankfurt am Main</p>
+                                                <p>16:15 <b>EWR</b> Newark-Liberty</p>
+                                            </div>
+                                            <div class="extra-company">
+                                                <img src="assets/icons/order/LY2.svg" alt="ly">
+                                                <p>EA AI</p>
+                                            </div>
+                                        </div>
+                                        <div class="details-extra__footer extra-footer">
+                                            <div class="extra-footer__icons">
+                                                <img src="assets/icons/order/luggage1-gray.svg" alt="luggage">
+                                                <img src="assets/icons/order/luggage1-gray.svg" alt="luggage">
+                                                <div class="luggage-count">
+                                                    <img src="assets/icons/order/luggage2-gray.svg" alt="luggage">
+                                                    <span>x2</span>
+                                                </div>
+                                            </div>
+                                            <button class="details-extra__btn_open">Flight information</button>
+                                        </div>
+                                        <div class="details-extra__more extra-more-not_show" style="display: none;">
+                                            <p class="details-extra__more-title">AIRBUS A330-300</p>
+                                            <div class="extra-more-1">
+                                                <p><span class="extra-more__status">18%</span>
+                                                    <span class="extra-more__info">Late aircraft:</span>
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">No.</span>
+                                                    <span class="extra-more__info">Multimedia:</span>
+                                                    <img src="assets/icons/order/video-player.svg" alt="video-player">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Canvas</span>
+                                                    <span class="extra-more__info">Wi-Fi:</span>
+                                                    <img src="assets/icons/order/wi-fi.svg" alt="wifi icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Alcohol:</span>
+                                                    <img src="assets/icons/order/martini.svg" alt="martini icon">
+                                                </p>
+                                            </div>
+                                            <div class="extra-more-2">
+                                                <p><span class="extra-more__status">14 minutes</span>
+                                                    <span class="extra-more__info">Average delay:</span>
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Hot food:</span>
+                                                    <img src="assets/icons/order/cutlery.svg" alt="cutlery icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">USB and sockets:</span>
+                                                    <img src="assets/icons/order/power-plug.svg" alt="usb icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Used drinks:</span>
+                                                    <img src="assets/icons/order/coffee.svg" alt="coffee icon">
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.details-extra__group -->
+                            </div>
+                        </div>
+                        <!-- /.flight-there-details -->
+
+                        <div class="flight-back-details">
+                            <div class="flight-back-details-content">
+                                <div class="flight-back-title">BACK: PUNTA CANA - KYIV</div>
+                                <div class="to">
+                                    <p class="time">12:55</p>
+                                    <p class="city-name">Kieva</p>
+                                    <p class="date">5 Feb 2021</p>
+                                    <p class="week">Mon.</p>
+                                </div>
+                                <div class="graphic">
+                                    <div class="graphic-top-section">
+                                        <img src="assets/icons/plane-to-gray.svg" alt="">
+                                        <div class="flight-duration">
+                                            On the way: <span class="flight-duration-value">1d 13h 19min</span>
+                                        </div>
+                                        <img src="assets/icons/plane-from-gray.svg" alt="">
+
+                                        <span class="graphic-time-length time-length-2"></span>
+                                        <span class="graphic-time-length time-length-1"></span>
+                                    </div>
+                                    <div class="graphic-line"></div>
+                                    <div class="graphic-info-section">
+                                        <span>KBP</span>
+                                        <span>FRA</span>
+                                        <span>FRA</span>
+                                        <span>PUJ</span>
+                                    </div>
+
+                                </div>
+                                <div class="from">
+                                    <p class="time">13:11</p>
+                                    <p class="city-name">Punta Cana</p>
+                                    <p class="date">4 Feb 2021</p>
+                                    <p class="week">Tue.</p>
+                                </div>
+                                <div class="airline-info">
+                                    <div class="airline-icon-wrapper">
+                                        <img src="assets/icons/ua-icon.svg" class="airline-icon" alt="">
+                                    </div>
+                                    <p class="airline-text">EasyJet</p>
+                                </div>
+                            </div>
+                            <!-- /.flight-back-details-content -->
+                            <div class="flight-details-extra flight-back-details-extra" style="display: none">
+                                <div class="details-extra__group" style="">
+                                    <div class="details-extra__info_title non-title">
+                                        <span>16г 26хв</span>
+                                        <span>Transfer to New York</span>
+                                    </div>
+                                    <div class="details-extra return__extra_services">
+                                        <div class="details-extra__header">
+                                            <div class="details-extra__flight_duration">9g 10min</div>
+                                            <div class="details-extra__flight_info">FLIGHT LH-402</div>
+                                        </div>
+                                        <div class="details-extra__content">
+                                            <div class="extra-data">
+                                                <p>Jan 25, Mon.</p>
+                                                <p>Jan 25, Mon.</p>
+                                            </div>
+                                            <div class="extra-more_detail">
+                                                <p>13:05 <b>FROM</b> Frankfurt am Main</p>
+                                                <p>16:15 <b>EWR</b> Newark-Liberty</p>
+                                            </div>
+                                            <div class="extra-company">
+                                                <img src="assets/icons/order/LY2.svg" alt="ly">
+                                                <p>EA AI</p>
+                                            </div>
+                                        </div>
+                                        <div class="details-extra__footer extra-footer">
+                                            <div class="extra-footer__icons">
+                                                <img src="assets/icons/order/luggage1-gray.svg" alt="luggage">
+                                                <img src="assets/icons/order/luggage1-gray.svg" alt="luggage">
+                                                <div class="luggage-count">
+                                                    <img src="assets/icons/order/luggage2-gray.svg" alt="luggage">
+                                                    <span>x2</span>
+                                                </div>
+                                            </div>
+                                            <button class="details-extra__btn_open">Flight information</button>
+                                        </div>
+                                        <div class="details-extra__more extra-more-not_show" style="display: none;">
+                                            <p class="details-extra__more-title">AIRBUS A330-300</p>
+                                            <div class="extra-more-1">
+                                                <p><span class="extra-more__status">18%</span>
+                                                    <span class="extra-more__info">Late aircraft:</span>
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">No.</span>
+                                                    <span class="extra-more__info">Multimedia:</span>
+                                                    <img src="assets/icons/order/video-player.svg" alt="video-player">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Canvas</span>
+                                                    <span class="extra-more__info">Wi-Fi:</span>
+                                                    <img src="assets/icons/order/wi-fi.svg" alt="wifi icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Alcohol:</span>
+                                                    <img src="assets/icons/order/martini.svg" alt="martini icon">
+                                                </p>
+                                            </div>
+                                            <div class="extra-more-2">
+                                                <p><span class="extra-more__status">14 minutes</span>
+                                                    <span class="extra-more__info">Average delay:</span>
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Hot food:</span>
+                                                    <img src="assets/icons/order/cutlery.svg" alt="cutlery icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">USB and sockets:</span>
+                                                    <img src="assets/icons/order/power-plug.svg" alt="usb icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Used drinks:</span>
+                                                    <img src="assets/icons/order/coffee.svg" alt="coffee icon">
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.details-extra__group -->
+                                <div class="details-extra__group" style="">
+                                    <div class="details-extra__info_title">
+                                        <span>16г 26хв</span>
+                                        <span>Transfer to New York</span>
+                                    </div>
+                                    <div class="details-extra return__extra_services">
+                                        <div class="details-extra__header">
+                                            <div class="details-extra__flight_duration">9g 10min</div>
+                                            <div class="details-extra__flight_info">FLIGHT LH-402</div>
+                                        </div>
+                                        <div class="details-extra__content">
+                                            <div class="extra-data">
+                                                <p>Jan 25, Mon.</p>
+                                                <p>Jan 25, Mon.</p>
+                                            </div>
+                                            <div class="extra-more_detail">
+                                                <p>13:05 <b>FROM</b> Frankfurt am Main</p>
+                                                <p>16:15 <b>EWR</b> Newark-Liberty</p>
+                                            </div>
+                                            <div class="extra-company">
+                                                <img src="assets/icons/order/LY2.svg" alt="ly">
+                                                <p>EA AI</p>
+                                            </div>
+                                        </div>
+                                        <div class="details-extra__footer extra-footer">
+                                            <div class="extra-footer__icons">
+                                                <img src="assets/icons/order/luggage1-gray.svg" alt="luggage">
+                                                <img src="assets/icons/order/luggage1-gray.svg" alt="luggage">
+                                                <div class="luggage-count">
+                                                    <img src="assets/icons/order/luggage2-gray.svg" alt="luggage">
+                                                    <span>x2</span>
+                                                </div>
+                                            </div>
+                                            <button class="details-extra__btn_open">Flight information</button>
+                                        </div>
+                                        <div class="details-extra__more extra-more-not_show" style="display: none;">
+                                            <p class="details-extra__more-title">AIRBUS A330-300</p>
+                                            <div class="extra-more-1">
+                                                <p><span class="extra-more__status">18%</span>
+                                                    <span class="extra-more__info">Late aircraft:</span>
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">No.</span>
+                                                    <span class="extra-more__info">Multimedia:</span>
+                                                    <img src="assets/icons/order/video-player.svg" alt="video-player">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Canvas</span>
+                                                    <span class="extra-more__info">Wi-Fi:</span>
+                                                    <img src="assets/icons/order/wi-fi.svg" alt="wifi icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Alcohol:</span>
+                                                    <img src="assets/icons/order/martini.svg" alt="martini icon">
+                                                </p>
+                                            </div>
+                                            <div class="extra-more-2">
+                                                <p><span class="extra-more__status">14 minutes</span>
+                                                    <span class="extra-more__info">Average delay:</span>
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Hot food:</span>
+                                                    <img src="assets/icons/order/cutlery.svg" alt="cutlery icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">USB and sockets:</span>
+                                                    <img src="assets/icons/order/power-plug.svg" alt="usb icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Used drinks:</span>
+                                                    <img src="assets/icons/order/coffee.svg" alt="coffee icon">
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.details-extra__group -->
+                                <div class="details-extra__group" style="">
+                                    <div class="details-extra__info_title">
+                                        <span>16г 26хв</span>
+                                        <span>Transfer to New York</span>
+                                    </div>
+                                    <div class="details-extra return__extra_services">
+                                        <div class="details-extra__header">
+                                            <div class="details-extra__flight_duration">9g 10min</div>
+                                            <div class="details-extra__flight_info">FLIGHT LH-402</div>
+                                        </div>
+                                        <div class="details-extra__content">
+                                            <div class="extra-data">
+                                                <p>Jan 25, Mon.</p>
+                                                <p>Jan 25, Mon.</p>
+                                            </div>
+                                            <div class="extra-more_detail">
+                                                <p>13:05 <b>FROM</b> Frankfurt am Main</p>
+                                                <p>16:15 <b>EWR</b> Newark-Liberty</p>
+                                            </div>
+                                            <div class="extra-company">
+                                                <img src="assets/icons/order/LY2.svg" alt="ly">
+                                                <p>EA AI</p>
+                                            </div>
+                                        </div>
+                                        <div class="details-extra__footer extra-footer">
+                                            <div class="extra-footer__icons">
+                                                <img src="assets/icons/order/luggage1-gray.svg" alt="luggage">
+                                                <img src="assets/icons/order/luggage1-gray.svg" alt="luggage">
+                                                <div class="luggage-count">
+                                                    <img src="assets/icons/order/luggage2-gray.svg" alt="luggage">
+                                                    <span>x2</span>
+                                                </div>
+                                            </div>
+                                            <button class="details-extra__btn_open">Flight information</button>
+                                        </div>
+                                        <div class="details-extra__more extra-more-not_show" style="display: none;">
+                                            <p class="details-extra__more-title">AIRBUS A330-300</p>
+                                            <div class="extra-more-1">
+                                                <p><span class="extra-more__status">18%</span>
+                                                    <span class="extra-more__info">Late aircraft:</span>
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">No.</span>
+                                                    <span class="extra-more__info">Multimedia:</span>
+                                                    <img src="assets/icons/order/video-player.svg" alt="video-player">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Canvas</span>
+                                                    <span class="extra-more__info">Wi-Fi:</span>
+                                                    <img src="assets/icons/order/wi-fi.svg" alt="wifi icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Alcohol:</span>
+                                                    <img src="assets/icons/order/martini.svg" alt="martini icon">
+                                                </p>
+                                            </div>
+                                            <div class="extra-more-2">
+                                                <p><span class="extra-more__status">14 minutes</span>
+                                                    <span class="extra-more__info">Average delay:</span>
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Hot food:</span>
+                                                    <img src="assets/icons/order/cutlery.svg" alt="cutlery icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">USB and sockets:</span>
+                                                    <img src="assets/icons/order/power-plug.svg" alt="usb icon">
+                                                </p>
+                                                <p>
+                                                    <span class="extra-more__status">Free</span>
+                                                    <span class="extra-more__info">Used drinks:</span>
+                                                    <img src="assets/icons/order/coffee.svg" alt="coffee icon">
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.details-extra__group -->
+                            </div>
+                        </div>
+                        <!-- /.flight-back-details -->
+                    </div>
+                    <!-- /.flight-details -->
+                    <button type="button" class="btn-open-result-details">
+                        <span class="open-icon"></span>
+                    </button>
+                </div>
+                <!-- /.flights-results-table 3 -->
+
+                <div class="view-more-flights-wrapper">
+                    <button class="view-more-flights">View more flights</button>
+                </div>
+            </div>
+            <!-- /.flights-list-results -->
+
+            <div class="flights-sidebar">
+                <div class="flights-sidebar-filters">
+
+                    <div class="filter-item open filter-popular">
+                        <div class="filter-item__header">
+                            <span class="filter-item__open"></span>
+                            <h5 class="filter-item__title">Popular filters</h5>
+                        </div>
+                        <ul class="filter-item-list">
+                            <li>
+                                <label class="form-checkbox-group">
+                                    <span class="checkbox-text">Direct flight only</span>
+                                    <input type="checkbox" checked>
+                                    <span class="checkmark"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="form-checkbox-group">
+                                    <span class="checkbox-text">One way</span>
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.filter-item filter-popular -->
+
+                    <div class="filter-item open ticket-price">
+                        <div class="filter-item__header">
+                            <span class="filter-item__open"></span>
+                            <h5 class="filter-item__title">Ticket price</h5>
+                        </div>
+                        <ul class="filter-item-list">
+                            <li>
+                                <div class="range-slider-wrapper">
+                                    <p class="range-slider-label">
+                                        <input type="text" id="ticket-price-amount" dir="rtl" readonly>
+                                    </p>
+                                    <div id="ticket-price-slider" class="range-slider"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.filter-item ticket-price -->
+
+                    <div class="filter-item open airlines">
+                        <div class="filter-item__header">
+                            <span class="filter-item__open"></span>
+                            <h5 class="filter-item__title">Airlines</h5>
+                        </div>
+                        <ul class="filter-item-list">
+                            <li>
+                                <span class="filter-airlines-price">202$</span>
+                                <label class="form-checkbox-group">
+                                    <span class="checkbox-text">Show all</span>
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <span class="filter-airlines-price">273$</span>
+                                <label class="form-checkbox-group">
+                                    <span class="checkbox-text">El Al</span>
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <span class="filter-airlines-price">374$</span>
+                                <label class="form-checkbox-group">
+                                    <span class="checkbox-text">Turkish Airlines</span>
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <span class="filter-airlines-price">276$</span>
+                                <label class="form-checkbox-group">
+                                    <span class="checkbox-text">Klm Airlines</span>
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <span class="filter-airlines-price">376$</span>
+                                <label class="form-checkbox-group">
+                                    <span class="checkbox-text">Air France</span>
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            <li>
+                                <span class="filter-airlines-price">376$</span>
+                                <label class="form-checkbox-group">
+                                    <span class="checkbox-text">Ukraine International Airlines</span>
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </li>
+                        </ul>
+                        <div class="show-more-wrapper">
+                            <button class="show-more">Show more</button>
+                        </div>
+                    </div>
+                    <!-- /.filter-item airlines -->
+
+                    <div class="filter-item open max-connections">
+                        <div class="filter-item__header">
+                            <span class="filter-item__open"></span>
+                            <h5 class="filter-item__title">Max connections</h5>
+                        </div>
+                        <ul class="filter-item-list">
+                            <li>
+                                <span class="filter-airlines-price">202$</span>
+                                <label class="form-checkbox-group">
+                                    <span class="checkbox-text">Direct flights</span>
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <span class="filter-airlines-price">273$</span>
+                                <label class="form-checkbox-group">
+                                    <span class="checkbox-text">1 connection</span>
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <span class="filter-airlines-price">374$</span>
+                                <label class="form-checkbox-group">
+                                    <span class="checkbox-text">2 and more</span>
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.max-connections -->
+
+                    <div class="filter-item open duration">
+                        <div class="filter-item__header">
+                            <span class="filter-item__open"></span>
+                            <h5 class="filter-item__title">Duration</h5>
+                        </div>
+                        <ul class="filter-item-list">
+                            <li>
+                                <p class="filter-item-title">Time on the way there</p>
+                                <div class="range-slider-wrapper">
+                                    <p class="range-slider-label">
+                                        <input type="text" id="duration-onway-amount" dir="rtl" readonly>
+                                    </p>
+                                    <div id="duration-onway-slider" class="range-slider"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="filter-item-title">Time to go back</p>
+                                <div class="range-slider-wrapper">
+                                    <p class="range-slider-label">
+                                        <input type="text" id="duration-goback-amount" dir="rtl" readonly>
+                                    </p>
+                                    <div id="duration-goback-slider" class="range-slider"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.duration -->
+
+                    <div class="filter-item open stopover">
+                        <div class="filter-item__header">
+                            <span class="filter-item__open"></span>
+                            <h5 class="filter-item__title">Stopover</h5>
+                        </div>
+                        <ul class="filter-item-list">
+                            <li>
+                                <div class="range-slider-wrapper">
+                                    <p class="range-slider-label">
+                                        <input type="text" id="stopover-amount" dir="rtl" readonly>
+                                    </p>
+                                    <div id="stopover-slider" class="range-slider"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.stopover -->
+
+                    <div class="filter-item open departure-arrival-times">
+                        <div class="filter-item__header">
+                            <span class="filter-item__open"></span>
+                            <h5 class="filter-item__title">Departure and arrival times</h5>
+                        </div>
+                        <h4 class="departure-flight-details">
+                            <span class="to">Punta Cana</span>
+                            <img src="assets/icons/plane-for-filters.svg" alt="">
+                            <span class="from">Boryspil</span>
+
+                        </h4>
+                        <ul class="filter-item-list flight-there-time">
+                            <li>
+                                <p class="filter-item-title">Departure from Boryspil:</p>
+                                <div class="range-slider-wrapper">
+                                    <p class="range-slider-label">
+                                        <input type="text" id="depart-from-amount" dir="rtl" readonly>
+                                    </p>
+                                    <div id="depart-from-slider" class="range-slider"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="filter-item-title">Arrival in Punta Cana:</p>
+                                <div class="range-slider-wrapper">
+                                    <p class="range-slider-label">
+                                        <input type="text" id="arrival-in-amount" dir="rtl" readonly>
+                                    </p>
+                                    <div id="arrival-in-slider" class="range-slider"></div>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <h4 class="departure-flight-details">
+                            <span class="to">Boryspil</span>
+                            <img src="assets/icons/plane-for-filters.svg" alt="">
+                            <span class="from">Punta Cana</span>
+                        </h4>
+                        <ul class="filter-item-list flight-back-time">
+                            <li>
+                                <p class="filter-item-title">Departure from Punta Cana</p>
+                                <div class="range-slider-wrapper">
+                                    <p class="range-slider-label">
+                                        <input type="text" id="depart-back-from-amount" dir="rtl" readonly>
+                                    </p>
+                                    <div id="depart-back-from-slider" class="range-slider"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="filter-item-title">Arrival in Boryspil</p>
+                                <div class="range-slider-wrapper">
+                                    <p class="range-slider-label">
+                                        <input type="text" id="arrival-back-in-amount" dir="rtl" readonly>
+                                    </p>
+                                    <div id="arrival-back-in-slider" class="range-slider"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.departure-arrival-times -->
+
+                    <div class="reset-filter-wrapper">
+                        <button type="button" class="reset-filters">Reset all filters</button>
+                    </div>
+                </div>
+            </div>
+            <!-- /.flights-sidebar -->
+        </div>
+    </div>
+</section>
+<!-- / section ordering -->
+
+<!-- section services -->
+<section class="section-block services">
+    <div class="section-inner">
+        <div class="service-item">
+            <div class="service-item__bg"></div>
+            <img src="assets/icons/service-chat.svg" class="service-item__icon" alt="icon">
+            <div class="service-item__content">
+                <h3 class="service-item__title">Online chat</h3>
+                <p class="service-item__text">with a company representative is available during business hours Sun-Thu
+                    9; 00-18; 00</p>
+            </div>
+        </div>
+        <div class="service-item">
+            <div class="service-item__bg"></div>
+            <img src="assets/icons/service-order.svg" class="service-item__icon" alt="icon">
+            <div class="service-item__content">
+                <h3 class="service-item__title">Order processing</h3>
+                <p class="service-item__text">to process an existing order,
+                    call: 2134567890</p>
+            </div>
+        </div>
+        <div class="service-item">
+            <div class="service-item__bg"></div>
+            <img src="assets/icons/service-operator.svg" class="service-item__icon" alt="icon">
+            <div class="service-item__content">
+                <h3 class="service-item__title">Consultation</h3>
+                <p class="service-item__text">To order a consultation with a company agent, call 34567890 during
+                    business hours Sun-Thu 9; 00-17; 00</p>
+            </div>
+        </div>
+        <div class="service-item">
+            <div class="service-item__bg"></div>
+            <img src="assets/icons/service-networking.svg" class="service-item__icon" alt="icon">
+            <div class="service-item__content">
+                <h3 class="service-item__title">Personal area</h3>
+                <p class="service-item__text">Everything is important in one place. Useful information and various
+                    self-service operations. To go to your personal account,
+                    <a href="#">click here</a>
+                </p>
+            </div>
+        </div>
+        <div class="service-item">
+            <div class="service-item__bg"></div>
+            <img src="assets/icons/service-form.svg" class="service-item__icon" alt="icon">
+            <div class="service-item__content">
+                <h3 class="service-item__title">Application form</h3>
+                <p class="service-item__text"><a href="#">Click here</a> to fill out the online form</p>
+            </div>
+        </div>
+        <div class="service-item">
+            <div class="service-item__bg"></div>
+            <img src="assets/icons/service-facebook.svg" class="service-item__icon" alt="icon">
+            <div class="service-item__content">
+                <h3 class="service-item__title">Facebook</h3>
+                <p class="service-item__text">The response from a company representative in a personal message on our
+                    Facebook page
+                    <a href="#">Start</a> a conversation with a company representative.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- / section services -->
+
+<!-- section footer -->
+<footer class="section-block footer footer-customer-details">
+    <div class="section-inner">
+        <div class="footer__nav footer-nav">
+            <div class="footer-nav__menu_block">
+                <div class="footer-menu__title_space"></div>
+                <h4 class="footer-menu__title">Menu 1</h4>
+                <ul class="footer-nav__menu footer-menu footer-menu_1">
+                    <li class="footer-menu__item">
+                        <span>»</span><a href="#">EasyJet תוסיט</a>
+                    </li>
+                    <li class="footer-menu__item">
+                        <span>»</span><a href="#">הינמרג תוסיט</a>
+                    </li>
+                    <li class="footer-menu__item">
+                        <span>»</span><a href="#">Air Wizz תוסיט</a>
+                    </li>
+                    <li class="footer-menu__item">
+                        <span>»</span><a href="#">Transavia תוסיט</a>
+                    </li>
+                    <li class="footer-menu__item">
+                        <span>»</span><a href="#">הקירמאל תוסיט</a>
+                    </li>
+                    <li class="footer-menu__item">
+                        <span>»</span><a href="#">עיקרא תוסיט</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-nav__menu_block">
+                <div class="footer-menu__title_space"></div>
+                <h4 class="footer-menu__title">Menu 2</h4>
+                <ul class="footer-nav__menu footer-menu footer-menu_2">
+                    <li class="footer-menu__item">
+                        <span>»</span><a href="#">EasyJet תוסיט</a>
+                    </li>
+                    <li class="footer-menu__item">
+                        <span>»</span><a href="#">הינמרג תוסיט</a>
+                    </li>
+                    <li class="footer-menu__item">
+                        <span>»</span><a href="#">Air Wizz תוסיט</a>
+                    </li>
+                    <li class="footer-menu__item">
+                        <span>»</span><a href="#">Transavia תוסיט</a>
+                    </li>
+                    <li class="footer-menu__item">
+                        <span>»</span><a href="#">הקירמאל תוסיט</a>
+                    </li>
+                    <li class="footer-menu__item">
+                        <span>»</span><a href="#">עיקרא תוסיט</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-nav__menu_block">
+                <h4 class="footer-menu__title_notclick">מומלצים</h4>
+                <h4 class="footer-menu__title">מומלצים</h4>
+
+                <ul class="footer-nav__menu footer-menu footer-menu_3">
+                    <li class="footer-menu__item">
+                        <span>»</span><a href="#">EasyJet תוסיט</a>
+                    </li>
+                    <li class="footer-menu__item">
+                        <span>»</span><a href="#">הינמרג תוסיט</a>
+                    </li>
+                    <li class="footer-menu__item">
+                        <span>»</span><a href="#">Air Wizz תוסיט</a>
+                    </li>
+                    <li class="footer-menu__item">
+                        <span>»</span><a href="#">Transavia תוסיט</a>
+                    </li>
+                    <li class="footer-menu__item">
+                        <span>»</span><a href="#">הקירמאל תוסיט</a>
+                    </li>
+                    <li class="footer-menu__item">
+                        <span>»</span><a href="#">עיקרא תוסיט</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__info">
+            <h4 class="footer__title">אינדקס טיסות לחו"ל</h4>
+            <h4 class="footer__title">טיסות זולות לחו"ל</h4>
+            <h4 class="footer__title">אנשי קשר</h4>
+        </div>
+        <div class="footer__contact footer-contact">
+            <div class="footer-contact__top contact-top">
+                <div class="contact-top__phone contact-phone">
+                    <div class="contact-phone__text_block">
+                        <div class="contact-phone__title">:וישכע ורשקתה</div>
+                        <div class="contact-phone__number">03-7777777</div>
+                    </div>
+                    <img src="assets/icons/headphone.svg">
+                </div>
+                <div class="contact-top__logo contact-info">
+                    <div class="contact-info__logo">
+                        <img src="assets/img/logo_white.png" alt="logo">
+                    </div>
+                    <div class="contact-info__text">Now with hotel reviews by</div>
+                    <div class="contact-info__tripadvisor">
+                        <img src="assets/icons/tripadvisor.svg" alt="trip advisor">
+                    </div>
+                </div>
+                <div class="contact-top__subscribe contact-subscribe">
+                    <a href="#" class="contact-subscribe__button">המשרה</a>
+                    <div class="contact-subscribe__text_block">
+                        <p class="contact-subscribe__title">ליימ בותכ</p>
+                        <p class="contact-subscribe__email">example@email.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-contact__copyright">
+                1956-2019 מ"עב לארשי אתסיאל תורומש תויוכזה לכ ©
+                ץראב שפונ ,ל"וחב תונולמ ,םיליד ,שפונ תוליבח ,תוסיט :תוריית ירצומ תקוושמה
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- / section footer -->
+
+<!-- jQuery -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<!-- jQuery UI -->
+<script src="assets/libs/jquery-ui-1.12.1/jquery-ui.js"></script>
+<!-- jQuery range slider -->
+<script src="assets/libs/jquery.ui.slider-rtl/jquery.ui.slider-rtl.js"></script>
+
+
+
+<!-- Mobile menu -->
+<script src="assets/mmenu/dist/mmenu-light.js"></script>
+
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>

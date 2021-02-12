@@ -4,11 +4,21 @@ $(document).ready(function(){
     $(".owl-carousel").owlCarousel({
         items: 3,
         loop: true,
-        smartSpeed: 600,
-        autoHeight: true,
-        center: true,
         autoplay: true,
-        autoplayTimeout: 1000,
+        autoplayTimeout: 4000,
+        mouseDrag: false,
+        touchDrag: false,
+        dots: false,
+        smartSpeed: 400,
+        center: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            767: {
+                items: 3
+            }
+        }
     });
 
 

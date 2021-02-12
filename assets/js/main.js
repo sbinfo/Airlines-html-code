@@ -13,12 +13,13 @@ document.addEventListener("DOMContentLoaded", function () {
         drawer.open();
     });
     /* Mobile menu end */
+
+
 });
 
 
 $(document).ready(function(){
     /*** Order page ***/
-
     $(".order-details-filter.filter__buttons button.order-details-btn_terms").on('click', function() {
         $(this).addClass('active');
         $(".order-details-filter.filter__buttons button.order-details-btn_summary").removeClass('active');
@@ -85,10 +86,22 @@ $(document).ready(function(){
         $(".sits-edit__information").show();
     })
 
-    // seat map - select
-    // $(".seat-map span.seat").on("click", function () {
-    //
-    // });
+    // ordering steeps
+    $("#order-customer___details form button[type=submit]").on("click", function () {
+        event.preventDefault();
+        $("#order-customer___details").hide(); // step 1 hide
+        $("#order-passenger___details").show(250); // step 2 show
+    });
+    $("#order-passenger___details form button[type=submit]").on("click", function () {
+        event.preventDefault();
+        $("#order-passenger___details").hide(); // step 2 hide
+        $("#order-extra___services").show(250); // step 3 show
+    });
+    $("#order-extra___services .continue-payment button").on("click", function () {
+        event.preventDefault();
+        $("#order-extra___services").hide(); // step 2 hide
+        $("#order-payment___details").show(250); // step 3 show
+    });
 
     /*** Order page end ***/
 
@@ -114,10 +127,149 @@ $(document).ready(function(){
 
     // Contact page End
 
+    // FAQ
+    $(".faq-list .faq-list-item").on("click", function () {
+        $(this).toggleClass("active", 500);
+    });
+
+    // General Information
+    if ( $("#information-tabs").length > 0 ) {
+        $("#information-tabs").tabs({
+            hide: 400, show: 400
+        }).addClass( "ui-tabs-vertical ui-helper-clearfix" );
+        $( "#information-tabs li" ).removeClass( "ui-corner-top" ).addClass( "ui-corner-left" );
+    }
+
+    /* list of flights */
+    $(".flights-sidebar span.filter-item__open").on("click", function () {
+        if ($(".flights-sidebar .filter-item.open").has(this).length) {
+            $(this).parents('.filter-item').removeClass("open");
+        } else {
+            $(this).parents('.filter-item').addClass("open");
+        }
+    });
+    /* /.list of flights */
+
+
     // footer spoiler
     $('.footer-menu__title').on('click', function() {
         $(this).toggleClass('active').next().slideToggle(300);
-    })
+    });
+
+
+
+    /*** list-of-flights ***/
+
+    /**
+     * Create Range Slider
+     * @param sliderId (Id Name without - #)
+     * @param labelId (Id Name without - #)
+     * @param min
+     * @param max
+     * @param values
+     */
+    function createRangeSlider(sliderId, labelId, min = 50, max = 1000, values = [100, 300]) {
+        $("#" + sliderId).slider({
+            animate: "slow",
+            range: true,
+            min,
+            max,
+            isRTL: true,
+            values,
+            slide: function( event, ui ) {
+                $("#" + labelId).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+            }
+        });
+        $("#" + labelId).val( "$" + $("#" + sliderId).slider( "values", 0 ) + " - $" + $("#" + sliderId).slider( "values", 1 ) );
+    }
+
+
+    /**
+     * Create Duration Range Slider
+     * @param sliderId (Id Name without - #)
+     * @param labelId (Id Name without - #)
+     * @param min
+     * @param max
+     * @param values
+     */
+    function createRangeSliderDuration(sliderId, labelId, min = 60, max = 1000, values = [120, 360]) {
+
+        function converDataToDuration(max, min) {
+            let maxTime = max;
+            let minTime = min;
+            let maxHours = Math.floor(maxTime / 60);
+            let maxMinutes = maxTime % 60;
+            let minHours = Math.floor(minTime / 60);
+            let minMinutes = minTime % 60;
+            $("#" + labelId).val(  maxHours + "h " + maxMinutes + "min"  + " - " + minHours + "h " + minMinutes + "min");
+        }
+
+        $("#" + sliderId).slider({
+            animate: "slow",
+            range: true,
+            min,
+            max,
+            step: 5,
+            isRTL: true,
+            values,
+            slide: function( event, ui ) {
+                converDataToDuration(ui.values[1], ui.values[0]);
+            }
+        });
+        converDataToDuration( $("#" + sliderId).slider( "values", 1 ),  $("#" + sliderId).slider( "values", 0 ));
+    }
+
+
+    /**
+     * Create Date Range Slider
+     * @param sliderId
+     * @param labelId
+     * @param min
+     * @param max
+     * @param values
+     */
+    let currentTime = new Date().getTime() / 1000;
+    let maxTime = new Date('2022.01.01').getTime() / 1000;
+    function createDateRangeSlider(sliderId, labelId, min = currentTime, max = maxTime, values = [ currentTime + 1000000, currentTime + 5000000 ]) {
+        $("#" + sliderId).slider({
+            range: true,
+            isRTL: true,
+            min,
+            max,
+            step: 86400,
+            values,
+            slide: function( event, ui ) {
+                $("#" + labelId).val( (new Date(ui.values[1] * 1000).toDateString() )
+                    + " - " + (new Date(ui.values[0] *1000)).toDateString() );
+            }
+        });
+        $("#" + labelId).val( (new Date($("#" + sliderId).slider( "values", 1 )*1000).toDateString())
+            + " - " + (new Date($("#" + sliderId).slider( "values", 0 )*1000)).toDateString());
+    }
+
+    // create ticket-price-slider
+    createRangeSlider("ticket-price-slider", "ticket-price-amount");
+
+    //create duration on the way slider
+    createRangeSliderDuration("duration-onway-slider", "duration-onway-amount",80, 500, [180, 300]);
+    //create duration on the way slider
+    createRangeSliderDuration("duration-goback-slider", "duration-goback-amount");
+    //create stopover slider
+    createRangeSliderDuration("stopover-slider", "stopover-amount", 180, 800, [320, 500]);
+
+    //create slider there depart-from-slider
+    createDateRangeSlider("depart-from-slider", "depart-from-amount");
+    //create slider there arrival-in-slider
+    createDateRangeSlider("arrival-in-slider", "arrival-in-amount");
+    // create slider back depart-back-from-slider
+    createDateRangeSlider("depart-back-from-slider", "depart-back-from-amount");
+    // create slider back arrival-back-in-slider
+    createDateRangeSlider("arrival-back-in-slider", "arrival-back-in-amount");
+
+    // more offers
+
+    /*** /.list-of-flights ***/
+
 });
 
 
