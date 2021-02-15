@@ -158,7 +158,7 @@
 </header>
 <!-- / section-header -->
 
-<!-- section ordering -->
+<!-- section flights-list-wrapper -->
 <section class="section-block flights-list-wrapper">
     <div class="section-inner">
         <div class="flights-filter-buttons">
@@ -196,7 +196,10 @@
                     <div class="price-details">
                         <p class="price-details-row">
                             <img src="assets/icons/order/luggage1-gray.svg" alt="">
-                            <img src="assets/icons/order/luggage2-gray.svg" alt="">
+                        <span class="luggage-count">
+                            <img src="assets/icons/order/luggage2-gray.svg" alt="luggage">
+                                <span>x2</span>
+                            </span>
                         </p>
                         <p class="price-details-row luggage-text">With luggage</p>
                         <p class="price-details-row places-info">Last 8 places</p>
@@ -259,10 +262,18 @@
                                     </div>
                                     <div class="graphic-line"></div>
                                     <div class="graphic-info-section">
-                                        <span>KBP</span>
-                                        <span>FRA</span>
-                                        <span>FRA</span>
-                                        <span>PUJ</span>
+                                        <div>PUJ
+                                            <span class="graphic-hint graphic-bottom-hint">Departure from Boryspil Airport,Kyiv at 06:30 local time</span>
+                                        </div>
+                                        <div>FRA
+                                            <span class="graphic-hint graphic-top-hint">Change 4h 45min at the airport “Frankfurt am Main”</span>
+                                        </div>
+                                        <div>FRA
+                                            <span class="graphic-hint graphic-bottom-hint">Departure at 06:30 local time</span>
+                                        </div>
+                                        <div>KBP
+                                            <span class="graphic-hint graphic-top-hint">Departure from Boryspil Airport,Kyiv at 06:30 local time</span>
+                                        </div>
                                     </div>
 
                                 </div>
@@ -2354,7 +2365,151 @@
         </div>
     </div>
 </section>
-<!-- / section ordering -->
+<!-- / section flights-list-wrapper -->
+
+
+<!-- flexible-dates -->
+<div class="section-block flexible-dates">
+    <div class="section-inner">
+        <h3 class="flexible-dates-title heading-3--right_line">Flexible dates</h3>
+        <h6 class="flexible-dates-subtitle">* pay attention! Prices are updated once a day and there may be a deviation in the price,
+            so click on the flight displayed to receive the final price. </h6>
+        <table border="0" cellpadding="0" cellspacing="0" class="flexible-table">
+            <tr class="table-row">
+                <th scope="col">
+                    <p class="th-title">Return</p>
+                    <p class="th-date">Sunday 07/02</p>
+                </th>
+                <th scope="col">
+                    <p class="th-title">Return</p>
+                    <p class="th-date">Sat 06/02</p>
+                </th>
+                <th scope="col" class="selected">
+                    <p class="th-title">Return</p>
+                    <p class="th-date">Friday 05/02</p>
+                </th>
+                <th scope="col">
+                    <p class="th-title">Return</p>
+                    <p class="th-date">Thursday 04/02</p>
+                </th>
+                <th scope="col">
+                    <p class="th-title">Return</p>
+                    <p class="th-date">Wednesday 03/02</p>
+                </th>
+                <th scope="col">
+                    <p class="th-title">Return</p>
+                    <p class="th-date">Tuesday 02/02</p>
+                </th>
+                <th scope="col">
+                    <p class="th-title">Return</p>
+                    <p class="th-date">Monday 01/02</p>
+                </th>
+                <th scope="col"></th>
+            </tr>
+            <tr class="table-row">
+                <td class="2-stopover">$304</td>
+                <td class="2-stopover">$358</td>
+                <td class="selected stopover">$304</td>
+                <td class="stopover">$350</td>
+                <td class="stopover">$254</td>
+                <td class="cheapest stopover">$402</td>
+                <td class="stopover">$388</td>
+                <th scope="row">
+                    <p class="th-title">Output</p>
+                    <p class="th-date">Friday 22/01</p>
+                </th>
+            </tr>
+            <tr class="table-row">
+                <td class="two-stopover">$204</td>
+                <td class="two-stopover">$358</td>
+                <td class="stopover start">$304</td>
+                <td class="stopover selected">$350</td>
+                <td class="stopover selected">$388</td>
+                <td class="stopover selected">$254</td>
+                <td class="stopover selected">$402</td>
+                <th scope="row" class="selected">
+                    <p class="th-title">Output</p>
+                    <p class="th-date">Sat 24/01</p>
+                </th>
+            </tr>
+            <tr class="table-row">
+                <td class="two-stopover">$402</td>
+                <td class="stopover">$358</td>
+                <td class="stopover">$304</td>
+                <td class="stopover">$304</td>
+                <td class="two-stopover">$350</td>
+                <td class="stopover cheapest">$254</td>
+                <td class="stopover">$388</td>
+                <th scope="row">
+                    <p class="th-title">Output</p>
+                    <p class="th-date">Sunday 07/02</p>
+                </th>
+            </tr>
+            <tr class="table-row">
+                <td class="stopover">$388</td>
+                <td class="stopover">$304</td>
+                <td class="stopover">$358</td>
+                <td class="two-stopover">$304</td>
+                <td class="two-stopover">$350</td>
+                <td class="stopover cheapest">$254</td>
+                <td class="two-stopover">$402</td>
+                <th scope="row">
+                    <p class="th-title">Output</p>
+                    <p class="th-date">Sunday 07/02</p>
+                </th>
+            </tr>
+            <tr class="table-row">
+                <td class="stopover">$358</td>
+                <td class="stopover">$304</td>
+                <td class="stopover">$254</td>
+                <td class="stopover">$350</td>
+                <td class="stopover">$304</td>
+                <td class="stopover">$402</td>
+                <td class="stopover">$388</td>
+                <th scope="row">
+                    <p class="th-title">Output</p>
+                    <p class="th-date">Sunday 07/02</p>
+                </th>
+            </tr>
+            <tr class="table-row">
+                <td class="stopover">$304</td>
+                <td class="stopover">$358</td>
+                <td class="stopover">$304</td>
+                <td class="stopover">$350</td>
+                <td class="stopover">$254</td>
+                <td class="stopover">$402</td>
+                <td class="stopover">$388</td>
+                <th scope="row">
+                    <p class="th-title">Output</p>
+                    <p class="th-date">Sunday 07/02</p>
+                </th>
+            </tr>
+            <tr class="table-row">
+                <td class="stopover">$304</td>
+                <td class="stopover">$304</td>
+                <td class="two-stopover">$358</td>
+                <td class="two-stopover">$350</td>
+                <td class="two-stopover">$254</td>
+                <td class="stopover">$402</td>
+                <td class="stopover">$388</td>
+                <th scope="row">
+                    <p class="th-title">Output</p>
+                    <p class="th-date">Sunday 07/02</p>
+                </th>
+            </tr>
+            <tr class="table-row table-info-block">
+                <td colspan="8">
+                    <span class="table-info info-two-stopover">2 stopover</span>
+                    <span class="table-info info-one-stopover">1 stopover</span>
+                    <span class="table-info info-selecterd">Selected date</span>
+                    <span class="table-info info-cheapest">Cheapest date</span>
+                    <span class="table-info info-start">Start date</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<!-- /.flexible-dates -->
 
 <!-- section services -->
 <section class="section-block services">

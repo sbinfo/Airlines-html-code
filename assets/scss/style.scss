@@ -6078,6 +6078,26 @@ body {
       padding: 15px 30px;
       border-right: 1px solid #E0E0E0;
 
+      .luggage-count {
+        position: relative;
+
+        span {
+          content: "x2";
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 16px;
+          height: 16px;
+          position: absolute;
+          top: -9px;
+          left: 9px;
+          font-size: 9px;
+          border-radius: 50%;
+          background-color: #CE833F;
+          color: #fff;
+        }
+      }
+
       & > p {
        flex-basis: 100%;
         text-align: center;
@@ -6227,10 +6247,61 @@ body {
           padding-top: 25px;
           display: flex;
           justify-content: space-between;
-          span {
+          > div {
             font-weight: 500;
             font-size: 12px;
             color: $color-primary;
+            position: relative;
+
+            span.graphic-hint {
+              width: 185px;
+              position: absolute;
+              left: 0;
+              padding: 8px 8px;
+              font-weight: 400;
+              font-size: 12px;
+              color: #fff;
+              background: rgba(38, 38, 38, 0.9);
+              box-shadow: 0px 9px 28px 8px rgba(0, 0, 0, 0.05), 0px 3px 6px -4px rgba(0, 0, 0, 0.12);
+              filter: drop-shadow(0px 6px 16px rgba(0, 0, 0, 0.08));
+              cursor: none;
+              z-index: 20;
+              display: none;
+              @include transit(all, 0.5s, ease);
+
+              &:before {
+                content: "";
+                position: absolute;
+                left: 7px;
+                width: 10px;
+                height: 10px;
+                background: rgba(38, 38, 38, 0.9);
+                transform: rotate(45deg);
+              }
+            }
+
+            span.graphic-top-hint {
+              bottom: 25px;
+
+              &:before {
+                bottom: -4px;
+              }
+            }
+
+            span.graphic-bottom-hint {
+              top: 25px;
+
+              &:before {
+                top: -4px;
+              }
+            }
+
+            &:hover {
+              color: $color-brown;
+              span.graphic-hint {
+                display: block;
+              }
+            }
           }
         }
       }
@@ -6607,6 +6678,250 @@ body {
 }
 // =================== list-of-flights End =================
 
+// =================== flexible-dates =================
+.list-of-flights .flexible-dates {
+  .section-inner {
+    max-width: 1520px;
+  }
+  h3.flexible-dates-title,
+  h6.flexible-dates-subtitle {
+    width: 100%;
+    text-align: right;
+  }
+
+  h6.flexible-dates-subtitle {
+    font-size: 12px;
+    font-weight: 400;
+    color: $color-surface;
+    margin-top: 35px;
+    margin-bottom: 10px;
+  }
+
+  .flexible-table {
+    .table-row {
+
+    }
+  }
+
+  .flexible-table .table-row {
+    th[scope="col"],
+    th[scope="row"] {
+      padding: 10px 0;
+      background-color: #E4EBEA;
+      color: $color-main;
+
+      p.th-title {
+        font-size: 12px;
+        font-weight: 400;
+        margin-bottom: 5px;
+      }
+
+      p.th-date {
+        font-weight: 500;
+        font-size: 12px;
+        text-transform: uppercase;
+      }
+    }
+
+    td {
+      padding: 30px 60px;
+      font-weight: 400;
+      font-size: 26px;
+      border: 1px solid #E9E9E9;
+      position: relative;
+
+      &.stopover,
+      &.two-stopover {
+        &:before {
+          content: "";
+          height: 6px;
+          position: absolute;
+          top: 10px;
+          left: 10px;
+        }
+      }
+
+      &.stopover {
+        &:before {
+          background: url("../icons/stopover.svg") no-repeat center center;
+          width: 30px;
+        }
+      }
+
+      &.two-stopover {
+        &:before {
+          background: url("../icons/2-stopover.svg") no-repeat center center;
+          width: 55px;
+        }
+      }
+
+      &.start.stopover,
+      &.cheapest.stopover {
+        &:before {
+          background: url("../icons/stopover-white.svg") no-repeat center center;
+        }
+      }
+
+      &.start.two-stopover,
+      &.cheapest.two-stopover {
+        &:before {
+          background: url("../icons/2-stopover-white.svg") no-repeat center center;
+        }
+      }
+
+      &.start {
+        background: #82D2A4;
+        position: relative;
+        &:after {
+          content: "";
+          background: url("../icons/check-circle-white.svg") no-repeat center center;
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          top: 10px;
+          right: 10px;
+        }
+      }
+
+      &.cheapest {
+        background: #F9C18F;
+        position: relative;
+
+        &:after {
+          content: "";
+          background: url("../icons/cheapest-circle.svg") no-repeat center center;
+          width: 100px;
+          height: 70px;
+          position: absolute;
+          left: 23%;
+          top: 15%;
+        }
+      }
+
+      &.selected {
+        background: #f6f6f6;
+      }
+    }
+
+    th[scope="col"] {
+      position: relative;
+
+      &:not(:last-child):after {
+        content: "";
+        background: url("../icons/plane-to-gray.svg") no-repeat center center;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        right: 5px;
+        top: 13px;
+      }
+
+      &.selected {
+        background: #D8E0DF;
+        :after {
+          background: url("../icons/plane-to-green.svg") no-repeat center center;
+        }
+      }
+    }
+
+    th[scope="row"] {
+      padding: 30px 60px;
+      border-top: 2px solid #fff;
+      position: relative;
+
+      &:after {
+        content: "";
+        background: url("../icons/plane-from-gray.svg") no-repeat center center;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+      }
+
+      &.selected {
+        background: #D8E0DF;
+        :after {
+          background: url("../icons/plane-from-green.svg") no-repeat center center;
+        }
+      }
+    }
+
+    &.table-info-block {
+      @include box-shadow(0px -12px 21px rgba(0, 0, 0, 0.07));
+    }
+    &.table-info-block td {
+      padding: 10px 20px 15px;
+      text-align: right;
+
+      span.table-info {
+        font-size: 14px;
+        font-weight: 400;
+        color: $color-surface;
+        border-left: 1px solid #ccc;
+        position: relative;
+
+        &:after {
+          content: "";
+          position: absolute;
+        }
+      }
+
+      .info-two-stopover {
+        padding: 0 75px 0 20px;
+        &:after {
+          background: url("../icons/2-stopover.svg") no-repeat center center;
+          width: 55px;
+          height: 6px;
+          right: 10px;
+          top: 6px;
+        }
+      }
+      .info-one-stopover {
+        padding: 0 50px 0 20px;
+
+        &:after {
+          background: url("../icons/stopover.svg") no-repeat center center;
+          width: 30px;
+          height: 6px;
+          right: 10px;
+          top: 6px;
+        }
+      }
+
+      .info-start,
+      .info-cheapest,
+      .info-selecterd {
+        padding: 0 40px 0 20px;
+        &:after {
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          right: 10px;
+          top:-2px;
+        }
+      }
+
+      .info-selecterd {
+        &:after {
+          background: #E9E9E9;
+        }
+      }
+      .info-cheapest {
+        &:after {
+          background: #F9C18F;
+        }
+      }
+      .info-start {
+        &:after {
+          background: #82D2A4;
+        }
+      }
+    }
+  }
+  // .flexible-table .table-row
+}
+// =================== flexible-dates End =================
 
 
 

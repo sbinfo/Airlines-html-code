@@ -5595,6 +5595,24 @@ body {
   padding: 15px 30px;
   border-right: 1px solid #E0E0E0;
 }
+.list-of-flights .flights-results .flights-results-table .price-details .luggage-count {
+  position: relative;
+}
+.list-of-flights .flights-results .flights-results-table .price-details .luggage-count span {
+  content: "x2";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: -9px;
+  left: 9px;
+  font-size: 9px;
+  border-radius: 50%;
+  background-color: #CE833F;
+  color: #fff;
+}
 .list-of-flights .flights-results .flights-results-table .price-details > p {
   flex-basis: 100%;
   text-align: center;
@@ -5748,10 +5766,58 @@ body {
   display: flex;
   justify-content: space-between;
 }
-.list-of-flights .flights-results .flights-results-table .flight-details .graphic .graphic-info-section span {
+.list-of-flights .flights-results .flights-results-table .flight-details .graphic .graphic-info-section > div {
   font-weight: 500;
   font-size: 12px;
   color: #0EB155;
+  position: relative;
+}
+.list-of-flights .flights-results .flights-results-table .flight-details .graphic .graphic-info-section > div span.graphic-hint {
+  width: 185px;
+  position: absolute;
+  left: 0;
+  padding: 8px 8px;
+  font-weight: 400;
+  font-size: 12px;
+  color: #fff;
+  background: rgba(38, 38, 38, 0.9);
+  box-shadow: 0px 9px 28px 8px rgba(0, 0, 0, 0.05), 0px 3px 6px -4px rgba(0, 0, 0, 0.12);
+  filter: drop-shadow(0px 6px 16px rgba(0, 0, 0, 0.08));
+  cursor: none;
+  z-index: 20;
+  display: none;
+  -webkit-transition: all, 0.5s ease;
+  -moz-transition: all, 0.5s ease;
+  -ms-transition: all, 0.5s ease;
+  -o-transition: all, 0.5s ease;
+  transition: all, 0.5s ease;
+}
+.list-of-flights .flights-results .flights-results-table .flight-details .graphic .graphic-info-section > div span.graphic-hint:before {
+  content: "";
+  position: absolute;
+  left: 7px;
+  width: 10px;
+  height: 10px;
+  background: rgba(38, 38, 38, 0.9);
+  transform: rotate(45deg);
+}
+.list-of-flights .flights-results .flights-results-table .flight-details .graphic .graphic-info-section > div span.graphic-top-hint {
+  bottom: 25px;
+}
+.list-of-flights .flights-results .flights-results-table .flight-details .graphic .graphic-info-section > div span.graphic-top-hint:before {
+  bottom: -4px;
+}
+.list-of-flights .flights-results .flights-results-table .flight-details .graphic .graphic-info-section > div span.graphic-bottom-hint {
+  top: 25px;
+}
+.list-of-flights .flights-results .flights-results-table .flight-details .graphic .graphic-info-section > div span.graphic-bottom-hint:before {
+  top: -4px;
+}
+.list-of-flights .flights-results .flights-results-table .flight-details .graphic .graphic-info-section > div:hover {
+  color: #CE833F;
+}
+.list-of-flights .flights-results .flights-results-table .flight-details .graphic .graphic-info-section > div:hover span.graphic-hint {
+  display: block;
 }
 .list-of-flights .flights-results .flights-results-table .flight-details .flight-back-title {
   font-weight: 500;
@@ -6088,4 +6154,196 @@ body {
 }
 .list-of-flights .services {
   padding-top: 200px;
+}
+
+.list-of-flights .flexible-dates .section-inner {
+  max-width: 1520px;
+}
+.list-of-flights .flexible-dates h3.flexible-dates-title,
+.list-of-flights .flexible-dates h6.flexible-dates-subtitle {
+  width: 100%;
+  text-align: right;
+}
+.list-of-flights .flexible-dates h6.flexible-dates-subtitle {
+  font-size: 12px;
+  font-weight: 400;
+  color: #908C8E;
+  margin-top: 35px;
+  margin-bottom: 10px;
+}
+.list-of-flights .flexible-dates .flexible-table .table-row th[scope=col],
+.list-of-flights .flexible-dates .flexible-table .table-row th[scope=row] {
+  padding: 10px 0;
+  background-color: #E4EBEA;
+  color: #2D2B2C;
+}
+.list-of-flights .flexible-dates .flexible-table .table-row th[scope=col] p.th-title,
+.list-of-flights .flexible-dates .flexible-table .table-row th[scope=row] p.th-title {
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+.list-of-flights .flexible-dates .flexible-table .table-row th[scope=col] p.th-date,
+.list-of-flights .flexible-dates .flexible-table .table-row th[scope=row] p.th-date {
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.list-of-flights .flexible-dates .flexible-table .table-row td {
+  padding: 30px 60px;
+  font-weight: 400;
+  font-size: 26px;
+  border: 1px solid #E9E9E9;
+  position: relative;
+}
+.list-of-flights .flexible-dates .flexible-table .table-row td.stopover:before, .list-of-flights .flexible-dates .flexible-table .table-row td.two-stopover:before {
+  content: "";
+  height: 6px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.list-of-flights .flexible-dates .flexible-table .table-row td.stopover:before {
+  background: url("../icons/stopover.svg") no-repeat center center;
+  width: 30px;
+}
+.list-of-flights .flexible-dates .flexible-table .table-row td.two-stopover:before {
+  background: url("../icons/2-stopover.svg") no-repeat center center;
+  width: 55px;
+}
+.list-of-flights .flexible-dates .flexible-table .table-row td.start.stopover:before, .list-of-flights .flexible-dates .flexible-table .table-row td.cheapest.stopover:before {
+  background: url("../icons/stopover-white.svg") no-repeat center center;
+}
+.list-of-flights .flexible-dates .flexible-table .table-row td.start.two-stopover:before, .list-of-flights .flexible-dates .flexible-table .table-row td.cheapest.two-stopover:before {
+  background: url("../icons/2-stopover-white.svg") no-repeat center center;
+}
+.list-of-flights .flexible-dates .flexible-table .table-row td.start {
+  background: #82D2A4;
+  position: relative;
+}
+.list-of-flights .flexible-dates .flexible-table .table-row td.start:after {
+  content: "";
+  background: url("../icons/check-circle-white.svg") no-repeat center center;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.list-of-flights .flexible-dates .flexible-table .table-row td.cheapest {
+  background: #F9C18F;
+  position: relative;
+}
+.list-of-flights .flexible-dates .flexible-table .table-row td.cheapest:after {
+  content: "";
+  background: url("../icons/cheapest-circle.svg") no-repeat center center;
+  width: 100px;
+  height: 70px;
+  position: absolute;
+  left: 23%;
+  top: 15%;
+}
+.list-of-flights .flexible-dates .flexible-table .table-row td.selected {
+  background: #f6f6f6;
+}
+.list-of-flights .flexible-dates .flexible-table .table-row th[scope=col] {
+  position: relative;
+}
+.list-of-flights .flexible-dates .flexible-table .table-row th[scope=col]:not(:last-child):after {
+  content: "";
+  background: url("../icons/plane-to-gray.svg") no-repeat center center;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: 5px;
+  top: 13px;
+}
+.list-of-flights .flexible-dates .flexible-table .table-row th[scope=col].selected {
+  background: #D8E0DF;
+}
+.list-of-flights .flexible-dates .flexible-table .table-row th[scope=col].selected :after {
+  background: url("../icons/plane-to-green.svg") no-repeat center center;
+}
+.list-of-flights .flexible-dates .flexible-table .table-row th[scope=row] {
+  padding: 30px 60px;
+  border-top: 2px solid #fff;
+  position: relative;
+}
+.list-of-flights .flexible-dates .flexible-table .table-row th[scope=row]:after {
+  content: "";
+  background: url("../icons/plane-from-gray.svg") no-repeat center center;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.list-of-flights .flexible-dates .flexible-table .table-row th[scope=row].selected {
+  background: #D8E0DF;
+}
+.list-of-flights .flexible-dates .flexible-table .table-row th[scope=row].selected :after {
+  background: url("../icons/plane-from-green.svg") no-repeat center center;
+}
+.list-of-flights .flexible-dates .flexible-table .table-row.table-info-block {
+  -webkit-box-shadow: 0px -12px 21px rgba(0, 0, 0, 0.07);
+  -moz-box-shadow: 0px -12px 21px rgba(0, 0, 0, 0.07);
+  box-shadow: 0px -12px 21px rgba(0, 0, 0, 0.07);
+}
+.list-of-flights .flexible-dates .flexible-table .table-row.table-info-block td {
+  padding: 10px 20px 15px;
+  text-align: right;
+}
+.list-of-flights .flexible-dates .flexible-table .table-row.table-info-block td span.table-info {
+  font-size: 14px;
+  font-weight: 400;
+  color: #908C8E;
+  border-left: 1px solid #ccc;
+  position: relative;
+}
+.list-of-flights .flexible-dates .flexible-table .table-row.table-info-block td span.table-info:after {
+  content: "";
+  position: absolute;
+}
+.list-of-flights .flexible-dates .flexible-table .table-row.table-info-block td .info-two-stopover {
+  padding: 0 75px 0 20px;
+}
+.list-of-flights .flexible-dates .flexible-table .table-row.table-info-block td .info-two-stopover:after {
+  background: url("../icons/2-stopover.svg") no-repeat center center;
+  width: 55px;
+  height: 6px;
+  right: 10px;
+  top: 6px;
+}
+.list-of-flights .flexible-dates .flexible-table .table-row.table-info-block td .info-one-stopover {
+  padding: 0 50px 0 20px;
+}
+.list-of-flights .flexible-dates .flexible-table .table-row.table-info-block td .info-one-stopover:after {
+  background: url("../icons/stopover.svg") no-repeat center center;
+  width: 30px;
+  height: 6px;
+  right: 10px;
+  top: 6px;
+}
+.list-of-flights .flexible-dates .flexible-table .table-row.table-info-block td .info-start,
+.list-of-flights .flexible-dates .flexible-table .table-row.table-info-block td .info-cheapest,
+.list-of-flights .flexible-dates .flexible-table .table-row.table-info-block td .info-selecterd {
+  padding: 0 40px 0 20px;
+}
+.list-of-flights .flexible-dates .flexible-table .table-row.table-info-block td .info-start:after,
+.list-of-flights .flexible-dates .flexible-table .table-row.table-info-block td .info-cheapest:after,
+.list-of-flights .flexible-dates .flexible-table .table-row.table-info-block td .info-selecterd:after {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  right: 10px;
+  top: -2px;
+}
+.list-of-flights .flexible-dates .flexible-table .table-row.table-info-block td .info-selecterd:after {
+  background: #E9E9E9;
+}
+.list-of-flights .flexible-dates .flexible-table .table-row.table-info-block td .info-cheapest:after {
+  background: #F9C18F;
+}
+.list-of-flights .flexible-dates .flexible-table .table-row.table-info-block td .info-start:after {
+  background: #82D2A4;
 }
