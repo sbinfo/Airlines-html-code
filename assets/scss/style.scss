@@ -6697,12 +6697,6 @@ body {
     margin-bottom: 10px;
   }
 
-  .flexible-table {
-    .table-row {
-
-    }
-  }
-
   .flexible-table .table-row {
     th[scope="col"],
     th[scope="row"] {
@@ -6922,6 +6916,114 @@ body {
   // .flexible-table .table-row
 }
 // =================== flexible-dates End =================
+
+
+// =================== month-view =================
+.list-of-flights .month-view {
+  .section-inner {
+    max-width: 1520px;
+  }
+
+  h3.month-view-title {
+    width: 100%;
+    text-align: right;
+  }
+
+  h6.month-view-subtitle {
+    font-weight: 400;
+    font-size: 12px;
+    color: $color-surface;
+    width: 100%;
+    text-align: right;
+    margin-top: 35px;
+    margin-bottom: 10px;
+  }
+
+  table.month-view-table {
+    width: 100%;
+
+    tr.table-row {}
+  }
+
+  table.month-view-table tr.table-row {
+    th[scope="col"] {
+      font-weight: 500;
+      font-size: 12px;
+      background: #E4EBEA;
+      padding: 15px;
+      text-transform: uppercase;
+    }
+
+    td.day {
+      width: 210px;
+      height: 100px;
+      background: #f6f6f6;
+      border: 1px solid #E4EBEA;
+      position: relative;
+      text-align: center;
+
+      span.day-number {
+        font-size: 14px;
+        font-weight: 400;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        color: #797778;
+      }
+      .price-of-day {
+        font-weight: 400;
+        font-size: 26px;
+        display: none;
+      }
+      .return-info {
+        color: $color-surface;
+        font-size: 12px;
+        font-weight: 400;
+        margin-bottom: -22px;
+        margin-top: 15px;
+        display: none;
+      }
+    }
+
+    td.day.active {
+      background: #fff;
+
+      span.day-number {
+        color: $color-main;
+      }
+      .price-of-day {
+        display: block;
+      }
+      .return-info {
+        display: block;
+      }
+    }
+
+    td.day.cheapest {
+      background: #F9C18F;
+      .price-of-day {
+        position: relative;
+        display: inline-block;
+
+        &:after {
+          content: "";
+          background: url(../icons/cheapest-circle.svg) no-repeat center center;
+          background-size: contain;
+          width: 80px;
+          height: 70px;
+          position: absolute;
+          left: -10px;
+          top: -24px;
+        }
+      }
+      .return-info {
+        color: #fff;
+      }
+    }
+
+  }
+}
+// =================== month-view End =================
 
 
 
