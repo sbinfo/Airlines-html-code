@@ -5435,12 +5435,15 @@ body {
   }
 }
 
-.list-of-flights .flights-list-wrapper .flights-filter-buttons {
+.list-of-flights .section-block .section-inner {
+  max-width: 1520px;
+}
+.list-of-flights .flights-filter-buttons-wrapper .flights-filter-buttons {
   text-align: right;
   border-bottom: 2px solid #E4EBEA;
   margin-bottom: 20px;
 }
-.list-of-flights .flights-list-wrapper .flights-filter-buttons button {
+.list-of-flights .flights-filter-buttons-wrapper .flights-filter-buttons button {
   font-weight: 500;
   font-size: 14px;
   text-transform: uppercase;
@@ -5460,11 +5463,11 @@ body {
   font-size: 14px;
   padding: 11px 20px;
 }
-.list-of-flights .flights-list-wrapper .flights-filter-buttons button.active {
+.list-of-flights .flights-filter-buttons-wrapper .flights-filter-buttons button.active {
   color: #fff;
   background-color: #CE833F;
 }
-.list-of-flights .flights-list-wrapper .flights-filter-buttons button:not(.active):hover {
+.list-of-flights .flights-filter-buttons-wrapper .flights-filter-buttons button:not(.active):hover {
   color: #fff;
   background-color: #ce833f7d;
 }

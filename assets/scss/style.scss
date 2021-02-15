@@ -5937,33 +5937,36 @@ body {
 
 // =================== list-of-flights =================
 .list-of-flights {
-  .flights-list-wrapper {
+  .section-block .section-inner {
+    max-width: 1520px;
+  }
 
-    .flights-filter-buttons {
-      text-align: right;
-      border-bottom: 2px solid #E4EBEA;
-      margin-bottom: 20px;
+  .flights-filter-buttons-wrapper .flights-filter-buttons {
+    text-align: right;
+    border-bottom: 2px solid #E4EBEA;
+    margin-bottom: 20px;
 
-      button {
-        @include start-button(14px, #000, #E4EBEA);
-        border-radius: 5px 5px 0 0;
-        font-weight: 400;
-        font-size: 14px;
-        padding: 11px 20px;
-      }
-
-      button.active {
-        color: #fff;
-        background-color: $color-brown;
-      }
-
-      button:not(.active):hover {
-        color: #fff;
-        background-color: #ce833f7d;
-      }
+    button {
+      @include start-button(14px, #000, #E4EBEA);
+      border-radius: 5px 5px 0 0;
+      font-weight: 400;
+      font-size: 14px;
+      padding: 11px 20px;
     }
 
-    // .flights-filter-buttons
+    button.active {
+      color: #fff;
+      background-color: $color-brown;
+    }
+
+    button:not(.active):hover {
+      color: #fff;
+      background-color: #ce833f7d;
+    }
+  }
+  // .flights-filter-buttons
+
+  .flights-list-wrapper {
 
     .flights-list {
       display: flex;
