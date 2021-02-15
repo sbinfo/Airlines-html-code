@@ -1071,8 +1071,56 @@ body {
     padding-top: 20px;
 
     &__profile {
-      &-button + &-button {
+      .profile-icon,
+      .search-image-icon {
+        position: relative;
+        flex-basis: 15%;
+
+        .nav-icon-hint {
+          font-weight: 400;
+          font-size: 12px;
+          position: absolute;
+          left: 0;
+          bottom: -40px;
+          padding: 8px 8px;
+          color: #fff;
+          background-color: $color-main;
+          box-shadow: 0px 9px 28px 8px rgba(0, 0, 0, 0.05), 0px 3px 6px -4px rgba(0, 0, 0, 0.12);
+          filter: drop-shadow(0px 6px 16px rgba(0, 0, 0, 0.08));
+          cursor: none;
+          display: none;
+          @include transit(all, 0.5s, ease);
+
+          &:before {
+            content: "";
+            position: absolute;
+            left: 7px;
+            top: -4px;
+            width: 10px;
+            height: 10px;
+            background-color: $color-main;
+            transform: rotate(45deg);
+          }
+
+        }
+      }
+
+      .profile-icon {
+        &:hover .nav-icon-hint {
+          display: block;
+        }
+      }
+
+      .search-image-icon {
         margin-left: 30px;
+
+        .nav-icon-hint {
+          width: 87px;
+        }
+
+        &:hover .nav-icon-hint {
+          display: block;
+        }
       }
     }
 
