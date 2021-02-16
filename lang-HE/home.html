@@ -1,0 +1,1230 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home page</title>
+
+    <!-- Slider -->
+    <link rel="stylesheet" href="../assets/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="../assets/owl/owl.theme.default.min.css">
+    <!-- Mobile menu - slick nav -->
+    <link rel="stylesheet" href="../assets/mmenu/dist/mmenu-light.css">
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+
+<!-- section-header -->
+<header class="section-block section-header vh100">
+    <div class="section-header-bg-clouds"></div>
+    <div class="section-header-bg-gradient"></div>
+
+    <div class="section-inner">
+
+        <!-- Menu -->
+        <div class="header-menu">
+            <!-- mobile menu -->
+            <a href="#my-menu" class="my-menu-open">
+                <span class="my-menu-open__text">MENU</span>
+                <img src="../assets/img/logo_white.png" alt="logo" class="my-menu-open__logo">
+            </a>
+            <nav id="my-menu" class="mobile-menu">
+                <div class="mobile-menu__profile">
+                    <a href="#" class="mobile-menu__profile-button">
+                        <img src="../assets/icons/account.png" alt="account">
+                    </a>
+                    <a href="#" class="mobile-menu__profile-button">
+                        <img src="../assets/icons/image_search.png" alt="search image">
+                    </a>
+                </div>
+                <ul>
+                    <li class="Selected"><a href="#">Contacts</a></li>
+                    <li><span>About us</span>
+                        <ul>
+                            <li><a href="#">to passengers</a></li>
+                            <li><a href="#">Cheap flights abroad</a></li>
+                            <li><a href="#">all flights</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- / mobile menu -->
+
+            <!-- section-header-nav -->
+            <div class="section-header-nav">
+                <div class="section-header-nav__profile">
+                    <a href="#" class="profile-icon">
+                        <img src="../assets/icons/account.png" alt="account">
+                        <span class="nav-icon-hint profile-icon-hint">Login</span>
+                    </a>
+                    <a href="#" class="search-image-icon">
+                        <img src="../assets/icons/image_search.png" alt="search image">
+                        <span class="nav-icon-hint search-image-hint">My searches</span>
+                    </a>
+                </div>
+                <nav class="section-header-nav__menu">
+                    <ul>
+                        <li class="section-header-nav__menu-item"><a href="contacts.html">Contacts <span
+                                class="active-line"></span></a></li>
+                        <li class="section-header-nav__menu-item"><a href="blog.html">to passengers <span
+                                class="active-line"></span></a></li>
+                        <li class="section-header-nav__menu-item"><a href="ordering.html">order <span
+                                class="active-line"></span></a></li>
+                        <li class="section-header-nav__menu-item"><a href="#">Cheap flights abroad <span
+                                class="active-line"></span></a></li>
+                        <li class="section-header-nav__menu-item"><a href="general-information.html">Terms of use <span
+                                class="active-line"></span></a></li>
+                    </ul>
+                </nav>
+                <div class="section-header-nav__logo">
+                    <a href="/"><img src="../assets/img/logo_black.png" alt="Logo"></a>
+                </div>
+            </div>
+            <!-- / section-header-nav -->
+        </div>
+        <!-- / Menu -->
+
+        <!-- section-header-search -->
+        <div class="section-header-search">
+            <h1 class="section-header-search__title">חיפוש טיסות לחו"ל</h1>
+
+            <div class="section-header-search__form main-ticket-search_form">
+                <div class="main-ticket-search_form__filters">
+                    <div class="main-ticket-search_form__filters-button btn-filter-flight_status">רוצה להרכיב לבד טיסה ומלון</div>
+                    <div class="main-ticket-search_form__filters-button btn-filter-manage_trips">רק טיסה</div>
+                    <div class="main-ticket-search_form__filters-button btn-filter-book active">רק טיסה</div>
+                </div>
+
+                <div class="main-ticket-search_form-inner flight-search-status" style="display: none">
+                    <form action="">
+                        <div class="search-block">
+                            <button type="submit" class="search-block-btn-success">ושפח</button>
+                        </div>
+
+                        <div class="flight-search-form form-text flight-status-to">
+                            <span class="flight-search-reset-form"></span>
+                            <label for="flight_status_to">יציאה
+                                <input type="text" id="flight_status_to" class="flight-search-form-input"
+                                       placeholder="">
+                            </label>
+                        </div>
+
+                        <div class="flight-search-form form-text flight-status-from">
+                            <span class="flight-search-reset-form"></span>
+                            <label for="flight_status_from">אל:
+                                <input type="text" id="flight_status_from" class="flight-search-form-input"
+                                       placeholder="">
+                            </label>
+                        </div>
+
+                        <hr class="white-separator">
+
+                        <div class="empty-block">
+
+                        </div>
+
+                        <div class="flight-search-form form-date flight-status-date">
+                            <span class="flight-search-reset-form"></span>
+                            <label for="flight_status_date">יציאה
+                                <input type="date" id="flight_status_date" class="flight-search-form-input">
+                            </label>
+                        </div>
+
+
+                        <div class="flight-search-form form-text flight-status-number">
+                            <span class="flight-search-reset-form"></span>
+                            <label for="flight_status_number">יציאה
+                                <input type="text" id="flight_status_number" class="flight-search-form-input"
+                                       placeholder="">
+                            </label>
+                        </div>
+                        <!-- /.department-block -->
+                    </form>
+                    <div class="main-ticket-search_form-inner__background"></div>
+                    <div class="main-ticket-search_form-inner__background main-ticket-search-bg-opacity"></div>
+                </div>
+                <!-- /.flight-search-status -->
+
+                <div class="main-ticket-search_form-inner flight-search-manage_trip" style="display: none">
+                    <form action="">
+                        <div class="search-block">
+                            <button type="submit" class="search-block-btn-success">search</button>
+                        </div>
+
+                        <div class="flight-search-form form-text trip-passenger-last_name">
+                            <span class="flight-search-reset-form"></span>
+                            <label for="trip-passenger-last_name">Passenger last name
+                                <input type="text" id="trip-passenger-last_name" class="flight-search-form-input"
+                                       placeholder="">
+                            </label>
+                        </div>
+
+                        <div class="flight-search-form form-text trip-passenger-first_name">
+                            <span class="flight-search-reset-form"></span>
+                            <label for="trip-passenger-first_name">Passenger first name
+                                <input type="text" id="trip-passenger-first_name" class="flight-search-form-input"
+                                       placeholder="">
+                            </label>
+                        </div>
+
+                        <hr class="white-separator">
+
+                        <div class="info-block">
+                            Check in beginning 24 hours and up to 45 minutes before your flight (90 minutes for
+                            international).
+                        </div>
+
+                        <div class="filters-block">
+                            <div class="filters-block__item">
+                                <label for="manage_check_in">Manage trips / Check-in</label>
+                                <input type="checkbox" id="manage_check_in" class="checkbox-white">
+                            </div>
+                            <div class="filters-block__item">
+                                <label for="view_canceled_trips">View canceled trips</label>
+                                <input type="checkbox" id="view_canceled_trips" class="checkbox-white">
+                            </div>
+                        </div>
+
+
+                        <div class="flight-search-form form-text trip-ticket_number">
+                            <span class="flight-search-reset-form"></span>
+                            <label for="confirm_ticket_number">Confirmation or ticket number
+                                <input type="text" id="confirm_ticket_number" class="flight-search-form-input"
+                                       placeholder="">
+                            </label>
+                        </div>
+                        <!-- /.department-block -->
+                    </form>
+                    <div class="main-ticket-search_form-inner__background"></div>
+                    <div class="main-ticket-search_form-inner__background main-ticket-search-bg-opacity"></div>
+                </div>
+                <!-- /.flight-search-manage_trip -->
+
+                <div class="main-ticket-search_form-inner flight-search-book" style="display: block">
+                    <form action="">
+                        <div class="search-block">
+                            <button type="submit" class="search-block-btn-success">ושפח</button>
+                        </div>
+
+                        <div class="date-block">
+                            <div class="date-activator-click activator-click">
+                                <button class="date-activator-click__button">
+                                    <img src="../assets/icons/arrow_down.svg" alt="arrow down">
+                                </button>
+                            </div>
+                            <div class="date-activator-content activator-content">
+                                <label class="date-activator-content__label">יציאה</label>
+                                <div class="date-activator-content__placeholder">21/01/21 - 13/01/21</div>
+                            </div>
+                        </div>
+
+                        <div class="flight-search-form form-text to-block">
+                            <span class="flight-search-reset-form"></span>
+                            <label for="flight-search-to">אל:
+                                <input type="text" id="flight-search-to" class="flight-search-form-input"
+                                       placeholder="Punta Cana">
+                            </label>
+                        </div>
+
+                        <div class="flight-search-form form-text from-block">
+                            <button type="button" class="date-activator__btn_switch">
+                                <img src="../assets/icons/arrows.png">
+                            </button>
+
+                            <span class="flight-search-reset-form"></span>
+                            <label for="flight-search-from">מ:
+                                <input type="text" id="flight-search-from" class="flight-search-form-input"
+                                       placeholder="Tel-Aviv">
+                            </label>
+                        </div>
+
+                        <hr class="white-separator">
+
+                        <div class="filters-block">
+                            <div class="filters-block__item">
+                                <label for="flexible_dates">חיפוש גמיש 3 ימים לפה ולשם</label>
+                                <input type="checkbox" id="flexible_dates" class="checkbox-white">
+                            </div>
+                            <div class="filters-block__item">
+                                <label for="direct_flights_only">טיסות ישירות בלבד</label>
+                                <input type="checkbox" id="direct_flights_only" class="checkbox-white">
+                            </div>
+                        </div>
+
+                        <div class="flight-search-form form-select route-block">
+                            <span class="flight-search-reset-form"></span>
+                            <label for="flight-search-route">הלוך ושוב
+                                <input type="text" id="flight-search-route" class="flight-search-form-input"
+                                       value="Round trip" disabled>
+                            </label>
+                            <ul class="flight-search-dropdown">
+                                <li>
+                                    <label class="route-list-item" for="route-round-trip">
+                                        מחלקת תיירים
+                                        <input type="radio" id="route-round-trip" checked name="route-radio">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="route-list-item" for="route-one-way">
+                                        מחלקת תיירים
+                                        <input type="radio" id="route-one-way" name="route-radio">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /.route-block -->
+
+                        <div class="flight-search-form form-select department-block">
+                            <span class="flight-search-reset-form"></span>
+                            <label for="flight-search-department">מחלקת תיירים
+                                <input type="text" id="flight-search-department" class="flight-search-form-input"
+                                       value="Econom Class" disabled>
+                            </label>
+                            <ul class="flight-search-dropdown">
+                                <li>
+                                    <label class="route-list-item" for="department-economy-class">
+                                        ביבא לת
+                                        <input type="radio" id="department-economy-class" checked
+                                               name="department-radio">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="route-list-item" for="department-premium-class">
+                                        ביבא לתביבא לת
+                                        <input type="radio" id="department-premium-class" name="department-radio">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="route-list-item" for="department-business-class">
+                                        Business class
+                                        <input type="radio" id="department-business-class" name="department-radio">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="route-list-item" for="department-first-class">
+                                        First class
+                                        <input type="radio" id="department-first-class" name="department-radio">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /.department-block -->
+
+                        <div class="flight-search-form form-select passengers-block">
+                            <span class="flight-search-reset-form"></span>
+                            <label for="flight-search-passengers">ביבא לת
+                                <input type="text" id="flight-search-passengers" class="flight-search-form-input"
+                                       value="2" disabled>
+                            </label>
+                            <ul class="flight-search-dropdown passengers-dropdown">
+                                <li class="adults">
+                                    <div class="passengers-dropdown-buttons">
+                                        <button type="button" class="plus">+</button>
+                                        <span class="count">2</span>
+                                        <button type="button" class="minus active">-</button>
+                                    </div>
+                                    <div class="passengers-dropdown-info">
+                                        <p>ביבא לת</p>
+                                        <span>Age 24-64</span>
+                                    </div>
+                                </li>
+                                <li class="young">
+                                    <div class="passengers-dropdown-buttons">
+                                        <button type="button" class="plus">+</button>
+                                        <span class="count">0</span>
+                                        <button type="button" class="minus" disabled>-</button>
+                                    </div>
+                                    <div class="passengers-dropdown-info">
+                                        <p>ביבא לת</p>
+                                        <span>Age 16-23</span>
+                                    </div>
+                                </li>
+                                <li class="child">
+                                    <div class="passengers-dropdown-buttons">
+                                        <button type="button" class="plus">+</button>
+                                        <span class="count">0</span>
+                                        <button type="button" class="minus" disabled>-</button>
+                                    </div>
+                                    <div class="passengers-dropdown-info">
+                                        <p>Child</p>
+                                        <span>Age 2-15</span>
+                                    </div>
+                                </li>
+                                <li class="baby">
+                                    <div class="passengers-dropdown-buttons">
+                                        <button type="button" class="plus">+</button>
+                                        <span class="count">0</span>
+                                        <button type="button" class="minus" disabled>-</button>
+                                    </div>
+                                    <div class="passengers-dropdown-info">
+                                        <p>Baby</p>
+                                        <span>Under 2</span>
+                                    </div>
+                                </li>
+                                <li class="retired">
+                                    <div class="passengers-dropdown-buttons">
+                                        <button type="button" class="plus">+</button>
+                                        <span class="count">0</span>
+                                        <button type="button" class="minus" disabled>-</button>
+                                    </div>
+                                    <div class="passengers-dropdown-info">
+                                        <p>Retired</p>
+                                        <span>Age 65+</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </form>
+                    <div class="main-ticket-search_form-inner__background"></div>
+                    <div class="main-ticket-search_form-inner__background main-ticket-search-bg-opacity"></div>
+                </div>
+                <!-- /.flight-search-book -->
+            </div>
+            <!-- /.section-header-search__form main-ticket-search_form -->
+
+            <div class="section-header-search__icons">
+                <div class="section-header-search__icons-item">
+                    <div class="text">בשבילכם 24/7
+                        זמינים</div>
+                    <div class="icon">
+                        <img src="../assets/icons/mobile-payment.svg" alt="mobile payment">
+                    </div>
+                </div>
+                <div class="section-header-search__icons-item">
+                    <div class="text">פריסת תשלומים נוחה</div>
+                    <div class="icon">
+                        <img src="../assets/icons/tickets.svg" alt="tickets">
+                    </div>
+                </div>
+                <div class="section-header-search__icons-item">
+                    <div class="text">עולם שלם של מוצרי 
+                        תיירות במקום אחד</div>
+                    <div class="icon">
+                        <img src="../assets/icons/airplane.svg" alt="airplane">
+                    </div>
+                </div>
+            </div>
+        </div> <!-- section-header-search -->
+    </div>
+</header>
+<!-- / section-header -->
+
+<!-- section-slider -->
+<section class="section-block section-slider">
+    <div class="section-slider-inner">
+        <div class="slider owl-carousel">
+            <div class="slider-item">
+                <div class="slider-item__secondary_block">
+                    <div class="slider-item__secondary_block-inner">
+                        <div class="slider-item__secondary_block-title">עולם שלם של מוצרי 
+                            תיירות במקום אחד</div>
+                        <div class="slider-item__secondary_block-subtitle"></div>
+                    </div>
+                </div>
+                <img src="https://i2.wp.com/www.traveloffpath.com/wp-content/uploads/2020/08/Bali-Will-Not-Open-Borders-For-Tourism-Until-2021-Governor-Announces-3.jpg?resize=759%2C500&ssl=1"
+                     alt="slider image">
+                <div class="slider-item__primary_block">
+                    <div class="bg-clouds"></div>
+                    <div class="slider-item__primary_block-content">
+                        <div>
+                            <div class="slider-item__primary_block-title">עולם שלם של מוצרי 
+                                תיירות במקום אחד</div>
+                            <div class="slider-item__primary_block-subtitle">עולם שלם של מוצרי 
+                                תיירות במקום אחד</div>
+                        </div>
+                        <div class="slider-item__primary_block-button">
+                            <a href="#" class="button-white">ושפח</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-item">
+                <div class="slider-item__secondary_block">
+                    <div class="slider-item__secondary_block-inner">
+                        <div class="slider-item__secondary_block-title">עולם שלם של מוצרי 
+                            תיירות במקום אחד</div>
+                        <div class="slider-item__secondary_block-subtitle"></div>
+                    </div>
+                </div>
+                <img src="https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Fsundaytimes%2Fprod%2Fweb%2Fbin%2Fa9023898-3d32-11ea-955e-6a5fc41152f3.jpg?crop=5770%2C3246%2C77%2C706&resize=1180"
+                     alt="slider image">
+                <div class="slider-item__primary_block">
+                    <div class="bg-clouds"></div>
+                    <div class="slider-item__primary_block-content">
+                        <div>
+                            <div class="slider-item__primary_block-title">עולם שלם של מוצרי 
+                                תיירות במקום אחד</div>
+                            <div class="slider-item__primary_block-subtitle">עולם שלם של מוצרי 
+תיירות במקום אחד</div>
+                        </div>
+                        <div class="slider-item__primary_block-button">
+                            <a href="#" class="button-white">ושפח</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-item">
+                <div class="slider-item__secondary_block">
+                    <div class="slider-item__secondary_block-inner">
+                        <div class="slider-item__secondary_block-title">עולם שלם של מוצרי 
+                            תיירות במקום אחד</div>
+                        <div class="slider-item__secondary_block-subtitle"></div>
+                    </div>
+                </div>
+                <img src="https://files.tpg.ua/pages2/87854/UAE_main.jpg"
+                     alt="slider image">
+                <div class="slider-item__primary_block">
+                    <div class="bg-clouds"></div>
+                    <div class="slider-item__primary_block-content">
+                        <div>
+                            <div class="slider-item__primary_block-title">עולם שלם של מוצרי 
+                                תיירות במקום אחד</div>
+                            <div class="slider-item__primary_block-subtitle">עולם שלם של מוצרי 
+                                תיירות במקום אחד</div>
+                        </div>
+                        <div class="slider-item__primary_block-button">
+                            <a href="#" class="button-white">ושפח</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- / section-slider -->
+
+<!-- section-cheap -->
+<section class="section-block section-cheap">
+    <div class="section-inner">
+        <h2 class="heading-2 text-center">טיסות זולות לחו"ל</h2>
+        <hr class="green-line">
+        <div class="section-cheap__buttons">
+            <a href="#" class="section-cheap__buttons-item">אמריקה</a>
+            <a href="#" class="section-cheap__buttons-item">אל על</a>
+            <a href="#" class="section-cheap__buttons-item active">טיסות במחירי מציאה</a>
+        </div>
+        <div class="section-cheap__table">
+            <div class="section-cheap__table-item">
+                <div class="section-cheap__table-item-price">$ 272</div>
+                <div class="section-cheap__table-item-date">
+                    <div class="cheap-date-return">
+                        <span class="cheap-date-title">יציאות: </span>
+                        <span class="cheap-date-number">08/04</span>
+                    </div>
+                    <div class="cheap-date-round_trip">
+                        <span class="cheap-date-title">טיסות לברלין</span>
+                        <span class="cheap-date-number">04/04</span>
+                    </div>
+                </div>
+                <div class="section-cheap__table-item-city">
+                    טיסות לברלין
+                    <img src="../assets/icons/flag.svg" alt="flag" class="flag-icon">
+                </div>
+            </div>
+            <div class="section-cheap__table-item">
+                <div class="section-cheap__table-item-price">$ 272</div>
+                <div class="section-cheap__table-item-date">
+                    <div class="cheap-date-return">
+                        <span class="cheap-date-title">יציאות: </span>
+                        <span class="cheap-date-number">08/04</span>
+                    </div>
+                    <div class="cheap-date-round_trip">
+                        <span class="cheap-date-title">טיסות לברלין</span>
+                        <span class="cheap-date-number">04/04</span>
+                    </div>
+                </div>
+                <div class="section-cheap__table-item-city">
+                    טיסות לברלין
+                    <img src="../assets/icons/flag.svg" alt="flag" class="flag-icon">
+                </div>
+            </div>
+            <div class="section-cheap__table-item">
+                <div class="section-cheap__table-item-price">$ 272</div>
+                <div class="section-cheap__table-item-date">
+                    <div class="cheap-date-return">
+                        <span class="cheap-date-title">יציאות: </span>
+                        <span class="cheap-date-number">08/04</span>
+                    </div>
+                    <div class="cheap-date-round_trip">
+                        <span class="cheap-date-title">טיסות לברלין</span>
+                        <span class="cheap-date-number">04/04</span>
+                    </div>
+                </div>
+                <div class="section-cheap__table-item-city">
+                    טיסות לברלין
+                    <img src="../assets/icons/flag.svg" alt="flag" class="flag-icon">
+                </div>
+            </div>
+            <div class="section-cheap__table-item">
+                <div class="section-cheap__table-item-price">$ 272</div>
+                <div class="section-cheap__table-item-date">
+                    <div class="cheap-date-return">
+                        <span class="cheap-date-title">יציאות: </span>
+                        <span class="cheap-date-number">08/04</span>
+                    </div>
+                    <div class="cheap-date-round_trip">
+                        <span class="cheap-date-title">טיסות לברלין</span>
+                        <span class="cheap-date-number">04/04</span>
+                    </div>
+                </div>
+                <div class="section-cheap__table-item-city">
+                    טיסות לברלין
+                    <img src="../assets/icons/flag.svg" alt="flag" class="flag-icon">
+                </div>
+            </div>
+            <div class="section-cheap__table-item">
+                <div class="section-cheap__table-item-price">$ 272</div>
+                <div class="section-cheap__table-item-date">
+                    <div class="cheap-date-return">
+                        <span class="cheap-date-title">יציאות: </span>
+                        <span class="cheap-date-number">08/04</span>
+                    </div>
+                    <div class="cheap-date-round_trip">
+                        <span class="cheap-date-title">טיסות לברלין</span>
+                        <span class="cheap-date-number">04/04</span>
+                    </div>
+                </div>
+                <div class="section-cheap__table-item-city">
+                    טיסות לברלין
+                    <img src="../assets/icons/flag.svg" alt="flag" class="flag-icon">
+                </div>
+            </div>
+            <div class="section-cheap__table-item">
+                <div class="section-cheap__table-item-price">$ 272</div>
+                <div class="section-cheap__table-item-date">
+                    <div class="cheap-date-return">
+                        <span class="cheap-date-title">יציאות: </span>
+                        <span class="cheap-date-number">08/04</span>
+                    </div>
+                    <div class="cheap-date-round_trip">
+                        <span class="cheap-date-title">טיסות לברלין</span>
+                        <span class="cheap-date-number">04/04</span>
+                    </div>
+                </div>
+                <div class="section-cheap__table-item-city">
+                    טיסות לברלין
+                    <img src="../assets/icons/flag.svg" alt="flag" class="flag-icon">
+                </div>
+            </div>
+            <div class="section-cheap__table-item">
+                <div class="section-cheap__table-item-price">$ 272</div>
+                <div class="section-cheap__table-item-date">
+                    <div class="cheap-date-return">
+                        <span class="cheap-date-title">יציאות: </span>
+                        <span class="cheap-date-number">08/04</span>
+                    </div>
+                    <div class="cheap-date-round_trip">
+                        <span class="cheap-date-title">טיסות לברלין</span>
+                        <span class="cheap-date-number">04/04</span>
+                    </div>
+                </div>
+                <div class="section-cheap__table-item-city">
+                    טיסות לברלין
+                    <img src="../assets/icons/flag.svg" alt="flag" class="flag-icon">
+                </div>
+            </div>
+            <div class="section-cheap__table-item">
+                <div class="section-cheap__table-item-price">$ 272</div>
+                <div class="section-cheap__table-item-date">
+                    <div class="cheap-date-return">
+                        <span class="cheap-date-title">יציאות: </span>
+                        <span class="cheap-date-number">08/04</span>
+                    </div>
+                    <div class="cheap-date-round_trip">
+                        <span class="cheap-date-title">טיסות לברלין</span>
+                        <span class="cheap-date-number">04/04</span>
+                    </div>
+                </div>
+                <div class="section-cheap__table-item-city">
+                    טיסות לברלין
+                    <img src="../assets/icons/flag.svg" alt="flag" class="flag-icon">
+                </div>
+            </div>
+            <div class="section-cheap__table-item">
+                <div class="section-cheap__table-item-price">$ 272</div>
+                <div class="section-cheap__table-item-date">
+                    <div class="cheap-date-return">
+                        <span class="cheap-date-title">יציאות: </span>
+                        <span class="cheap-date-number">08/04</span>
+                    </div>
+                    <div class="cheap-date-round_trip">
+                        <span class="cheap-date-title">טיסות לברלין</span>
+                        <span class="cheap-date-number">04/04</span>
+                    </div>
+                </div>
+                <div class="section-cheap__table-item-city">
+                    טיסות לברלין
+                    <img src="../assets/icons/flag.svg" alt="flag" class="flag-icon">
+                </div>
+            </div>
+            <div class="section-cheap__table-item">
+                <div class="section-cheap__table-item-price">$ 272</div>
+                <div class="section-cheap__table-item-date">
+                    <div class="cheap-date-return">
+                        <span class="cheap-date-title">יציאות: </span>
+                        <span class="cheap-date-number">08/04</span>
+                    </div>
+                    <div class="cheap-date-round_trip">
+                        <span class="cheap-date-title">טיסות לברלין</span>
+                        <span class="cheap-date-number">04/04</span>
+                    </div>
+                </div>
+                <div class="section-cheap__table-item-city">
+                    טיסות לברלין
+                    <img src="../assets/icons/flag.svg" alt="flag" class="flag-icon">
+                </div>
+            </div>
+            <div class="section-cheap__table-item">
+                <div class="section-cheap__table-item-price">$ 272</div>
+                <div class="section-cheap__table-item-date">
+                    <div class="cheap-date-return">
+                        <span class="cheap-date-title">יציאות: </span>
+                        <span class="cheap-date-number">08/04</span>
+                    </div>
+                    <div class="cheap-date-round_trip">
+                        <span class="cheap-date-title">טיסות לברלין</span>
+                        <span class="cheap-date-number">04/04</span>
+                    </div>
+                </div>
+                <div class="section-cheap__table-item-city">
+                    טיסות לברלין
+                    <img src="../assets/icons/flag.svg" alt="flag" class="flag-icon">
+                </div>
+            </div>
+            <div class="section-cheap__table-item">
+                <div class="section-cheap__table-item-price">$ 272</div>
+                <div class="section-cheap__table-item-date">
+                    <div class="cheap-date-return">
+                        <span class="cheap-date-title">יציאות: </span>
+                        <span class="cheap-date-number">08/04</span>
+                    </div>
+                    <div class="cheap-date-round_trip">
+                        <span class="cheap-date-title">טיסות לברלין</span>
+                        <span class="cheap-date-number">04/04</span>
+                    </div>
+                </div>
+                <div class="section-cheap__table-item-city">
+                    טיסות לברלין
+                    <img src="../assets/icons/flag.svg" alt="flag" class="flag-icon">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- / section-cheap -->
+
+<!-- section-social -->
+<section class="section-block section-social">
+    <div class="section-inner">
+        <h2 class="heading-2 text-center">יעדים פופולאריים</h2>
+        <hr class="green-line">
+        <div class="section-social__content">
+            <div class="section-social__content-item social-facebook">
+                <div class="section-social__content-item-bg">
+                    <img src="../assets/img/bg-facebook.svg" alt="facebook">
+                </div>
+                <div class="section-social__content-item-title">We are in Facebook</div>
+                <div class="section-social__content-item-icon">
+                    <img src="../assets/icons/facebook.svg" alt="facebook">
+                </div>
+                <div class="section-social__content-item-button">
+                    <a href="#" class="section-social__content-btn">Join</a>
+                </div>
+            </div>
+            <div class="section-social__content-item social-insta">
+                <div class="section-social__content-item-bg">
+                    <img src="../assets/img/bg-insta.svg" alt="instagram">
+                </div>
+                <div class="section-social__content-item-title">We are in Instagram</div>
+                <div class="section-social__content-item-icon">
+                    <img src="../assets/icons/instagram.svg" alt="facebook">
+                </div>
+                <div class="section-social__content-item-button">
+                    <a href="#" class="section-social__content-btn">Join</a>
+                </div>
+            </div>
+            <div class="section-social__content-item social-youtube">
+                <div class="section-social__content-item-bg">
+                    <div class="section-social__content-item-bg">
+                        <img src="../assets/img/bg-youtube.svg" alt="youtube">
+                    </div>
+                </div>
+                <div class="section-social__content-item-title">We are in Youtube</div>
+                <div class="section-social__content-item-icon">
+                    <img src="../assets/icons/youtube.svg" alt="facebook">
+                </div>
+                <div class="section-social__content-item-button">
+                    <a href="#" class="section-social__content-btn">Join</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- / section-social -->
+
+<!-- section-popular -->
+<section class="section-block section-popular">
+    <div class="section-inner">
+        <h2 class="heading-2 text-center">יעדים פופולאריים</h2>
+        <hr class="green-line">
+        <div class="section-popular__nav text-center">
+            <div class="home-popular-filter filter__buttons active-brown bg-white section-popular__nav-filter padding-14">
+                <button class="filter__buttons-btn">תונידמ</button>
+                <button class="filter__buttons-btn"> םירע</button>
+                <button class="filter__buttons-btn active"> םיצלמומ</button>
+            </div>
+            <div class="search__element section-popular__nav-search">
+                <input type="text" class="search__element-input">
+                <button class="search__element-button">
+                    <img src="../assets/icons/search.svg" alt="search icon">
+                </button>
+            </div>
+        </div>
+        <div class="section-popular__table">
+            <div class="section-popular__table-group">
+                <div class="section-popular__table-group__title">Spain</div>
+                <div class="section-popular__table-group__list">
+
+                    <div class="table-open">
+                        <div class="flight-table__item">
+                            <div class="flight-table__item__price">
+                                <div class="flight-table__item__price-title">Mon, Th</div>
+                                <div class="flight-table__item__price-cost">$ 272</div>
+                            </div>
+                            <div class="flight-table__item__city">
+                                <div class="flight-table__item__city-from">Tel-Aviv</div>
+                                <div class="flight-table__item__city-to">לונדון</div>
+                            </div>
+                        </div>
+                        <div class="table-open__image">
+                            <img src="../assets/img/stock-photo-happy-asian-woman-travels.svg">
+                        </div>
+                        <div class="table-open__footer">
+                            <div class="table-open__footer__price">
+                                <div class="table-open__footer__price-title">Mon, Th</div>
+                                <div class="table-open__footer__price-cost">$ 272</div>
+                            </div>
+                            <div class="table-group__item__city">
+                                <div class="table-open__footer__city-from">Tel-Aviv</div>
+                                <div class="table-open__footer__city-to">לונדון</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-popular__table-group__list-item new--item">
+                        <div class="flight-table__item">
+                            <div class="flight-table__item__price">
+                                <div class="flight-table__item__price-title">Mon, Th</div>
+                                <div class="flight-table__item__price-cost">$ 272</div>
+                            </div>
+                            <div class="flight-table__item__city">
+                                <div class="flight-table__item__city-from">Tel-Aviv</div>
+                                <div class="flight-table__item__city-to">לונדון</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-popular__table-group__list-item">
+                        <div class="flight-table__item">
+                            <div class="flight-table__item__price">
+                                <div class="flight-table__item__price-title">Mon, Th</div>
+                                <div class="flight-table__item__price-cost">$ 272</div>
+                            </div>
+                            <div class="flight-table__item__city">
+                                <div class="flight-table__item__city-from">Tel-Aviv</div>
+                                <div class="flight-table__item__city-to">לונדון</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-popular__table-group__list-item">
+                        <div class="flight-table__item">
+                            <div class="flight-table__item__price">
+                                <div class="flight-table__item__price-title">Mon, Th</div>
+                                <div class="flight-table__item__price-cost">$ 272</div>
+                            </div>
+                            <div class="flight-table__item__city">
+                                <div class="flight-table__item__city-from">Tel-Aviv</div>
+                                <div class="flight-table__item__city-to">לונדון</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-popular__table-group__list-item">
+                        <div class="flight-table__item">
+                            <div class="flight-table__item__price">
+                                <div class="flight-table__item__price-title">Mon, Th</div>
+                                <div class="flight-table__item__price-cost">$ 272</div>
+                            </div>
+                            <div class="flight-table__item__city">
+                                <div class="flight-table__item__city-from">Tel-Aviv</div>
+                                <div class="flight-table__item__city-to">לונדון</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-popular__table-group__list-item">
+                        <div class="flight-table__item">
+                            <div class="flight-table__item__price">
+                                <div class="flight-table__item__price-title">Mon, Th</div>
+                                <div class="flight-table__item__price-cost">$ 272</div>
+                            </div>
+                            <div class="flight-table__item__city">
+                                <div class="flight-table__item__city-from">Tel-Aviv</div>
+                                <div class="flight-table__item__city-to">לונדון</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-popular__table-group__list-item new--item">
+                        <div class="flight-table__item">
+                            <div class="flight-table__item__price">
+                                <div class="flight-table__item__price-title">Mon, Th</div>
+                                <div class="flight-table__item__price-cost">$ 272</div>
+                            </div>
+                            <div class="flight-table__item__city">
+                                <div class="flight-table__item__city-from">Tel-Aviv</div>
+                                <div class="flight-table__item__city-to">לונדון</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-popular__table-group__list-item">
+                        <div class="flight-table__item">
+                            <div class="flight-table__item__price">
+                                <div class="flight-table__item__price-title">Mon, Th</div>
+                                <div class="flight-table__item__price-cost">$ 272</div>
+                            </div>
+                            <div class="flight-table__item__city">
+                                <div class="flight-table__item__city-from">Tel-Aviv</div>
+                                <div class="flight-table__item__city-to">לונדון</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-popular__table-group__list-item">
+                        <div class="flight-table__item">
+                            <div class="flight-table__item__price">
+                                <div class="flight-table__item__price-title">Mon, Th</div>
+                                <div class="flight-table__item__price-cost">$ 272</div>
+                            </div>
+                            <div class="flight-table__item__city">
+                                <div class="flight-table__item__city-from">Tel-Aviv</div>
+                                <div class="flight-table__item__city-to">לונדון</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-popular__table-group__list-item">
+                        <div class="flight-table__item">
+                            <div class="flight-table__item__price">
+                                <div class="flight-table__item__price-title">Mon, Th</div>
+                                <div class="flight-table__item__price-cost">$ 272</div>
+                            </div>
+                            <div class="flight-table__item__city">
+                                <div class="flight-table__item__city-from">Tel-Aviv</div>
+                                <div class="flight-table__item__city-to">לונדון</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="section-popular__table-group">
+                <div class="section-popular__table-group__title">Bulgaria</div>
+                <div class="section-popular__table-group__list">
+                    <div class="section-popular__table-group__list-item">
+                        <div class="flight-table__item">
+                            <div class="flight-table__item__price">
+                                <div class="flight-table__item__price-title">Mon, Th</div>
+                                <div class="flight-table__item__price-cost">$ 272</div>
+                            </div>
+                            <div class="flight-table__item__city">
+                                <div class="flight-table__item__city-from">Tel-Aviv</div>
+                                <div class="flight-table__item__city-to">לונדון</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-popular__table-group__list-item">
+                        <div class="flight-table__item">
+                            <div class="flight-table__item__price">
+                                <div class="flight-table__item__price-title">Mon, Th</div>
+                                <div class="flight-table__item__price-cost">$ 272</div>
+                            </div>
+                            <div class="flight-table__item__city">
+                                <div class="flight-table__item__city-from">Tel-Aviv</div>
+                                <div class="flight-table__item__city-to">לונדון</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-popular__table-group__list-item">
+                        <div class="flight-table__item">
+                            <div class="flight-table__item__price">
+                                <div class="flight-table__item__price-title">Mon, Th</div>
+                                <div class="flight-table__item__price-cost">$ 272</div>
+                            </div>
+                            <div class="flight-table__item__city">
+                                <div class="flight-table__item__city-from">Tel-Aviv</div>
+                                <div class="flight-table__item__city-to">לונדון</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-popular__table-group__list-item">
+                        <div class="flight-table__item">
+                            <div class="flight-table__item__price">
+                                <div class="flight-table__item__price-title">Mon, Th</div>
+                                <div class="flight-table__item__price-cost">$ 272</div>
+                            </div>
+                            <div class="flight-table__item__city">
+                                <div class="flight-table__item__city-from">Tel-Aviv</div>
+                                <div class="flight-table__item__city-to">לונדון</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-popular__table-group__list-item">
+                        <div class="flight-table__item">
+                            <div class="flight-table__item__price">
+                                <div class="flight-table__item__price-title">Mon, Th</div>
+                                <div class="flight-table__item__price-cost">$ 272</div>
+                            </div>
+                            <div class="flight-table__item__city">
+                                <div class="flight-table__item__city-from">Tel-Aviv</div>
+                                <div class="flight-table__item__city-to">לונדון</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-popular__table-group__list-item">
+                        <div class="flight-table__item">
+                            <div class="flight-table__item__price">
+                                <div class="flight-table__item__price-title">Mon, Th</div>
+                                <div class="flight-table__item__price-cost">$ 272</div>
+                            </div>
+                            <div class="flight-table__item__city">
+                                <div class="flight-table__item__city-from">Tel-Aviv</div>
+                                <div class="flight-table__item__city-to">לונדון</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-popular__table-group__list-item">
+                        <div class="flight-table__item">
+                            <div class="flight-table__item__price">
+                                <div class="flight-table__item__price-title">Mon, Th</div>
+                                <div class="flight-table__item__price-cost">$ 272</div>
+                            </div>
+                            <div class="flight-table__item__city">
+                                <div class="flight-table__item__city-from">Tel-Aviv</div>
+                                <div class="flight-table__item__city-to">לונדון</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-popular__table-group__list-item">
+                        <div class="flight-table__item">
+                            <div class="flight-table__item__price">
+                                <div class="flight-table__item__price-title">Mon, Th</div>
+                                <div class="flight-table__item__price-cost">$ 272</div>
+                            </div>
+                            <div class="flight-table__item__city">
+                                <div class="flight-table__item__city-from">Tel-Aviv</div>
+                                <div class="flight-table__item__city-to">לונדון</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- / section-popular -->
+
+<!-- section news -->
+<section class="section-block section-news">
+    <div class="section-inner">
+        <div class="section-news__buttons news-buttons">
+            <a href="#" class="news-buttons__coronavirus"><img src="../assets/icons/left-arrow-black.svg">Coronavirus</a>
+            <a href="#" class="news-buttons__important"><img src="../assets/icons/left-arrow-white.svg">Important</a>
+        </div>
+        <div class="section-news__content">
+            <div class="section-news__item news-item">
+                <div class="news-item__text_block">
+                    <div class="news-item__title">אתסיא תובידאב - תוישומיש תוצעו םיפיט המכ</div>
+                    <div class="news-item__date">12.01.2021</div>
+                </div>
+                <img src="../assets/img/stock-plane-in-the-blue-sky.svg" class="news-item__image">
+            </div>
+            <div class="section-news__item news-item">
+                <div class="news-item__text_block">
+                    <div class="news-item__title">אתסיא תובידאב - תוישומיש תוצעו םיפיט המכ</div>
+                    <div class="news-item__date">12.01.2021</div>
+                </div>
+                <img src="../assets/img/stock-plane-in-the-blue-sky.svg" class="news-item__image">
+            </div>
+            <div class="section-news__item news-item">
+                <div class="news-item__text_block">
+                    <div class="news-item__title">אתסיא תובידאב - תוישומיש תוצעו םיפיט המכ</div>
+                    <div class="news-item__date">12.01.2021</div>
+                </div>
+                <img src="../assets/img/stock-plane-in-the-blue-sky.svg" class="news-item__image">
+            </div>
+            <div class="section-news__item news-item">
+                <div class="news-item__text_block">
+                    <div class="news-item__title">אתסיא תובידאב - תוישומיש תוצעו םיפיט המכ</div>
+                    <div class="news-item__date">12.01.2021</div>
+                </div>
+                <img src="../assets/img/stock-photo-happy-asian-woman-travels.svg" class="news-item__image">
+            </div>
+            <div class="section-news__item news-item">
+                <div class="news-item__text_block">
+                    <div class="news-item__title">אתסיא תובידאב - תוישומיש תוצעו םיפיט המכ</div>
+                    <div class="news-item__date">12.01.2021</div>
+                </div>
+                <img src="../assets/img/stock-photo-greece-rhodes-island.svg" class="news-item__image">
+            </div>
+            <div class="section-news__item news-item">
+                <div class="news-item__text_block">
+                    <div class="news-item__title">אתסיא תובידאב - תוישומיש תוצעו םיפיט המכ</div>
+                    <div class="news-item__date">12.01.2021</div>
+                </div>
+                <img src="../assets/img/stock-photo-nerja-m-laga-sunny.svg" class="news-item__image">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- / section news -->
+
+<!-- section footer -->
+<footer class="section-block footer">
+    <div class="section-inner">
+        <div class="footer__nav footer-nav">
+            <div class="footer-nav__menu_block">
+                <div class="footer-menu__title_space"></div>
+                <h4 class="footer-menu__title">Menu 1</h4>
+                <ul class="footer-nav__menu footer-menu footer-menu_1">
+                    <li class="footer-menu__item">
+                        <span>»</span><a href="#">EasyJet תוסיט</a>
+                    </li>
+                    <li class="footer-menu__item">
+                        <span>»</span><a href="#">הינמרג תוסיט</a>
+                    </li>
+                    <li class="footer-menu__item">
+                        <span>»</span><a href="#">Air Wizz תוסיט</a>
+                    </li>
+                    <li class="footer-menu__item">
+                        <span>»</span><a href="#">Transavia תוסיט</a>
+                    </li>
+                    <li class="footer-menu__item">
+                        <span>»</span><a href="#">הקירמאל תוסיט</a>
+                    </li>
+                    <li class="footer-menu__item">
+                        <span>»</span><a href="#">עיקרא תוסיט</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-nav__menu_block">
+                <div class="footer-menu__title_space"></div>
+                <h4 class="footer-menu__title">Menu 2</h4>
+                <ul class="footer-nav__menu footer-menu footer-menu_2">
+                    <li class="footer-menu__item">
+                        <span>»</span><a href="#">EasyJet תוסיט</a>
+                    </li>
+                    <li class="footer-menu__item">
+                        <span>»</span><a href="#">הינמרג תוסיט</a>
+                    </li>
+                    <li class="footer-menu__item">
+                        <span>»</span><a href="#">Air Wizz תוסיט</a>
+                    </li>
+                    <li class="footer-menu__item">
+                        <span>»</span><a href="#">Transavia תוסיט</a>
+                    </li>
+                    <li class="footer-menu__item">
+                        <span>»</span><a href="#">הקירמאל תוסיט</a>
+                    </li>
+                    <li class="footer-menu__item">
+                        <span>»</span><a href="#">עיקרא תוסיט</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-nav__menu_block">
+                <h4 class="footer-menu__title_notclick">מומלצים</h4>
+                <h4 class="footer-menu__title">מומלצים</h4>
+
+                <ul class="footer-nav__menu footer-menu footer-menu_3">
+                    <li class="footer-menu__item">
+                        <span>»</span><a href="#">EasyJet תוסיט</a>
+                    </li>
+                    <li class="footer-menu__item">
+                        <span>»</span><a href="#">הינמרג תוסיט</a>
+                    </li>
+                    <li class="footer-menu__item">
+                        <span>»</span><a href="#">Air Wizz תוסיט</a>
+                    </li>
+                    <li class="footer-menu__item">
+                        <span>»</span><a href="#">Transavia תוסיט</a>
+                    </li>
+                    <li class="footer-menu__item">
+                        <span>»</span><a href="#">הקירמאל תוסיט</a>
+                    </li>
+                    <li class="footer-menu__item">
+                        <span>»</span><a href="#">עיקרא תוסיט</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__info">
+            <h4 class="footer__title">אינדקס טיסות לחו"ל</h4>
+            <h4 class="footer__title">טיסות זולות לחו"ל</h4>
+            <h4 class="footer__title">אנשי קשר</h4>
+        </div>
+        <div class="footer__contact footer-contact">
+            <div class="footer-contact__top contact-top">
+                <div class="contact-top__phone contact-phone">
+                    <div class="contact-phone__text_block">
+                        <div class="contact-phone__title">:וישכע ורשקתה</div>
+                        <div class="contact-phone__number">03-7777777</div>
+                    </div>
+                    <img src="../assets/icons/headphone.svg">
+                </div>
+                <div class="contact-top__logo contact-info">
+                    <div class="contact-info__logo">
+                        <img src="../assets/img/logo_white.png" alt="logo">
+                    </div>
+                    <div class="contact-info__text">Now with hotel reviews by</div>
+                    <div class="contact-info__tripadvisor">
+                        <img src="../assets/icons/tripadvisor.svg" alt="trip advisor">
+                    </div>
+                </div>
+                <div class="contact-top__subscribe contact-subscribe">
+                    <a href="#" class="contact-subscribe__button">המשרה</a>
+                    <div class="contact-subscribe__text_block">
+                        <p class="contact-subscribe__title">ליימ בותכ</p>
+                        <p class="contact-subscribe__email">example@email.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-contact__copyright">
+                1956-2019 מ"עב לארשי אתסיאל תורומש תויוכזה לכ ©
+                ץראב שפונ ,ל"וחב תונולמ ,םיליד ,שפונ תוליבח ,תוסיט :תוריית ירצומ תקוושמה
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- / section footer -->
+
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="../assets/libs/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+<!-- Carousel -->
+<script src="../assets/owl/js/owl.carousel.js"></script>
+<script src="../assets/owl/js/owl.navigation.js"></script>
+<script src="../assets/owl/js/owl.autoplay.js"></script>
+<!-- Mobile menu -->
+<script src="../assets/mmenu/dist/mmenu-light.js"></script>
+
+<script src="../assets/js/home.js"></script>
+<script src="../assets/js/main.js"></script>
+
+</body>
+</html>

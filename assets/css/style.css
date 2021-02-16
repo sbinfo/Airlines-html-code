@@ -1863,6 +1863,7 @@ body {
   justify-content: stretch;
   margin-top: 20px;
   margin-bottom: 0px;
+  z-index: 10;
 }
 .section-slider .slider .owl-stage .big .slider-item__primary_block-button a.button-white {
   width: 100%;
