@@ -573,7 +573,7 @@ body {
     flex-basis: 100%;
     border-bottom: 2px solid #fff;
     margin: 0 30px;
-    padding: 20px 0;
+    //padding: 20px 0;
 
     div.activator-click {
       display: flex;
@@ -604,6 +604,9 @@ body {
 
   form .filters-block {
     flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: flex-end !important;
 
     &__item:first-child {
       margin-bottom: 9px;
@@ -668,9 +671,10 @@ body {
     position: relative;
 
     button.date-activator__btn_switch {
+      z-index: 10;
       transform: rotate(90deg);
       position: absolute;
-      bottom: -16px;
+      bottom: -18px;
       right: 0;
       width: 36px;
       height: 36px;
@@ -711,6 +715,18 @@ body {
     }
   }
 
+  span.flight-search-reset-form {
+    &:before {
+      background: url("../icons/close.svg") no-repeat center center;
+    }
+  }
+
+  span.search-dropdown-button {
+    &:before {
+      background: url("../icons/arrow_down.svg") no-repeat center center;
+    }
+  }
+
   @media (min-width: $bp-small-576) {
     &__filters-button {
       font-size: 16px;
@@ -731,7 +747,7 @@ body {
     .form-text button.date-activator__btn_switch {
       transform: rotate(0);
       right: -45px;
-      top: 29%;
+      top: 35%;
     }
   }
 
@@ -773,8 +789,9 @@ body {
       left: 0;
       top: 15%;
     }
-    .flight-search-manage_trip {
-      form > div:not(.search-block):not(.info-block)::before {
+    .flight-search-manage_trip,
+    .flight-search-status {
+      form > div:not(.search-block):not(.empty-block):not(.info-block)::before {
         content: "";
         height: 60px;
         color: white;
@@ -827,12 +844,18 @@ body {
     }
   }
 }
+// /. Main ticket search form
+
+.flight-search-book .filters-block {
+  border: none !important;
+}
 
 // Flight search form
 .flight-search-form {
   width: 100%;
   position: relative;
 
+  span.search-dropdown-button,
   span.flight-search-reset-form {
     position: absolute;
     left: 30px;
@@ -841,7 +864,6 @@ body {
 
     &:before {
       content: "";
-      background: url("../icons/close.svg") no-repeat center center;
       width: 14px;
       height: 14px;
       display: inline-block;
@@ -864,6 +886,7 @@ body {
       font-size: 20px;
       color: $color-main;
       background: transparent;
+      height: 22px;
 
       &::placeholder {
         font-weight: 400;
@@ -872,12 +895,6 @@ body {
   }
 
   &.form-select {
-
-    span.flight-search-reset-form {
-      &:before {
-        background: url("../icons/arrow_down.svg") no-repeat center center;
-      }
-    }
 
     ul.flight-search-dropdown {
       z-index: 10;
@@ -1016,10 +1033,45 @@ body {
   // &.form-select.passengers-block
 }
 
-.main-ticket-search_form-inner.flight-search-manage_trip form {
+.main-ticket-search_form-inner form {
+  @media (max-width: 1023px) and (min-width: $bp-small-576) {
 
-  @media (max-width: $bp-medium-1024) and (min-width: $bp-small-576) {
+    div.from-block,
+    div.date-block,
+    div.department-block {
+      position: relative;
+      &:after {
+        content: "";
+        width: 2px;
+        height: 60%;
+        position: absolute;
+        right: -30px;
+        top: 22px;
+        background: #fff;
+      }
+    }
+  }
 
+  @media (max-width: 1023px) {
+    span.search-dropdown-button,
+    span.flight-search-reset-form {
+      left: 0;
+    }
+  }
+}
+
+.main-ticket-search_form-inner.custom-col3 form {
+
+  @media (max-width: 575px) {
+    .empty-block {
+      display: none !important;
+    }
+  }
+
+  @media (max-width: 1023px) and (min-width: $bp-small-576) {
+
+    div.flight-status-to,
+    div.flight-status-date,
     div.trip-passenger-last_name,
     div.trip-ticket_number {
       position: relative;
@@ -1036,97 +1088,25 @@ body {
 
   }
 
-  @media (max-width: $bp-medium-1024) {
-    padding: 20px 0;
-
+  @media (max-width: 1023px) {
     .info-block {
       order: 8;
       border: none;
     }
-    span.flight-search-reset-form {
-      left: 0;
-    }
-  }
-
-  @media (min-width: $bp-medium-1024) {
-    > div {
-      flex-basis: 33%;
-    }
-  }
-}
-
-.main-ticket-search_form-inner.flight-search-status form {
-    > div {
-      flex-basis: 33%;
-    }
-
-  @media (max-width: $bp-small-576) {
-    > div {
-      flex-basis: 100%;
-    }
     .empty-block {
-      display: none !important;
-    }
-  }
-
-  @media (max-width: 1023px) and (min-width: $bp-small-576) {
-    > div {
-      flex-basis: 40%;
-    }
-
-    .flight-status-to,
-    .flight-status-date {
-      &:after {
-        content: "";
-        width: 2px;
-        height: 60%;
-        position: absolute;
-        right: -30px;
-        top: 22px;
-        background: #fff;
-      }
-    }
-
-    .empty-block {
-      order: 5;
+      order: 4;
       border: none;
     }
-
-  }
-
-  @media (max-width: 1023px) {
-    padding: 15px 0;
-
-    .search-block {
-      margin-top: 10px;
-    }
-
-    span.flight-search-reset-form {
-      left: 0;
-    }
   }
 
   @media (min-width: $bp-medium-1024) {
     > div {
       flex-basis: 33%;
     }
-    > div:not(.search-block):not(.empty-block) {
-      &:before {
-        content: "";
-        width: 2px;
-        height: 60%;
-        position: absolute;
-        left: 0px;
-        top: 22px;
-        background: #fff;
-      }
-    }
   }
 }
 
-
-
-  // Кнопки для филтера с округленными краями
+// Кнопки для филтера с округленными краями
 .filter__buttons {
   display: inline-block;
   border: 2px solid #E0E0E0;

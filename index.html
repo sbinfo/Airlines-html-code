@@ -96,7 +96,7 @@
                     <div class="main-ticket-search_form__filters-button btn-filter-book active">book</div>
                 </div>
 
-                <div class="main-ticket-search_form-inner flight-search-status" style="display: none">
+                <div class="main-ticket-search_form-inner flight-search-status custom-col3" style="display: none">
                     <form action="">
                         <div class="search-block">
                             <button type="submit" class="search-block-btn-success">search</button>
@@ -123,7 +123,7 @@
                         </div>
 
                         <div class="flight-search-form form-date flight-status-date">
-                            <span class="flight-search-reset-form"></span>
+                            <span class="search-dropdown-button"></span>
                             <label for="flight_status_date">Date
                                 <input type="date" id="flight_status_date" class="flight-search-form-input">
                             </label>
@@ -143,7 +143,7 @@
                 </div>
                 <!-- /.flight-search-status -->
 
-                <div class="main-ticket-search_form-inner flight-search-manage_trip" style="display: none">
+                <div class="main-ticket-search_form-inner flight-search-manage_trip custom-col3" style="display: none">
                     <form action="">
                         <div class="search-block">
                             <button type="submit" class="search-block-btn-success">search</button>
@@ -200,16 +200,11 @@
                             <button type="submit" class="search-block-btn-success">search</button>
                         </div>
 
-                        <div class="date-block">
-                            <div class="date-activator-click activator-click">
-                                <button class="date-activator-click__button">
-                                    <img src="assets/icons/arrow_down.svg" alt="arrow down">
-                                </button>
-                            </div>
-                            <div class="date-activator-content activator-content">
-                                <label class="date-activator-content__label">Depart-Return</label>
-                                <div class="date-activator-content__placeholder">21/01/21 - 13/01/21</div>
-                            </div>
+                        <div class="flight-search-form form-date date-block">
+                            <span class="search-dropdown-button"></span>
+                            <label for="date_depart_return">Depart-Return
+                                <input type="date" id="date_depart_return" class="flight-search-form-input">
+                            </label>
                         </div>
 
                         <div class="flight-search-form form-text to-block">
@@ -244,7 +239,7 @@
                         </div>
 
                         <div class="flight-search-form form-select route-block">
-                            <span class="flight-search-reset-form"></span>
+                            <span class="search-dropdown-button"></span>
                             <label for="flight-search-route">Route
                                 <input type="text" id="flight-search-route" class="flight-search-form-input" value="Round trip" disabled>
                             </label>
@@ -268,7 +263,7 @@
                         <!-- /.route-block -->
 
                         <div class="flight-search-form form-select department-block">
-                            <span class="flight-search-reset-form"></span>
+                            <span class="search-dropdown-button"></span>
                             <label for="flight-search-department">Department
                                 <input type="text" id="flight-search-department" class="flight-search-form-input" value="Econom Class" disabled>
                             </label>
@@ -306,7 +301,7 @@
                         <!-- /.department-block -->
 
                         <div class="flight-search-form form-select passengers-block">
-                            <span class="flight-search-reset-form"></span>
+                            <span class="search-dropdown-button"></span>
                             <label for="flight-search-passengers">Number of passengers
                                 <input type="text" id="flight-search-passengers" class="flight-search-form-input" value="2" disabled>
                             </label>
