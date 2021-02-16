@@ -5204,6 +5204,37 @@ body {
   background: url("../icons/blog/faq-active.svg") no-repeat center center;
   transition: 0.5s;
 }
+@media (max-width: 575px) {
+  .faq .section-blog-header {
+    flex-wrap: wrap;
+  }
+  .faq .section-blog-header .blog-header-button {
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .faq .section-blog-header .search__element.blog-header-search {
+    flex-basis: 100%;
+  }
+  .faq .section-faq .faq-list .faq-list-item .faq-item-icon {
+    display: none;
+  }
+}
+@media (max-width: 75em) {
+  .faq .section-post .post-block {
+    flex-wrap: wrap;
+  }
+  .faq .section-post .post-block .post-sidebar {
+    padding: 0 20px 0 0;
+    flex-basis: 100%;
+    order: 2;
+    margin-top: 50px;
+    border: none;
+  }
+  .faq .section-post .post-block .post-wrapper {
+    flex-basis: 100%;
+  }
+}
 
 .general-information .section-information .section-inner {
   display: flex;
