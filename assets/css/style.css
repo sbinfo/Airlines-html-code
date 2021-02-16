@@ -763,7 +763,7 @@ body {
   color: #fff !important;
   border-radius: 5px 5px 0px 0px;
 }
-.main-ticket-search_form__filters-button:not(:last-child) {
+.main-ticket-search_form__filters-button {
   margin-right: 3px;
   color: #2D2B2C;
   background-color: #fff;
@@ -5088,6 +5088,7 @@ body {
   width: 100%;
   height: 100%;
   z-index: -1;
+  object-fit: cover;
 }
 .post .section-post .post-wrapper .post-header .post-header-content {
   flex-basis: 100%;
@@ -5124,6 +5125,7 @@ body {
 .post .section-post .post-wrapper .post-content p.quote-text .quote-icon:after {
   content: "";
   background: url("../icons/blog/quote.svg") no-repeat center center;
+  background-size: contain;
   display: block;
   width: 32px;
   height: 28px;
@@ -5145,6 +5147,56 @@ body {
   font-weight: 500;
   font-size: 30px;
   margin-bottom: 20px;
+}
+@media (max-width: 575px) {
+  .post .section-post .post-block .post-wrapper .post-header {
+    height: 220px;
+    margin-bottom: 30px;
+  }
+  .post .section-post .post-block .post-wrapper .post-header .post-header-content {
+    padding: 15px 10px;
+  }
+  .post .section-post .post-block .post-wrapper .post-header .post-header-content h2.post-title {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+}
+@media (max-width: 991px) and (min-width: 36em) {
+  .post .section-post .post-block .post-wrapper .post-header {
+    height: 380px;
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 991px) {
+  .post .section-blog-header {
+    flex-wrap: wrap;
+  }
+  .post .section-blog-header .blog-header-button {
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .post .section-blog-header .search__element.blog-header-search {
+    flex-basis: 100%;
+  }
+  .post .section-post .post-wrapper .post-content p.quote-text {
+    font-size: 22px;
+  }
+  .post .section-post .post-wrapper .post-content p.quote-text .quote-icon:after {
+    width: 25px;
+    height: 20px;
+  }
+  .post .section-post .post-block {
+    flex-wrap: wrap;
+  }
+  .post .section-post .post-block .post-sidebar,
+.post .section-post .post-block .post-wrapper {
+    flex-basis: 100%;
+  }
+  .post .section-post .post-block .post-sidebar {
+    order: 2;
+    margin-top: 40px;
+  }
 }
 
 .faq .section-faq h3.faq-wrapper-title:after {
