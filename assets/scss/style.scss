@@ -509,8 +509,8 @@ body {
       cursor: pointer;
 
       &.active {
-        background: #CE833F;
-        color: $color-white;
+        background: #CE833F !important;
+        color: $color-white !important;
         border-radius: 5px 5px 0px 0px;
       }
     }
@@ -660,7 +660,11 @@ body {
     border-bottom: 0 !important;
   }
 
-  .from-block {
+  form .info-block {
+    text-align: right;
+  }
+
+  .form-text {
     position: relative;
 
     button.date-activator__btn_switch {
@@ -724,7 +728,7 @@ body {
       flex-basis: 40%;
     }
 
-    .from-block button.date-activator__btn_switch {
+    .form-text button.date-activator__btn_switch {
       transform: rotate(0);
       right: -45px;
       top: 29%;
@@ -740,10 +744,9 @@ body {
 
     .white-separator {
       display: block;
-      margin-bottom: 20px;
-      margin-top: 20px;
+      margin: 5px 0;
     }
-    .from-block button.date-activator__btn_switch {
+    .form-text button.date-activator__btn_switch {
       transform: rotate(0);
       left: -18px;
       top: 27%;
@@ -751,11 +754,8 @@ body {
     form {
       padding: 20px 0;
     }
-    form > div:not(:first-child):not(.white-separator):not(.filters-block) {
+    form > div:not(:first-child):not(.white-separator) {
       padding: 17px 30px;
-    }
-    form .filters-block {
-      padding: 17px 15px !important;
     }
     form > div:not(.white-separator) {
       position: relative;
@@ -764,7 +764,7 @@ body {
       margin: 0;
       min-height: 90px;
     }
-    form > div:not(:first-child):not(:nth-child(6))::before {
+    .flight-search-book form > div:not(:first-child):not(:nth-child(6))::before {
       content: "";
       height: 60px;
       color: white;
@@ -772,6 +772,17 @@ body {
       position: absolute;
       left: 0;
       top: 15%;
+    }
+    .flight-search-manage_trip {
+      form > div:not(.search-block):not(.info-block)::before {
+        content: "";
+        height: 60px;
+        color: white;
+        border-left: 2px solid #fff;
+        position: absolute;
+        left: 0;
+        top: 15%;
+      }
     }
     form .from-block,
     form .to-block,
@@ -817,7 +828,305 @@ body {
   }
 }
 
-// Кнопки для филтера с округленными краями
+// Flight search form
+.flight-search-form {
+  width: 100%;
+  position: relative;
+
+  span.flight-search-reset-form {
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    cursor: pointer;
+
+    &:before {
+      content: "";
+      background: url("../icons/close.svg") no-repeat center center;
+      width: 14px;
+      height: 14px;
+      display: inline-block;
+    }
+  }
+
+  label {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+
+    input.flight-search-form-input {
+      width: 100%;
+      margin-top: 12px;
+      border: none;
+      outline: none;
+      text-align: right;
+      font-weight: 500;
+      font-size: 20px;
+      color: $color-main;
+      background: transparent;
+
+      &::placeholder {
+        font-weight: 400;
+      }
+    }
+  }
+
+  &.form-select {
+
+    span.flight-search-reset-form {
+      &:before {
+        background: url("../icons/arrow_down.svg") no-repeat center center;
+      }
+    }
+
+    ul.flight-search-dropdown {
+      z-index: 10;
+      width: 100%;
+      background: #fff;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 110px;
+      padding: 20px 20px 10px;
+      @include box-shadow(0px 3px 9px rgba(0, 0, 0, 0.09));
+
+      li {
+        display: block;
+        position: relative;
+        //padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        label {
+          font-size: 16px;
+          font-weight: 400;
+          cursor: pointer;
+        }
+
+        input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+          height: 0;
+          width: 0;
+        }
+
+        .checkmark {
+          position: relative;
+          border: 2px solid #DADADA;
+          height: 18px;
+          width: 18px;
+          background: transparent;
+          border-radius: 50%;
+          margin-left: 16px;
+        }
+
+        &:active input ~ .checkmark {
+          @include box-shadow(0px 0px 0px 7px rgba(231, 248, 238, 1));
+        }
+
+        input:checked ~ .checkmark {
+          background-color: #fff;
+          border: 2px solid $color-primary;
+        }
+
+        .checkmark:after {
+          content: "";
+          position: absolute;
+          display: none;
+        }
+
+        input:checked ~ .checkmark:after {
+          display: block;
+        }
+
+        .checkmark:after {
+          top: 2px;
+          left: 2px;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background: #0EB155;
+        }
+
+      }
+    }
+  }
+  // &.form-select
+
+  &.form-select.passengers-block {
+    .passengers-dropdown {
+      li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16px;
+
+        .passengers-dropdown-buttons {
+          button.plus,
+          button.minus {
+            @include start-button(16px, $color-primary, #fff);
+            @include box-shadow(0px 3px 8px rgba(0, 0, 0, 0.17));
+            width: 24px;
+            height: 24px;
+
+            &:active {
+              @include box-shadow(0px 0px 0px 8px rgba(231, 248, 238, 1));
+            }
+
+            &:disabled {
+              color: #908C8E;
+              background: #E9E9E9;
+            }
+          }
+
+          button.plus {}
+          span.count {
+            font-weight: 400;
+            font-size: 16px;
+            margin: 0 15px;
+          }
+          button.minus {}
+        }
+        .passengers-dropdown-info {
+          display: flex;
+          flex-wrap: wrap;
+          text-align: right;
+          p {
+            flex-basis: 100%;
+            font-weight: 400;
+            font-size: 16px;
+            margin-bottom: 4px;
+          }
+          span {
+            flex-basis: 100%;
+            font-weight: 400;
+            font-size: 12px;
+            color: $color-surface;
+          }
+        }
+      }
+    }
+  }
+  // &.form-select.passengers-block
+}
+
+.main-ticket-search_form-inner.flight-search-manage_trip form {
+
+  @media (max-width: $bp-medium-1024) and (min-width: $bp-small-576) {
+
+    div.trip-passenger-last_name,
+    div.trip-ticket_number {
+      position: relative;
+      &:after {
+        content: "";
+        width: 2px;
+        height: 60%;
+        position: absolute;
+        right: -30px;
+        top: 22px;
+        background: #fff;
+      }
+    }
+
+  }
+
+  @media (max-width: $bp-medium-1024) {
+    padding: 20px 0;
+
+    .info-block {
+      order: 8;
+      border: none;
+    }
+    span.flight-search-reset-form {
+      left: 0;
+    }
+  }
+
+  @media (min-width: $bp-medium-1024) {
+    > div {
+      flex-basis: 33%;
+    }
+  }
+}
+
+.main-ticket-search_form-inner.flight-search-status form {
+    > div {
+      flex-basis: 33%;
+    }
+
+  @media (max-width: $bp-small-576) {
+    > div {
+      flex-basis: 100%;
+    }
+    .empty-block {
+      display: none !important;
+    }
+  }
+
+  @media (max-width: 1023px) and (min-width: $bp-small-576) {
+    > div {
+      flex-basis: 40%;
+    }
+
+    .flight-status-to,
+    .flight-status-date {
+      &:after {
+        content: "";
+        width: 2px;
+        height: 60%;
+        position: absolute;
+        right: -30px;
+        top: 22px;
+        background: #fff;
+      }
+    }
+
+    .empty-block {
+      order: 5;
+      border: none;
+    }
+
+  }
+
+  @media (max-width: 1023px) {
+    padding: 15px 0;
+
+    .search-block {
+      margin-top: 10px;
+    }
+
+    span.flight-search-reset-form {
+      left: 0;
+    }
+  }
+
+  @media (min-width: $bp-medium-1024) {
+    > div {
+      flex-basis: 33%;
+    }
+    > div:not(.search-block):not(.empty-block) {
+      &:before {
+        content: "";
+        width: 2px;
+        height: 60%;
+        position: absolute;
+        left: 0px;
+        top: 22px;
+        background: #fff;
+      }
+    }
+  }
+}
+
+
+
+  // Кнопки для филтера с округленными краями
 .filter__buttons {
   display: inline-block;
   border: 2px solid #E0E0E0;

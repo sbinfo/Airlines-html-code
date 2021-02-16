@@ -759,8 +759,8 @@ body {
   cursor: pointer;
 }
 .main-ticket-search_form__filters-button.active {
-  background: #CE833F;
-  color: #fff;
+  background: #CE833F !important;
+  color: #fff !important;
   border-radius: 5px 5px 0px 0px;
 }
 .main-ticket-search_form__filters-button:not(:last-child) {
@@ -897,10 +897,13 @@ body {
   text-align: center;
   border-bottom: 0 !important;
 }
-.main-ticket-search_form .from-block {
+.main-ticket-search_form form .info-block {
+  text-align: right;
+}
+.main-ticket-search_form .form-text {
   position: relative;
 }
-.main-ticket-search_form .from-block button.date-activator__btn_switch {
+.main-ticket-search_form .form-text button.date-activator__btn_switch {
   transform: rotate(90deg);
   position: absolute;
   bottom: -16px;
@@ -916,21 +919,21 @@ body {
   background: #FFFFFF;
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.17);
 }
-.main-ticket-search_form .from-block .search-block {
+.main-ticket-search_form .form-text .search-block {
   display: flex;
   justify-content: center;
   padding-top: 7px;
   padding-right: 14px;
 }
-.main-ticket-search_form .from-block .filters-block__item:first-child {
+.main-ticket-search_form .form-text .filters-block__item:first-child {
   margin-bottom: 16px;
 }
-.main-ticket-search_form .from-block .filters-block__item {
+.main-ticket-search_form .form-text .filters-block__item {
   display: flex;
   justify-content: flex-end;
   padding-right: 30px;
 }
-.main-ticket-search_form .from-block .filters-block__item label {
+.main-ticket-search_form .form-text .filters-block__item label {
   font-size: 18px;
   line-height: 21px;
   margin-right: 10px;
@@ -948,7 +951,7 @@ body {
   .main-ticket-search_form form > div:not(.white-separator) {
     flex-basis: 40%;
   }
-  .main-ticket-search_form .from-block button.date-activator__btn_switch {
+  .main-ticket-search_form .form-text button.date-activator__btn_switch {
     transform: rotate(0);
     right: -45px;
     top: 29%;
@@ -975,10 +978,9 @@ body {
   }
   .main-ticket-search_form .white-separator {
     display: block;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin: 5px 0;
   }
-  .main-ticket-search_form .from-block button.date-activator__btn_switch {
+  .main-ticket-search_form .form-text button.date-activator__btn_switch {
     transform: rotate(0);
     left: -18px;
     top: 27%;
@@ -986,11 +988,8 @@ body {
   .main-ticket-search_form form {
     padding: 20px 0;
   }
-  .main-ticket-search_form form > div:not(:first-child):not(.white-separator):not(.filters-block) {
+  .main-ticket-search_form form > div:not(:first-child):not(.white-separator) {
     padding: 17px 30px;
-  }
-  .main-ticket-search_form form .filters-block {
-    padding: 17px 15px !important;
   }
   .main-ticket-search_form form > div:not(.white-separator) {
     position: relative;
@@ -999,7 +998,16 @@ body {
     margin: 0;
     min-height: 90px;
   }
-  .main-ticket-search_form form > div:not(:first-child):not(:nth-child(6))::before {
+  .main-ticket-search_form .flight-search-book form > div:not(:first-child):not(:nth-child(6))::before {
+    content: "";
+    height: 60px;
+    color: white;
+    border-left: 2px solid #fff;
+    position: absolute;
+    left: 0;
+    top: 15%;
+  }
+  .main-ticket-search_form .flight-search-manage_trip form > div:not(.search-block):not(.info-block)::before {
     content: "";
     height: 60px;
     color: white;
@@ -1070,6 +1078,268 @@ body {
   }
   .main-ticket-search_form form > div {
     min-height: 110px;
+  }
+}
+
+.flight-search-form {
+  width: 100%;
+  position: relative;
+}
+.flight-search-form span.flight-search-reset-form {
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  cursor: pointer;
+}
+.flight-search-form span.flight-search-reset-form:before {
+  content: "";
+  background: url("../icons/close.svg") no-repeat center center;
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+}
+.flight-search-form label {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+.flight-search-form label input.flight-search-form-input {
+  width: 100%;
+  margin-top: 12px;
+  border: none;
+  outline: none;
+  text-align: right;
+  font-weight: 500;
+  font-size: 20px;
+  color: #2D2B2C;
+  background: transparent;
+}
+.flight-search-form label input.flight-search-form-input::placeholder {
+  font-weight: 400;
+}
+.flight-search-form.form-select span.flight-search-reset-form:before {
+  background: url("../icons/arrow_down.svg") no-repeat center center;
+}
+.flight-search-form.form-select ul.flight-search-dropdown {
+  z-index: 10;
+  width: 100%;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 110px;
+  padding: 20px 20px 10px;
+  -webkit-box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.09);
+  -moz-box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.09);
+  box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.09);
+}
+.flight-search-form.form-select ul.flight-search-dropdown li {
+  display: block;
+  position: relative;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.flight-search-form.form-select ul.flight-search-dropdown li label {
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.flight-search-form.form-select ul.flight-search-dropdown li input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.flight-search-form.form-select ul.flight-search-dropdown li .checkmark {
+  position: relative;
+  border: 2px solid #DADADA;
+  height: 18px;
+  width: 18px;
+  background: transparent;
+  border-radius: 50%;
+  margin-left: 16px;
+}
+.flight-search-form.form-select ul.flight-search-dropdown li:active input ~ .checkmark {
+  -webkit-box-shadow: 0px 0px 0px 7px #e7f8ee;
+  -moz-box-shadow: 0px 0px 0px 7px #e7f8ee;
+  box-shadow: 0px 0px 0px 7px #e7f8ee;
+}
+.flight-search-form.form-select ul.flight-search-dropdown li input:checked ~ .checkmark {
+  background-color: #fff;
+  border: 2px solid #0EB155;
+}
+.flight-search-form.form-select ul.flight-search-dropdown li .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.flight-search-form.form-select ul.flight-search-dropdown li input:checked ~ .checkmark:after {
+  display: block;
+}
+.flight-search-form.form-select ul.flight-search-dropdown li .checkmark:after {
+  top: 2px;
+  left: 2px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #0EB155;
+}
+.flight-search-form.form-select.passengers-block .passengers-dropdown li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.flight-search-form.form-select.passengers-block .passengers-dropdown li .passengers-dropdown-buttons button.plus,
+.flight-search-form.form-select.passengers-block .passengers-dropdown li .passengers-dropdown-buttons button.minus {
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  color: #0EB155;
+  background: #fff;
+  -webkit-transition: all, 0.5s ease;
+  -moz-transition: all, 0.5s ease;
+  -ms-transition: all, 0.5s ease;
+  -o-transition: all, 0.5s ease;
+  transition: all, 0.5s ease;
+  -webkit-box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.17);
+  -moz-box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.17);
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.17);
+  width: 24px;
+  height: 24px;
+}
+.flight-search-form.form-select.passengers-block .passengers-dropdown li .passengers-dropdown-buttons button.plus:active,
+.flight-search-form.form-select.passengers-block .passengers-dropdown li .passengers-dropdown-buttons button.minus:active {
+  -webkit-box-shadow: 0px 0px 0px 8px #e7f8ee;
+  -moz-box-shadow: 0px 0px 0px 8px #e7f8ee;
+  box-shadow: 0px 0px 0px 8px #e7f8ee;
+}
+.flight-search-form.form-select.passengers-block .passengers-dropdown li .passengers-dropdown-buttons button.plus:disabled,
+.flight-search-form.form-select.passengers-block .passengers-dropdown li .passengers-dropdown-buttons button.minus:disabled {
+  color: #908C8E;
+  background: #E9E9E9;
+}
+.flight-search-form.form-select.passengers-block .passengers-dropdown li .passengers-dropdown-buttons span.count {
+  font-weight: 400;
+  font-size: 16px;
+  margin: 0 15px;
+}
+.flight-search-form.form-select.passengers-block .passengers-dropdown li .passengers-dropdown-info {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: right;
+}
+.flight-search-form.form-select.passengers-block .passengers-dropdown li .passengers-dropdown-info p {
+  flex-basis: 100%;
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+.flight-search-form.form-select.passengers-block .passengers-dropdown li .passengers-dropdown-info span {
+  flex-basis: 100%;
+  font-weight: 400;
+  font-size: 12px;
+  color: #908C8E;
+}
+
+@media (max-width: 64em) and (min-width: 36em) {
+  .main-ticket-search_form-inner.flight-search-manage_trip form div.trip-passenger-last_name,
+.main-ticket-search_form-inner.flight-search-manage_trip form div.trip-ticket_number {
+    position: relative;
+  }
+  .main-ticket-search_form-inner.flight-search-manage_trip form div.trip-passenger-last_name:after,
+.main-ticket-search_form-inner.flight-search-manage_trip form div.trip-ticket_number:after {
+    content: "";
+    width: 2px;
+    height: 60%;
+    position: absolute;
+    right: -30px;
+    top: 22px;
+    background: #fff;
+  }
+}
+@media (max-width: 64em) {
+  .main-ticket-search_form-inner.flight-search-manage_trip form {
+    padding: 20px 0;
+  }
+  .main-ticket-search_form-inner.flight-search-manage_trip form .info-block {
+    order: 8;
+    border: none;
+  }
+  .main-ticket-search_form-inner.flight-search-manage_trip form span.flight-search-reset-form {
+    left: 0;
+  }
+}
+@media (min-width: 64em) {
+  .main-ticket-search_form-inner.flight-search-manage_trip form > div {
+    flex-basis: 33%;
+  }
+}
+
+.main-ticket-search_form-inner.flight-search-status form > div {
+  flex-basis: 33%;
+}
+@media (max-width: 36em) {
+  .main-ticket-search_form-inner.flight-search-status form > div {
+    flex-basis: 100%;
+  }
+  .main-ticket-search_form-inner.flight-search-status form .empty-block {
+    display: none !important;
+  }
+}
+@media (max-width: 1023px) and (min-width: 36em) {
+  .main-ticket-search_form-inner.flight-search-status form > div {
+    flex-basis: 40%;
+  }
+  .main-ticket-search_form-inner.flight-search-status form .flight-status-to:after,
+.main-ticket-search_form-inner.flight-search-status form .flight-status-date:after {
+    content: "";
+    width: 2px;
+    height: 60%;
+    position: absolute;
+    right: -30px;
+    top: 22px;
+    background: #fff;
+  }
+  .main-ticket-search_form-inner.flight-search-status form .empty-block {
+    order: 5;
+    border: none;
+  }
+}
+@media (max-width: 1023px) {
+  .main-ticket-search_form-inner.flight-search-status form {
+    padding: 15px 0;
+  }
+  .main-ticket-search_form-inner.flight-search-status form .search-block {
+    margin-top: 10px;
+  }
+  .main-ticket-search_form-inner.flight-search-status form span.flight-search-reset-form {
+    left: 0;
+  }
+}
+@media (min-width: 64em) {
+  .main-ticket-search_form-inner.flight-search-status form > div {
+    flex-basis: 33%;
+  }
+  .main-ticket-search_form-inner.flight-search-status form > div:not(.search-block):not(.empty-block):before {
+    content: "";
+    width: 2px;
+    height: 60%;
+    position: absolute;
+    left: 0px;
+    top: 22px;
+    background: #fff;
   }
 }
 
