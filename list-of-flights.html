@@ -57,11 +57,13 @@
             <!-- section-header-nav -->
             <div class="section-header-nav">
                 <div class="section-header-nav__profile">
-                    <a href="#" class="section-header-nav__profile-button">
+                    <a href="#" class="profile-icon">
                         <img src="assets/icons/account.png" alt="account">
+                        <span class="nav-icon-hint profile-icon-hint">Login</span>
                     </a>
-                    <a href="#" class="section-header-nav__profile-button">
+                    <a href="#" class="search-image-icon">
                         <img src="assets/icons/image_search.png" alt="search image">
+                        <span class="nav-icon-hint search-image-hint">My searches</span>
                     </a>
                 </div>
                 <nav class="section-header-nav__menu">
@@ -156,14 +158,22 @@
 </header>
 <!-- / section-header -->
 
-<!-- section ordering -->
-<section class="section-block flights-list-wrapper">
+
+<div class="section-block flights-filter-buttons-wrapper">
     <div class="section-inner">
         <div class="flights-filter-buttons">
             <button type="button" class="month-view">month view</button>
             <button type="button" class="flexible-dates">Flexible dates +/-3 days</button>
             <button type="button" class="all-results active">all results</button>
         </div>
+    </div>
+</div>
+
+
+
+<!-- section flights-list-wrapper -->
+<section class="section-block flights-list-wrapper">
+    <div class="section-inner">
         <div class="flights-list">
             <div class="flights-list-header">
                 <div class="flights-list-filter_buttons">
@@ -194,7 +204,10 @@
                     <div class="price-details">
                         <p class="price-details-row">
                             <img src="assets/icons/order/luggage1-gray.svg" alt="">
-                            <img src="assets/icons/order/luggage2-gray.svg" alt="">
+                        <span class="luggage-count">
+                            <img src="assets/icons/order/luggage2-gray.svg" alt="luggage">
+                                <span>x2</span>
+                            </span>
                         </p>
                         <p class="price-details-row luggage-text">With luggage</p>
                         <p class="price-details-row places-info">Last 8 places</p>
@@ -257,10 +270,18 @@
                                     </div>
                                     <div class="graphic-line"></div>
                                     <div class="graphic-info-section">
-                                        <span>KBP</span>
-                                        <span>FRA</span>
-                                        <span>FRA</span>
-                                        <span>PUJ</span>
+                                        <div>PUJ
+                                            <span class="graphic-hint graphic-bottom-hint">Departure from Boryspil Airport,Kyiv at 06:30 local time</span>
+                                        </div>
+                                        <div>FRA
+                                            <span class="graphic-hint graphic-top-hint">Change 4h 45min at the airport “Frankfurt am Main”</span>
+                                        </div>
+                                        <div>FRA
+                                            <span class="graphic-hint graphic-bottom-hint">Departure at 06:30 local time</span>
+                                        </div>
+                                        <div>KBP
+                                            <span class="graphic-hint graphic-top-hint">Departure from Boryspil Airport,Kyiv at 06:30 local time</span>
+                                        </div>
                                     </div>
 
                                 </div>
@@ -2352,7 +2373,394 @@
         </div>
     </div>
 </section>
-<!-- / section ordering -->
+<!-- / section flights-list-wrapper -->
+
+
+<!-- flexible-dates -->
+<div class="section-block flexible-dates">
+    <div class="section-inner">
+        <h3 class="flexible-dates-title heading-3--right_line">Flexible dates</h3>
+        <h6 class="flexible-dates-subtitle">* pay attention! Prices are updated once a day and there may be a deviation in the price,
+            so click on the flight displayed to receive the final price. </h6>
+        <table border="0" cellpadding="0" cellspacing="0" class="flexible-table">
+            <tr class="table-row">
+                <th scope="col">
+                    <p class="th-title">Return</p>
+                    <p class="th-date">Sunday 07/02</p>
+                </th>
+                <th scope="col">
+                    <p class="th-title">Return</p>
+                    <p class="th-date">Sat 06/02</p>
+                </th>
+                <th scope="col" class="selected">
+                    <p class="th-title">Return</p>
+                    <p class="th-date">Friday 05/02</p>
+                </th>
+                <th scope="col">
+                    <p class="th-title">Return</p>
+                    <p class="th-date">Thursday 04/02</p>
+                </th>
+                <th scope="col">
+                    <p class="th-title">Return</p>
+                    <p class="th-date">Wednesday 03/02</p>
+                </th>
+                <th scope="col">
+                    <p class="th-title">Return</p>
+                    <p class="th-date">Tuesday 02/02</p>
+                </th>
+                <th scope="col">
+                    <p class="th-title">Return</p>
+                    <p class="th-date">Monday 01/02</p>
+                </th>
+                <th scope="col"></th>
+            </tr>
+            <tr class="table-row">
+                <td class="2-stopover">$304</td>
+                <td class="2-stopover">$358</td>
+                <td class="selected stopover">$304</td>
+                <td class="stopover">$350</td>
+                <td class="stopover">$254</td>
+                <td class="cheapest stopover">$402</td>
+                <td class="stopover">$388</td>
+                <th scope="row">
+                    <p class="th-title">Output</p>
+                    <p class="th-date">Friday 22/01</p>
+                </th>
+            </tr>
+            <tr class="table-row">
+                <td class="two-stopover">$204</td>
+                <td class="two-stopover">$358</td>
+                <td class="stopover start">$304</td>
+                <td class="stopover selected">$350</td>
+                <td class="stopover selected">$388</td>
+                <td class="stopover selected">$254</td>
+                <td class="stopover selected">$402</td>
+                <th scope="row" class="selected">
+                    <p class="th-title">Output</p>
+                    <p class="th-date">Sat 24/01</p>
+                </th>
+            </tr>
+            <tr class="table-row">
+                <td class="two-stopover">$402</td>
+                <td class="stopover">$358</td>
+                <td class="stopover">$304</td>
+                <td class="stopover">$304</td>
+                <td class="two-stopover">$350</td>
+                <td class="stopover cheapest">$254</td>
+                <td class="stopover">$388</td>
+                <th scope="row">
+                    <p class="th-title">Output</p>
+                    <p class="th-date">Sunday 07/02</p>
+                </th>
+            </tr>
+            <tr class="table-row">
+                <td class="stopover">$388</td>
+                <td class="stopover">$304</td>
+                <td class="stopover">$358</td>
+                <td class="two-stopover">$304</td>
+                <td class="two-stopover">$350</td>
+                <td class="stopover cheapest">$254</td>
+                <td class="two-stopover">$402</td>
+                <th scope="row">
+                    <p class="th-title">Output</p>
+                    <p class="th-date">Sunday 07/02</p>
+                </th>
+            </tr>
+            <tr class="table-row">
+                <td class="stopover">$358</td>
+                <td class="stopover">$304</td>
+                <td class="stopover">$254</td>
+                <td class="stopover">$350</td>
+                <td class="stopover">$304</td>
+                <td class="stopover">$402</td>
+                <td class="stopover">$388</td>
+                <th scope="row">
+                    <p class="th-title">Output</p>
+                    <p class="th-date">Sunday 07/02</p>
+                </th>
+            </tr>
+            <tr class="table-row">
+                <td class="stopover">$304</td>
+                <td class="stopover">$358</td>
+                <td class="stopover">$304</td>
+                <td class="stopover">$350</td>
+                <td class="stopover">$254</td>
+                <td class="stopover">$402</td>
+                <td class="stopover">$388</td>
+                <th scope="row">
+                    <p class="th-title">Output</p>
+                    <p class="th-date">Sunday 07/02</p>
+                </th>
+            </tr>
+            <tr class="table-row">
+                <td class="stopover">$304</td>
+                <td class="stopover">$304</td>
+                <td class="two-stopover">$358</td>
+                <td class="two-stopover">$350</td>
+                <td class="two-stopover">$254</td>
+                <td class="stopover">$402</td>
+                <td class="stopover">$388</td>
+                <th scope="row">
+                    <p class="th-title">Output</p>
+                    <p class="th-date">Sunday 07/02</p>
+                </th>
+            </tr>
+            <tr class="table-row table-info-block">
+                <td colspan="8">
+                    <span class="table-info info-two-stopover">2 stopover</span>
+                    <span class="table-info info-one-stopover">1 stopover</span>
+                    <span class="table-info info-selecterd">Selected date</span>
+                    <span class="table-info info-cheapest">Cheapest date</span>
+                    <span class="table-info info-start">Start date</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<!-- /.flexible-dates -->
+
+<!-- Month view -->
+<div class="section-block month-view">
+    <div class="section-inner">
+        <h3 class="month-view-title heading-3--right_line">Flexible dates</h3>
+        <h6 class="month-view-subtitle">* pay attention! Prices are updated once a day and there may be a deviation in the price,
+            so click on the flight displayed to receive the final price. </h6>
+        <table border="0" cellpadding="0" cellspacing="0" class="month-view-table">
+            <tr class="table-row">
+                <th scope="col">Sunday</th>
+                <th scope="col">Saturday</th>
+                <th scope="col">Friday</th>
+                <th scope="col">Thursday</th>
+                <th scope="col">Wednesday</th>
+                <th scope="col">Tuesday</th>
+                <th scope="col">Monday</th>
+            </tr>
+            <tr class="table-row">
+                <td class="day">
+                    <span class="day-number">27</span>
+                    <p class="price-of-day">$297</p>
+                    <p class="return-info">Return date 30/01</p>
+                </td>
+                <td class="day">
+                    <span class="day-number">27</span>
+                    <p class="price-of-day">$297</p>
+                    <p class="return-info">Return date 30/01</p>
+                </td>
+                <td class="day">
+                    <span class="day-number">26</span>
+                    <p class="price-of-day">$297</p>
+                    <p class="return-info">Return date 30/01</p>
+                </td>
+                <td class="day">
+                    <span class="day-number">25</span>
+                    <p class="price-of-day">$297</p>
+                    <p class="return-info">Return date 30/01</p>
+                </td>
+                <td class="day">
+                    <span class="day-number">24</span>
+                    <p class="price-of-day">$297</p>
+                    <p class="return-info">Return date 30/01</p>
+                </td>
+                <td class="day">
+                    <span class="day-number">23</span>
+                    <p class="price-of-day">$297</p>
+                    <p class="return-info">Return date 30/01</p>
+                </td>
+                <td class="day">
+                    <span class="day-number">22</span>
+                    <p class="price-of-day">$297</p>
+                    <p class="return-info">Return date 30/01</p>
+                </td>
+            </tr>
+            <tr class="table-row">
+                <td class="day">
+                    <span class="day-number">21</span>
+                    <p class="price-of-day">$297</p>
+                    <p class="return-info">Return date 30/01</p>
+                </td>
+                <td class="day">
+                    <span class="day-number">27</span>
+                    <p class="price-of-day">$297</p>
+                    <p class="return-info">Return date 30/01</p>
+                </td>
+                <td class="day">
+                    <span class="day-number">20</span>
+                    <p class="price-of-day">$297</p>
+                    <p class="return-info">Return date 30/01</p>
+                </td>
+                <td class="day">
+                    <span class="day-number">19</span>
+                    <p class="price-of-day">$297</p>
+                    <p class="return-info">Return date 30/01</p>
+                </td>
+                <td class="day">
+                    <span class="day-number">18</span>
+                    <p class="price-of-day">$297</p>
+                    <p class="return-info">Return date 30/01</p>
+                </td>
+                <td class="day">
+                    <span class="day-number">17</span>
+                    <p class="price-of-day">$297</p>
+                    <p class="return-info">Return date 30/01</p>
+                </td>
+                <td class="day">
+                    <span class="day-number">16</span>
+                    <p class="price-of-day">$297</p>
+                    <p class="return-info">Return date 30/01</p>
+                </td>
+            </tr>
+            <tr class="table-row">
+                <td class="day">
+                    <span class="day-number">15</span>
+                    <p class="price-of-day">$297</p>
+                    <p class="return-info">Return date 30/01</p>
+                </td>
+                <td class="day">
+                    <span class="day-number">27</span>
+                    <p class="price-of-day">$297</p>
+                    <p class="return-info">Return date 30/01</p>
+                </td>
+                <td class="day active">
+                    <span class="day-number">14</span>
+                    <p class="price-of-day">$297</p>
+                    <p class="return-info">Return date 30/01</p>
+                </td>
+                <td class="day active">
+                    <span class="day-number">13</span>
+                    <p class="price-of-day">$297</p>
+                    <p class="return-info">Return date 30/01</p>
+                </td>
+                <td class="day active">
+                    <span class="day-number">12</span>
+                    <p class="price-of-day">$297</p>
+                    <p class="return-info">Return date 30/01</p>
+                </td>
+                <td class="day active">
+                    <span class="day-number">11</span>
+                    <p class="price-of-day">$297</p>
+                    <p class="return-info">Return date 30/01</p>
+                </td>
+                <td class="day active">
+                    <span class="day-number">10</span>
+                    <p class="price-of-day">$297</p>
+                    <p class="return-info">Return date 30/01</p>
+                </td>
+            </tr>
+            <tr class="table-row">
+                <td class="day">
+                    <span class="day-number">27</span>
+                    <p class="price-of-day">$297</p>
+                    <p class="return-info">Return date 30/01</p>
+                </td>
+                <td class="day">
+                    <span class="day-number">27</span>
+                    <p class="price-of-day">$297</p>
+                    <p class="return-info">Return date 30/01</p>
+                </td>
+                <td class="day">
+                    <span class="day-number">27</span>
+                    <p class="price-of-day">$297</p>
+                    <p class="return-info">Return date 30/01</p>
+                </td>
+                <td class="day">
+                    <span class="day-number">27</span>
+                    <p class="price-of-day">$297</p>
+                    <p class="return-info">Return date 30/01</p>
+                </td>
+                <td class="day">
+                    <span class="day-number">27</span>
+                    <p class="price-of-day">$297</p>
+                    <p class="return-info">Return date 30/01</p>
+                </td>
+                <td class="day">
+                    <span class="day-number">27</span>
+                    <p class="price-of-day">$297</p>
+                    <p class="return-info">Return date 30/01</p>
+                </td>
+                <td class="day">
+                    <span class="day-number">27</span>
+                    <p class="price-of-day">$297</p>
+                    <p class="return-info">Return date 30/01</p>
+                </td>
+            </tr>
+            <tr class="table-row">
+                <td class="day active">
+                    <span class="day-number">27</span>
+                    <p class="price-of-day">$297</p>
+                    <p class="return-info">Return date 30/01</p>
+                </td>
+                <td class="day active cheapest">
+                    <span class="day-number">27</span>
+                    <p class="price-of-day">$297</p>
+                    <p class="return-info">Return date 30/01</p>
+                </td>
+                <td class="day">
+                    <span class="day-number">27</span>
+                    <p class="price-of-day">$297</p>
+                    <p class="return-info">Return date 30/01</p>
+                </td>
+                <td class="day">
+                    <span class="day-number">27</span>
+                    <p class="price-of-day">$297</p>
+                    <p class="return-info">Return date 30/01</p>
+                </td>
+                <td class="day active">
+                    <span class="day-number">27</span>
+                    <p class="price-of-day">$297</p>
+                    <p class="return-info">Return date 30/01</p>
+                </td>
+                <td class="day">
+                    <span class="day-number">27</span>
+                    <p class="price-of-day">$297</p>
+                    <p class="return-info">Return date 30/01</p>
+                </td>
+                <td class="day">
+                    <span class="day-number">27</span>
+                    <p class="price-of-day">$297</p>
+                    <p class="return-info">Return date 30/01</p>
+                </td>
+            </tr>
+            <tr class="table-row">
+                <td class="day">
+                    <span class="day-number">27</span>
+                    <p class="price-of-day">$297</p>
+                    <p class="return-info">Return date 30/01</p>
+                </td>
+                <td class="day">
+                    <span class="day-number">27</span>
+                    <p class="price-of-day">$297</p>
+                    <p class="return-info">Return date 30/01</p>
+                </td>
+                <td class="day">
+                    <span class="day-number">27</span>
+                    <p class="price-of-day">$297</p>
+                    <p class="return-info">Return date 30/01</p>
+                </td>
+                <td class="day">
+                    <span class="day-number">27</span>
+                    <p class="price-of-day">$297</p>
+                    <p class="return-info">Return date 30/01</p>
+                </td>
+                <td class="day">
+                    <span class="day-number">27</span>
+                    <p class="price-of-day">$297</p>
+                    <p class="return-info">Return date 30/01</p>
+                </td>
+                <td class="day">
+                    <span class="day-number">27</span>
+                    <p class="price-of-day">$297</p>
+                    <p class="return-info">Return date 30/01</p>
+                </td>
+                <td class="day">
+                    <span class="day-number">27</span>
+                    <p class="price-of-day">$297</p>
+                    <p class="return-info">Return date 30/01</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<!-- Month view -->
 
 <!-- section services -->
 <section class="section-block services">

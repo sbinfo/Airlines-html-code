@@ -19,6 +19,36 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 $(document).ready(function(){
+
+    /*** Search form ***/
+    $(".btn-filter-flight_status").on("click", function () {
+        $(".main-ticket-search_form .flight-search-manage_trip").hide();
+        $(".main-ticket-search_form .flight-search-book").hide();
+
+        $(".main-ticket-search_form__filters-button").removeClass("active");
+        $(this).addClass('active');
+        $(".main-ticket-search_form .flight-search-status").show();
+    });
+
+    $(".btn-filter-manage_trips").on("click", function () {
+        $(".main-ticket-search_form .flight-search-book").hide();
+        $(".main-ticket-search_form .flight-search-status").hide();
+
+        $(".main-ticket-search_form__filters-button").removeClass("active");
+        $(this).addClass('active');
+        $(".main-ticket-search_form .flight-search-manage_trip").show();
+    });
+
+    $(".btn-filter-book").on("click", function () {
+        $(".main-ticket-search_form .flight-search-manage_trip").hide();
+        $(".main-ticket-search_form .flight-search-status").hide();
+
+        $(".main-ticket-search_form__filters-button").removeClass("active");
+        $(this).addClass('active');
+        $(".main-ticket-search_form .flight-search-book").show();
+    });
+    /*** / Search form ***/
+
     /*** Order page ***/
     $(".order-details-filter.filter__buttons button.order-details-btn_terms").on('click', function() {
         $(this).addClass('active');

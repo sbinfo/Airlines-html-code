@@ -1,5 +1,4 @@
 @import "normalize";
-//@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&family=Rubik:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap');
 
 // === Variables === //
@@ -43,7 +42,7 @@ $bp-xxlarge-1920: 120em; // 1920px
   bottom: 0;
 }
 
-@mixin transit($what: all, $s, $how: ease) {
+@mixin transit($what: all, $s: 0.5s, $how: ease) {
   -webkit-transition: $what, $s $how;
   -moz-transition: $what, $s $how;
   -ms-transition: $what, $s $how;
@@ -245,12 +244,12 @@ body {
 .form-select__group.success,
 .form-text__group.success {
   border: 1px solid #0EB155;
-  background: rgb(242 251 246);
+  background: rgb(242, 251, 246);
 
   .form-text,
   .form-select,
   .form-textarea {
-    background: rgb(242 251 246);
+    background: rgb(242, 251, 246);
   }
 }
 
@@ -509,13 +508,13 @@ body {
       cursor: pointer;
 
       &.active {
-        background: #CE833F;
-        color: $color-white;
+        background: #CE833F !important;
+        color: $color-white !important;
         border-radius: 5px 5px 0px 0px;
       }
     }
 
-    &-button:not(:last-child) {
+    &-button {
       margin-right: 3px;
       color: $color-main;
       background-color: $color-white;
@@ -524,7 +523,7 @@ body {
 
   &-inner {
     position: relative;
-    border: 1px solid rgb(255 255 255 / 70%);
+    border: 1px solid #ffffffbd;
 
     &__background {
       position: absolute;
@@ -573,7 +572,7 @@ body {
     flex-basis: 100%;
     border-bottom: 2px solid #fff;
     margin: 0 30px;
-    padding: 20px 0;
+    //padding: 20px 0;
 
     div.activator-click {
       display: flex;
@@ -604,6 +603,9 @@ body {
 
   form .filters-block {
     flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: flex-end !important;
 
     &__item:first-child {
       margin-bottom: 9px;
@@ -660,13 +662,18 @@ body {
     border-bottom: 0 !important;
   }
 
-  .from-block {
+  form .info-block {
+    text-align: right;
+  }
+
+  .form-text {
     position: relative;
 
     button.date-activator__btn_switch {
+      z-index: 10;
       transform: rotate(90deg);
       position: absolute;
-      bottom: -16px;
+      bottom: -18px;
       right: 0;
       width: 36px;
       height: 36px;
@@ -707,6 +714,18 @@ body {
     }
   }
 
+  span.flight-search-reset-form {
+    &:before {
+      background: url("../icons/close.svg") no-repeat center center;
+    }
+  }
+
+  span.search-dropdown-button {
+    &:before {
+      background: url("../icons/arrow_down.svg") no-repeat center center;
+    }
+  }
+
   @media (min-width: $bp-small-576) {
     &__filters-button {
       font-size: 16px;
@@ -724,10 +743,10 @@ body {
       flex-basis: 40%;
     }
 
-    .from-block button.date-activator__btn_switch {
+    .form-text button.date-activator__btn_switch {
       transform: rotate(0);
       right: -45px;
-      top: 29%;
+      top: 35%;
     }
   }
 
@@ -740,10 +759,9 @@ body {
 
     .white-separator {
       display: block;
-      margin-bottom: 20px;
-      margin-top: 20px;
+      margin: 5px 0;
     }
-    .from-block button.date-activator__btn_switch {
+    .form-text button.date-activator__btn_switch {
       transform: rotate(0);
       left: -18px;
       top: 27%;
@@ -751,11 +769,8 @@ body {
     form {
       padding: 20px 0;
     }
-    form > div:not(:first-child):not(.white-separator):not(.filters-block) {
+    form > div:not(:first-child):not(.white-separator) {
       padding: 17px 30px;
-    }
-    form .filters-block {
-      padding: 17px 15px !important;
     }
     form > div:not(.white-separator) {
       position: relative;
@@ -764,7 +779,7 @@ body {
       margin: 0;
       min-height: 90px;
     }
-    form > div:not(:first-child):not(:nth-child(6))::before {
+    .flight-search-book form > div:not(:first-child):not(:nth-child(6))::before {
       content: "";
       height: 60px;
       color: white;
@@ -772,6 +787,18 @@ body {
       position: absolute;
       left: 0;
       top: 15%;
+    }
+    .flight-search-manage_trip,
+    .flight-search-status {
+      form > div:not(.search-block):not(.empty-block):not(.info-block)::before {
+        content: "";
+        height: 60px;
+        color: white;
+        border-left: 2px solid #fff;
+        position: absolute;
+        left: 0;
+        top: 15%;
+      }
     }
     form .from-block,
     form .to-block,
@@ -813,6 +840,267 @@ body {
     }
     form > div {
       min-height: 110px;
+    }
+  }
+}
+// /. Main ticket search form
+
+.flight-search-book .filters-block {
+  border: none !important;
+}
+
+// Flight search form
+.flight-search-form {
+  width: 100%;
+  position: relative;
+
+  span.search-dropdown-button,
+  span.flight-search-reset-form {
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    cursor: pointer;
+
+    &:before {
+      content: "";
+      width: 14px;
+      height: 14px;
+      display: inline-block;
+    }
+  }
+
+  label {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+
+    input.flight-search-form-input {
+      width: 100%;
+      margin-top: 12px;
+      border: none;
+      outline: none;
+      text-align: right;
+      font-weight: 500;
+      font-size: 20px;
+      color: $color-main;
+      background: transparent;
+      height: 22px;
+
+      &::placeholder {
+        font-weight: 400;
+      }
+    }
+  }
+
+  &.form-select {
+
+    ul.flight-search-dropdown {
+      z-index: 10;
+      width: 100%;
+      background: #fff;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 110px;
+      padding: 20px 20px 10px;
+      @include box-shadow(0px 3px 9px rgba(0, 0, 0, 0.09));
+
+      li {
+        display: block;
+        position: relative;
+        //padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        label {
+          font-size: 16px;
+          font-weight: 400;
+          cursor: pointer;
+        }
+
+        input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+          height: 0;
+          width: 0;
+        }
+
+        .checkmark {
+          position: relative;
+          border: 2px solid #DADADA;
+          height: 18px;
+          width: 18px;
+          background: transparent;
+          border-radius: 50%;
+          margin-left: 16px;
+        }
+
+        &:active input ~ .checkmark {
+          @include box-shadow(0px 0px 0px 7px rgba(231, 248, 238, 1));
+        }
+
+        input:checked ~ .checkmark {
+          background-color: #fff;
+          border: 2px solid $color-primary;
+        }
+
+        .checkmark:after {
+          content: "";
+          position: absolute;
+          display: none;
+        }
+
+        input:checked ~ .checkmark:after {
+          display: block;
+        }
+
+        .checkmark:after {
+          top: 2px;
+          left: 2px;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background: #0EB155;
+        }
+
+      }
+    }
+  }
+  // &.form-select
+
+  &.form-select.passengers-block {
+    .passengers-dropdown {
+      li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16px;
+
+        .passengers-dropdown-buttons {
+          button.plus,
+          button.minus {
+            @include start-button(16px, $color-primary, #fff);
+            @include box-shadow(0px 3px 8px rgba(0, 0, 0, 0.17));
+            width: 24px;
+            height: 24px;
+
+            &:active {
+              @include box-shadow(0px 0px 0px 8px rgba(231, 248, 238, 1));
+            }
+
+            &:disabled {
+              color: #908C8E;
+              background: #E9E9E9;
+            }
+          }
+
+          button.plus {}
+          span.count {
+            font-weight: 400;
+            font-size: 16px;
+            margin: 0 15px;
+          }
+          button.minus {}
+        }
+        .passengers-dropdown-info {
+          display: flex;
+          flex-wrap: wrap;
+          text-align: right;
+          p {
+            flex-basis: 100%;
+            font-weight: 400;
+            font-size: 16px;
+            margin-bottom: 4px;
+          }
+          span {
+            flex-basis: 100%;
+            font-weight: 400;
+            font-size: 12px;
+            color: $color-surface;
+          }
+        }
+      }
+    }
+  }
+  // &.form-select.passengers-block
+}
+
+.main-ticket-search_form-inner form {
+  @media (max-width: 1023px) and (min-width: $bp-small-576) {
+
+    div.from-block,
+    div.date-block,
+    div.department-block {
+      position: relative;
+      &:after {
+        content: "";
+        width: 2px;
+        height: 60%;
+        position: absolute;
+        right: -30px;
+        top: 22px;
+        background: #fff;
+      }
+    }
+  }
+
+  @media (max-width: 1023px) {
+    span.search-dropdown-button,
+    span.flight-search-reset-form {
+      left: 0;
+    }
+  }
+}
+
+.main-ticket-search_form-inner.custom-col3 form {
+
+  @media (max-width: 575px) {
+    .empty-block {
+      display: none !important;
+    }
+  }
+
+  @media (max-width: 1023px) and (min-width: $bp-small-576) {
+
+    div.flight-status-to,
+    div.flight-status-date,
+    div.trip-passenger-last_name,
+    div.trip-ticket_number {
+      position: relative;
+      &:after {
+        content: "";
+        width: 2px;
+        height: 60%;
+        position: absolute;
+        right: -30px;
+        top: 22px;
+        background: #fff;
+      }
+    }
+
+  }
+
+  @media (max-width: 1023px) {
+    .info-block {
+      order: 8;
+      border: none;
+    }
+    .empty-block {
+      order: 4;
+      border: none;
+    }
+  }
+
+  @media (min-width: $bp-medium-1024) {
+    > div {
+      flex-basis: 33%;
     }
   }
 }
@@ -972,24 +1260,33 @@ body {
     }
   }
 
+  @media (min-width: $bp-medium-992) {
+    position: relative;
+  }
+}
+
+#my-menu {
   .mobile-menu {
     &__profile {
+      width: 60%;
       display: flex;
       justify-content: flex-end;
+      margin-left: auto;
     }
 
     &__profile-button {
       flex-basis: 15%;
+      width: auto;
     }
 
     @media (min-width: $bp-medium-992) {
       display: none;
     }
   }
+}
 
-  @media (min-width: $bp-medium-992) {
-    position: relative;
-  }
+.mm-spn.mm-spn--navbar:after {
+  right: auto;
 }
 
 // Breadcrumbs
@@ -1071,8 +1368,56 @@ body {
     padding-top: 20px;
 
     &__profile {
-      &-button + &-button {
+      .profile-icon,
+      .search-image-icon {
+        position: relative;
+        flex-basis: 15%;
+
+        .nav-icon-hint {
+          font-weight: 400;
+          font-size: 12px;
+          position: absolute;
+          left: 0;
+          bottom: -40px;
+          padding: 8px 8px;
+          color: #fff;
+          background-color: $color-main;
+          box-shadow: 0px 9px 28px 8px rgba(0, 0, 0, 0.05), 0px 3px 6px -4px rgba(0, 0, 0, 0.12);
+          filter: drop-shadow(0px 6px 16px rgba(0, 0, 0, 0.08));
+          cursor: none;
+          display: none;
+          @include transit(all, 0.5s, ease);
+
+          &:before {
+            content: "";
+            position: absolute;
+            left: 7px;
+            top: -4px;
+            width: 10px;
+            height: 10px;
+            background-color: $color-main;
+            transform: rotate(45deg);
+          }
+
+        }
+      }
+
+      .profile-icon {
+        &:hover .nav-icon-hint {
+          display: block;
+        }
+      }
+
+      .search-image-icon {
         margin-left: 30px;
+
+        .nav-icon-hint {
+          width: 87px;
+        }
+
+        &:hover .nav-icon-hint {
+          display: block;
+        }
       }
     }
 
@@ -1370,6 +1715,7 @@ body {
               justify-content: stretch;
               margin-top: 20px;
               margin-bottom: 0px;
+              z-index: 10;
 
               a.button-white {
                 width: 100%;
@@ -1685,9 +2031,10 @@ body {
 // ## cheap
 .section-cheap {
   padding-top: 40px;
-  padding-bottom: 30px;
-  background: url("../img/bg-cheap.svg") no-repeat 50% center;
-  background-size: cover;
+  padding-bottom: 130px;
+  background: url(../img/bg-home-list-mobile.png) no-repeat 70% 95%;
+  -webkit-background-size: 90vh;
+  background-size: 90vh;
 
   &__buttons {
     display: flex;
@@ -1838,6 +2185,10 @@ body {
   }
 
   @media (min-width: $bp-small-576) {
+    background: url(../img/bg-home-list-mobile.png) no-repeat center 90%;
+    -webkit-background-size: contain;
+    background-size: contain;
+
     .section-cheap__table {
       justify-content: space-between;
 
@@ -1859,6 +2210,10 @@ body {
     }
   }
   @media (min-width: $bp-medium-1024) {
+    background: url("../img/bg-cheap.svg") no-repeat 50% center;
+    background-size: cover;
+    padding-bottom: 160px;
+
     &__buttons-item {
       font-size: 16px;
       padding: 14px 108px;
@@ -2140,6 +2495,7 @@ body {
         font-size: 26px;
       }
     }
+
   }
 
   @media (min-width: $bp-xlarge-1620) {
@@ -2368,8 +2724,8 @@ body {
   min-height: 300px;
   padding-top: 30px;
   padding-bottom: 16px;
-  background: url("../img/bg-footer.svg") no-repeat 50% center;
-  background-size: cover;
+  background: url("../img/bg-footer.svg") repeat 50% center;
+  background-size: auto;
 
   .section-inner {
     display: flex;
@@ -2458,7 +2814,7 @@ body {
 
   .footer__info {
     flex-basis: 100%;
-    text-align: right;
+    text-align: center;
     border-bottom: 1px solid #4F4F4F;
     border-top: 1px solid #4F4F4F;
     padding-top: 20px;
@@ -2583,6 +2939,7 @@ body {
       flex-basis: 74%;
     }
     .footer__info {
+      text-align: right;
       border-bottom: none;
       border-top: none;
       border-right: 1px solid #4F4F4F;
@@ -3019,7 +3376,7 @@ body {
   }
 
   .select-person__item.active {
-    background: rgb(230 246 237);
+    background: rgb(230, 246, 237);
 
     .active-icon {
       display: block;
@@ -3232,7 +3589,7 @@ body {
   .passengers-item.active {
     .luggage-detail {
       .luggage-select-inner .luggage-select-text {
-        background-color: rgb(14, 177, 85, 0.1);
+        background-color: rgba(14, 177, 85, 0.1);
         border: 1px solid #0EB155;
       }
     }
@@ -3793,7 +4150,7 @@ body {
             }
 
             &.active {
-              background-color: rgb(14, 177, 85, 0.1);
+              background-color: rgba(14, 177, 85, 0.1);
             }
           }
         }
@@ -4980,10 +5337,6 @@ body {
 
 // =================== Blog Post =====================
 .post {
-  .section-post {
-  }
-
-  // .section-post
 
   .section-post {
     .post-block {
@@ -5078,7 +5431,6 @@ body {
 
     // .post-block .post-sidebar
   }
-
   // .section-post
 
   .section-post .post-wrapper {
@@ -5103,6 +5455,7 @@ body {
         width: 100%;
         height: 100%;
         z-index: -1;
+        object-fit: cover;
       }
 
       .post-header-content {
@@ -5149,6 +5502,7 @@ body {
         &:after {
           content: "";
           background: url("../icons/blog/quote.svg") no-repeat center center;
+          background-size: contain;
           display: block;
           width: 32px;
           height: 28px;
@@ -5179,9 +5533,72 @@ body {
 
     // .post-content
   }
-
   // .section-post .post-content
 
+  @media (max-width: 575px) {
+    .section-post .post-block .post-wrapper {
+      .post-header {
+        height: 220px;
+        margin-bottom: 30px;
+
+        .post-header-content {
+          padding: 15px 10px;
+          h2.post-title {
+            font-size: 20px;
+            margin-bottom: 8px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 991px) and (min-width: $bp-small-576) {
+    .section-post .post-block {
+      .post-wrapper .post-header {
+          height: 380px;
+          margin-bottom: 40px;
+      }
+    }
+  }
+
+  @media (max-width: 991px) {
+    .section-blog-header {
+      flex-wrap: wrap;
+
+      .blog-header-button {
+        flex-basis: 100%;
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      .search__element.blog-header-search {
+        flex-basis: 100%;
+      }
+    }
+
+    .section-post .post-wrapper .post-content {
+      p.quote-text {
+        font-size: 22px;
+        .quote-icon:after {
+          width: 25px;
+          height: 20px;
+        }
+      }
+    }
+
+    .section-post .post-block {
+      flex-wrap: wrap;
+
+      .post-sidebar,
+      .post-wrapper {
+        flex-basis: 100%;
+      }
+
+      .post-sidebar {
+        order: 2;
+        margin-top: 40px;
+      }
+    }
+  }
 }
 
 // =================== Blog Post End =================
@@ -5243,7 +5660,6 @@ body {
         transition: 0.5s;
       }
     }
-
     // .faq-list-item
 
     .faq-list-item.active {
@@ -5263,8 +5679,45 @@ body {
         transition: 0.5s;
       }
     }
-
     //.faq-list-item.active
+  }
+
+  @media (max-width: 575px) {
+    .section-blog-header {
+      flex-wrap: wrap;
+
+      .blog-header-button {
+        flex-basis: 100%;
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .search__element.blog-header-search {
+        flex-basis: 100%;
+      }
+    }
+
+    .section-faq .faq-list .faq-list-item .faq-item-icon {
+      display: none;
+    }
+  }
+
+  @media (max-width: $bp-medium-1200) {
+    .section-post .post-block {
+      flex-wrap: wrap;
+
+      .post-sidebar {
+        padding: 0 20px 0 0;
+        flex-basis: 100%;
+        order: 2;
+        margin-top: 50px;
+        border: none;
+      }
+
+      .post-wrapper {
+        flex-basis: 100%;
+      }
+    }
   }
 }
 
@@ -5889,33 +6342,36 @@ body {
 
 // =================== list-of-flights =================
 .list-of-flights {
-  .flights-list-wrapper {
+  .section-block .section-inner {
+    max-width: 1520px;
+  }
 
-    .flights-filter-buttons {
-      text-align: right;
-      border-bottom: 2px solid #E4EBEA;
-      margin-bottom: 20px;
+  .flights-filter-buttons-wrapper .flights-filter-buttons {
+    text-align: right;
+    border-bottom: 2px solid #E4EBEA;
+    margin-bottom: 20px;
 
-      button {
-        @include start-button(14px, #000, #E4EBEA);
-        border-radius: 5px 5px 0 0;
-        font-weight: 400;
-        font-size: 14px;
-        padding: 11px 20px;
-      }
-
-      button.active {
-        color: #fff;
-        background-color: $color-brown;
-      }
-
-      button:not(.active):hover {
-        color: #fff;
-        background-color: #ce833f7d;
-      }
+    button {
+      @include start-button(14px, #000, #E4EBEA);
+      border-radius: 5px 5px 0 0;
+      font-weight: 400;
+      font-size: 14px;
+      padding: 11px 20px;
     }
 
-    // .flights-filter-buttons
+    button.active {
+      color: #fff;
+      background-color: $color-brown;
+    }
+
+    button:not(.active):hover {
+      color: #fff;
+      background-color: #ce833f7d;
+    }
+  }
+  // .flights-filter-buttons
+
+  .flights-list-wrapper {
 
     .flights-list {
       display: flex;
@@ -6019,7 +6475,7 @@ body {
   .flights-results .flights-results-table {
     display: flex;
     position: relative;
-    @include box-shadow(0px 2px 11px rgb(0 0 0 / 12%));
+    @include box-shadow(0px 2px 11px rgb(0, 0, 0 / 12%));
     margin-bottom: 30px;
 
     .price-details {
@@ -6029,6 +6485,26 @@ body {
 
       padding: 15px 30px;
       border-right: 1px solid #E0E0E0;
+
+      .luggage-count {
+        position: relative;
+
+        span {
+          content: "x2";
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 16px;
+          height: 16px;
+          position: absolute;
+          top: -9px;
+          left: 9px;
+          font-size: 9px;
+          border-radius: 50%;
+          background-color: #CE833F;
+          color: #fff;
+        }
+      }
 
       & > p {
        flex-basis: 100%;
@@ -6179,10 +6655,61 @@ body {
           padding-top: 25px;
           display: flex;
           justify-content: space-between;
-          span {
+          > div {
             font-weight: 500;
             font-size: 12px;
             color: $color-primary;
+            position: relative;
+
+            span.graphic-hint {
+              width: 185px;
+              position: absolute;
+              left: 0;
+              padding: 8px 8px;
+              font-weight: 400;
+              font-size: 12px;
+              color: #fff;
+              background: rgba(38, 38, 38, 0.9);
+              box-shadow: 0px 9px 28px 8px rgba(0, 0, 0, 0.05), 0px 3px 6px -4px rgba(0, 0, 0, 0.12);
+              filter: drop-shadow(0px 6px 16px rgba(0, 0, 0, 0.08));
+              cursor: none;
+              z-index: 20;
+              display: none;
+              @include transit(all, 0.5s, ease);
+
+              &:before {
+                content: "";
+                position: absolute;
+                left: 7px;
+                width: 10px;
+                height: 10px;
+                background: rgba(38, 38, 38, 0.9);
+                transform: rotate(45deg);
+              }
+            }
+
+            span.graphic-top-hint {
+              bottom: 25px;
+
+              &:before {
+                bottom: -4px;
+              }
+            }
+
+            span.graphic-bottom-hint {
+              top: 25px;
+
+              &:before {
+                top: -4px;
+              }
+            }
+
+            &:hover {
+              color: $color-brown;
+              span.graphic-hint {
+                display: block;
+              }
+            }
           }
         }
       }
@@ -6559,6 +7086,352 @@ body {
 }
 // =================== list-of-flights End =================
 
+// =================== flexible-dates =================
+.list-of-flights .flexible-dates {
+  .section-inner {
+    max-width: 1520px;
+  }
+  h3.flexible-dates-title,
+  h6.flexible-dates-subtitle {
+    width: 100%;
+    text-align: right;
+  }
+
+  h6.flexible-dates-subtitle {
+    font-size: 12px;
+    font-weight: 400;
+    color: $color-surface;
+    margin-top: 35px;
+    margin-bottom: 10px;
+  }
+
+  .flexible-table .table-row {
+    th[scope="col"],
+    th[scope="row"] {
+      padding: 10px 0;
+      background-color: #E4EBEA;
+      color: $color-main;
+
+      p.th-title {
+        font-size: 12px;
+        font-weight: 400;
+        margin-bottom: 5px;
+      }
+
+      p.th-date {
+        font-weight: 500;
+        font-size: 12px;
+        text-transform: uppercase;
+      }
+    }
+
+    td {
+      padding: 30px 60px;
+      font-weight: 400;
+      font-size: 26px;
+      border: 1px solid #E9E9E9;
+      position: relative;
+
+      &.stopover,
+      &.two-stopover {
+        &:before {
+          content: "";
+          height: 6px;
+          position: absolute;
+          top: 10px;
+          left: 10px;
+        }
+      }
+
+      &.stopover {
+        &:before {
+          background: url("../icons/stopover.svg") no-repeat center center;
+          width: 30px;
+        }
+      }
+
+      &.two-stopover {
+        &:before {
+          background: url("../icons/2-stopover.svg") no-repeat center center;
+          width: 55px;
+        }
+      }
+
+      &.start.stopover,
+      &.cheapest.stopover {
+        &:before {
+          background: url("../icons/stopover-white.svg") no-repeat center center;
+        }
+      }
+
+      &.start.two-stopover,
+      &.cheapest.two-stopover {
+        &:before {
+          background: url("../icons/2-stopover-white.svg") no-repeat center center;
+        }
+      }
+
+      &.start {
+        background: #82D2A4;
+        position: relative;
+        &:after {
+          content: "";
+          background: url("../icons/check-circle-white.svg") no-repeat center center;
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          top: 10px;
+          right: 10px;
+        }
+      }
+
+      &.cheapest {
+        background: #F9C18F;
+        position: relative;
+
+        &:after {
+          content: "";
+          background: url("../icons/cheapest-circle.svg") no-repeat center center;
+          width: 100px;
+          height: 70px;
+          position: absolute;
+          left: 23%;
+          top: 15%;
+        }
+      }
+
+      &.selected {
+        background: #f6f6f6;
+      }
+    }
+
+    th[scope="col"] {
+      position: relative;
+
+      &:not(:last-child):after {
+        content: "";
+        background: url("../icons/plane-to-gray.svg") no-repeat center center;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        right: 5px;
+        top: 13px;
+      }
+
+      &.selected {
+        background: #D8E0DF;
+        :after {
+          background: url("../icons/plane-to-green.svg") no-repeat center center;
+        }
+      }
+    }
+
+    th[scope="row"] {
+      padding: 30px 60px;
+      border-top: 2px solid #fff;
+      position: relative;
+
+      &:after {
+        content: "";
+        background: url("../icons/plane-from-gray.svg") no-repeat center center;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+      }
+
+      &.selected {
+        background: #D8E0DF;
+        :after {
+          background: url("../icons/plane-from-green.svg") no-repeat center center;
+        }
+      }
+    }
+
+    &.table-info-block {
+      @include box-shadow(0px -12px 21px rgba(0, 0, 0, 0.07));
+    }
+    &.table-info-block td {
+      padding: 10px 20px 15px;
+      text-align: right;
+
+      span.table-info {
+        font-size: 14px;
+        font-weight: 400;
+        color: $color-surface;
+        border-left: 1px solid #ccc;
+        position: relative;
+
+        &:after {
+          content: "";
+          position: absolute;
+        }
+      }
+
+      .info-two-stopover {
+        padding: 0 75px 0 20px;
+        &:after {
+          background: url("../icons/2-stopover.svg") no-repeat center center;
+          width: 55px;
+          height: 6px;
+          right: 10px;
+          top: 6px;
+        }
+      }
+      .info-one-stopover {
+        padding: 0 50px 0 20px;
+
+        &:after {
+          background: url("../icons/stopover.svg") no-repeat center center;
+          width: 30px;
+          height: 6px;
+          right: 10px;
+          top: 6px;
+        }
+      }
+
+      .info-start,
+      .info-cheapest,
+      .info-selecterd {
+        padding: 0 40px 0 20px;
+        &:after {
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          right: 10px;
+          top:-2px;
+        }
+      }
+
+      .info-selecterd {
+        &:after {
+          background: #E9E9E9;
+        }
+      }
+      .info-cheapest {
+        &:after {
+          background: #F9C18F;
+        }
+      }
+      .info-start {
+        &:after {
+          background: #82D2A4;
+        }
+      }
+    }
+  }
+  // .flexible-table .table-row
+}
+// =================== flexible-dates End =================
+
+
+// =================== month-view =================
+.list-of-flights .month-view {
+  .section-inner {
+    max-width: 1520px;
+  }
+
+  h3.month-view-title {
+    width: 100%;
+    text-align: right;
+  }
+
+  h6.month-view-subtitle {
+    font-weight: 400;
+    font-size: 12px;
+    color: $color-surface;
+    width: 100%;
+    text-align: right;
+    margin-top: 35px;
+    margin-bottom: 10px;
+  }
+
+  table.month-view-table {
+    width: 100%;
+
+    tr.table-row {}
+  }
+
+  table.month-view-table tr.table-row {
+    th[scope="col"] {
+      font-weight: 500;
+      font-size: 12px;
+      background: #E4EBEA;
+      padding: 15px;
+      text-transform: uppercase;
+    }
+
+    td.day {
+      width: 210px;
+      height: 100px;
+      background: #f6f6f6;
+      border: 1px solid #E4EBEA;
+      position: relative;
+      text-align: center;
+
+      span.day-number {
+        font-size: 14px;
+        font-weight: 400;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        color: #797778;
+      }
+      .price-of-day {
+        font-weight: 400;
+        font-size: 26px;
+        display: none;
+      }
+      .return-info {
+        color: $color-surface;
+        font-size: 12px;
+        font-weight: 400;
+        margin-bottom: -22px;
+        margin-top: 15px;
+        display: none;
+      }
+    }
+
+    td.day.active {
+      background: #fff;
+
+      span.day-number {
+        color: $color-main;
+      }
+      .price-of-day {
+        display: block;
+      }
+      .return-info {
+        display: block;
+      }
+    }
+
+    td.day.cheapest {
+      background: #F9C18F;
+      .price-of-day {
+        position: relative;
+        display: inline-block;
+
+        &:after {
+          content: "";
+          background: url(../icons/cheapest-circle.svg) no-repeat center center;
+          background-size: contain;
+          width: 80px;
+          height: 70px;
+          position: absolute;
+          left: -10px;
+          top: -24px;
+        }
+      }
+      .return-info {
+        color: #fff;
+      }
+    }
+
+  }
+}
+// =================== month-view End =================
 
 
 
