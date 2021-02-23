@@ -1,5 +1,4 @@
 @import "normalize";
-//@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&family=Rubik:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap');
 
 // === Variables === //
@@ -43,7 +42,7 @@ $bp-xxlarge-1920: 120em; // 1920px
   bottom: 0;
 }
 
-@mixin transit($what: all, $s, $how: ease) {
+@mixin transit($what: all, $s: 0.5s, $how: ease) {
   -webkit-transition: $what, $s $how;
   -moz-transition: $what, $s $how;
   -ms-transition: $what, $s $how;
@@ -245,12 +244,12 @@ body {
 .form-select__group.success,
 .form-text__group.success {
   border: 1px solid #0EB155;
-  background: rgb(242 251 246);
+  background: rgb(242, 251, 246);
 
   .form-text,
   .form-select,
   .form-textarea {
-    background: rgb(242 251 246);
+    background: rgb(242, 251, 246);
   }
 }
 
@@ -524,7 +523,7 @@ body {
 
   &-inner {
     position: relative;
-    border: 1px solid rgb(255 255 255 / 70%);
+    border: 1px solid #ffffffbd;
 
     &__background {
       position: absolute;
@@ -1261,24 +1260,33 @@ body {
     }
   }
 
+  @media (min-width: $bp-medium-992) {
+    position: relative;
+  }
+}
+
+#my-menu {
   .mobile-menu {
     &__profile {
+      width: 60%;
       display: flex;
       justify-content: flex-end;
+      margin-left: auto;
     }
 
     &__profile-button {
       flex-basis: 15%;
+      width: auto;
     }
 
     @media (min-width: $bp-medium-992) {
       display: none;
     }
   }
+}
 
-  @media (min-width: $bp-medium-992) {
-    position: relative;
-  }
+.mm-spn.mm-spn--navbar:after {
+  right: auto;
 }
 
 // Breadcrumbs
@@ -2023,9 +2031,10 @@ body {
 // ## cheap
 .section-cheap {
   padding-top: 40px;
-  padding-bottom: 30px;
-  background: url("../img/bg-cheap.svg") no-repeat 50% center;
-  background-size: cover;
+  padding-bottom: 130px;
+  background: url(../img/bg-home-list-mobile.png) no-repeat 70% 95%;
+  -webkit-background-size: 90vh;
+  background-size: 90vh;
 
   &__buttons {
     display: flex;
@@ -2176,6 +2185,10 @@ body {
   }
 
   @media (min-width: $bp-small-576) {
+    background: url(../img/bg-home-list-mobile.png) no-repeat center 90%;
+    -webkit-background-size: contain;
+    background-size: contain;
+
     .section-cheap__table {
       justify-content: space-between;
 
@@ -2197,6 +2210,10 @@ body {
     }
   }
   @media (min-width: $bp-medium-1024) {
+    background: url("../img/bg-cheap.svg") no-repeat 50% center;
+    background-size: cover;
+    padding-bottom: 160px;
+
     &__buttons-item {
       font-size: 16px;
       padding: 14px 108px;
@@ -2707,8 +2724,8 @@ body {
   min-height: 300px;
   padding-top: 30px;
   padding-bottom: 16px;
-  background: url("../img/bg-footer.svg") no-repeat 50% center;
-  background-size: cover;
+  background: url("../img/bg-footer.svg") repeat 50% center;
+  background-size: auto;
 
   .section-inner {
     display: flex;
@@ -2797,7 +2814,7 @@ body {
 
   .footer__info {
     flex-basis: 100%;
-    text-align: right;
+    text-align: center;
     border-bottom: 1px solid #4F4F4F;
     border-top: 1px solid #4F4F4F;
     padding-top: 20px;
@@ -2922,6 +2939,7 @@ body {
       flex-basis: 74%;
     }
     .footer__info {
+      text-align: right;
       border-bottom: none;
       border-top: none;
       border-right: 1px solid #4F4F4F;
@@ -3358,7 +3376,7 @@ body {
   }
 
   .select-person__item.active {
-    background: rgb(230 246 237);
+    background: rgb(230, 246, 237);
 
     .active-icon {
       display: block;
@@ -3571,7 +3589,7 @@ body {
   .passengers-item.active {
     .luggage-detail {
       .luggage-select-inner .luggage-select-text {
-        background-color: rgb(14, 177, 85, 0.1);
+        background-color: rgba(14, 177, 85, 0.1);
         border: 1px solid #0EB155;
       }
     }
@@ -4132,7 +4150,7 @@ body {
             }
 
             &.active {
-              background-color: rgb(14, 177, 85, 0.1);
+              background-color: rgba(14, 177, 85, 0.1);
             }
           }
         }
@@ -6457,7 +6475,7 @@ body {
   .flights-results .flights-results-table {
     display: flex;
     position: relative;
-    @include box-shadow(0px 2px 11px rgb(0 0 0 / 12%));
+    @include box-shadow(0px 2px 11px rgb(0, 0, 0 / 12%));
     margin-bottom: 30px;
 
     .price-details {
