@@ -90,62 +90,179 @@
         <div class="section-header-search">
             <div class="section-header-search__form main-ticket-search_form">
                 <div class="main-ticket-search_form-inner">
-                    <form action="">
-                        <div class="search-block">
-                            <button type="submit" class="search-block-btn-success">update</button>
-                        </div>
-
-                        <div class="passengers-block">
-                            <div class="passengers-activator-click activator-click">
-                                <button class="passengers-activator-click__button">
-                                    <img src="assets/icons/arrow_down.svg" alt="arrow down">
+                    <div class="main-ticket-search_form-inner flight-search-book" style="display: block">
+                        <form action="">
+                            <div class="search-block">
+                                <button type="submit" class="search-block-btn-success">search</button>
+                            </div>
+    
+                            <div class="flight-search-form form-date date-block">
+                                <span class="search-dropdown-button"></span>
+                                <label for="date_depart_return">Depart-Return
+                                    <input type="date" id="date_depart_return" class="flight-search-form-input">
+                                </label>
+                            </div>
+    
+                            <div class="flight-search-form form-text to-block">
+                                <span class="flight-search-reset-form"></span>
+                                <label for="flight-search-to">To
+                                    <input type="text" id="flight-search-to" class="flight-search-form-input" placeholder="Punta Cana">
+                                </label>
+                            </div>
+    
+                            <div class="flight-search-form form-text from-block">
+                                <button type="button" class="date-activator__btn_switch">
+                                    <img src="assets/icons/arrows.png">
                                 </button>
+    
+                                <span class="flight-search-reset-form"></span>
+                                <label for="flight-search-from">From
+                                    <input type="text" id="flight-search-from" class="flight-search-form-input" placeholder="Tel-Aviv">
+                                </label>
                             </div>
-                            <div class="passengers-activator-content activator-content">
-                                <label class="passengers-activator-content__label">Number of passengers</label>
-                                <div class="passengers-activator-content__placeholder">2</div>
+    
+                            <hr class="white-separator">
+    
+                            <div class="filters-block">
+                                <div class="filters-block__item">
+                                    <label for="flexible_dates">Flexible dates +/- 3 days</label>
+                                    <input type="checkbox" id="flexible_dates" class="checkbox-white">
+                                </div>
+                                <div class="filters-block__item">
+                                    <label for="direct_flights_only">Direct flights only</label>
+                                    <input type="checkbox" id="direct_flights_only" class="checkbox-white">
+                                </div>
                             </div>
-                        </div>
-                        <div class="date-block">
-                            <div class="date-activator-click activator-click">
-                                <button class="date-activator-click__button">
-                                    <img src="assets/icons/arrow_down.svg" alt="arrow down">
-                                </button>
+    
+                            <div class="flight-search-form form-select route-block">
+                                <span class="search-dropdown-button"></span>
+                                <label for="flight-search-route">Route
+                                    <input type="text" id="flight-search-route" class="flight-search-form-input" value="Round trip" disabled>
+                                </label>
+                                <ul class="flight-search-dropdown">
+                                    <li>
+                                        <label class="route-list-item" for="route-round-trip">
+                                            Round trip
+                                            <input type="radio" id="route-round-trip" checked name="route-radio">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="route-list-item" for="route-one-way">
+                                            One way
+                                            <input type="radio" id="route-one-way" name="route-radio">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </li>
+                                </ul>
                             </div>
-                            <div class="date-activator-content activator-content">
-                                <label class="date-activator-content__label">Depart-Return</label>
-                                <div class="date-activator-content__placeholder">21/01/21 - 13/01/21</div>
+                            <!-- /.route-block -->
+    
+                            <div class="flight-search-form form-select department-block">
+                                <span class="search-dropdown-button"></span>
+                                <label for="flight-search-department">Department
+                                    <input type="text" id="flight-search-department" class="flight-search-form-input" value="Econom Class" disabled>
+                                </label>
+                                <ul class="flight-search-dropdown">
+                                    <li>
+                                        <label class="route-list-item" for="department-economy-class">
+                                            Economy class
+                                            <input type="radio" id="department-economy-class" checked name="department-radio">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="route-list-item" for="department-premium-class">
+                                            Premium Department
+                                            <input type="radio" id="department-premium-class" name="department-radio">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="route-list-item" for="department-business-class">
+                                            Business class
+                                            <input type="radio" id="department-business-class" name="department-radio">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="route-list-item" for="department-first-class">
+                                            First class
+                                            <input type="radio" id="department-first-class" name="department-radio">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </li>
+                                </ul>
                             </div>
-                        </div>
-                        <div class="to-block">
-                            <div class="to-activator-click activator-click">
-                                <button class="to-activator-click__button">
-                                    <img src="assets/icons/close.svg" alt="arrow down">
-                                </button>
+                            <!-- /.department-block -->
+    
+                            <div class="flight-search-form form-select passengers-block">
+                                <span class="search-dropdown-button"></span>
+                                <label for="flight-search-passengers">Number of passengers
+                                    <input type="text" id="flight-search-passengers" class="flight-search-form-input" value="2" disabled>
+                                </label>
+                                <ul class="flight-search-dropdown passengers-dropdown">
+                                    <li class="adults">
+                                        <div class="passengers-dropdown-buttons">
+                                            <button type="button" class="plus">+</button>
+                                            <span class="count">2</span>
+                                            <button type="button" class="minus active">-</button>
+                                        </div>
+                                        <div class="passengers-dropdown-info">
+                                            <p>Adults</p>
+                                            <span>Age 24-64</span>
+                                        </div>
+                                    </li>
+                                    <li class="young">
+                                        <div class="passengers-dropdown-buttons">
+                                            <button type="button" class="plus">+</button>
+                                            <span class="count">0</span>
+                                            <button type="button" class="minus" disabled>-</button>
+                                        </div>
+                                        <div class="passengers-dropdown-info">
+                                            <p>Young</p>
+                                            <span>Age 16-23</span>
+                                        </div>
+                                    </li>
+                                    <li class="child">
+                                        <div class="passengers-dropdown-buttons">
+                                            <button type="button" class="plus">+</button>
+                                            <span class="count">0</span>
+                                            <button type="button" class="minus" disabled>-</button>
+                                        </div>
+                                        <div class="passengers-dropdown-info">
+                                            <p>Child</p>
+                                            <span>Age 2-15</span>
+                                        </div>
+                                    </li>
+                                    <li class="baby">
+                                        <div class="passengers-dropdown-buttons">
+                                            <button type="button" class="plus">+</button>
+                                            <span class="count">0</span>
+                                            <button type="button" class="minus" disabled>-</button>
+                                        </div>
+                                        <div class="passengers-dropdown-info">
+                                            <p>Baby</p>
+                                            <span>Under 2</span>
+                                        </div>
+                                    </li>
+                                    <li class="retired">
+                                        <div class="passengers-dropdown-buttons">
+                                            <button type="button" class="plus">+</button>
+                                            <span class="count">0</span>
+                                            <button type="button" class="minus" disabled>-</button>
+                                        </div>
+                                        <div class="passengers-dropdown-info">
+                                            <p>Retired</p>
+                                            <span>Age 65+</span>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
-                            <div class="to-activator-content activator-content">
-                                <label class="to-activator-content__label">To</label>
-                                <div class="to-activator-content__placeholder">Phuket</div>
-                            </div>
-                        </div>
-
-                        <div class="from-block">
-                            <button type="button" class="date-activator__btn_switch">
-                                <img src="assets/icons/arrows.png">
-                            </button>
-                            <div class="from-activator-click activator-click">
-                                <button class="from-activator-click__button">
-                                    <img src="assets/icons/close.svg" alt="arrow down">
-                                </button>
-                            </div>
-                            <div class="from-activator-content activator-content">
-                                <label class="from-activator-content__label">From</label>
-                                <div class="from-activator-content__placeholder">Tel-Aviv</div>
-                            </div>
-                        </div>
-                    </form>
-                    <div class="main-ticket-search_form-inner__background"></div>
-                    <div class="main-ticket-search_form-inner__background main-ticket-search-bg-opacity"></div>
+                        </form>
+                        <div class="main-ticket-search_form-inner__background"></div>
+                        <div class="main-ticket-search_form-inner__background main-ticket-search-bg-opacity"></div>
+                    </div>
                 </div>
             </div>
         </div> <!-- section-header-search -->
