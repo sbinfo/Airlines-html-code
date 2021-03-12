@@ -71,6 +71,11 @@ $(document).ready(function(){
         $(".search-department-dropdown").removeClass("active");
         $(".passengers-dropdown").toggleClass("active");
     });
+
+    // advanced search
+    $(".btn-advanced-settings").on("click", function () {
+        $(".advanced-search-form").toggleClass("advanced-search-form_short");
+    });
     /*** / Search form ***/
 
     /*** Order page ***/

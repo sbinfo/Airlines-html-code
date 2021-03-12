@@ -1440,18 +1440,6 @@ body {
 .advanced-search-form_short form .from-block {
   order: 5;
 }
-.advanced-search-form_short form .passengers-block:before,
-.advanced-search-form_short form .date-block:before,
-.advanced-search-form_short form .to-block:before,
-.advanced-search-form_short form .from-block:before {
-  content: "";
-  height: 60px;
-  color: #fff;
-  border-left: 2px solid #fff;
-  position: absolute;
-  left: 0;
-  top: 15%;
-}
 .advanced-search-form_short .search-advanced-settings {
   display: block;
   z-index: 10;
@@ -1472,6 +1460,72 @@ body {
 }
 .advanced-search-form_short .search-advanced-settings .btn-advanced-settings:hover {
   color: #15ad56;
+}
+@media (min-width: 75em) {
+  .advanced-search-form_short form {
+    flex-wrap: nowrap !important;
+  }
+  .advanced-search-form_short form .passengers-block:before,
+.advanced-search-form_short form .date-block:before,
+.advanced-search-form_short form .to-block:before,
+.advanced-search-form_short form .from-block:before {
+    content: "";
+    height: 60px;
+    color: #fff;
+    border-left: 2px solid #fff;
+    position: absolute;
+    left: 0;
+    top: 15%;
+  }
+}
+@media (max-width: 991px) and (min-width: 36em) {
+  .advanced-search-form_short form {
+    padding: 0 20px !important;
+  }
+  .advanced-search-form_short form > div {
+    flex-basis: 50% !important;
+    margin: 0 !important;
+  }
+  .advanced-search-form_short form > div:not(.search-block) {
+    border-bottom: 2px solid #fff;
+  }
+  .advanced-search-form_short form .to-block {
+    order: 1;
+  }
+  .advanced-search-form_short form .from-block {
+    order: 2;
+  }
+  .advanced-search-form_short form .passengers-block {
+    order: 3;
+  }
+  .advanced-search-form_short form .date-block {
+    order: 4;
+  }
+  .advanced-search-form_short form .search-block {
+    order: 5;
+  }
+  .advanced-search-form_short form .passengers-block,
+.advanced-search-form_short form .to-block {
+    padding-right: 20px;
+  }
+  .advanced-search-form_short form .date-block:before,
+.advanced-search-form_short form .from-block:before {
+    content: "";
+    height: 60px;
+    color: #fff;
+    border-left: 2px solid #fff;
+    position: absolute;
+    left: 0;
+    top: 15%;
+  }
+  .advanced-search-form_short button.date-activator__btn_switch {
+    left: -16px !important;
+    right: initial !important;
+    top: 30% !important;
+  }
+  .advanced-search-form_short .search-advanced-settings {
+    text-align: center;
+  }
 }
 
 .flight-search-book .filters-block {

@@ -1198,21 +1198,6 @@ body {
     order: 5;
   }
 
-  form {
-    .passengers-block:before,
-    .date-block:before,
-    .to-block:before,
-    .from-block:before {
-      content: "";
-      height: 60px;
-      color: #fff;
-      border-left: 2px solid #fff;
-      position: absolute;
-      left: 0;
-      top: 15%;
-    }
-  }
-
   .search-advanced-settings {
     display: block;
     z-index: 10;
@@ -1237,6 +1222,83 @@ body {
     }
   }
 
+  @media (min-width: $bp-medium-1200) {
+    form {
+      flex-wrap: nowrap !important;
+    }
+
+    form {
+      .passengers-block:before,
+      .date-block:before,
+      .to-block:before,
+      .from-block:before {
+        content: "";
+        height: 60px;
+        color: #fff;
+        border-left: 2px solid #fff;
+        position: absolute;
+        left: 0;
+        top: 15%;
+      }
+    }
+  }
+
+  @media (max-width: 991px) and (min-width: $bp-small-576) {
+    form {
+      padding: 0 20px !important;
+    }
+    form > div {
+      flex-basis: 50% !important;
+      margin: 0 !important;
+    }
+    form > div:not(.search-block) {
+      border-bottom: 2px solid #fff;
+    }
+    form .to-block {
+      order: 1;
+    }
+    form .from-block {
+      order: 2;
+    }
+    form .passengers-block {
+      order: 3;
+    }
+    form .date-block {
+      order: 4;
+    }
+    form .search-block {
+      order: 5;
+    }
+
+    form {
+      .passengers-block,
+      .to-block {
+        padding-right: 20px;
+      }
+
+      .date-block:before,
+      .from-block:before {
+        content: "";
+        height: 60px;
+        color: #fff;
+        border-left: 2px solid #fff;
+        position: absolute;
+        left: 0;
+        top: 15%;
+      }
+    }
+
+    button.date-activator__btn_switch {
+      left: -16px !important;
+      right: initial !important;
+      top: 30% !important;
+    }
+
+    .search-advanced-settings {
+      text-align: center;
+    }
+
+  }
 
 }
 // /.advanced-search-form_short
