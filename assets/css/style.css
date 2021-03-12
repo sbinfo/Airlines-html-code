@@ -738,18 +738,15 @@ body {
     color: #2D2B2C;
   }
 }
-.advanced-search-form,
 .main-ticket-search_form {
   width: 100%;
   position: relative;
 }
-.advanced-search-form__filters,
 .main-ticket-search_form__filters {
   display: flex;
   justify-content: flex-end;
   padding-right: 2px;
 }
-.advanced-search-form__filters-button,
 .main-ticket-search_form__filters-button {
   font-size: 14px;
   justify-content: center;
@@ -761,24 +758,20 @@ body {
   text-transform: uppercase;
   cursor: pointer;
 }
-.advanced-search-form__filters-button.active,
 .main-ticket-search_form__filters-button.active {
   background: #CE833F !important;
   color: #fff !important;
   border-radius: 5px 5px 0px 0px;
 }
-.advanced-search-form__filters-button,
 .main-ticket-search_form__filters-button {
   margin-right: 3px;
   color: #2D2B2C;
   background-color: #fff;
 }
-.advanced-search-form-inner,
 .main-ticket-search_form-inner {
   position: relative;
   border: 1px solid #ffffffbd;
 }
-.advanced-search-form-inner__background,
 .main-ticket-search_form-inner__background {
   position: absolute;
   top: 0;
@@ -788,12 +781,10 @@ body {
   z-index: 1;
   backdrop-filter: blur(10px);
 }
-.advanced-search-form-inner .main-ticket-search-bg-opacity,
 .main-ticket-search_form-inner .main-ticket-search-bg-opacity {
   background: #4585a2;
   opacity: 0.1;
 }
-.advanced-search-form .search-block-btn-success,
 .main-ticket-search_form .search-block-btn-success {
   font-weight: 500;
   font-size: 26px;
@@ -817,23 +808,19 @@ body {
   -o-transition: all, 0.5s ease;
   transition: all, 0.5s ease;
 }
-.advanced-search-form .search-block-btn-success:hover,
 .main-ticket-search_form .search-block-btn-success:hover {
   background: #27c76b;
 }
-.advanced-search-form form,
 .main-ticket-search_form form {
   position: relative;
   z-index: 10;
   display: flex;
   flex-wrap: wrap;
 }
-.advanced-search-form form > div:not(:first-child):not(.white-separator),
 .main-ticket-search_form form > div:not(:first-child):not(.white-separator) {
   display: flex;
   justify-content: space-between;
 }
-.advanced-search-form form > div:not(.white-separator),
 .main-ticket-search_form form > div:not(.white-separator) {
   display: flex;
   align-items: center;
@@ -843,33 +830,27 @@ body {
   border-bottom: 2px solid #fff;
   margin: 0 30px;
 }
-.advanced-search-form form > div:not(.white-separator) div.activator-click,
 .main-ticket-search_form form > div:not(.white-separator) div.activator-click {
   display: flex;
   align-items: flex-end;
 }
-.advanced-search-form form > div:not(.white-separator) div.activator-click button,
 .main-ticket-search_form form > div:not(.white-separator) div.activator-click button {
   border: none;
   outline: none;
   background: none;
   cursor: pointer;
 }
-.advanced-search-form form > div:not(.white-separator) div.activator-content,
 .main-ticket-search_form form > div:not(.white-separator) div.activator-content {
   text-align: right;
 }
-.advanced-search-form form > div:not(.white-separator) div.activator-content label,
 .main-ticket-search_form form > div:not(.white-separator) div.activator-content label {
   font-size: 16px;
 }
-.advanced-search-form form > div:not(.white-separator) div.activator-content div,
 .main-ticket-search_form form > div:not(.white-separator) div.activator-content div {
   font-weight: 500;
   font-size: 20px;
   margin-top: 10px;
 }
-.advanced-search-form form .filters-block,
 .main-ticket-search_form form .filters-block {
   flex-wrap: wrap !important;
   -webkit-flex-direction: column !important;
@@ -877,11 +858,9 @@ body {
   justify-content: center !important;
   align-items: flex-end !important;
 }
-.advanced-search-form form .filters-block__item:first-child,
 .main-ticket-search_form form .filters-block__item:first-child {
   margin-bottom: 9px;
 }
-.advanced-search-form form .filters-block__item,
 .main-ticket-search_form form .filters-block__item {
   text-align: right;
   flex-basis: 100%;
@@ -889,57 +868,44 @@ body {
   justify-content: flex-end;
   align-items: center;
 }
-.advanced-search-form form .filters-block__item input,
 .main-ticket-search_form form .filters-block__item input {
   margin-left: 10px;
 }
-.advanced-search-form .white-separator,
 .main-ticket-search_form .white-separator {
   display: none;
 }
-.advanced-search-form form .from-block,
 .main-ticket-search_form form .from-block {
   order: 1;
 }
-.advanced-search-form form .to-block,
 .main-ticket-search_form form .to-block {
   order: 2;
 }
-.advanced-search-form form .date-block,
 .main-ticket-search_form form .date-block {
   order: 3;
 }
-.advanced-search-form form .route-block,
 .main-ticket-search_form form .route-block {
   order: 4;
 }
-.advanced-search-form form .department-block,
 .main-ticket-search_form form .department-block {
   order: 5;
 }
-.advanced-search-form form .passengers-block,
 .main-ticket-search_form form .passengers-block {
   order: 6;
 }
-.advanced-search-form form .filters-block,
 .main-ticket-search_form form .filters-block {
   order: 7;
 }
-.advanced-search-form form .search-block,
 .main-ticket-search_form form .search-block {
   order: 10;
   text-align: center;
   border-bottom: 0 !important;
 }
-.advanced-search-form form .info-block,
 .main-ticket-search_form form .info-block {
   text-align: right;
 }
-.advanced-search-form .form-text,
 .main-ticket-search_form .form-text {
   position: relative;
 }
-.advanced-search-form .form-text button.date-activator__btn_switch,
 .main-ticket-search_form .form-text button.date-activator__btn_switch {
   z-index: 10;
   transform: rotate(90deg);
@@ -957,63 +923,52 @@ body {
   background: #FFFFFF;
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.17);
 }
-.advanced-search-form .form-text .search-block,
 .main-ticket-search_form .form-text .search-block {
   display: flex;
   justify-content: center;
   padding-top: 7px;
   padding-right: 14px;
 }
-.advanced-search-form .form-text .filters-block__item:first-child,
 .main-ticket-search_form .form-text .filters-block__item:first-child {
   margin-bottom: 16px;
 }
-.advanced-search-form .form-text .filters-block__item,
 .main-ticket-search_form .form-text .filters-block__item {
   display: flex;
   justify-content: flex-end;
   padding-right: 30px;
 }
-.advanced-search-form .form-text .filters-block__item label,
 .main-ticket-search_form .form-text .filters-block__item label {
   font-size: 18px;
   line-height: 21px;
   margin-right: 10px;
 }
-.advanced-search-form span.flight-search-reset-form:before,
 .main-ticket-search_form span.flight-search-reset-form:before {
   background: url("../icons/close.svg") no-repeat center center;
 }
-.advanced-search-form span.search-dropdown-button:before,
 .main-ticket-search_form span.search-dropdown-button:before {
   background: url("../icons/arrow_down.svg") no-repeat center center;
 }
 @media (min-width: 36em) {
-  .advanced-search-form__filters-button,
-.main-ticket-search_form__filters-button {
+  .main-ticket-search_form__filters-button {
     font-size: 16px;
     padding: 14px 20px;
   }
 }
 @media (min-width: 48em) {
-  .advanced-search-form form,
-.main-ticket-search_form form {
+  .main-ticket-search_form form {
     justify-content: center;
   }
-  .advanced-search-form form > div:not(.white-separator),
-.main-ticket-search_form form > div:not(.white-separator) {
+  .main-ticket-search_form form > div:not(.white-separator) {
     flex-basis: 40%;
   }
-  .advanced-search-form .form-text button.date-activator__btn_switch,
-.main-ticket-search_form .form-text button.date-activator__btn_switch {
+  .main-ticket-search_form .form-text button.date-activator__btn_switch {
     transform: rotate(0);
     right: -45px;
     top: 35%;
   }
 }
 @media (min-width: 64em) {
-  .advanced-search-form .search-block-btn-success,
-.main-ticket-search_form .search-block-btn-success {
+  .main-ticket-search_form .search-block-btn-success {
     font-weight: 500;
     font-size: 22px;
     text-transform: uppercase;
@@ -1031,35 +986,29 @@ body {
     padding: 11px 50px;
     cursor: pointer;
   }
-  .advanced-search-form .white-separator,
-.main-ticket-search_form .white-separator {
+  .main-ticket-search_form .white-separator {
     display: block;
     margin: 5px 0;
   }
-  .advanced-search-form .form-text button.date-activator__btn_switch,
-.main-ticket-search_form .form-text button.date-activator__btn_switch {
+  .main-ticket-search_form .form-text button.date-activator__btn_switch {
     transform: rotate(0);
     left: -18px;
     top: 27%;
   }
-  .advanced-search-form form,
-.main-ticket-search_form form {
+  .main-ticket-search_form form {
     padding: 20px 0;
   }
-  .advanced-search-form form > div:not(:first-child):not(.white-separator),
-.main-ticket-search_form form > div:not(:first-child):not(.white-separator) {
+  .main-ticket-search_form form > div:not(:first-child):not(.white-separator) {
     padding: 17px 30px;
   }
-  .advanced-search-form form > div:not(.white-separator),
-.main-ticket-search_form form > div:not(.white-separator) {
+  .main-ticket-search_form form > div:not(.white-separator) {
     position: relative;
     border-bottom: none;
     flex-basis: 25%;
     margin: 0;
     min-height: 90px;
   }
-  .advanced-search-form .flight-search-book form > div:not(:first-child):not(:nth-child(6))::before,
-.main-ticket-search_form .flight-search-book form > div:not(:first-child):not(:nth-child(6))::before {
+  .main-ticket-search_form .flight-search-book form > div:not(:first-child):not(:nth-child(6))::before {
     content: "";
     height: 60px;
     color: white;
@@ -1068,9 +1017,7 @@ body {
     left: 0;
     top: 15%;
   }
-  .advanced-search-form .flight-search-manage_trip form > div:not(.search-block):not(.empty-block):not(.info-block)::before,
-.advanced-search-form .flight-search-status form > div:not(.search-block):not(.empty-block):not(.info-block)::before,
-.main-ticket-search_form .flight-search-manage_trip form > div:not(.search-block):not(.empty-block):not(.info-block)::before,
+  .main-ticket-search_form .flight-search-manage_trip form > div:not(.search-block):not(.empty-block):not(.info-block)::before,
 .main-ticket-search_form .flight-search-status form > div:not(.search-block):not(.empty-block):not(.info-block)::before {
     content: "";
     height: 60px;
@@ -1080,15 +1027,7 @@ body {
     left: 0;
     top: 15%;
   }
-  .advanced-search-form form .from-block,
-.advanced-search-form form .to-block,
-.advanced-search-form form .date-block,
-.advanced-search-form form .route-block,
-.advanced-search-form form .department-block,
-.advanced-search-form form .passengers-block,
-.advanced-search-form form .filters-block,
-.advanced-search-form form .search-block,
-.main-ticket-search_form form .from-block,
+  .main-ticket-search_form form .from-block,
 .main-ticket-search_form form .to-block,
 .main-ticket-search_form form .date-block,
 .main-ticket-search_form form .route-block,
@@ -1100,8 +1039,7 @@ body {
   }
 }
 @media (min-width: 85.375em) {
-  .advanced-search-form .search-block-btn-success,
-.main-ticket-search_form .search-block-btn-success {
+  .main-ticket-search_form .search-block-btn-success {
     font-weight: 500;
     font-size: 22px;
     text-transform: uppercase;
@@ -1119,23 +1057,19 @@ body {
     padding: 11px 80px;
     cursor: pointer;
   }
-  .advanced-search-form form div.activator-content,
-.main-ticket-search_form form div.activator-content {
+  .main-ticket-search_form form div.activator-content {
     text-align: right;
   }
-  .advanced-search-form form div.activator-content label,
-.main-ticket-search_form form div.activator-content label {
+  .main-ticket-search_form form div.activator-content label {
     font-size: 18px;
   }
-  .advanced-search-form form div.activator-content div,
-.main-ticket-search_form form div.activator-content div {
+  .main-ticket-search_form form div.activator-content div {
     font-size: 24px;
     margin-top: 13px;
   }
 }
 @media (min-width: 101.25em) {
-  .advanced-search-form .search-block-btn-success,
-.main-ticket-search_form .search-block-btn-success {
+  .main-ticket-search_form .search-block-btn-success {
     font-weight: 500;
     font-size: 26px;
     text-transform: uppercase;
@@ -1153,10 +1087,391 @@ body {
     padding: 16px 84px;
     cursor: pointer;
   }
-  .advanced-search-form form > div,
-.main-ticket-search_form form > div {
+  .main-ticket-search_form form > div {
     min-height: 110px;
   }
+}
+
+.advanced-search-form {
+  width: 100%;
+  position: relative;
+}
+.advanced-search-form__inner {
+  position: relative;
+  border: 1px solid #ffffffbd;
+}
+.advanced-search-form__inner .main-ticket-search_form-inner__background {
+  background: #a3dce31a;
+}
+.advanced-search-form form {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+}
+.advanced-search-form form > div:not(:first-child):not(.white-separator) {
+  display: flex;
+  justify-content: space-between;
+}
+.advanced-search-form .search-block button {
+  font-weight: 500;
+  font-size: 26px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  color: #fff;
+  background: #15AD56;
+  -webkit-transition: all, 0.5s ease;
+  -moz-transition: all, 0.5s ease;
+  -ms-transition: all, 0.5s ease;
+  -o-transition: all, 0.5s ease;
+  transition: all, 0.5s ease;
+  padding: 12px 80px;
+  cursor: pointer;
+  -webkit-transition: all, 0.5s ease;
+  -moz-transition: all, 0.5s ease;
+  -ms-transition: all, 0.5s ease;
+  -o-transition: all, 0.5s ease;
+  transition: all, 0.5s ease;
+}
+.advanced-search-form .search-block button:hover {
+  background: #27c76b;
+}
+.advanced-search-form form > div:not(.white-separator) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90px;
+  flex-basis: 100%;
+  border-bottom: 2px solid #fff;
+  margin: 0 30px;
+}
+.advanced-search-form form > div:not(.white-separator) div.activator-click {
+  display: flex;
+  align-items: flex-end;
+}
+.advanced-search-form form > div:not(.white-separator) div.activator-click button {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+.advanced-search-form form > div:not(.white-separator) div.activator-content {
+  text-align: right;
+}
+.advanced-search-form form > div:not(.white-separator) div.activator-content label {
+  font-size: 16px;
+}
+.advanced-search-form form > div:not(.white-separator) div.activator-content div {
+  font-weight: 500;
+  font-size: 20px;
+  margin-top: 10px;
+}
+.advanced-search-form form .filters-block {
+  flex-wrap: wrap !important;
+  -webkit-flex-direction: column !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: flex-end !important;
+}
+.advanced-search-form form .filters-block__item:first-child {
+  margin-bottom: 9px;
+}
+.advanced-search-form form .filters-block__item {
+  text-align: right;
+  flex-basis: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.advanced-search-form form .filters-block__item input {
+  margin-left: 10px;
+}
+.advanced-search-form .white-separator {
+  display: none;
+}
+.advanced-search-form form .from-block {
+  order: 1;
+}
+.advanced-search-form form .to-block {
+  order: 2;
+}
+.advanced-search-form form .date-block {
+  order: 3;
+}
+.advanced-search-form form .route-block {
+  order: 4;
+}
+.advanced-search-form form .department-block {
+  order: 5;
+}
+.advanced-search-form form .passengers-block {
+  order: 6;
+}
+.advanced-search-form form .filters-block {
+  order: 7;
+}
+.advanced-search-form form .search-block {
+  order: 10;
+  text-align: center;
+  border-bottom: 0 !important;
+}
+.advanced-search-form form .info-block {
+  text-align: right;
+}
+.advanced-search-form .form-text {
+  position: relative;
+}
+.advanced-search-form .form-text button.date-activator__btn_switch {
+  z-index: 10;
+  transform: rotate(90deg);
+  position: absolute;
+  bottom: -18px;
+  right: 0;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  background: #FFFFFF;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.17);
+}
+.advanced-search-form .form-text .search-block {
+  display: flex;
+  justify-content: center;
+  padding-top: 7px;
+  padding-right: 14px;
+}
+.advanced-search-form .form-text .filters-block__item:first-child {
+  margin-bottom: 16px;
+}
+.advanced-search-form .form-text .filters-block__item {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 30px;
+}
+.advanced-search-form .form-text .filters-block__item label {
+  font-size: 18px;
+  line-height: 21px;
+  margin-right: 10px;
+}
+.advanced-search-form span.flight-search-reset-form:before {
+  background: url("../icons/close.svg") no-repeat center center;
+}
+.advanced-search-form span.search-dropdown-button:before {
+  background: url("../icons/arrow_down.svg") no-repeat center center;
+}
+.advanced-search-form .search-advanced-settings {
+  display: none;
+}
+@media (min-width: 36em) {
+  .advanced-search-form__filters-button {
+    font-size: 16px;
+    padding: 14px 20px;
+  }
+}
+@media (min-width: 48em) {
+  .advanced-search-form form {
+    justify-content: center;
+  }
+  .advanced-search-form form > div:not(.white-separator) {
+    flex-basis: 40%;
+  }
+  .advanced-search-form .form-text button.date-activator__btn_switch {
+    transform: rotate(0);
+    right: -45px;
+    top: 35%;
+  }
+}
+@media (min-width: 64em) {
+  .advanced-search-form .search-block-btn-success {
+    font-weight: 500;
+    font-size: 22px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    color: #fff;
+    background: #15AD56;
+    -webkit-transition: all, 0.5s ease;
+    -moz-transition: all, 0.5s ease;
+    -ms-transition: all, 0.5s ease;
+    -o-transition: all, 0.5s ease;
+    transition: all, 0.5s ease;
+    padding: 11px 50px;
+    cursor: pointer;
+  }
+  .advanced-search-form .white-separator {
+    display: block;
+    margin: 5px 0;
+  }
+  .advanced-search-form .form-text button.date-activator__btn_switch {
+    transform: rotate(0);
+    left: -18px;
+    top: 27%;
+  }
+  .advanced-search-form form {
+    padding: 20px 0;
+  }
+  .advanced-search-form form > div:not(:first-child):not(.white-separator) {
+    padding: 17px 30px;
+  }
+  .advanced-search-form form > div:not(.white-separator) {
+    position: relative;
+    border-bottom: none;
+    flex-basis: 25%;
+    margin: 0;
+    min-height: 90px;
+  }
+  .advanced-search-form .flight-search-book form > div:not(:first-child):not(:nth-child(6))::before {
+    content: "";
+    height: 60px;
+    color: white;
+    border-left: 2px solid #fff;
+    position: absolute;
+    left: 0;
+    top: 15%;
+  }
+  .advanced-search-form .flight-search-manage_trip form > div:not(.search-block):not(.empty-block):not(.info-block)::before,
+.advanced-search-form .flight-search-status form > div:not(.search-block):not(.empty-block):not(.info-block)::before {
+    content: "";
+    height: 60px;
+    color: white;
+    border-left: 2px solid #fff;
+    position: absolute;
+    left: 0;
+    top: 15%;
+  }
+  .advanced-search-form form .from-block,
+.advanced-search-form form .to-block,
+.advanced-search-form form .date-block,
+.advanced-search-form form .route-block,
+.advanced-search-form form .department-block,
+.advanced-search-form form .passengers-block,
+.advanced-search-form form .filters-block,
+.advanced-search-form form .search-block {
+    order: unset;
+  }
+}
+@media (min-width: 85.375em) {
+  .advanced-search-form .search-block-btn-success {
+    font-weight: 500;
+    font-size: 22px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    color: #fff;
+    background: #15AD56;
+    -webkit-transition: all, 0.5s ease;
+    -moz-transition: all, 0.5s ease;
+    -ms-transition: all, 0.5s ease;
+    -o-transition: all, 0.5s ease;
+    transition: all, 0.5s ease;
+    padding: 11px 80px;
+    cursor: pointer;
+  }
+  .advanced-search-form form div.activator-content {
+    text-align: right;
+  }
+  .advanced-search-form form div.activator-content label {
+    font-size: 18px;
+  }
+  .advanced-search-form form div.activator-content div {
+    font-size: 24px;
+    margin-top: 13px;
+  }
+}
+@media (min-width: 101.25em) {
+  .advanced-search-form .search-block-btn-success {
+    font-weight: 500;
+    font-size: 26px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    color: #fff;
+    background: #15AD56;
+    -webkit-transition: all, 0.5s ease;
+    -moz-transition: all, 0.5s ease;
+    -ms-transition: all, 0.5s ease;
+    -o-transition: all, 0.5s ease;
+    transition: all, 0.5s ease;
+    padding: 16px 84px;
+    cursor: pointer;
+  }
+  .advanced-search-form form > div {
+    min-height: 110px;
+  }
+}
+
+.advanced-search-form_short form {
+  padding: 20px 0 0 !important;
+}
+.advanced-search-form_short form > div {
+  flex-basis: 20% !important;
+}
+.advanced-search-form_short form .filters-block,
+.advanced-search-form_short form .route-block,
+.advanced-search-form_short form .department-block,
+.advanced-search-form_short form .white-separator {
+  display: none !important;
+}
+.advanced-search-form_short form .search-block {
+  order: 1;
+}
+.advanced-search-form_short form .passengers-block {
+  order: 2;
+}
+.advanced-search-form_short form .date-block {
+  order: 3;
+}
+.advanced-search-form_short form .to-block {
+  order: 4;
+}
+.advanced-search-form_short form .from-block {
+  order: 5;
+}
+.advanced-search-form_short form .passengers-block:before,
+.advanced-search-form_short form .date-block:before,
+.advanced-search-form_short form .to-block:before,
+.advanced-search-form_short form .from-block:before {
+  content: "";
+  height: 60px;
+  color: #fff;
+  border-left: 2px solid #fff;
+  position: absolute;
+  left: 0;
+  top: 15%;
+}
+.advanced-search-form_short .search-advanced-settings {
+  display: block;
+  z-index: 10;
+  position: relative;
+  text-align: right;
+  padding: 0 30px 16px;
+}
+.advanced-search-form_short .search-advanced-settings .btn-advanced-settings {
+  font-weight: 400;
+  font-size: 14px;
+  color: #CE833F;
+  background: none;
+  border: none;
+  outline: none;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.advanced-search-form_short .search-advanced-settings .btn-advanced-settings:hover {
+  color: #15ad56;
 }
 
 .flight-search-book .filters-block {

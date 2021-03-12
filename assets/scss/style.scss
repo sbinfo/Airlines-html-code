@@ -487,7 +487,6 @@ body {
 // === Common end === //
 
 // Main ticket search form
-.advanced-search-form,
 .main-ticket-search_form {
   width: 100%;
   position: relative;
@@ -847,8 +846,401 @@ body {
 // /. Main ticket search form
 
 .advanced-search-form {
+  width: 100%;
+  position: relative;
+
+  &__inner {
+    position: relative;
+    border: 1px solid #ffffffbd;
+
+    .main-ticket-search_form-inner__background {
+      background: #a3dce31a;
+    }
+  }
+
+  form {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-wrap: wrap;
+
+    & > div:not(:first-child):not(.white-separator) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .search-block {
+    button {
+      @include start-button(26px, $color-white, $color-green);
+      padding: 12px 80px;
+      cursor: pointer;
+      @include transit(all, 0.5s, ease);
+
+      &:hover {
+        background: #27c76b;
+      }
+    }
+  }
+
+  form > div:not(.white-separator) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90px;
+    flex-basis: 100%;
+    border-bottom: 2px solid #fff;
+    margin: 0 30px;
+
+    div.activator-click {
+      display: flex;
+      align-items: flex-end;
+
+      button {
+        border: none;
+        outline: none;
+        background: none;
+        cursor: pointer;
+      }
+    }
+
+    div.activator-content {
+      text-align: right;
+
+      label {
+        font-size: 16px;
+      }
+
+      div {
+        font-weight: 500;
+        font-size: 20px;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  form .filters-block {
+    flex-wrap: wrap !important;
+    -webkit-flex-direction: column !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: flex-end !important;
+
+    &__item:first-child {
+      margin-bottom: 9px;
+    }
+
+    &__item {
+      text-align: right;
+      flex-basis: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    &__item input {
+      margin-left: 10px;
+    }
+  }
+
+  .white-separator {
+    display: none;
+  }
+
+  form .from-block {
+    order: 1;
+  }
+
+  form .to-block {
+    order: 2;
+  }
+
+  form .date-block {
+    order: 3;
+  }
+
+  form .route-block {
+    order: 4;
+  }
+
+  form .department-block {
+    order: 5;
+  }
+
+  form .passengers-block {
+    order: 6;
+  }
+
+  form .filters-block {
+    order: 7;
+  }
+
+  form .search-block {
+    order: 10;
+    text-align: center;
+    border-bottom: 0 !important;
+  }
+
+  form .info-block {
+    text-align: right;
+  }
+
+  .form-text {
+    position: relative;
+
+    button.date-activator__btn_switch {
+      z-index: 10;
+      transform: rotate(90deg);
+      position: absolute;
+      bottom: -18px;
+      right: 0;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      outline: none;
+      border-radius: 50%;
+      background: #FFFFFF;
+      box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.17);
+    }
+
+
+    .search-block {
+      display: flex;
+      justify-content: center;
+      padding-top: 7px;
+      padding-right: 14px;
+    }
+
+    .filters-block {
+      &__item:first-child {
+        margin-bottom: 16px;
+      }
+
+      &__item {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 30px;
+
+        label {
+          font-size: 18px;
+          line-height: 21px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  span.flight-search-reset-form {
+    &:before {
+      background: url("../icons/close.svg") no-repeat center center;
+    }
+  }
+
+  span.search-dropdown-button {
+    &:before {
+      background: url("../icons/arrow_down.svg") no-repeat center center;
+    }
+  }
+
+  .search-advanced-settings {
+    display: none;
+  }
+
+  @media (min-width: $bp-small-576) {
+    &__filters-button {
+      font-size: 16px;
+      padding: 14px 20px;
+    }
+  }
+
+  @media (min-width: $bp-small-768) {
+
+    form {
+      justify-content: center;
+    }
+
+    form > div:not(.white-separator) {
+      flex-basis: 40%;
+    }
+
+    .form-text button.date-activator__btn_switch {
+      transform: rotate(0);
+      right: -45px;
+      top: 35%;
+    }
+  }
+
+  @media (min-width: $bp-medium-1024) {
+    .search-block-btn-success {
+      @include start-button(22px, $color-white, $color-green);
+      padding: 11px 50px;
+      cursor: pointer;
+    }
+
+    .white-separator {
+      display: block;
+      margin: 5px 0;
+    }
+    .form-text button.date-activator__btn_switch {
+      transform: rotate(0);
+      left: -18px;
+      top: 27%;
+    }
+    form {
+      padding: 20px 0;
+    }
+    form > div:not(:first-child):not(.white-separator) {
+      padding: 17px 30px;
+    }
+    form > div:not(.white-separator) {
+      position: relative;
+      border-bottom: none;
+      flex-basis: 25%;
+      margin: 0;
+      min-height: 90px;
+    }
+    .flight-search-book form > div:not(:first-child):not(:nth-child(6))::before {
+      content: "";
+      height: 60px;
+      color: white;
+      border-left: 2px solid #fff;
+      position: absolute;
+      left: 0;
+      top: 15%;
+    }
+    .flight-search-manage_trip,
+    .flight-search-status {
+      form > div:not(.search-block):not(.empty-block):not(.info-block)::before {
+        content: "";
+        height: 60px;
+        color: white;
+        border-left: 2px solid #fff;
+        position: absolute;
+        left: 0;
+        top: 15%;
+      }
+    }
+    form .from-block,
+    form .to-block,
+    form .date-block,
+    form .route-block,
+    form .department-block,
+    form .passengers-block,
+    form .filters-block,
+    form .search-block {
+      order: unset;
+    }
+  }
+
+  @media (min-width: $bp-large-1366) {
+    .search-block-btn-success {
+      @include start-button(22px, $color-white, $color-green);
+      padding: 11px 80px;
+      cursor: pointer;
+    }
+    form div.activator-content {
+      text-align: right;
+
+      label {
+        font-size: 18px;
+      }
+
+      div {
+        font-size: 24px;
+        margin-top: 13px;
+      }
+    }
+  }
+
+  @media (min-width: $bp-xlarge-1620) {
+    .search-block-btn-success {
+      @include start-button(26px, $color-white, $color-green);
+      padding: 16px 84px;
+      cursor: pointer;
+    }
+    form > div {
+      min-height: 110px;
+    }
+  }
+}
+
+// .advanced-search-form_short
+.advanced-search-form_short {
+  form {
+    padding: 20px 0 0 !important;
+  }
+  form > div {
+    flex-basis: 20% !important;
+  }
+  form .filters-block,
+  form .route-block,
+  form .department-block,
+  form .white-separator {
+    display: none !important;
+  }
+
+  form .search-block {
+    order: 1;
+  }
+  form .passengers-block {
+    order: 2;
+  }
+  form .date-block {
+    order: 3;
+  }
+  form .to-block {
+    order: 4;
+  }
+  form .from-block {
+    order: 5;
+  }
+
+  form {
+    .passengers-block:before,
+    .date-block:before,
+    .to-block:before,
+    .from-block:before {
+      content: "";
+      height: 60px;
+      color: #fff;
+      border-left: 2px solid #fff;
+      position: absolute;
+      left: 0;
+      top: 15%;
+    }
+  }
+
+  .search-advanced-settings {
+    display: block;
+    z-index: 10;
+    position: relative;
+    text-align: right;
+    padding: 0 30px 16px;
+
+    .btn-advanced-settings {
+      font-weight: 400;
+      font-size: 14px;
+      color: $color-brown;
+      background: none;
+      border: none;
+      outline: none;
+      text-decoration: underline;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        color: #15ad56;
+      }
+    }
+  }
+
 
 }
+// /.advanced-search-form_short
+
 
 .flight-search-book .filters-block {
   border: none !important;
