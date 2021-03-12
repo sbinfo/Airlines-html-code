@@ -487,6 +487,7 @@ body {
 // === Common end === //
 
 // Main ticket search form
+.advanced-search-form,
 .main-ticket-search_form {
   width: 100%;
   position: relative;
@@ -572,7 +573,6 @@ body {
     flex-basis: 100%;
     border-bottom: 2px solid #fff;
     margin: 0 30px;
-    //padding: 20px 0;
 
     div.activator-click {
       display: flex;
@@ -602,7 +602,7 @@ body {
   }
 
   form .filters-block {
-    flex-wrap: wrap i !important;
+    flex-wrap: wrap !important;
     -webkit-flex-direction: column !important;
     flex-direction: column !important;
     justify-content: center !important;
@@ -846,6 +846,10 @@ body {
 }
 // /. Main ticket search form
 
+.advanced-search-form {
+
+}
+
 .flight-search-book .filters-block {
   border: none !important;
 }
@@ -906,6 +910,7 @@ body {
       top: 110px;
       padding: 20px 20px 10px;
       @include box-shadow(0px 3px 9px rgba(0, 0, 0, 0.09));
+      display: none;
 
       li {
         display: block;
@@ -972,6 +977,10 @@ body {
         }
 
       }
+    }
+
+    ul.flight-search-dropdown.active {
+      display: block;
     }
   }
   // &.form-select

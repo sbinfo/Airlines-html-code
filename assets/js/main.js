@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
 $(document).ready(function(){
 
     /*** Search form ***/
+    // button flight status
     $(".btn-filter-flight_status").on("click", function () {
         $(".main-ticket-search_form .flight-search-manage_trip").hide();
         $(".main-ticket-search_form .flight-search-book").hide();
@@ -30,6 +31,7 @@ $(document).ready(function(){
         $(".main-ticket-search_form .flight-search-status").show();
     });
 
+    // button manage trips
     $(".btn-filter-manage_trips").on("click", function () {
         $(".main-ticket-search_form .flight-search-book").hide();
         $(".main-ticket-search_form .flight-search-status").hide();
@@ -39,6 +41,7 @@ $(document).ready(function(){
         $(".main-ticket-search_form .flight-search-manage_trip").show();
     });
 
+    // button book
     $(".btn-filter-book").on("click", function () {
         $(".main-ticket-search_form .flight-search-manage_trip").hide();
         $(".main-ticket-search_form .flight-search-status").hide();
@@ -46,6 +49,27 @@ $(document).ready(function(){
         $(".main-ticket-search_form__filters-button").removeClass("active");
         $(this).addClass('active');
         $(".main-ticket-search_form .flight-search-book").show();
+    });
+
+    // search route
+    $(".btn-search-route").on("click", function () {
+        $(".search-department-dropdown").removeClass("active");
+        $(".passengers-dropdown").removeClass("active");
+        $(".search-route-dropdown").toggleClass("active");
+    });
+
+    // search department
+    $(".btn-search-department").on("click", function () {
+        $(".search-route-dropdown").removeClass("active");
+        $(".passengers-dropdown").removeClass("active");
+        $(".search-department-dropdown").toggleClass("active");
+    });
+
+    // search passengers number
+    $(".btn-passengers-number").on("click", function () {
+        $(".search-route-dropdown").removeClass("active");
+        $(".search-department-dropdown").removeClass("active");
+        $(".passengers-dropdown").toggleClass("active");
     });
     /*** / Search form ***/
 
@@ -299,6 +323,8 @@ $(document).ready(function(){
     // more offers
 
     /*** /.list-of-flights ***/
+
+
 
 });
 
