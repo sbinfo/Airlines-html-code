@@ -1038,6 +1038,11 @@ body {
     order: unset;
   }
 }
+@media (max-width: 75em) and (min-width: 64em) {
+  .main-ticket-search_form input.flight-search-form-input {
+    font-size: 18px !important;
+  }
+}
 @media (min-width: 85.375em) {
   .main-ticket-search_form .search-block-btn-success {
     font-weight: 500;
@@ -1269,6 +1274,15 @@ body {
 .advanced-search-form .search-advanced-settings {
   display: none;
 }
+@media (max-width: 36em) {
+  .advanced-search-form .search-block button.search-block-btn-success {
+    font-size: 24px;
+    padding: 10px 20% !important;
+  }
+  .advanced-search-form .search-advanced-settings {
+    text-align: center !important;
+  }
+}
 @media (min-width: 36em) {
   .advanced-search-form__filters-button {
     font-size: 16px;
@@ -1358,6 +1372,29 @@ body {
 .advanced-search-form form .search-block {
     order: unset;
   }
+  .advanced-search-form:not(.advanced-search-form_short) form .passengers-block:before,
+.advanced-search-form:not(.advanced-search-form_short) form .date-block:before,
+.advanced-search-form:not(.advanced-search-form_short) form .to-block:before,
+.advanced-search-form:not(.advanced-search-form_short) form .department-block:before,
+.advanced-search-form:not(.advanced-search-form_short) form .route-block:before,
+.advanced-search-form:not(.advanced-search-form_short) form .from-block:before {
+    content: "";
+    height: 60px;
+    color: #fff;
+    border-left: 2px solid #fff;
+    position: absolute;
+    left: 0;
+    top: 15%;
+  }
+}
+@media (max-width: 75em) and (min-width: 64em) {
+  .advanced-search-form button.search-block-btn-success {
+    font-size: 20px !important;
+    padding: 12px 20% !important;
+  }
+  .advanced-search-form:not(.advanced-search-form_short) .flight-search-form label input.flight-search-form-input {
+    font-size: 18px !important;
+  }
 }
 @media (min-width: 85.375em) {
   .advanced-search-form .search-block-btn-success {
@@ -1442,7 +1479,7 @@ body {
 }
 .advanced-search-form_short .search-advanced-settings {
   display: block;
-  z-index: 10;
+  z-index: 8;
   position: relative;
   text-align: right;
   padding: 0 30px 16px;
@@ -1461,26 +1498,20 @@ body {
 .advanced-search-form_short .search-advanced-settings .btn-advanced-settings:hover {
   color: #15ad56;
 }
-@media (min-width: 75em) {
+@media (max-width: 85.375em) and (min-width: 62em) {
   .advanced-search-form_short form {
-    flex-wrap: nowrap !important;
-  }
-  .advanced-search-form_short form .passengers-block:before,
-.advanced-search-form_short form .date-block:before,
-.advanced-search-form_short form .to-block:before,
-.advanced-search-form_short form .from-block:before {
-    content: "";
-    height: 60px;
-    color: #fff;
-    border-left: 2px solid #fff;
-    position: absolute;
-    left: 0;
-    top: 15%;
+    justify-content: space-between !important;
   }
 }
-@media (max-width: 991px) and (min-width: 36em) {
+@media (max-width: 85.375em) and (min-width: 1126px) {
+  .advanced-search-form_short form > div {
+    flex-basis: 19% !important;
+  }
+}
+@media (max-width: 1125px) and (min-width: 36em) {
   .advanced-search-form_short form {
     padding: 0 20px !important;
+    justify-content: center !important;
   }
   .advanced-search-form_short form > div {
     flex-basis: 50% !important;
@@ -1526,6 +1557,46 @@ body {
   .advanced-search-form_short .search-advanced-settings {
     text-align: center;
   }
+  .advanced-search-form_short button.date-activator__btn_switch {
+    transform: rotate(0deg) !important;
+  }
+}
+@media (min-width: 1126px) {
+  .advanced-search-form_short form {
+    flex-wrap: nowrap !important;
+  }
+  .advanced-search-form_short form .passengers-block:before,
+.advanced-search-form_short form .date-block:before,
+.advanced-search-form_short form .to-block:before,
+.advanced-search-form_short form .from-block:before {
+    content: "";
+    height: 60px;
+    color: #fff;
+    border-left: 2px solid #fff;
+    position: absolute;
+    left: 0;
+    top: 15%;
+  }
+}
+@media (max-width: 36em) {
+  .advanced-search-form_short form > div {
+    flex-basis: 100% !important;
+  }
+  .advanced-search-form_short form .from-block {
+    order: 1;
+  }
+  .advanced-search-form_short form .to-block {
+    order: 2;
+  }
+  .advanced-search-form_short form .date-block {
+    order: 3;
+  }
+  .advanced-search-form_short form .passengers-block {
+    order: 4;
+  }
+  .advanced-search-form_short form .search-block {
+    order: 5;
+  }
 }
 
 .flight-search-book .filters-block {
@@ -1555,6 +1626,7 @@ body {
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
+  text-align: right;
 }
 .flight-search-form label input.flight-search-form-input {
   width: 100%;
@@ -1707,7 +1779,7 @@ body {
   color: #908C8E;
 }
 
-@media (max-width: 1023px) and (min-width: 36em) {
+@media (max-width: 1023px) and (min-width: 48em) {
   .main-ticket-search_form-inner form div.from-block,
 .main-ticket-search_form-inner form div.date-block,
 .main-ticket-search_form-inner form div.department-block {
@@ -6068,11 +6140,6 @@ body {
   }
   .all-flights .section-social {
     margin-bottom: 70px;
-  }
-}
-@media (min-width: 101.25em) {
-  .all-flights .section-header button.search-block-btn-success {
-    padding: 11px 50px;
   }
 }
 

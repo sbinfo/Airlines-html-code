@@ -812,6 +812,12 @@ body {
     }
   }
 
+  @media (max-width: $bp-medium-1200) and (min-width: $bp-medium-1024) {
+    input.flight-search-form-input {
+      font-size: 18px !important;
+    }
+  }
+
   @media (min-width: $bp-large-1366) {
     .search-block-btn-success {
       @include start-button(22px, $color-white, $color-green);
@@ -1049,6 +1055,16 @@ body {
     display: none;
   }
 
+  @media (max-width: $bp-small-576) {
+    .search-block button.search-block-btn-success {
+      font-size: 24px;
+      padding: 10px 20% !important;
+    }
+    .search-advanced-settings {
+      text-align: center !important;
+    }
+  }
+
   @media (min-width: $bp-small-576) {
     &__filters-button {
       font-size: 16px;
@@ -1133,6 +1149,34 @@ body {
     form .search-block {
       order: unset;
     }
+
+    &:not(.advanced-search-form_short) form {
+      .passengers-block:before,
+      .date-block:before,
+      .to-block:before,
+      .department-block:before,
+      .route-block:before,
+      .from-block:before {
+        content: "";
+        height: 60px;
+        color: #fff;
+        border-left: 2px solid #fff;
+        position: absolute;
+        left: 0;
+        top: 15%;
+      }
+    }
+  }
+
+  @media (max-width: $bp-medium-1200) and (min-width: $bp-medium-1024) {
+    button.search-block-btn-success {
+      font-size: 20px !important;
+      padding: 12px 20% !important;
+    }
+
+    &:not(.advanced-search-form_short) .flight-search-form label input.flight-search-form-input {
+      font-size: 18px !important;
+    }
   }
 
   @media (min-width: $bp-large-1366) {
@@ -1165,7 +1209,9 @@ body {
       min-height: 110px;
     }
   }
+
 }
+// .advanced-search-form
 
 // .advanced-search-form_short
 .advanced-search-form_short {
@@ -1200,7 +1246,7 @@ body {
 
   .search-advanced-settings {
     display: block;
-    z-index: 10;
+    z-index: 8;
     position: relative;
     text-align: right;
     padding: 0 30px 16px;
@@ -1222,30 +1268,23 @@ body {
     }
   }
 
-  @media (min-width: $bp-medium-1200) {
+  
+  @media (max-width: $bp-large-1366) and (min-width: $bp-medium-992) {
     form {
-      flex-wrap: nowrap !important;
-    }
-
-    form {
-      .passengers-block:before,
-      .date-block:before,
-      .to-block:before,
-      .from-block:before {
-        content: "";
-        height: 60px;
-        color: #fff;
-        border-left: 2px solid #fff;
-        position: absolute;
-        left: 0;
-        top: 15%;
-      }
+      justify-content: space-between !important;
     }
   }
 
-  @media (max-width: 991px) and (min-width: $bp-small-576) {
+  @media (max-width: $bp-large-1366) and (min-width: 1126px) {
+    form > div {
+      flex-basis: 19% !important;
+    }
+  }
+
+  @media (max-width: 1125px) and (min-width: $bp-small-576) {
     form {
       padding: 0 20px !important;
+      justify-content: center !important;
     }
     form > div {
       flex-basis: 50% !important;
@@ -1298,6 +1337,51 @@ body {
       text-align: center;
     }
 
+    button.date-activator__btn_switch {
+      transform: rotate(0deg) !important;
+    }
+  }
+
+  @media (min-width: 1126px) {
+    form {
+      flex-wrap: nowrap !important;
+    }
+
+    form {
+      .passengers-block:before,
+      .date-block:before,
+      .to-block:before,
+      .from-block:before {
+        content: "";
+        height: 60px;
+        color: #fff;
+        border-left: 2px solid #fff;
+        position: absolute;
+        left: 0;
+        top: 15%;
+      }
+    }
+  }
+
+  @media (max-width: $bp-small-576) {
+    form > div {
+      flex-basis: 100% !important;
+    }
+    form .from-block {
+      order: 1;
+    }
+    form .to-block {
+      order: 2;
+    }
+    form .date-block {
+      order: 3;
+    }
+    form .passengers-block {
+      order: 4;
+    }
+    form .search-block {
+      order: 5;
+    }
   }
 
 }
@@ -1333,6 +1417,7 @@ body {
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;
+    text-align: right;
 
     input.flight-search-form-input {
       width: 100%;
@@ -1497,7 +1582,7 @@ body {
 }
 
 .main-ticket-search_form-inner form {
-  @media (max-width: 1023px) and (min-width: $bp-small-576) {
+  @media (max-width: 1023px) and (min-width: $bp-small-768) {
 
     div.from-block,
     div.date-block,
@@ -6585,13 +6670,13 @@ body {
     }
   }
 
-  @media (min-width: $bp-xlarge-1620) {
-    .section-header {
-      button.search-block-btn-success {
-        padding: 11px 50px;
-      }
-    }
-  }
+  //@media (min-width: $bp-xlarge-1620) {
+  //  .section-header {
+  //    button.search-block-btn-success {
+  //      padding: 11px 50px;
+  //    }
+  //  }
+  //}
 }
 
 // =================== all-flights End =================
